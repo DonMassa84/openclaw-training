@@ -1,0 +1,25 @@
+years:
+  - 2011
+  - 2012
+  - 2013
+  - 2014
+  - 2015
+  - 2016
+  - 2017
+  - 2018
+  - 2019
+  - 2020
+  - 2021
+  - 2022
+  - 2023
+
+sa_markers:
+  sa1: ["Situationsaufgabe 1", "Situationsaufgabe1", "SA1", "Aufgabe 1"]
+  sa2: ["Situationsaufgabe 2", "Situationsaufgabe2", "SA2", "Aufgabe 2"]
+  sa3: ["Situationsaufgabe 3", "Situationsaufgabe3", "SA3", "Aufgabe 3"]
+
+solution_markers:
+  - "Lösung"
+  - "Lösungshinweise"
+  - "Bearbeitungshinweise"
+  - "Hinweise zur Lösung"
