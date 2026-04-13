@@ -1,0 +1,21 @@
+# ChromaDB – zu groß für GitHub
+artifacts/chroma_multi/
+
+# PDFs – urheberrechtlich geschützt
+pdfs/
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+
+# Temporär
+*.bak.*
+*.prepatch
+*.tmp
+
+# Secrets
+.env
+*.key
