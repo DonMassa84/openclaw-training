@@ -1,21 +1,34 @@
-# ChromaDB – zu groß für GitHub
-artifacts/chroma_multi/
+# Generierte Artefakte — nicht versionieren
+artifacts/extracted_text/
+artifacts/openclaw_env_fix_*/
+artifacts/openclaw_fix_*/
+artifacts/openclaw_routerfix_*/
+artifacts/openclaw_smoke_*/
+artifacts/openclaw_wave1_*/
+artifacts/recovery_*/
+artifacts/router_probe_*/
+artifacts/skill_rollout_*/
+artifacts/wave1_debug_*/
+artifacts/paste.txt
+artifacts/paste_docs.jsonl
+artifacts/paste_tasks.jsonl
+artifacts/quality_gate_result.txt
+artifacts/router_probe_*.txt
 
-# PDFs – urheberrechtlich geschützt
-pdfs/
+# Lokale Backups (groß, lokal behalten)
+local_backups/
+
+# Sonderdateien (entstanden aus Terminal-Artefakten)
+**Berichte
+**Nicht
+**Shell
+C[Tier
+F[Tier
 
 # Python
-.venv/
 __pycache__/
 *.pyc
-*.pyo
-*.egg-info/
-
-# Temporär
-*.bak.*
-*.prepatch
-*.tmp
-
-# Secrets
 .env
-*.key
+
+# Reports lokal
+reports/
