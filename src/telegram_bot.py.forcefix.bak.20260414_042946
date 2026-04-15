@@ -1,0 +1,345 @@
+from pathlib import Path
+import json
+import subprocess
+import logging
+import os
+
+from telegram import Update
+from telegram.ext import ApplicationBuilder, MessageHandler, filters, ContextTypes, CommandHandler
+
+from bot_skills import load_skills, dispatch_skill_command
+
+logging.basicConfig(
+    format="%(asctime)s [%(levelname)s] %(message)s",
+    level=logging.INFO
+)
+
+TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
+
+if not TOKEN:
+    raise ValueError("TELEGRAM_BOT_TOKEN fehlt")
+
+SKILL_REGISTRY = load_skills()
+
+async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    text = (update.message.text or "").strip()
+
+    if text.startswith("/"):
+        response = dispatch_skill_command(text, SKILL_REGISTRY)
+        await update.message.reply_text(response)
+        return
+
+    if await _exact_special_reply(update, skill):
+        return
+    await update.message.reply_text("Unbekannter Befehl. Nutze /help")
+
+
+
+async def _wave1_reply(update, text: str) -> None:
+    if update.message:
+        await update.message.reply_text(text)
+
+def _wave1_load_env_file() -> dict:
+    env = {}
+    env_file = Path.home() / "secrets" / "telegram_bots.env"
+    if env_file.exists():
+        for raw in env_file.read_text(encoding="utf-8").splitlines():
+            line = raw.strip()
+            if not line or line.startswith("#") or "=" not in line:
+                continue
+            k, v = line.split("=", 1)
+            env[k] = v
+    return env
+
+async def cmd_help(update, context) -> None:
+    await _wave1_reply(
+        update,
+        "OpenClaw Welle 1\n\n"
+        "/help - Übersicht\n"
+        "/health - Services + API-Check\n"
+        "/status - systemd Status\n"
+        "/getme - Bot-Identitäten"
+    )
+
+async def cmd_health(update, context) -> None:
+    env = _wave1_load_env_file()
+    services = {
+        "watch": "schatten-watch-bot.service",
+        "backup": "schatten-backup-bot.service",
+        "openclaw": "openclaw-telegram-bot.service",
+    }
+    lines = ["Health"]
+    for key, service in services.items():
+        proc = subprocess.run(["systemctl", "--user", "is-active", service], capture_output=True, text=True, check=False)
+        state = (proc.stdout or proc.stderr).strip() or "unknown"
+        lines.append(f"{key}: {state}")
+
+    checks = [
+        ("watch_api", env.get("SCHATTEN_WATCH_BOT_TOKEN", "")),
+        ("backup_api", env.get("BACKUP_BOT_TOKEN", "")),
+        ("openclaw_api", env.get("OPENCLAW_BOT_TOKEN", "")),
+    ]
+    for label, token in checks:
+        if not token:
+            lines.append(f"{label}: missing-token")
+            continue
+        proc = subprocess.run(["curl", "-s", f"https://api.telegram.org/bot{token}/getMe"], capture_output=True, text=True, check=False)
+        body = proc.stdout.strip()
+        lines.append(f"{label}: {'ok' if '"ok":true' in body else 'fail'}")
+
+    await _wave1_reply(update, "\n".join(lines))
+
+async def cmd_status(update, context) -> None:
+    services = {
+        "watch": "schatten-watch-bot.service",
+        "backup": "schatten-backup-bot.service",
+        "openclaw": "openclaw-telegram-bot.service",
+    }
+    lines = ["Status"]
+    for key, service in services.items():
+        active = subprocess.run(["systemctl", "--user", "is-active", service], capture_output=True, text=True, check=False).stdout.strip() or "unknown"
+        enabled = subprocess.run(["systemctl", "--user", "is-enabled", service], capture_output=True, text=True, check=False).stdout.strip() or "unknown"
+        lines.append(f"{key}: active={active} enabled={enabled}")
+    await _wave1_reply(update, "\n".join(lines))
+
+async def cmd_getme(update, context) -> None:
+    env = _wave1_load_env_file()
+    mapping = {
+        "watch": env.get("SCHATTEN_WATCH_BOT_TOKEN", ""),
+        "backup": env.get("BACKUP_BOT_TOKEN", ""),
+        "openclaw": env.get("OPENCLAW_BOT_TOKEN", ""),
+    }
+    lines = ["getMe"]
+    for label, token in mapping.items():
+        if not token:
+            lines.append(f"{label}: missing-token")
+            continue
+        proc = subprocess.run(["curl", "-s", f"https://api.telegram.org/bot{token}/getMe"], capture_output=True, text=True, check=False)
+        try:
+            data = json.loads(proc.stdout)
+        except Exception:
+            lines.append(f"{label}: invalid-response")
+            continue
+        if not data.get("ok"):
+            lines.append(f"{label}: api-fail")
+            continue
+        result = data.get("result", {})
+        lines.append(f"{label}: @{result.get('username', 'unknown')} | {result.get('first_name', 'unknown')}")
+    await _wave1_reply(update, "\n".join(lines))
+
+
+
+async def _cmd_reply(update, text: str) -> None:
+    if update.message:
+        await update.message.reply_text(text)
+
+def _load_global_env() -> dict:
+    env = {}
+    env_file = Path.home() / "secrets" / "telegram_bots.env"
+    if env_file.exists():
+        for raw in env_file.read_text(encoding="utf-8").splitlines():
+            line = raw.strip()
+            if not line or line.startswith("#") or "=" not in line:
+                continue
+            k, v = line.split("=", 1)
+            env[k] = v
+    return env
+
+async def cmd_start(update, context) -> None:
+    text = (
+        "CrashGuardBot aktiv.\n\n"
+        "Verfügbare Basisbefehle:\n"
+        "/help\n"
+        "/health\n"
+        "/status\n"
+        "/getme\n"
+        "/ping\n"
+        "/models\n"
+        "/rag"
+    )
+    await _cmd_reply(update, text)
+
+async def cmd_status(update, context) -> None:
+    services = {
+        "watch": "schatten-watch-bot.service",
+        "backup": "schatten-backup-bot.service",
+        "openclaw": "openclaw-telegram-bot.service",
+    }
+    lines = ["Status"]
+    for key, service in services.items():
+        active = subprocess.run(
+            ["systemctl", "--user", "is-active", service],
+            capture_output=True, text=True, check=False
+        ).stdout.strip() or "unknown"
+        enabled = subprocess.run(
+            ["systemctl", "--user", "is-enabled", service],
+            capture_output=True, text=True, check=False
+        ).stdout.strip() or "unknown"
+        lines.append(f"{key}: active={active} enabled={enabled}")
+    await _cmd_reply(update, "\n".join(lines))
+
+async def cmd_getme(update, context) -> None:
+    env = _load_global_env()
+    mapping = {
+        "watch": env.get("SCHATTEN_WATCH_BOT_TOKEN", ""),
+        "backup": env.get("BACKUP_BOT_TOKEN", ""),
+        "openclaw": env.get("OPENCLAW_BOT_TOKEN", ""),
+    }
+    lines = ["getMe"]
+    for label, token in mapping.items():
+        if not token:
+            lines.append(f"{label}: missing-token")
+            continue
+        proc = subprocess.run(
+            ["curl", "-s", f"https://api.telegram.org/bot{token}/getMe"],
+            capture_output=True, text=True, check=False
+        )
+        try:
+            data = json.loads(proc.stdout)
+        except Exception:
+            lines.append(f"{label}: invalid-response")
+            continue
+        if not data.get("ok"):
+            lines.append(f"{label}: api-fail")
+            continue
+        result = data.get("result", {})
+        lines.append(f"{label}: @{result.get('username', 'unknown')} | {result.get('first_name', 'unknown')}")
+    await _cmd_reply(update, "\n".join(lines))
+
+
+# OPENCLAW_ROUTER_ALIAS_FIX_V1
+def _alias_env() -> dict:
+    env = {}
+    env_file = Path.home() / "secrets" / "telegram_bots.env"
+    if env_file.exists():
+        for raw in env_file.read_text(encoding="utf-8").splitlines():
+            line = raw.strip()
+            if not line or line.startswith("#") or "=" not in line:
+                continue
+            k, v = line.split("=", 1)
+            env[k] = v
+    return env
+
+def _alias_getme_text() -> str:
+    env = _alias_env()
+    mapping = {
+        "watch": env.get("SCHATTEN_WATCH_BOT_TOKEN", ""),
+        "backup": env.get("BACKUP_BOT_TOKEN", ""),
+        "openclaw": env.get("OPENCLAW_BOT_TOKEN", ""),
+    }
+    lines = ["getMe"]
+    for label, token in mapping.items():
+        if not token:
+            lines.append(f"{label}: missing-token")
+            continue
+        proc = subprocess.run(
+            ["curl", "-s", f"https://api.telegram.org/bot{token}/getMe"],
+            capture_output=True, text=True, check=False
+        )
+        try:
+            data = json.loads(proc.stdout)
+        except Exception:
+            lines.append(f"{label}: invalid-response")
+            continue
+        if not data.get("ok"):
+            lines.append(f"{label}: api-fail")
+            continue
+        result = data.get("result", {})
+        lines.append(f"{label}: @{result.get('username', 'unknown')} | {result.get('first_name', 'unknown')}")
+    return "\n".join(lines)
+
+
+# OPENCLAW_EXACT_UNKNOWN_FIX_V3
+def _exact_env() -> dict:
+    env = {}
+    env_file = Path.home() / "secrets" / "telegram_bots.env"
+    if env_file.exists():
+        for raw in env_file.read_text(encoding="utf-8").splitlines():
+            line = raw.strip()
+            if not line or line.startswith("#") or "=" not in line:
+                continue
+            k, v = line.split("=", 1)
+            env[k] = v
+    return env
+
+async def _exact_special_reply(update, skill_name: str):
+    skill_name = (skill_name or "").strip().lower()
+
+    if skill_name == "start":
+        await update.message.reply_text(
+            "CrashGuardBot aktiv.\n\n"
+            "Verfügbare Basisbefehle:\n"
+            "/help\n"
+            "/health\n"
+            "/status\n"
+            "/getme\n"
+            "/ping\n"
+            "/models\n"
+            "/rag"
+        )
+        return True
+
+    if skill_name == "status":
+        services = {
+            "watch": "schatten-watch-bot.service",
+            "backup": "schatten-backup-bot.service",
+            "openclaw": "openclaw-telegram-bot.service",
+        }
+        lines = ["Status"]
+        for key, service in services.items():
+            import subprocess
+            active = subprocess.run(["systemctl", "--user", "is-active", service], capture_output=True, text=True, check=False).stdout.strip() or "unknown"
+            enabled = subprocess.run(["systemctl", "--user", "is-enabled", service], capture_output=True, text=True, check=False).stdout.strip() or "unknown"
+            lines.append(f"{key}: active={active} enabled={enabled}")
+        await update.message.reply_text("\n".join(lines))
+        return True
+
+    if skill_name == "getme":
+        import subprocess, json
+        env = _exact_env()
+        mapping = {
+            "watch": env.get("SCHATTEN_WATCH_BOT_TOKEN", ""),
+            "backup": env.get("BACKUP_BOT_TOKEN", ""),
+            "openclaw": env.get("OPENCLAW_BOT_TOKEN", ""),
+        }
+        lines = ["getMe"]
+        for label, token in mapping.items():
+            if not token:
+                lines.append(f"{label}: missing-token")
+                continue
+            proc = subprocess.run(["curl", "-s", f"https://api.telegram.org/bot{token}/getMe"], capture_output=True, text=True, check=False)
+            try:
+                data = json.loads(proc.stdout)
+            except Exception:
+                lines.append(f"{label}: invalid-response")
+                continue
+            if not data.get("ok"):
+                lines.append(f"{label}: api-fail")
+                continue
+            result = data.get("result", {})
+            lines.append(f"{label}: @{result.get('username', 'unknown')} | {result.get('first_name', 'unknown')}")
+        await update.message.reply_text("\n".join(lines))
+        return True
+
+    return False
+
+def main():
+    app = ApplicationBuilder().token(TOKEN).build()
+
+    app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
+    app.add_handler(MessageHandler(filters.COMMAND, handle_message))
+
+    logging.info("OPENCLAW Telegram Bot startet...")
+    
+    app.add_handler(CommandHandler("help", cmd_help))
+    app.add_handler(CommandHandler("health", cmd_health))
+    app.add_handler(CommandHandler("status", cmd_status))
+    app.add_handler(CommandHandler("getme", cmd_getme))
+
+    app.add_handler(CommandHandler("start", cmd_start))
+    app.add_handler(CommandHandler("status", cmd_status))
+    app.add_handler(CommandHandler("getme", cmd_getme))
+    app.run_polling()
+
+if __name__ == "__main__":
+    main()

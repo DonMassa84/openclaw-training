@@ -1,0 +1,41 @@
+import logging
+import os
+
+from telegram import Update
+from telegram.ext import ApplicationBuilder, MessageHandler, filters, ContextTypes
+
+from bot_skills import load_skills, dispatch_skill_command
+
+logging.basicConfig(
+    format="%(asctime)s [%(levelname)s] %(message)s",
+    level=logging.INFO
+)
+
+TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
+
+if not TOKEN:
+    raise ValueError("TELEGRAM_BOT_TOKEN fehlt")
+
+SKILL_REGISTRY = load_skills()
+
+async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    text = (update.message.text or "").strip()
+
+    if text.startswith("/"):
+        response = dispatch_skill_command(text, SKILL_REGISTRY)
+        await update.message.reply_text(response)
+        return
+
+    await update.message.reply_text("Unbekannter Befehl. Nutze /help")
+
+def main():
+    app = ApplicationBuilder().token(TOKEN).build()
+
+    app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
+    app.add_handler(MessageHandler(filters.COMMAND, handle_message))
+
+    logging.info("OPENCLAW Telegram Bot startet...")
+    app.run_polling()
+
+if __name__ == "__main__":
+    main()

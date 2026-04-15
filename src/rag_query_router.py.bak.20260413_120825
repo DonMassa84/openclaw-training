@@ -1,0 +1,482 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import re
+import chromadb
+from sentence_transformers import SentenceTransformer
+import requests
+
+# SA1_HARDENING_V2
+
+VERSION = "IHK-ROUTER-V4.1-FINAL-HARDENED"
+DB = str(Path.home() / "openclaw_training" / "artifacts" / "chroma_multi")
+
+COLLECTIONS = {
+    "TASK": "itpl_tasks",
+    "SOLUTION": "itpl_solutions",
+    "MASTER": "itpl_masterpattern",
+}
+
+OLLAMA_URL = "http://127.0.0.1:11434/api/generate"
+OLLAMA_MODEL = "qwen2.5:7b"
+
+TOP_K_BY_INTENT = {
+    "TASK": 8,
+    "SOLUTION": 12,
+    "MASTER": 10,
+}
+
+CONTEXT_DOCS_BY_INTENT = {
+    "TASK": 5,
+    "SOLUTION": 6,
+    "MASTER": 5,
+}
+
+client = chromadb.PersistentClient(path=DB)
+model = SentenceTransformer("all-MiniLM-L6-v2")
+
+
+def norm(text: str) -> str:
+    return re.sub(r"\s+", " ", (text or "").strip().lower())
+
+
+def detect_sa_type(question: str) -> str:
+    q = norm(question)
+    if re.search(r"\bsa1\b", q) or "situationsaufgabe 1" in q or "situationsaufgabe1" in q or "aufgabe 1" in q:
+        return "SA1"
+    if re.search(r"\bsa2\b", q) or "situationsaufgabe 2" in q or "situationsaufgabe2" in q or "aufgabe 2" in q:
+        return "SA2"
+    if re.search(r"\bsa3\b", q) or "situationsaufgabe 3" in q or "situationsaufgabe3" in q or "aufgabe 3" in q:
+        return "SA3"
+    return "GEN"
+
+
+def detect_task_number(question: str):
+    q = norm(question)
+    m = re.search(r"\baufgabe\s*(\d+)\b", q)
+    if m:
+        return m.group(1)
+    return None
+
+
+def detect_intent(question: str) -> str:
+    q = norm(question)
+
+    master_terms = [
+        "erstelle eine sa1 antwort",
+        "erstelle eine sa2 antwort",
+        "erstelle eine sa3 antwort",
+        "schreibe eine sa1 antwort",
+        "schreibe eine sa2 antwort",
+        "schreibe eine sa3 antwort",
+        "sa1 antwort",
+        "sa2 antwort",
+        "sa3 antwort",
+        "musterantwort",
+        "pruefungsantwort",
+        "prüfungsantwort",
+        "im ihk stil",
+        "ihk stil",
+        "10-punkte-gerüst",
+        "10 punkte gerüst",
+        "10-punkte-geruest",
+        "10 punkte geruest",
+        "antwort erstellen",
+        "lösung erstellen",
+        "loesung erstellen",
+    ]
+
+    solution_terms = [
+        "musterlösung",
+        "musterloesung",
+        "welche lösung",
+        "welche loesung",
+        "welche antwort",
+        "lösung wurde",
+        "loesung wurde",
+        "wie wurde",
+        "welches ergebnis",
+        "vorgeschlagen",
+        "lösungshinweis",
+        "lösungshinweise",
+        "loesungshinweis",
+        "loesungshinweise",
+        "extrahiere die lösung",
+        "extrahiere die loesung",
+        "extrahiere die lösungshinweise",
+        "extrahiere die loesungshinweise",
+        "laut lösung",
+        "laut loesung",
+        "wie lautet die lösung",
+        "wie lautet die loesung",
+    ]
+
+    if any(term in q for term in master_terms):
+        return "MASTER"
+    if any(term in q for term in solution_terms):
+        return "SOLUTION"
+    return "TASK"
+
+
+def route_query(question: str):
+    intent = detect_intent(question)
+    sa_type = detect_sa_type(question)
+    task_no = detect_task_number(question)
+    return {
+        "intent": intent,
+        "collection_name": COLLECTIONS[intent],
+        "sa_type": sa_type,
+        "task_no": task_no,
+        "top_k": TOP_K_BY_INTENT[intent],
+        "context_docs": CONTEXT_DOCS_BY_INTENT[intent],
+    }
+
+
+def query_collection(question: str, coll_name: str, top_k: int):
+    try:
+        coll = client.get_collection(coll_name)
+    except Exception:
+        return []
+
+    try:
+        emb = model.encode([question]).tolist()
+        res = coll.query(query_embeddings=emb, n_results=top_k)
+    except Exception:
+        return []
+
+    docs = res.get("documents", [[]])[0] or []
+    metas = res.get("metadatas", [[]])[0] or []
+    distances = res.get("distances", [[]])[0] or []
+
+    rows = []
+    for i, doc in enumerate(docs):
+        meta = metas[i] if i < len(metas) and metas[i] else {}
+        dist = distances[i] if i < len(distances) else None
+        rows.append({
+            "doc": doc,
+            "meta": meta,
+            "distance": dist,
+        })
+    return rows
+
+
+def row_text(row):
+    meta = row.get("meta", {}) or {}
+    meta_blob = " ".join(f"{k}:{v}" for k, v in meta.items())
+    doc_blob = (row.get("doc") or "")[:1800]
+    return norm(meta_blob + " " + doc_blob)
+
+
+def filter_rows(rows, sa_type: str, task_no):
+    filtered = rows
+
+    if sa_type != "GEN":
+        tmp = []
+        for row in filtered:
+            txt = row_text(row)
+            if sa_type.lower() in txt:
+                tmp.append(row)
+                continue
+            if sa_type == "SA1" and ("situationsaufgabe 1" in txt or "sa 1" in txt):
+                tmp.append(row)
+                continue
+            if sa_type == "SA2" and ("situationsaufgabe 2" in txt or "sa 2" in txt):
+                tmp.append(row)
+                continue
+            if sa_type == "SA3" and ("situationsaufgabe 3" in txt or "sa 3" in txt):
+                tmp.append(row)
+                continue
+        if tmp:
+            filtered = tmp
+
+    if task_no is not None:
+        tmp = []
+        for row in filtered:
+            txt = row_text(row)
+            if f"aufgabe {task_no}" in txt:
+                tmp.append(row)
+        if tmp:
+            filtered = tmp
+
+    return filtered
+
+
+def build_context(rows, limit: int):
+    blocks = []
+    for i, row in enumerate(rows[:limit], start=1):
+        meta = row.get("meta", {}) or {}
+        source = (
+            meta.get("source_file")
+            or meta.get("filename")
+            or meta.get("source")
+            or meta.get("path")
+            or meta.get("file")
+            or f"doc_{i}"
+        )
+        year = meta.get("year", "UNKNOWN")
+        domain = meta.get("domain", "GEN")
+        sa = meta.get("sa", "GEN")
+        typ = meta.get("type", "GEN")
+        dist = row.get("distance")
+        dist_text = f"{dist:.4f}" if isinstance(dist, (int, float)) else "-"
+        label = f"[Quelle {i}: {source} | YEAR={year} | DOMAIN={domain} | SA={sa} | TYPE={typ} | DIST={dist_text}]"
+        blocks.append(f"{label}\n{row.get('doc', '')}")
+    return "\n\n---\n\n".join(blocks)
+
+
+def build_sources(rows, limit: int):
+    out = []
+    for i, row in enumerate(rows[:limit], start=1):
+        meta = row.get("meta", {}) or {}
+        source = (
+            meta.get("source_file")
+            or meta.get("filename")
+            or meta.get("source")
+            or meta.get("path")
+            or meta.get("file")
+            or f"doc_{i}"
+        )
+        year = meta.get("year", "UNKNOWN")
+        domain = meta.get("domain", "GEN")
+        sa = meta.get("sa", "GEN")
+        typ = meta.get("type", "GEN")
+        dist = row.get("distance")
+        dist_text = f"{dist:.4f}" if isinstance(dist, (int, float)) else "-"
+        out.append(f"- Quelle {i}: source={source} | year={year} | domain={domain} | sa={sa} | type={typ} | distance={dist_text}")
+    return "\n".join(out) if out else "- Keine Quellen"
+
+
+def call_llm(prompt: str):
+    payload = {
+        "model": OLLAMA_MODEL,
+        "prompt": prompt,
+        "stream": False,
+        "options": {
+            "temperature": 0.1
+        }
+    }
+    r = requests.post(OLLAMA_URL, json=payload, timeout=240)
+    r.raise_for_status()
+    data = r.json()
+    return (data.get("response") or "").strip()
+
+
+def generate_master_answer(question: str, context: str, sa_type: str):
+    prompt = f"""
+Du bist ein IHK-Prüfer für IT-Projektmanagement. Aufgabentyp: {sa_type}.
+Erstelle eine prüfungsreife Antwort in exakt 10 Punkten. Keine Einleitung, kein Fazit.
+
+PFLICHTFORMAT:
+1 Situation
+[Fallbezogene Beschreibung: Ausgangslage, Kontext, Problemkern – 3-5 Sätze, konkret]
+
+2 Ziel (SMART)
+[PFLICHTFORMAT: "Bis [TT.MM.JJJJ] ist [messbares Ergebnis] erreicht, gemessen an [KPI mit Einheit], im Rahmen von [Budget/Ressource]." – keine abstrakten Ziele]
+
+3 Stakeholder
+[Tabellarisch: Name/Rolle | Interesse | Einfluss (hoch/mittel/gering)]
+
+4 Ursachen (Mensch / Organisation / Prozess)
+Mensch: [konkrete personenbezogene Ursachen]
+Organisation: [strukturelle/ressourcenbezogene Ursachen]
+Prozess: [ablaufbezogene Ursachen]
+
+5 Alternativen (A/B/C)
+A: [Konkrete Maßnahme 1 – KEIN "Status quo" oder "keine Aktion"]
+B: [Konkrete Maßnahme 2]
+C: [Konkrete Maßnahme 3]
+
+6 Bewertung (wirtschaftlich / menschlich / organisatorisch)
+[Für jede Alternative A/B/C je eine Zeile mit allen 3 Dimensionen]
+
+7 Entscheidung + Begründung
+Entscheidung: [Alternative X]
+Begründung: [PFLICHT: "Gegen B spricht: ... Gegen C spricht: ... Für A spricht: ..." – min. 3 fallbezogene Argumente, keine abstrakten Aussagen]
+
+8 Umsetzung (wer, wann, wie)
+[Nummerierte Schritte: Verantwortlicher | Maßnahme | Zeitpunkt/Dauer]
+
+9 Kontrolle (KPIs, Soll-Ist, Review)
+KPIs: [PFLICHT: min. 3 Kennzahlen mit Zielwert + Einheit, z.B. "Widerstandsquote < 20% | Milestone-Einhaltung ≥ 95% | Budgetabweichung < 5%"]
+Soll-Ist: [Methode des Vergleichs – z.B. wöchentlicher Statusbericht]
+Review: [PFLICHT: projektbegleitend, mindestens monatlich – KEIN "jährlich" bei Projektlaufzeit < 1 Jahr]
+
+10 Nachhaltigkeit & Kommunikation
+Nachhaltigkeit: [Langfristige Wirkung + PFLICHT: konkrete Lessons Learned aus diesem Fall]
+Kommunikation: [An wen, wann, wie]
+Rechtlich: [IMMER ausfüllen. Mögliche Aspekte je Fall: DSGVO Art.33/34 | Vertragsrecht BGB | SLA-Vertragsstrafe | Arbeitsrecht | Haftung. Mindestens ein konkretes Risiko oder explizit "Geprüft: keine rechtlichen Risiken identifiziert."]
+
+REGELN:
+- Annahmen mit "Annahme:" kennzeichnen
+- Keine generischen Aussagen – alles fallbezogen auf: {question}
+- Zahlen, Termine, Namen wo immer möglich
+- Kein Meta-Kommentar, keine Erklärung der Struktur
+
+Frage: {question}
+
+Kontext (IHK-Referenzlösungen):
+{context}
+
+Antwort:
+"""
+    return call_llm(prompt)
+
+
+def summarize_answer(question: str, context: str, mode: str):
+    prompt = f"""
+Beantworte die Frage nur auf Basis des Kontexts.
+Modus: {mode}
+
+Regeln:
+- Deutsch
+- Präzise
+- Keine Halluzinationen
+- Wenn nichts Eindeutiges im Kontext steht, antworte exakt: Keine eindeutige Information im Kontext.
+- Für SOLUTION nur konkrete Inhalte aus dem Kontext nennen
+- Für TASK nur fachliche Kernaussagen nennen
+- Stichpunkte sind erlaubt
+- Keine Einleitung
+- Keine 10-Punkte-Struktur
+
+Frage:
+{question}
+
+Kontext:
+{context}
+
+Antwort:
+"""
+    return call_llm(prompt)
+
+
+def enforce_structure(text: str):
+    required = [
+        "1 Situation",
+        "2 Ziel",
+        "3 Stakeholder",
+        "4 Ursachen",
+        "5 Alternativen",
+        "6 Bewertung",
+        "7 Entscheidung",
+        "8 Umsetzung",
+        "9 Kontrolle",
+        "10 Nachhaltigkeit",
+    ]
+    missing = [x for x in required if x not in text]
+    if missing:
+        return "FEHLER: Struktur nicht eingehalten. Fehlend: " + ", ".join(missing) + "\n\n" + text
+    return text
+
+
+def cleanup_non_master(text: str):
+    text = (text or "").strip()
+    if not text:
+        return "Keine eindeutige Information im Kontext."
+    bad_markers = [
+        "1 Situation",
+        "2 Ziel",
+        "3 Stakeholder",
+        "4 Ursachen",
+        "5 Alternativen",
+        "6 Bewertung",
+        "7 Entscheidung",
+        "8 Umsetzung",
+        "9 Kontrolle",
+        "10 Nachhaltigkeit",
+    ]
+    master_score = sum(1 for marker in bad_markers if marker in text)
+    if master_score >= 5:
+        return "Keine eindeutige Information im Kontext."
+    return text
+
+
+def read_multiline_block():
+    print("Frage eingeben. Leere Zeile beendet den Block. 'exit' beendet.")
+    lines = []
+    while True:
+        line = input()
+        if not line.strip():
+            break
+        lines.append(line.rstrip())
+    return "\n".join(lines).strip()
+
+
+def split_questions(block: str):
+    lines = [x.strip() for x in block.splitlines() if x.strip()]
+    if len(lines) <= 1:
+        return lines
+    short_lines = sum(1 for x in lines if len(x) <= 220)
+    if short_lines == len(lines):
+        return lines
+    return [block.strip()]
+
+
+def print_result(route, answer: str, sources: str):
+    print(f"\n[{VERSION}]")
+    print(f"[INTENT: {route['intent']} | SA: {route['sa_type']} | AUFGABE: {route['task_no'] or '-'} | COLLECTION: {route['collection_name']} | TOP_K: {route['top_k']}]")
+    print("\n" + answer)
+    print("\n--- QUELLEN ---")
+    print(sources)
+    print("\n" + "=" * 80 + "\n")
+
+
+def startup_checks():
+    print(f"{VERSION} AKTIV")
+    print(f"DATEI: {Path(__file__).resolve()}")
+    print(f"DB: {DB}")
+    existing_raw = client.list_collections()
+    existing = {c.name if hasattr(c, "name") else str(c) for c in existing_raw}
+    print("COLLECTIONS:")
+    for k, v in COLLECTIONS.items():
+        status = "OK" if v in existing else "FEHLT"
+        print(f"- {k}: {v} -> {status}")
+    print("")
+
+
+def handle_question(question: str):
+    route = route_query(question)
+    rows = query_collection(question, route["collection_name"], route["top_k"])
+    rows = filter_rows(rows, route["sa_type"], route["task_no"])
+
+    if not rows:
+        print_result(route, "Keine eindeutige Information im Kontext.", "- Keine Treffer")
+        return
+
+    context = build_context(rows, route["context_docs"])
+    sources = build_sources(rows, route["context_docs"])
+
+    if route["intent"] == "MASTER":
+        answer = generate_master_answer(question, context, route["sa_type"])
+        answer = enforce_structure(answer)
+    else:
+        answer = summarize_answer(question, context, route["intent"])
+        answer = cleanup_non_master(answer)
+
+    print_result(route, answer, sources)
+
+
+def main():
+    startup_checks()
+    while True:
+        try:
+            block = read_multiline_block()
+        except (EOFError, KeyboardInterrupt):
+            print("\nBeendet.")
+            break
+
+        if not block:
+            continue
+
+        if norm(block) in {"exit", "quit", "q"}:
+            print("Beendet.")
+            break
+
+        questions = split_questions(block)
+        for q in questions:
+            if norm(q) in {"exit", "quit", "q"}:
+                print("Beendet.")
+                return
+            handle_question(q)
+
+
+if __name__ == "__main__":
+    main()

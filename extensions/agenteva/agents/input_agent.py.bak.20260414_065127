@@ -1,0 +1,32 @@
+import sys
+import os
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
+from utils.keyloader import load_openai_key
+import openai
+
+class InputAgent:
+    def __init__(self, profile="default"):
+        openai.api_key = load_openai_key(profile)
+
+    def analyze(self, user_input):
+        try:
+            response = openai.ChatCompletion.create(
+                model="gpt-4o",
+                messages=[
+                    {
+                        "role": "system",
+                        "content": "Du bist EVA – ein Analyseagent. Extrahiere Ziel, Absicht und Handlungsrahmen."
+                    },
+                    {
+                        "role": "user",
+                        "content": user_input
+                    }
+                ],
+                temperature=0.3,
+                max_tokens=800
+            )
+            return response["choices"][0]["message"]["content"]
+        except Exception as e:
+            return f"❌ Fehler bei OpenAI-Aufruf: {str(e)}"
+

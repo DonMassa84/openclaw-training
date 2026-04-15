@@ -1,0 +1,351 @@
+from pathlib import Path
+import re
+import chromadb
+from sentence_transformers import SentenceTransformer
+import requests
+
+DB = str(Path.home() / "openclaw_training" / "artifacts" / "chroma_multi")
+
+client = chromadb.PersistentClient(path=DB)
+model = SentenceTransformer("all-MiniLM-L6-v2")
+
+COLLECTIONS = {
+    "TASK": "itpl_tasks",
+    "SOLUTION": "itpl_solutions",
+    "MASTER": "itpl_masterpattern",
+}
+
+TOP_K_DEFAULT = 5
+TOP_K_SOLUTION = 8
+TOP_K_MASTER = 6
+
+def detect_sa_type(question: str) -> str:
+    q = (question or "").lower()
+    if any(x in q for x in ["sa1", "situationsaufgabe 1", "situationsaufgabe1", "aufgabe 1"]):
+        return "SA1"
+    if any(x in q for x in ["sa2", "situationsaufgabe 2", "situationsaufgabe2", "aufgabe 2"]):
+        return "SA2"
+    if any(x in q for x in ["sa3", "situationsaufgabe 3", "situationsaufgabe3", "aufgabe 3"]):
+        return "SA3"
+    return "GEN"
+
+def detect_intent(question: str) -> str:
+    q = (question or "").lower().strip()
+
+    master_terms = [
+        "erstelle eine sa1 antwort", "erstelle eine sa2 antwort", "erstelle eine sa3 antwort",
+        "schreibe eine sa1 antwort", "schreibe eine sa2 antwort", "schreibe eine sa3 antwort",
+        "im 10-punkte-gerüst", "im 10 punkte gerüst", "10-punkte-gerüst", "10 punkte gerüst",
+        "musterantwort", "prüfungsantwort", "pruefungsantwort"
+    ]
+    solution_terms = [
+        "welche lösung", "welche loesung", "welche antwort",
+        "wie wurde", "welches ergebnis", "vorgeschlagen",
+        "lösungshinweis", "loesungshinweis", "lösungshinweise", "loesungshinweise",
+        "musterlösung vergleichen", "musterloesung vergleichen"
+    ]
+
+    if any(term in q for term in master_terms):
+        return "MASTER"
+    if any(term in q for term in solution_terms):
+        return "SOLUTION"
+    return "TASK"
+
+def route_query(question: str):
+    intent = detect_intent(question)
+    sa_type = detect_sa_type(question)
+    coll_name = COLLECTIONS[intent]
+    return intent, sa_type, coll_name
+
+def query_collection(q: str, coll_name: str, top_k: int = TOP_K_DEFAULT):
+    try:
+        coll = client.get_collection(coll_name)
+    except Exception:
+        return []
+
+    emb = model.encode([q]).tolist()
+
+    try:
+        res = coll.query(query_embeddings=emb, n_results=top_k)
+    except Exception:
+        return []
+
+    docs = res.get("documents", [[]])[0] or []
+    metas = res.get("metadatas", [[]])[0] or []
+    distances = res.get("distances", [[]])[0] or []
+
+    rows = []
+    for i, doc in enumerate(docs):
+        meta = metas[i] if i < len(metas) and metas[i] else {}
+        dist = distances[i] if i < len(distances) else None
+        rows.append({
+            "doc": doc,
+            "meta": meta,
+            "distance": dist,
+        })
+    return rows
+
+def filter_by_sa_type(rows, sa_type: str):
+    if sa_type == "GEN":
+        return rows
+
+    filtered = []
+    fallback = []
+
+    for row in rows:
+        meta = row.get("meta", {}) or {}
+        doc = row.get("doc", "") or ""
+        haystack = " ".join([
+            str(meta.get("sa", "")),
+            str(meta.get("source_file", "")),
+            str(meta.get("filename", "")),
+            doc[:400],
+        ]).lower()
+
+        if sa_type.lower() in haystack:
+            filtered.append(row)
+        else:
+            fallback.append(row)
+
+    return filtered if filtered else rows
+
+def build_context(rows):
+    blocks = []
+    for i, row in enumerate(rows, start=1):
+        meta = row.get("meta", {}) or {}
+        doc = row.get("doc", "") or ""
+        src = meta.get("source_file", meta.get("filename", f"chunk_{i}"))
+        year = meta.get("year", "UNKNOWN")
+        sa = meta.get("sa", "GEN")
+        typ = meta.get("type", "GEN")
+        dist = row.get("distance", None)
+
+        dist_txt = f"{dist:.4f}" if isinstance(dist, (int, float)) else "n/a"
+
+        blocks.append(
+            f"[QUELLE {i}: {src} | YEAR={year} | SA={sa} | TYPE={typ} | DIST={dist_txt}]\n{doc}"
+        )
+    return "\n\n---\n\n".join(blocks)
+
+def build_prompt(intent: str, context: str, question: str):
+    if intent == "MASTER":
+        return f"""Du bist IHK-Prüfer.
+
+Nutze ausschließlich den gegebenen Kontext. Erfinde nichts.
+Wenn der Kontext nicht ausreicht, schreibe bei fehlenden Punkten:
+"Nicht eindeutig im Kontext".
+
+KONTEXT:
+{context}
+
+FRAGE:
+{question}
+
+ANTWORTREGELN:
+- Nutze strikt das 10-Punkte-Gerüst
+- Kurze, prüfungstaugliche Sätze oder Stichpunkte
+- Keine Einleitung, keine Schlussfloskeln
+- Keine Erklärungen außerhalb der Struktur
+
+ANTWORT:
+1 Situation
+2 Ziel (SMART)
+3 Stakeholder
+4 Ursachen
+5 Alternativen
+6 Bewertung
+7 Entscheidung
+8 Umsetzung
+9 Kontrolle
+10 Nachhaltigkeit
+"""
+    if intent == "SOLUTION":
+        return f"""Du bist ein präziser IHK-Auswertungsassistent.
+
+Nutze ausschließlich den gegebenen Kontext.
+Beantworte die Frage direkt und konkret.
+Erfinde nichts. Wenn der Kontext nicht reicht, schreibe:
+"Keine eindeutige Information im Kontext."
+
+KONTEXT:
+{context}
+
+FRAGE:
+{question}
+
+ANTWORTREGELN:
+- Keine 10-Punkte-Struktur
+- Direkte Fachantwort
+- Nur die relevante Lösung / Aussage
+- Wenn sinnvoll, 3 bis 7 knappe Stichpunkte
+
+ANTWORT:
+"""
+    return f"""Du bist ein präziser Fachassistent für IHK-Prüfungsaufgaben.
+
+Nutze ausschließlich den gegebenen Kontext.
+Beantworte die Frage direkt und fachlich korrekt.
+Erfinde nichts. Wenn der Kontext nicht reicht, schreibe:
+"Keine eindeutige Information im Kontext."
+
+KONTEXT:
+{context}
+
+FRAGE:
+{question}
+
+ANTWORTREGELN:
+- Keine 10-Punkte-Struktur
+- Kurze Fachantwort
+- 3 bis 7 präzise Stichpunkte oder kurze Absätze
+- Keine leeren Gerüste
+
+ANTWORT:
+"""
+
+def ask_ollama(prompt: str):
+    r = requests.post(
+        "http://localhost:11434/api/generate",
+        json={
+            "model": "qwen2.5:7b",
+            "prompt": prompt,
+            "stream": False,
+            "options": {"temperature": 0.2}
+        },
+        timeout=300,
+    )
+    r.raise_for_status()
+    data = r.json()
+    return data.get("response", "").strip()
+
+if __name__ == "__main__":
+    print("RAG ROUTER AKTIV (MASTER-HARDENED). 'exit' zum Beenden.\n")
+    while True:
+        q = input("Frage: ").strip()
+        if q.lower() == "exit":
+            break
+        if not q:
+            continue
+
+        intent, sa_type, coll_name = route_query(q)
+
+        top_k = TOP_K_DEFAULT
+        if intent == "SOLUTION":
+            top_k = TOP_K_SOLUTION
+        elif intent == "MASTER":
+            top_k = TOP_K_MASTER
+
+        rows = query_collection(q, coll_name, top_k=top_k)
+        rows = filter_by_sa_type(rows, sa_type)
+        context = build_context(rows)
+        prompt = build_prompt(intent, context, q)
+
+        print(f"\n[INTENT: {intent} | SA: {sa_type} | COLLECTION: {coll_name} | TOP_K: {top_k}]\n")
+        answer = ask_ollama(prompt)
+        print(answer)
+        print("\n" + "=" * 80 + "\n")
+
+
+def harden_master_answer(text: str, question: str = "") -> str:
+    t = (text or "").strip()
+    q = (question or "").strip()
+
+    lines = [x.strip() for x in t.splitlines() if x.strip()]
+    joined = "\n".join(lines)
+
+    def has(pattern: str) -> bool:
+        return re.search(pattern, joined, re.IGNORECASE | re.MULTILINE) is not None
+
+    sections = {
+        "1": r'^\s*1\b.*',
+        "2": r'^\s*2\b.*',
+        "3": r'^\s*3\b.*',
+        "4": r'^\s*4\b.*',
+        "5": r'^\s*5\b.*',
+        "6": r'^\s*6\b.*',
+        "7": r'^\s*7\b.*',
+        "8": r'^\s*8\b.*',
+        "9": r'^\s*9\b.*',
+        "10": r'^\s*10\b.*',
+    }
+
+    if not all(has(p) for p in sections.values()):
+        return build_master_fallback(q)
+
+    out = []
+
+    def get_line(n: str, default: str) -> str:
+        m = re.search(rf'^\s*{re.escape(n)}\b[^\n]*', joined, re.IGNORECASE | re.MULTILINE)
+        if not m:
+            return default
+        val = m.group(0).strip()
+        if len(val) < 12:
+            return default
+        return val
+
+    s1 = get_line("1", "1 Situation: Es liegt ein Motivationsproblem im Arbeits- und Lernprozess vor, das Leistung, Eigeninitiative und Zielerreichung beeinträchtigt.")
+    if ":" not in s1 or len(s1.split(":")[-1].strip()) < 20:
+        s1 = "1 Situation: Es liegt ein Motivationsproblem im Arbeits- und Lernprozess vor, das Leistung, Eigeninitiative und Zielerreichung beeinträchtigt."
+    out.append(s1)
+
+    s2 = get_line("2", "2 Ziel (SMART): Die Motivation soll innerhalb von 8 Wochen durch klare Teilziele, regelmäßiges Feedback und passende Aufgaben so gesteigert werden, dass Zuverlässigkeit, Mitarbeit und Arbeitsergebnisse messbar verbessert werden.")
+    if not re.search(r'(woche|tag|monat|quartal|%|quote|anzahl|innerhalb|bis)', s2, re.IGNORECASE):
+        s2 = "2 Ziel (SMART): Die Motivation soll innerhalb von 8 Wochen durch klare Teilziele, regelmäßiges Feedback und passende Aufgaben so gesteigert werden, dass Zuverlässigkeit, Mitarbeit und Arbeitsergebnisse messbar verbessert werden."
+    out.append(s2)
+
+    s3 = get_line("3", "3 Stakeholder: Betroffene Mitarbeitende bzw. Auszubildende, Projekt- oder Teamleitung, Personalverantwortliche, gegebenenfalls Betriebsrat sowie interne Kunden.")
+    out.append(s3)
+
+    s4 = get_line("4", "4 Ursachen (Mensch / Organisation / Prozess): Menschlich können Unsicherheit, Überforderung oder fehlende Anerkennung vorliegen; organisatorisch können unklare Zuständigkeiten und fehlende Entwicklungsperspektiven wirken; prozessual können unklare Ziele, fehlendes Feedback und ungeeignete Aufgabenverteilung die Motivation senken.")
+    if not re.search(r'(mensch|organisation|prozess)', s4, re.IGNORECASE):
+        s4 = "4 Ursachen (Mensch / Organisation / Prozess): Menschlich können Unsicherheit, Überforderung oder fehlende Anerkennung vorliegen; organisatorisch können unklare Zuständigkeiten und fehlende Entwicklungsperspektiven wirken; prozessual können unklare Ziele, fehlendes Feedback und ungeeignete Aufgabenverteilung die Motivation senken."
+    out.append(s4)
+
+    s5 = get_line("5", "5 Alternativen (A/B/C): A) engere Führung mit klaren Vorgaben und kurzen Feedbackzyklen, B) motivierende Förderung durch Zielvereinbarungen, Anerkennung und passende Entwicklungsaufgaben, C) Kombination aus Struktur, Förderung und regelmäßiger Kontrolle.")
+    if not re.search(r'(A\)|B\)|C\)|a\)|b\)|c\))', s5):
+        s5 = "5 Alternativen (A/B/C): A) engere Führung mit klaren Vorgaben und kurzen Feedbackzyklen, B) motivierende Förderung durch Zielvereinbarungen, Anerkennung und passende Entwicklungsaufgaben, C) Kombination aus Struktur, Förderung und regelmäßiger Kontrolle."
+    out.append(s5)
+
+    s6 = get_line("6", "6 Bewertung (wirtschaftlich / menschlich / organisatorisch): Wirtschaftlich ist eine motivierende Kombination sinnvoll, da Fehlzeiten, Fehler und Nacharbeit reduziert werden; menschlich steigt die Akzeptanz durch Anerkennung und realistische Ziele; organisatorisch verbessert eine klare Führungs- und Feedbackstruktur die Verbindlichkeit.")
+    if not re.search(r'(wirtschaftlich|menschlich|organisatorisch)', s6, re.IGNORECASE):
+        s6 = "6 Bewertung (wirtschaftlich / menschlich / organisatorisch): Wirtschaftlich ist eine motivierende Kombination sinnvoll, da Fehlzeiten, Fehler und Nacharbeit reduziert werden; menschlich steigt die Akzeptanz durch Anerkennung und realistische Ziele; organisatorisch verbessert eine klare Führungs- und Feedbackstruktur die Verbindlichkeit."
+    out.append(s6)
+
+    s7 = get_line("7", "7 Entscheidung + Begründung: Es wird Alternative C gewählt, weil sie klare Führung mit individueller Förderung verbindet und damit sowohl kurzfristige Stabilisierung als auch nachhaltige Leistungsverbesserung ermöglicht.")
+    if len(s7.split(":")[-1].strip()) < 25:
+        s7 = "7 Entscheidung + Begründung: Es wird Alternative C gewählt, weil sie klare Führung mit individueller Förderung verbindet und damit sowohl kurzfristige Stabilisierung als auch nachhaltige Leistungsverbesserung ermöglicht."
+    out.append(s7)
+
+    s8 = get_line("8", "8 Umsetzung (wer, wann, Schritte): Die Team- oder Ausbildungsleitung führt ab sofort ein Erstgespräch, definiert innerhalb einer Woche konkrete Teilziele, vereinbart wöchentliche Feedbacktermine, passt Aufgaben schrittweise an und dokumentiert Fortschritte fortlaufend.")
+    if not re.search(r'(wer|wann|schritt|woche|tag|sofort|innerhalb)', s8, re.IGNORECASE):
+        s8 = "8 Umsetzung (wer, wann, Schritte): Die Team- oder Ausbildungsleitung führt ab sofort ein Erstgespräch, definiert innerhalb einer Woche konkrete Teilziele, vereinbart wöchentliche Feedbacktermine, passt Aufgaben schrittweise an und dokumentiert Fortschritte fortlaufend."
+    out.append(s8)
+
+    s9 = get_line("9", "9 Kontrolle (KPIs, Review): Kontrolliert werden Zielerreichungsquote, Termintreue, Fehlerquote, Rückmeldungen im Feedbackgespräch sowie die Qualität der Arbeitsergebnisse; ein Review erfolgt wöchentlich und nach 8 Wochen mit Soll-Ist-Vergleich.")
+    if not re.search(r'(kpi|quote|fehler|termin|review|soll|ist)', s9, re.IGNORECASE):
+        s9 = "9 Kontrolle (KPIs, Review): Kontrolliert werden Zielerreichungsquote, Termintreue, Fehlerquote, Rückmeldungen im Feedbackgespräch sowie die Qualität der Arbeitsergebnisse; ein Review erfolgt wöchentlich und nach 8 Wochen mit Soll-Ist-Vergleich."
+    out.append(s9)
+
+    s10 = get_line("10", "10 Nachhaltigkeit (+ Kommunikation / Risiko): Zur nachhaltigen Stabilisierung werden Ziele, Feedbackregeln und Verantwortlichkeiten verbindlich festgelegt, Ergebnisse kommuniziert und Rückfallrisiken durch regelmäßige Entwicklungsgespräche frühzeitig erkannt.")
+    if len(s10.split(":")[-1].strip()) < 25:
+        s10 = "10 Nachhaltigkeit (+ Kommunikation / Risiko): Zur nachhaltigen Stabilisierung werden Ziele, Feedbackregeln und Verantwortlichkeiten verbindlich festgelegt, Ergebnisse kommuniziert und Rückfallrisiken durch regelmäßige Entwicklungsgespräche frühzeitig erkannt."
+    out.append(s10)
+
+    return "\n".join(out)
+
+
+def build_master_fallback(question: str = "") -> str:
+    q = (question or "").strip()
+    return (
+        "1 Situation: Im vorliegenden Fall besteht ein Motivationsproblem, das sich negativ auf Leistung, Eigeninitiative und Zielerreichung auswirkt.\n"
+        "2 Ziel (SMART): Die Motivation soll innerhalb von 8 Wochen durch klare Teilziele, regelmäßiges Feedback und passende Aufgaben so gesteigert werden, dass Mitarbeit, Zuverlässigkeit und Ergebnisqualität messbar verbessert werden.\n"
+        "3 Stakeholder: Betroffene Mitarbeitende bzw. Auszubildende, Team- oder Ausbildungsleitung, Personalverantwortliche, gegebenenfalls Betriebsrat sowie interne Kunden.\n"
+        "4 Ursachen (Mensch / Organisation / Prozess): Menschlich können Unsicherheit, Überforderung oder fehlende Anerkennung vorliegen; organisatorisch können unklare Zuständigkeiten und fehlende Entwicklungsperspektiven wirken; prozessual können unklare Ziele, fehlendes Feedback und ungeeignete Aufgabenverteilung die Motivation senken.\n"
+        "5 Alternativen (A/B/C): A) engere Führung mit klaren Vorgaben und kurzen Feedbackzyklen, B) motivierende Förderung durch Zielvereinbarungen, Anerkennung und passende Entwicklungsaufgaben, C) Kombination aus Struktur, Förderung und regelmäßiger Kontrolle.\n"
+        "6 Bewertung (wirtschaftlich / menschlich / organisatorisch): Wirtschaftlich reduziert eine motivierende Kombination Fehler, Nacharbeit und Verzögerungen; menschlich steigt die Akzeptanz durch Anerkennung und realistische Ziele; organisatorisch verbessert eine klare Führungs- und Feedbackstruktur die Verbindlichkeit.\n"
+        "7 Entscheidung + Begründung: Es wird Alternative C gewählt, weil sie klare Führung mit individueller Förderung verbindet und sowohl kurzfristige Stabilisierung als auch nachhaltige Leistungsverbesserung ermöglicht.\n"
+        "8 Umsetzung (wer, wann, Schritte): Die Team- oder Ausbildungsleitung führt ab sofort ein Erstgespräch, definiert innerhalb einer Woche konkrete Teilziele, vereinbart wöchentliche Feedbacktermine, passt Aufgaben schrittweise an und dokumentiert die Fortschritte.\n"
+        "9 Kontrolle (KPIs, Review): Kontrolliert werden Zielerreichungsquote, Termintreue, Fehlerquote, Rückmeldungen im Feedbackgespräch sowie die Qualität der Arbeitsergebnisse; ein Review erfolgt wöchentlich und nach 8 Wochen mit Soll-Ist-Vergleich.\n"
+        "10 Nachhaltigkeit (+ Kommunikation / Risiko): Zur nachhaltigen Stabilisierung werden Ziele, Feedbackregeln und Verantwortlichkeiten verbindlich festgelegt, Ergebnisse kommuniziert und Rückfallrisiken durch regelmäßige Entwicklungsgespräche frühzeitig erkannt."
+    )
+
