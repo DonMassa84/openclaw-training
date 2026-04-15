@@ -32,3 +32,18 @@ __pycache__/
 
 # Reports lokal
 reports/
+.venv/
+venv/
+artifacts/
+artifacts/chroma_multi/
+*.sqlite3
+*.db
+*.log
+logs/
+tmp/
+cache/
+.cache/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.DS_Store
