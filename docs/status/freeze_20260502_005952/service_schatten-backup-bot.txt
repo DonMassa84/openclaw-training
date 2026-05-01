@@ -1,0 +1,15 @@
+● schatten-backup-bot.service - Schatten Backup Telegram Bot
+     Loaded: loaded (/home/schattenmacher/.config/systemd/user/schatten-backup-bot.service; enabled; preset: enabled)
+     Active: active (running) since Fri 2026-05-01 22:57:45 CEST; 2h 2min ago
+   Main PID: 2900 (python3)
+      Tasks: 2 (limit: 37946)
+     Memory: 29.8M (peak: 31.0M)
+        CPU: 3.078s
+     CGroup: /user.slice/user-1000.slice/user@1000.service/app.slice/schatten-backup-bot.service
+             └─2900 python3 /home/schattenmacher/telegram_backup_bot.py
+
+Mai 01 22:57:45 schattenmacher-D3161-B1 systemd[1340]: schatten-backup-bot.service: Scheduled restart job, restart counter is at 4.
+Mai 01 22:57:45 schattenmacher-D3161-B1 systemd[1340]: Started schatten-backup-bot.service - Schatten Backup Telegram Bot.
+Mai 01 22:57:46 schattenmacher-D3161-B1 run_schatten_backup_bot.sh[2900]: Bot läuft...
+Mai 01 23:28:35 schattenmacher-D3161-B1 run_schatten_backup_bot.sh[2900]: /home/schattenmacher/telegram_backup_bot.py:29: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+Mai 01 23:28:35 schattenmacher-D3161-B1 run_schatten_backup_bot.sh[2900]:   line = f"{datetime.utcnow().isoformat()}Z;" \

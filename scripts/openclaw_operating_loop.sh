@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -Eeuo pipefail
+set -u
 
 echo "== OPENCLAW OPERATING LOOP =="
 echo "Zeit: $(date)"
@@ -14,23 +14,23 @@ docker ps --format 'table {{.Names}}\t{{.Status}}\t{{.Ports}}' | grep -Ei 'openc
 echo
 
 echo "3) OpenClaw Host-Test"
-curl -sS -I --max-time 8 http://127.0.0.1:18789
- 2>&1 || true
+curl -sS -I --max-time 8 http://127.0.0.1:18789 2>&1 || true
+echo
+echo "Hinweis: OpenClaw Host-Test darf FAIL/Reset zeigen."
 echo
 
 echo "4) OpenClaw container-intern"
-docker exec -i openclaw-openclaw-gateway-1 sh -lc 'curl -sS -I --max-time 8 http://127.0.0.1:18789
- 2>&1 | head -20' || true
+docker exec -i openclaw-openclaw-gateway-1 sh -lc 'curl -sS -I --max-time 8 http://127.0.0.1:18789 2>&1 | head -20' || true
 echo
 
 echo "5) Flowise"
-curl -sS -I --max-time 8 http://127.0.0.1:3001
- 2>&1 | head -10 || true
+curl -sS -I --max-time 8 http://127.0.0.1:3001 2>&1 | head -10 || true
 echo
 
 echo "6) n8n"
-curl -sS -I --max-time 8 http://127.0.0.1:5678
- 2>&1 | head -10 || true
+curl -sS -I --max-time 8 http://127.0.0.1:5678 2>&1 | head -10 || true
 echo
 
-echo "Bewertung: OpenClaw ist OK, wenn container-intern HTTP/1.1 200 OK erscheint."
+echo "7) Bewertung"
+echo "OpenClaw ist OK, wenn container-intern HTTP/1.1 200 OK erscheint."
+echo "Host-HTTP-Fail/Reset ist dokumentiert und kein Ausfall."
