@@ -1,0 +1,71 @@
+== OPENCLAW OPERATING LOOP ==
+Zeit: Sa 2. Mai 01:12:41 CEST 2026
+
+1) CrashBandicot
+● shadowmaker-control-bot.service - Shadowmaker Control Bot Telegram Discord
+     Loaded: loaded (/home/schattenmacher/.config/systemd/user/shadowmaker-control-bot.service; enabled; preset: enabled)
+     Active: active (running) since Sat 2026-05-02 01:04:33 CEST; 8min ago
+   Main PID: 110243 (python)
+      Tasks: 7 (limit: 37946)
+     Memory: 38.9M (peak: 46.8M)
+        CPU: 1.664s
+     CGroup: /user.slice/user-1000.slice/user@1000.service/app.slice/shadowmaker-control-bot.service
+             ├─110243 /home/schattenmacher/shadowmaker_bots/.venv/bin/python /home/schattenmacher/shadowmaker_bots/shadowmaker_control_bot.py
+             ├─117540 bash /home/schattenmacher/openclaw_training/scripts/shadowmaker_freeze_report_no_sudo.sh
+             ├─117543 tee -a /home/schattenmacher/openclaw_training/reports/freeze_report_no_sudo_20260502_011230.txt
+             ├─117735 bash /home/schattenmacher/openclaw_operating_loop.sh
+             ├─117737 systemctl --user status shadowmaker-control-bot.service --no-pager
+             └─117738 sed -n 1,18p
+
+Mai 02 01:04:33 schattenmacher-D3161-B1 systemd[1340]: Started shadowmaker-control-bot.service - Shadowmaker Control Bot Telegram Discord.
+Mai 02 01:04:33 schattenmacher-D3161-B1 run_shadowmaker_control_bot.sh[110243]: 2026-05-02 01:04:33 | Shadowmaker Control Bot startet.
+
+2) Docker
+openclaw-openclaw-gateway-1   Up About an hour       127.0.0.1:18789->18789/tcp
+shadowmaker-agents            Up 2 hours             0.0.0.0:3001->3000/tcp, [::]:3001->3000/tcp
+
+3) OpenClaw Host-Test
+curl: (56) Recv failure: Die Verbindung wurde vom Kommunikationspartner zurückgesetzt
+
+Hinweis: OpenClaw Host-Test darf FAIL/Reset zeigen.
+
+4) OpenClaw container-intern
+HTTP/1.1 200 OK
+X-Content-Type-Options: nosniff
+Referrer-Policy: no-referrer
+X-Frame-Options: DENY
+Content-Security-Policy: default-src 'self'; base-uri 'none'; object-src 'none'; frame-ancestors 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; connect-src 'self' ws: wss:
+Content-Type: text/html; charset=utf-8
+Cache-Control: no-cache
+Date: Fri, 01 May 2026 23:12:41 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+
+5) Flowise
+HTTP/1.1 200 OK
+Vary: Origin
+Accept-Ranges: bytes
+Cache-Control: public, max-age=0
+Last-Modified: Tue, 14 Apr 2026 11:32:51 GMT
+ETag: W/"c46-19d8bc3feb8"
+Content-Type: text/html; charset=UTF-8
+Content-Length: 3142
+Date: Fri, 01 May 2026 23:12:41 GMT
+Connection: keep-alive
+
+6) n8n
+HTTP/1.1 200 OK
+Accept-Ranges: bytes
+Cache-Control: public, max-age=86400
+Last-Modified: Fri, 01 May 2026 20:57:50 GMT
+ETag: W/"4066-19de5556084"
+Content-Type: text/html; charset=utf-8
+Content-Length: 16486
+Vary: Accept-Encoding
+Date: Fri, 01 May 2026 23:12:41 GMT
+Connection: keep-alive
+
+7) Bewertung
+OpenClaw ist OK, wenn container-intern HTTP/1.1 200 OK erscheint.
+Host-HTTP-Fail/Reset ist dokumentiert und kein Ausfall.
