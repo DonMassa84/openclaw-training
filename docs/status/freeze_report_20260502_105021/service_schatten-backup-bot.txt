@@ -1,0 +1,20 @@
+● schatten-backup-bot.service - Schatten Backup Telegram Bot
+     Loaded: loaded (/home/schattenmacher/.config/systemd/user/schatten-backup-bot.service; enabled; preset: enabled)
+     Active: active (running) since Fri 2026-05-01 22:57:45 CEST; 11h ago
+   Main PID: 2900 (python3)
+      Tasks: 3 (limit: 37946)
+     Memory: 30.8M (peak: 6.2G swap: 2.4M swap peak: 2.4M)
+        CPU: 43.028s
+     CGroup: /user.slice/user-1000.slice/user@1000.service/app.slice/schatten-backup-bot.service
+             └─2900 python3 /home/schattenmacher/telegram_backup_bot.py
+
+Mai 02 03:45:02 schattenmacher-D3161-B1 run_schatten_backup_bot.sh[2900]:              ^^^^^^^^^^^^^^^^^^^
+Mai 02 03:45:02 schattenmacher-D3161-B1 run_schatten_backup_bot.sh[2900]:   File "/home/schattenmacher/telegram-chatgpt-bot/.venv/lib/python3.12/site-packages/telegram/request/_baserequest.py", line 198, in post
+Mai 02 03:45:02 schattenmacher-D3161-B1 run_schatten_backup_bot.sh[2900]:     result = await self._request_wrapper(
+Mai 02 03:45:02 schattenmacher-D3161-B1 run_schatten_backup_bot.sh[2900]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Mai 02 03:45:02 schattenmacher-D3161-B1 run_schatten_backup_bot.sh[2900]:   File "/home/schattenmacher/telegram-chatgpt-bot/.venv/lib/python3.12/site-packages/telegram/request/_baserequest.py", line 305, in _request_wrapper
+Mai 02 03:45:02 schattenmacher-D3161-B1 run_schatten_backup_bot.sh[2900]:     code, payload = await self.do_request(
+Mai 02 03:45:02 schattenmacher-D3161-B1 run_schatten_backup_bot.sh[2900]:                     ^^^^^^^^^^^^^^^^^^^^^^
+Mai 02 03:45:02 schattenmacher-D3161-B1 run_schatten_backup_bot.sh[2900]:   File "/home/schattenmacher/telegram-chatgpt-bot/.venv/lib/python3.12/site-packages/telegram/request/_httpxrequest.py", line 303, in do_request
+Mai 02 03:45:02 schattenmacher-D3161-B1 run_schatten_backup_bot.sh[2900]:     raise NetworkError(f"httpx.{err.__class__.__name__}: {err}") from err
+Mai 02 03:45:02 schattenmacher-D3161-B1 run_schatten_backup_bot.sh[2900]: telegram.error.NetworkError: httpx.ConnectError: [Errno -2] Name or service not known
