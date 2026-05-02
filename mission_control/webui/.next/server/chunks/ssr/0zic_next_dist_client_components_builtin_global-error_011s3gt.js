@@ -1,0 +1,3 @@
+module.exports=[89379,(a,b,c)=>{let{createClientModuleProxy:d}=a.r(11706);a.n(d("[project]/openclaw_training/mission_control/webui/node_modules/next/dist/client/components/builtin/global-error.js <module evaluation>"))},90937,(a,b,c)=>{let{createClientModuleProxy:d}=a.r(11706);a.n(d("[project]/openclaw_training/mission_control/webui/node_modules/next/dist/client/components/builtin/global-error.js"))},2185,a=>{"use strict";a.i(89379);var b=a.i(90937);a.n(b)},53639,a=>{a.n(a.i(2185))}];
+
+//# sourceMappingURL=0zic_next_dist_client_components_builtin_global-error_011s3gt.js.map

@@ -1,0 +1,26 @@
+{
+  "name": "shadowmaker-mission-control-webui",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Read-only local Mission Control dashboard for Shadowmaker/OpenClaw.",
+  "scripts": {
+    "dev": "next dev -H 127.0.0.1 -p 4173",
+    "build": "next build",
+    "start": "next start -H 127.0.0.1 -p 4173"
+  },
+  "dependencies": {
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "lucide-react": "latest"
+  },
+  "devDependencies": {
+    "typescript": "latest",
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "tailwindcss": "latest",
+    "postcss": "latest",
+    "autoprefixer": "latest"
+  }
+}

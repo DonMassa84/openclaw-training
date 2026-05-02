@@ -1,0 +1,3 @@
+module.exports=[67420,a=>{"use strict";var b=a.i(46841);a.s(["default",0,function({children:a}){return(0,b.jsx)("html",{lang:"de",children:(0,b.jsx)("body",{children:a})})},"metadata",0,{title:"Shadowmaker Mission Control",description:"Read-only local dashboard for Shadowmaker/OpenClaw"}])},62105,a=>{a.n(a.i(67420))}];
+
+//# sourceMappingURL=openclaw_training_mission_control_webui_app_layout_tsx_00hz7xg._.js.map

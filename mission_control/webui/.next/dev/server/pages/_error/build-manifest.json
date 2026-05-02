@@ -1,0 +1,22 @@
+{
+  "devFiles": [],
+  "ampDevFiles": [],
+  "polyfillFiles": [],
+  "lowPriorityFiles": [],
+  "rootMainFiles": [],
+  "pages": {
+    "/_error": [
+      "static/chunks/0zic_next_dist_compiled_09tkmbv._.js",
+      "static/chunks/0zic_next_dist_shared_lib_0ax51zc._.js",
+      "static/chunks/0zic_next_dist_client_0-5d2~y._.js",
+      "static/chunks/0zic_next_dist_10wtp5.._.js",
+      "static/chunks/[next]_entry_page-loader_ts_10rqmqr._.js",
+      "static/chunks/0zic_react-dom_0cha8tu._.js",
+      "static/chunks/0zic_022ckz2._.js",
+      "static/chunks/[root-of-the-server]__0.73aag._.js",
+      "static/chunks/openclaw_training_mission_control_webui_pages__error_07xvfw~._.js",
+      "static/chunks/turbopack-openclaw_training_mission_control_webui_pages__error_0l8f7w4._.js"
+    ]
+  },
+  "ampFirstPages": []
+}
