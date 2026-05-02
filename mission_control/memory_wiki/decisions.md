@@ -127,3 +127,17 @@ Read-only, keine Zahlungen, keine Rechtsentscheidung, kein Versand, keine sensib
 
 Kontrolle:
 steward-run, latest_steward_report.md, latest_steward_finance_housing_readonly.md.
+
+## 2026-05-02 – Entscheidung: Steward aktivieren
+
+Entscheidung:
+Steward wird als fünfter echter Agent produktiv gemacht.
+
+Begründung:
+Finance/Housing/Jobcenter benötigt hohe Ordnung und Nachweissicherheit, darf aber keine automatische Kommunikation oder Zahlung ausführen.
+
+Grenzen:
+Read-only, keine Zahlungen, keine Rechtsentscheidung, kein Versand, keine sensiblen Daten an Discord.
+
+Kontrolle:
+steward-run, latest_steward_report.md, latest_steward_finance_housing_readonly.md.
