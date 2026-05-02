@@ -55,3 +55,11 @@ Duplikate, Cache, Browserdaten, Finanzdaten und Behördenunterlagen werden nicht
 | PROMPT-001 | OpenClaw | Tina-Huang-Master-Prompt erstellt | Mnemosyne | erledigt | /home/schattenmacher/openclaw_training/mission_control/prompt_library/tina_huang_style/latest_tina_huang_local_ai_master_prompt.md |
 | PROMPT-002 | Betrieb | Korrigierten Operating Prompt erstellt | Mnemosyne | erledigt | /home/schattenmacher/openclaw_training/mission_control/prompt_library/tina_huang_style/latest_corrected_local_ai_operating_prompt.md |
 | PROMPT-003 | OpenClaw | Execution Brief im Workspace bereitgestellt | Mnemosyne | erledigt | /home/schattenmacher/openclaw_training/mission_control/prompt_library/tina_huang_style/latest_openclaw_tina_huang_execution_brief.md |
+
+## 2026-05-02 – Home Script Inventory
+
+| ID | Bereich | Aufgabe | Owner | Status | Kontrolle |
+|---|---|---|---|---|---|
+| HOME-AUTO-001 | Inventory | Home-Skripte analysieren | Mnemosyne | erledigt | /home/schattenmacher/openclaw_training/mission_control/docs/home_script_inventory/latest_home_script_inventory.md |
+| HOME-AUTO-002 | Automation | Kandidaten dokumentieren | Linky | erledigt | /home/schattenmacher/openclaw_training/mission_control/automation_candidates/latest_home_automation_candidates.md |
+| HOME-AUTO-003 | Betrieb | Keine automatische Aktivierung ohne Freigabe | User | aktiv | systemctl --user list-timers --all |

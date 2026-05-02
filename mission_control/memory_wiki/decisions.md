@@ -213,3 +213,11 @@ Entscheidung: Künftige lokale KI-/OpenClaw-Antworten folgen einem outputorienti
 Begründung: Das System soll weniger erklären und mehr verwertbare, prüfbare Artefakte liefern.
 
 Grenze: Keine produktive Änderung ohne Freigabe, keine Secrets, keine Timer-Aktivierung.
+
+## 2026-05-02 – Entscheidung Home-Automatisierung
+
+Entscheidung: Home-Skripte werden katalogisiert, aber nicht automatisch aktiviert.
+
+Begründung: Viele Skripte sind Reparatur-/Setup-/Patch-Skripte und dürfen nur gezielt genutzt werden.
+
+Freigegeben zur späteren Prüfung: Winky, Mnemosyne, Courier.

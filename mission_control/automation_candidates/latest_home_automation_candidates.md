@@ -1,0 +1,1 @@
+/home/schattenmacher/openclaw_training/mission_control/automation_candidates/home_automation_candidates_20260502_123832.md

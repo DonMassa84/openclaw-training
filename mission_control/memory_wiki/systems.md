@@ -65,3 +65,11 @@ Schrittweise Aktivierung, read-only bzw. kontrolliertes Memory-Wiki-Schreiben.
 - Operating Prompt: /home/schattenmacher/openclaw_training/mission_control/prompt_library/tina_huang_style/latest_corrected_local_ai_operating_prompt.md
 - OpenClaw Brief: /home/schattenmacher/openclaw_training/mission_control/prompt_library/tina_huang_style/latest_openclaw_tina_huang_execution_brief.md
 - OpenClaw Workspace Kopie: /home/schattenmacher/.openclaw/workspace/prompts/latest_openclaw_tina_huang_execution_brief.md
+
+## 2026-05-02 – Home-weite Skriptinventur
+
+- Home-Verzeichnis wurde read-only nach lokalen KI-/Automation-/OpenClaw-Skripten inventarisiert.
+- Inventory: /home/schattenmacher/openclaw_training/mission_control/docs/home_script_inventory/latest_home_script_inventory.md
+- Useful Catalog: /home/schattenmacher/openclaw_training/mission_control/docs/home_script_inventory/latest_home_useful_scripts_catalog.md
+- Automation Candidates: /home/schattenmacher/openclaw_training/mission_control/automation_candidates/latest_home_automation_candidates.md
+- Keine Skripte ausgeführt, keine Timer aktiviert, keine Secrets gelesen.
