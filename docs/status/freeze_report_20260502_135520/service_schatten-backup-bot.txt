@@ -1,0 +1,13 @@
+● schatten-backup-bot.service - Schatten Backup Telegram Bot
+     Loaded: loaded (/home/schattenmacher/.config/systemd/user/schatten-backup-bot.service; enabled; preset: enabled)
+     Active: active (running) since Sat 2026-05-02 10:58:46 CEST; 2h 56min ago
+   Main PID: 1717 (python3)
+      Tasks: 5 (limit: 37946)
+     Memory: 30.1M (peak: 31.3M)
+        CPU: 4.207s
+     CGroup: /user.slice/user-1000.slice/user@1000.service/app.slice/schatten-backup-bot.service
+             └─1717 python3 /home/schattenmacher/telegram_backup_bot.py
+
+Mai 02 10:58:46 schattenmacher-D3161-B1 systemd[1289]: schatten-backup-bot.service: Scheduled restart job, restart counter is at 1.
+Mai 02 10:58:46 schattenmacher-D3161-B1 systemd[1289]: Started schatten-backup-bot.service - Schatten Backup Telegram Bot.
+Mai 02 10:58:46 schattenmacher-D3161-B1 run_schatten_backup_bot.sh[1717]: Bot läuft...
