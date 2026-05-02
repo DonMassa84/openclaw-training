@@ -1,0 +1,75 @@
+# Linky Prompt-to-Code Module – 2026-05-02
+
+Stand: Sa 2. Mai 08:13:21 CEST 2026
+
+## 1 Modulname
+
+Shadowmaker Safe Command Wrapper Pattern
+
+## 2 Zweck
+
+Dieses Modul definiert einen wiederverwendbaren Standard für sichere All-in-one-Skripte im Shadowmaker-System. Ziel ist, wiederkehrende Aufgaben kontrolliert, dokumentiert und rollbackfähig auszuführen.
+
+## 3 Risiko
+
+Niedrig, weil dieses Modul nur eine Vorlage und keine produktive Systemänderung ausführt.
+
+## 4 Safe Pattern
+
+Jedes neue Skript soll diese Regeln einhalten:
+
+```bash
+#!/usr/bin/env bash
+set -Eeuo pipefail
+
+TS="$(date +%Y%m%d_%H%M%S)"
+BASE="$HOME/openclaw_training"
+REPORT_DIR="$BASE/reports"
+STATUS_DIR="$BASE/docs/status"
+REPORT="$REPORT_DIR/example_$TS.txt"
+
+mkdir -p "$REPORT_DIR" "$STATUS_DIR"
+
+exec > >(tee -a "$REPORT") 2>&1
+
+echo "Start: $(date)"
+echo "Report: $REPORT"
+
+# 1. prüfen
+# 2. Backup erstellen
+# 3. Änderung isoliert durchführen
+# 4. Syntax/Test prüfen
+# 5. Status schreiben
+# 6. optional Git commit
+# 7. Freeze/Timeshift nur als manuelle Folge
+```
+
+## 5 Testbefehl
+
+```bash
+bash -n <script>
+```
+
+## 6 Rollback
+
+Vor jeder Änderung:
+- Datei mit Timestamp sichern
+- Symlink erst nach erfolgreichem Syntaxcheck setzen
+- produktive Timer nicht automatisch aktivieren
+- bei Fehler: Backup zurückkopieren
+
+## 7 Keine automatische Aktivierung
+
+Dieses Modul aktiviert keine Dienste, keine Timer und keine externen Aktionen.
+
+## 8 Nächste sinnvolle Linky-Aufgaben
+
+1. Bashrc-Alias-Guard verbessern
+2. Next.js Workspace-Root-Warnung sauber dokumentieren
+3. ShadowOps failed services nur analysieren, nicht reparieren
+4. Prompt-to-Code Registry erzeugen
+5. kleine Modulvorlagen für Mentor/Strategist/Steward bauen
+
+## 9 Kontrollsatz
+
+Linky baut nur kleine, prüfbare Module. Keine Systemänderung ohne separate Freigabe.

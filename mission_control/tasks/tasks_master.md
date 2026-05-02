@@ -181,3 +181,13 @@ echo "============================================================"
 | P5-020 | Housing | WBS/Jobcenter/Wohnungsnachweise strukturieren | Steward | vorbereitet | 1 | steward-latest |
 | P5-021 | Multi-Agent | Steward Timer optional entscheiden | User | offen | 3 | install-steward-timer-optional |
 | P5-022 | Multi-Agent | Linky später aktivieren | Linky | wartend | 3 | prompt-to-code |
+
+## Phase 5 Linky Ergänzung – 2026-05-02
+
+| ID | Bereich | Aufgabe | Owner | Status | Priorität | Kontrolle |
+|---|---|---|---|---|---:|---|
+| P5-023 | Multi-Agent | Linky als Builder Agent produktiv ausführen | Linky | aktiv | 1 | linky-run |
+| P5-024 | Prompt-to-Code | sichere Mini-Module erzeugen | Linky | aktiv | 1 | linky-latest |
+| P5-025 | Safety | keine automatischen produktiven Änderungen | Linky | aktiv | 1 | phase5-crew-status |
+| P5-026 | Multi-Agent | Linky Timer optional entscheiden | User | offen | 3 | install-linky-timer-optional |
+| P5-027 | Phase 5 | komplette Agent-Crew sichern | User | offen | 1 | freeze_report + timeshift |

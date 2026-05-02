@@ -34,5 +34,9 @@ echo "== Steward Latest =="
 cat "$MISSION/agent_runtime/steward/latest_steward_report.md" 2>/dev/null || echo "Kein Steward Report gefunden."
 echo
 
+echo "== Linky Latest =="
+cat "$MISSION/agent_runtime/linky/latest_linky_report.md" 2>/dev/null || echo "Kein Linky Report gefunden."
+echo
+
 echo "== Runtime Files =="
-find "$MISSION/agent_runtime" -maxdepth 3 -type f 2>/dev/null | sort | tail -260 || true
+find "$MISSION/agent_runtime" -maxdepth 3 -type f 2>/dev/null | sort | tail -320 || true

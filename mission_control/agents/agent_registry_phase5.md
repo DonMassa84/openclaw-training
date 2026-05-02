@@ -72,10 +72,13 @@ read-only, keine Zahlungen, keine Rechtsentscheidung, kein Versand.
 ## Linky
 
 Rolle:
-Builder / Prompt-to-Code.
+Builder / Prompt-to-Code Agent.
 
 Status:
-vorbereitet.
+produktiv aktiviert.
+
+Aufgabe:
+kleine, sichere, nicht-destruktive Module aus wiederkehrenden Prompts und Routinen vorbereiten.
 
 Grenzen:
-nur kleine Module, keine destruktiven Aktionen.
+kein sudo, keine Löschung, keine Fundamentänderung, keine automatische Aktivierung produktiver Dienste.
