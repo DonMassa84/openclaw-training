@@ -47,3 +47,12 @@ Schrittweise Aktivierung, read-only bzw. kontrolliertes Memory-Wiki-Schreiben.
 - Proton läuft lokal über Proton Bridge + Courier.
 - Courier bleibt read-only und sendet nur Kurzstatus an Discord.
 - Nächster Sicherheitsstandard: Proton Bridge Passwort später neu generieren.
+
+## 2026-05-02 – Lokale KI-Systemdokumentation
+
+- Vollständige lokale KI-Dokumentation wurde erzeugt.
+- Hauptdokument: /home/schattenmacher/openclaw_training/mission_control/docs/local_ai_inventory/latest_local_ai_system_documentation.md
+- OpenClaw-Brief: /home/schattenmacher/openclaw_training/mission_control/docs/local_ai_inventory/latest_openclaw_local_ai_documentation_brief.md
+- OpenClaw Workspace Kopie: /home/schattenmacher/.openclaw/workspace/docs/latest_local_ai_system_documentation.md
+- Aktueller stabiler Stand: Shadowmaker stable freeze after disabling broken ShadowOps timers.
+- Agenten bleiben manuell, Security-Timer bleiben aktiv, ShadowOps-Timer sind deaktiviert.

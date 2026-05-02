@@ -39,3 +39,11 @@ Keine ungeprüfte Autonomie. Jede produktive Änderung folgt:
 ## Keine Löschung
 
 Duplikate, Cache, Browserdaten, Finanzdaten und Behördenunterlagen werden nicht automatisch gelöscht.
+
+## 2026-05-02 – Lokale KI-Dokumentation
+
+| ID | Bereich | Aufgabe | Owner | Status | Kontrolle |
+|---|---|---|---|---|---|
+| DOC-AI-001 | Local AI | Master-Dokumentation erstellt | Mnemosyne | erledigt | /home/schattenmacher/openclaw_training/mission_control/docs/local_ai_inventory/latest_local_ai_system_documentation.md |
+| DOC-AI-002 | OpenClaw | OpenClaw-Brief erstellt | Mnemosyne | erledigt | /home/schattenmacher/openclaw_training/mission_control/docs/local_ai_inventory/latest_openclaw_local_ai_documentation_brief.md |
+| DOC-AI-003 | Betrieb | Agenten weiter manuell beobachten | Winky | aktiv | phase5-crew-status |

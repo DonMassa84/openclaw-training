@@ -1,0 +1,1 @@
+/home/schattenmacher/openclaw_training/mission_control/docs/local_ai_inventory/openclaw_local_ai_documentation_brief_20260502_121342.md

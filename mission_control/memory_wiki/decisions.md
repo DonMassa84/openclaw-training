@@ -197,3 +197,11 @@ Read-only. Kein Versand, keine Löschung, kein Archivieren, keine Anhänge, kein
 
 Kontrolle:
 courier-status, courier-gmail-oauth, courier-run.
+
+## 2026-05-02 – Entscheidung lokale KI-Dokumentation
+
+Entscheidung: Das lokale KI-System wird zentral in Mission Control und optional im OpenClaw Workspace dokumentiert.
+
+Begründung: Ein zentrales, read-only Lagebild verhindert Informationsverlust und macht den Stack prüfbar.
+
+Dokument: /home/schattenmacher/openclaw_training/mission_control/docs/local_ai_inventory/latest_local_ai_system_documentation.md
