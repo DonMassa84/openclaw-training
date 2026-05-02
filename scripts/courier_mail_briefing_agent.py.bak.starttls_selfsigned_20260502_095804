@@ -198,9 +198,7 @@ def proton_collect():
         else:
             imap = imaplib.IMAP4(host, port)
             if use_starttls:
-                # Proton Bridge uses a local self-signed certificate on 127.0.0.1.
-                # This connection is local-only and read-only in Courier.
-                imap.starttls(ssl._create_unverified_context())
+                imap.starttls(ssl.create_default_context())
 
         imap.login(user, password)
         imap.select(mailbox)
