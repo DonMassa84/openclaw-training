@@ -1,6 +1,6 @@
 # Winky System Monitor Report
 
-Stand: Sa 2. Mai 07:32:35 CEST 2026
+Stand: Sa 2. Mai 07:32:49 CEST 2026
 
 ## Rolle
 
@@ -17,15 +17,15 @@ Mission Control WebUI: YES
 ## Uptime
 
 ```text
- 07:32:35 up  8:35,  1 user,  load average: 2,94, 3,28, 3,22
+ 07:32:49 up  8:35,  1 user,  load average: 2,57, 3,19, 3,18
 ```
 
 ## RAM
 
 ```text
                gesamt       benutzt     frei      gemns.  Puffer/Cache verfügbar
-Speicher:       31Gi        13Gi       1,9Gi       552Mi        16Gi        17Gi
-Auslager:      2,0Gi       1,6Gi       453Mi
+Speicher:       31Gi        13Gi       1,8Gi       559Mi        16Gi        17Gi
+Auslager:      2,0Gi       1,6Gi       454Mi
 ```
 
 ## Disk Root
@@ -90,13 +90,13 @@ Legend: LOAD   → Reflects whether the unit definition was properly loaded.
 
 ```text
 NEXT                             LEFT LAST                               PASSED UNIT                                     ACTIVATES
-Sat 2026-05-02 07:33:20 CEST      45s Sat 2026-05-02 07:31:20 CEST 1min 14s ago monitor-apply-fixed.timer                monitor-apply-fixed.service
-Sat 2026-05-02 07:35:56 CEST 3min 21s Sat 2026-05-02 07:30:56 CEST 1min 38s ago monitor-color-guard.timer                monitor-color-guard.service
-Sat 2026-05-02 07:35:56 CEST 3min 21s Sat 2026-05-02 07:30:56 CEST 1min 38s ago shadowops-autopilot.timer                shadowops-autopilot.service
+Sat 2026-05-02 07:33:20 CEST      31s Sat 2026-05-02 07:31:20 CEST 1min 28s ago monitor-apply-fixed.timer                monitor-apply-fixed.service
+Sat 2026-05-02 07:35:56 CEST  3min 7s Sat 2026-05-02 07:30:56 CEST 1min 52s ago monitor-color-guard.timer                monitor-color-guard.service
+Sat 2026-05-02 07:35:56 CEST  3min 7s Sat 2026-05-02 07:30:56 CEST 1min 52s ago shadowops-autopilot.timer                shadowops-autopilot.service
 Sat 2026-05-02 08:00:00 CEST    27min Sat 2026-05-02 07:00:01 CEST    32min ago shadowops-log-push.timer                 shadowops-log-push.service
 Sat 2026-05-02 08:30:00 CEST    57min Fri 2026-05-01 08:30:00 CEST            - monitor-color-neutral.timer              monitor-color@neutral.service
 Sat 2026-05-02 09:00:00 CEST 1h 27min -                                       - openclaw-security-health.timer           openclaw-security-health.service
-Sat 2026-05-02 09:01:39 CEST 1h 29min -                                       - shadowmaker-security-audit-discord.timer shadowmaker-security-audit-discord.service
+Sat 2026-05-02 09:01:39 CEST 1h 28min -                                       - shadowmaker-security-audit-discord.timer shadowmaker-security-audit-discord.service
 Sat 2026-05-02 19:30:00 CEST      11h Fri 2026-05-01 19:30:00 CEST            - monitor-color-warm.timer                 monitor-color@warm.service
 Sat 2026-05-02 23:02:21 CEST      15h Fri 2026-05-01 23:02:21 CEST       8h ago launchpadlib-cache-clean.timer           launchpadlib-cache-clean.service
 9 timers listed.
@@ -119,7 +119,7 @@ Last-Modified: Tue, 14 Apr 2026 11:32:51 GMT
 ETag: W/"c46-19d8bc3feb8"
 Content-Type: text/html; charset=UTF-8
 Content-Length: 3142
-Date: Sat, 02 May 2026 05:32:35 GMT
+Date: Sat, 02 May 2026 05:32:49 GMT
 Connection: keep-alive
 ```
 
@@ -134,7 +134,7 @@ ETag: W/"4066-19de5556084"
 Content-Type: text/html; charset=utf-8
 Content-Length: 16486
 Vary: Accept-Encoding
-Date: Sat, 02 May 2026 05:32:35 GMT
+Date: Sat, 02 May 2026 05:32:49 GMT
 Connection: keep-alive
 ```
 
@@ -146,7 +146,7 @@ Vary: rsc, next-router-state-tree, next-router-prefetch, next-router-segment-pre
 Cache-Control: no-cache, must-revalidate
 X-Powered-By: Next.js
 Content-Type: text/html; charset=utf-8
-Date: Sat, 02 May 2026 05:32:35 GMT
+Date: Sat, 02 May 2026 05:32:50 GMT
 Connection: keep-alive
 Keep-Alive: timeout=5
 
