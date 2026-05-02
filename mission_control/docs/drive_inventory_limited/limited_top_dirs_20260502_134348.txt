@@ -1,0 +1,100 @@
+   5011  /media/schattenmacher/USB-STICK1/usb 07.11.25
+   5000  /media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/EML_RAW_ARCHIVE
+   5000  /media/schattenmacher/USB-STICK1/USB_SORTED
+   3829  /home/schattenmacher/Dokumente/USB_SORTED
+   2056  /media/schattenmacher/USB-STICK1/bilder
+   1845  /media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/USER_DATA
+   1024  /home/schattenmacher/openclaw_training/artifacts
+   1010  /media/schattenmacher/USB-STICK1/data
+    934  /home/schattenmacher/shadowmaker-ai-stack/flowise-data
+    694  /home/schattenmacher/Schreibtisch/Zusammenfassungen
+    492  /media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/shadow_backup
+    482  /media/schattenmacher/USB-STICK1/AEVO_Backup_20251217
+    469  /media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/stable-diffusion-webui
+    466  /media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/EMERGENCY_BACKUP_20250610
+    466  /media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/FULL_BACKUP_20250610
+    437  /home/schattenmacher/openclaw_training/mission_control
+    421  /home/schattenmacher/ComfyUI/ComfyUI
+    389  /media/schattenmacher/USB-STICK/shadow_final_20260414_062801
+    388  /home/schattenmacher/openclaw_training/docs
+    388  /media/schattenmacher/USB-STICK/openclaw_shadow_20260414_062334
+    386  /home/schattenmacher/Dokumente/frs-on-air
+    241  /home/schattenmacher/Dokumente/Geprüfte Operative IT Professionals - Teilnehmerunterlagen -
+    219  /home/schattenmacher/openclaw_training/reports
+    169  /home/schattenmacher/ComfyUI/comfy
+    146  /home/schattenmacher/Dokumente/transkripte
+    130  /home/schattenmacher/Downloads/Geprüfte Operative IT Professionals  - Teilnehmerunterlagen -
+    130  /home/schattenmacher/Downloads/Programme
+    129  /media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/Backup_EMERGENCY
+    118  /media/schattenmacher/USB-STICK1/AEVO_2025_Prüfung
+    115  /media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/GPT4All
+    111  /home/schattenmacher/Downloads/frsapp
+    106  /home/schattenmacher/Downloads/files
+     98  /home/schattenmacher/Downloads/MFP_90_Schattenmacher_Slides
+     98  /home/schattenmacher/Downloads/slides_monitor
+     90  /home/schattenmacher/Downloads/MFP_90_Slides
+     90  /media/schattenmacher/USB-STICK1/Zero-Trust-Sicherheitskonzept mit GitHub-Integration_Massa
+     89  /home/schattenmacher/Downloads/Geprüfte Operative IT Professionals Prüfungen
+     89  /media/schattenmacher/USB-STICK/openclaw_backup_2026-04-14_014714
+     87  /home/schattenmacher/Downloads/Notebook LM Videos und Audios
+     77  /home/schattenmacher/ComfyUI/comfy_extras
+     76  /home/schattenmacher/AEVO_App/dist
+     67  /media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/ollama_backup
+     60  /home/schattenmacher/openclaw_training/scripts
+     56  /home/schattenmacher/Dokumente/shadow-learn
+     55  /home/schattenmacher/openclaw_training/src
+     48  /home/schattenmacher/ComfyUI/comfy_api_nodes
+     38  /home/schattenmacher/Downloads/freies-radio-stuttgart-web
+     38  /home/schattenmacher/usb-llm-data-pipeline/psa_work_v2
+     36  /home/schattenmacher/Downloads/SA_Dark_Mode_Slides_Part1
+     35  /home/schattenmacher/local_llm_pipeline/runs
+     35  /media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/PYTHON_ENVIRONMENTS
+     34  /home/schattenmacher/Dokumente/Belege_Vermittlungsbudget_BG621A289912
+     33  /home/schattenmacher/ComfyUI/comfy_api
+     33  /home/schattenmacher/.openclaw/workspace
+     32  /home/schattenmacher/usb-llm-data-pipeline/psa_work
+     31  /media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/AI_MODELS
+     30  /home/schattenmacher/ComfyUI/models
+     30  /home/schattenmacher/Downloads/Transkripte_VFB_Videos
+     29  /media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/USB_SORTED
+     28  /media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/2025-06-18-1745-img-rescuezilla
+     27  /home/schattenmacher/usb-llm-data-pipeline/qwen25-15b-lora-clean
+     26  /home/schattenmacher/ComfyUI/tests-unit
+     22  /home/schattenmacher/ComfyUI/.github
+     22  /home/schattenmacher/Dokumente/Personal
+     19  /home/schattenmacher/Dokumente/FINANZEN_ARCHIV_2026-03-03
+     18  /media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/EVA-System-backup_20250610_201920
+     17  /home/schattenmacher/Dokumente/Kontoauszüge
+     17  /home/schattenmacher/Downloads/_bg_from_video_gpu
+     17  /home/schattenmacher/Schreibtisch/Freies Radio Stuttgart 20-11-25
+     16  /home/schattenmacher/Dokumente/ShadowLearn App v1.2 (Passive Mode)
+     16  /home/schattenmacher/Downloads/AEVO
+     16  /media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/EVA-System-backup
+     15  /home/schattenmacher/local_llm_pipeline/03_training
+     15  /home/schattenmacher/.openclaw/agents
+     15  /media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/multi_ai_agent
+     14  /home/schattenmacher/Dokumente/OP_Kurs_Upload
+     14  /home/schattenmacher/EVA_IntelligentAgent/_stack_rebuild_reports
+     12  /home/schattenmacher/ComfyUI/.ci
+     12  /home/schattenmacher/ComfyUI/tests
+     12  /home/schattenmacher/Dokumente/prüfungen
+     12  /home/schattenmacher/local_llm_pipeline/06_benchmark
+     11  /home/schattenmacher/Dokumente/Antrag auf Gewährung einer Förderung Vermittlungsbudget ausgefüllt 2
+     11  /home/schattenmacher/Dokumente/ShadowLearn_v2
+     11  /home/schattenmacher/openclaw_training/prompts
+     10  /home/schattenmacher/ComfyUI/app
+     10  /home/schattenmacher/Dokumente/ARCHIV_2026-03-03
+     10  /home/schattenmacher/Dokumente/ShadowLearn
+      9  /home/schattenmacher/Dokumente/ Position Service Desk Support in Stuttgart-Möhringen
+      9  /home/schattenmacher/Dokumente/Prüfungsvorbereitung
+      9  /home/schattenmacher/Schreibtisch/AEVO_Export
+      9  /home/schattenmacher/Schreibtisch/Openai Codex
+      8  /home/schattenmacher/ComfyUI/api_server
+      8  /home/schattenmacher/local_llm_pipeline/05_inference
+      8  /home/schattenmacher/local_llm_pipeline/09_logs
+      8  /home/schattenmacher/local_llm_pipeline/scripts
+      7  /home/schattenmacher/Downloads/run_pipeline
+      7  /home/schattenmacher/openclaw_training/pipeline
+      7  /home/schattenmacher/shadowmaker-ai-stack/flowise-configs
+      6  /home/schattenmacher/ComfyUI/comfy_execution
+      6  /home/schattenmacher/Dokumente/ALL_IN_ONE_OP

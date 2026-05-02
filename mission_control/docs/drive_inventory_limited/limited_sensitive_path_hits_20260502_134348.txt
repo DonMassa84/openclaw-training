@@ -1,0 +1,1000 @@
+/home/schattenmacher/ComfyUI/ComfyUI/comfy/text_encoders/spiece_tokenizer.py
+/home/schattenmacher/ComfyUI/ComfyUI/comfy/sd1_tokenizer/tokenizer_config.json
+/home/schattenmacher/ComfyUI/ComfyUI/comfy/sd1_tokenizer/special_tokens_map.json
+/home/schattenmacher/ComfyUI/ComfyUI/comfy/sd1_tokenizer/vocab.json
+/home/schattenmacher/ComfyUI/ComfyUI/comfy/sd1_tokenizer/merges.txt
+/home/schattenmacher/ComfyUI/comfy/text_encoders/t5_pile_tokenizer/tokenizer.model
+/home/schattenmacher/ComfyUI/comfy/text_encoders/llama_tokenizer/tokenizer_config.json
+/home/schattenmacher/ComfyUI/comfy/text_encoders/llama_tokenizer/tokenizer.json
+/home/schattenmacher/ComfyUI/comfy/text_encoders/hydit_clip_tokenizer/tokenizer_config.json
+/home/schattenmacher/ComfyUI/comfy/text_encoders/hydit_clip_tokenizer/special_tokens_map.json
+/home/schattenmacher/ComfyUI/comfy/text_encoders/hydit_clip_tokenizer/vocab.txt
+/home/schattenmacher/ComfyUI/comfy/text_encoders/__pycache__/spiece_tokenizer.cpython-312.pyc
+/home/schattenmacher/ComfyUI/comfy/text_encoders/byt5_tokenizer/tokenizer_config.json
+/home/schattenmacher/ComfyUI/comfy/text_encoders/byt5_tokenizer/special_tokens_map.json
+/home/schattenmacher/ComfyUI/comfy/text_encoders/byt5_tokenizer/added_tokens.json
+/home/schattenmacher/ComfyUI/comfy/text_encoders/spiece_tokenizer.py
+/home/schattenmacher/ComfyUI/comfy/text_encoders/ace_lyrics_tokenizer/vocab.json
+/home/schattenmacher/ComfyUI/comfy/text_encoders/qwen25_tokenizer/tokenizer_config.json
+/home/schattenmacher/ComfyUI/comfy/text_encoders/qwen25_tokenizer/vocab.json
+/home/schattenmacher/ComfyUI/comfy/text_encoders/qwen25_tokenizer/merges.txt
+/home/schattenmacher/ComfyUI/comfy/text_encoders/t5_tokenizer/tokenizer_config.json
+/home/schattenmacher/ComfyUI/comfy/text_encoders/t5_tokenizer/special_tokens_map.json
+/home/schattenmacher/ComfyUI/comfy/text_encoders/t5_tokenizer/tokenizer.json
+/home/schattenmacher/ComfyUI/comfy/sd1_tokenizer/tokenizer_config.json
+/home/schattenmacher/ComfyUI/comfy/sd1_tokenizer/special_tokens_map.json
+/home/schattenmacher/ComfyUI/comfy/sd1_tokenizer/vocab.json
+/home/schattenmacher/ComfyUI/comfy/sd1_tokenizer/merges.txt
+/home/schattenmacher/discord_token_guard_reset.sh
+/home/schattenmacher/Backups/AEVO_Backup_20251217_065916/AEVO_Unterweisung_Active_Directory_Nutzer_anlegen/AEVO_Master_Slideshow_JPG/0051_Phase_1__Zustand_steuern.jpg
+/home/schattenmacher/Backups/AEVO_Backup_20251217_065916/AEVO_Unterweisung_Active_Directory_Nutzer_anlegen/AEVO_Slideshow_Strategie_Lerntyp_JPG/0003_Phase_1__Zustand_steuern.jpg
+/home/schattenmacher/Videos/Video Aevo Unterweisung Aufnahmen/_tmp_aevo_poster_sim_full_2026-01-16_215647/auto_vbr.env
+/home/schattenmacher/Videos/Video Aevo Unterweisung Aufnahmen/_tmp_aevo_poster_sim_full_2026-01-16_215711/auto_vbr.env
+/home/schattenmacher/Videos/Video Aevo Unterweisung Aufnahmen/_tmp_aevo_fit_v2_2026-01-17_004752/fit.env
+/home/schattenmacher/Videos/Video Aevo Unterweisung Aufnahmen/_tmp_aevo_poster_sim_full_2026-01-16_220037/auto_vbr.env
+/home/schattenmacher/development/ShadowLearn/backend/.env
+/home/schattenmacher/development/ShadowLearn/ShadowLearnAI_FULL/backend/.env
+/home/schattenmacher/IBOGA-TOKEN-Projekt/docs/DISCLAIMER.md
+/home/schattenmacher/IBOGA-TOKEN-Projekt/docs/CHAT_ANALYSIS.md
+/home/schattenmacher/IBOGA-TOKEN-Projekt/.git/hooks/prepare-commit-msg.sample
+/home/schattenmacher/IBOGA-TOKEN-Projekt/.git/hooks/fsmonitor-watchman.sample
+/home/schattenmacher/IBOGA-TOKEN-Projekt/.git/hooks/commit-msg.sample
+/home/schattenmacher/IBOGA-TOKEN-Projekt/.git/hooks/pre-rebase.sample
+/home/schattenmacher/IBOGA-TOKEN-Projekt/.git/hooks/pre-push.sample
+/home/schattenmacher/IBOGA-TOKEN-Projekt/.git/hooks/sendemail-validate.sample
+/home/schattenmacher/IBOGA-TOKEN-Projekt/.git/hooks/pre-receive.sample
+/home/schattenmacher/IBOGA-TOKEN-Projekt/.git/hooks/applypatch-msg.sample
+/home/schattenmacher/IBOGA-TOKEN-Projekt/.git/hooks/pre-merge-commit.sample
+/home/schattenmacher/IBOGA-TOKEN-Projekt/.git/hooks/push-to-checkout.sample
+/home/schattenmacher/IBOGA-TOKEN-Projekt/.git/hooks/pre-applypatch.sample
+/home/schattenmacher/IBOGA-TOKEN-Projekt/.git/hooks/pre-commit.sample
+/home/schattenmacher/IBOGA-TOKEN-Projekt/.git/hooks/update.sample
+/home/schattenmacher/IBOGA-TOKEN-Projekt/.git/hooks/post-update.sample
+/home/schattenmacher/IBOGA-TOKEN-Projekt/.git/index
+/home/schattenmacher/IBOGA-TOKEN-Projekt/.git/refs/heads/main
+/home/schattenmacher/IBOGA-TOKEN-Projekt/.git/HEAD
+/home/schattenmacher/IBOGA-TOKEN-Projekt/.git/config
+/home/schattenmacher/IBOGA-TOKEN-Projekt/.git/objects/pack/pack-0bbd5586f21a58af59292ce0666e3b66306dbe58.idx
+/home/schattenmacher/IBOGA-TOKEN-Projekt/.git/objects/pack/pack-0bbd5586f21a58af59292ce0666e3b66306dbe58.pack
+/home/schattenmacher/IBOGA-TOKEN-Projekt/.git/objects/pack/pack-0bbd5586f21a58af59292ce0666e3b66306dbe58.rev
+/home/schattenmacher/IBOGA-TOKEN-Projekt/.git/objects/ec/e70ce9fb317b023a57a266ddeb0a7ca8e606f2
+/home/schattenmacher/IBOGA-TOKEN-Projekt/.git/objects/db/6bd64ddb347d81015c29ea4509161936895152
+/home/schattenmacher/IBOGA-TOKEN-Projekt/.git/objects/83/c0241d5abfed01e13bcf186649d3ddba91f95a
+/home/schattenmacher/IBOGA-TOKEN-Projekt/.git/objects/13/fce56b265171f75a37b20de4fecd1598142f84
+/home/schattenmacher/IBOGA-TOKEN-Projekt/.git/objects/cb/1296abc5f6a3373abd0d60c37ee319b6379775
+/home/schattenmacher/IBOGA-TOKEN-Projekt/.git/objects/da/4e08d73af021297f1b9ed834e71f93871ecfa2
+/home/schattenmacher/IBOGA-TOKEN-Projekt/.git/objects/f7/54d423faad99dfc358e71f746c92a647ab93b4
+/home/schattenmacher/IBOGA-TOKEN-Projekt/.git/description
+/home/schattenmacher/IBOGA-TOKEN-Projekt/.git/packed-refs
+/home/schattenmacher/IBOGA-TOKEN-Projekt/.git/COMMIT_EDITMSG
+/home/schattenmacher/IBOGA-TOKEN-Projekt/.git/logs/HEAD
+/home/schattenmacher/IBOGA-TOKEN-Projekt/.git/info/exclude
+/home/schattenmacher/IBOGA-TOKEN-Projekt/README.md
+/home/schattenmacher/IBOGA-TOKEN-Projekt/PROJECT_STATUS.md
+/home/schattenmacher/IBOGA-TOKEN-Projekt/LICENSE
+/home/schattenmacher/.openclaw/credentials/telegram-default-allowFrom.json
+/home/schattenmacher/.openclaw/credentials/telegram-pairing.json
+/home/schattenmacher/.openclaw/.env
+/home/schattenmacher/shadow-letta/.venv/bin/tokenize-rt
+/home/schattenmacher/usb-llm-data-pipeline/qwen25-15b-lora-clean/merged_model_1_5b/tokenizer_config.json
+/home/schattenmacher/usb-llm-data-pipeline/qwen25-15b-lora-clean/merged_model_1_5b/tokenizer.json
+/home/schattenmacher/usb-llm-data-pipeline/qwen25-15b-lora-clean/checkpoints/checkpoint-476/tokenizer_config.json
+/home/schattenmacher/usb-llm-data-pipeline/qwen25-15b-lora-clean/checkpoints/checkpoint-476/tokenizer.json
+/home/schattenmacher/usb-llm-data-pipeline/qwen25-15b-lora-clean/checkpoints/checkpoint-238/tokenizer_config.json
+/home/schattenmacher/usb-llm-data-pipeline/qwen25-15b-lora-clean/checkpoints/checkpoint-238/tokenizer.json
+/home/schattenmacher/usb-llm-data-pipeline/qwen25-15b-lora-clean/adapter/tokenizer_config.json
+/home/schattenmacher/usb-llm-data-pipeline/qwen25-15b-lora-clean/adapter/tokenizer.json
+/home/schattenmacher/usb-llm-data-pipeline/lora-output/tokenizer_config.json
+/home/schattenmacher/usb-llm-data-pipeline/lora-output/tokenizer.json
+/home/schattenmacher/usb-llm-data-pipeline/lora-output-clean-train/tokenizer_config.json
+/home/schattenmacher/usb-llm-data-pipeline/lora-output-clean-train/tokenizer.json
+/home/schattenmacher/usb-llm-data-pipeline/lora-output-psa_sa1_sa3/tokenizer_config.json
+/home/schattenmacher/usb-llm-data-pipeline/lora-output-psa_sa1_sa3/tokenizer.json
+/home/schattenmacher/usb-llm-data-pipeline/lora-output-ihk-cloud-migration/tokenizer_config.json
+/home/schattenmacher/usb-llm-data-pipeline/lora-output-ihk-cloud-migration/tokenizer.json
+/home/schattenmacher/usb-llm-data-pipeline/lora-output-psa-sa1-sa3/tokenizer_config.json
+/home/schattenmacher/usb-llm-data-pipeline/lora-output-psa-sa1-sa3/tokenizer.json
+/home/schattenmacher/usb-llm-data-pipeline/lora-output-psa-sa1-sa3-clean/tokenizer_config.json
+/home/schattenmacher/usb-llm-data-pipeline/lora-output-psa-sa1-sa3-clean/tokenizer.json
+/home/schattenmacher/.vscode/extensions/github.copilot-chat-0.36.1/dist/o200k_base.tiktoken
+/home/schattenmacher/.vscode/extensions/github.copilot-chat-0.36.1/dist/cl100k_base.tiktoken
+/home/schattenmacher/.vscode/extensions/github.copilot-chat-0.36.1/dist/tikTokenizerWorker.js
+/home/schattenmacher/.vscode/extensions/donjayamanne.python-environment-manager-1.2.7/pythonFiles/.env
+/home/schattenmacher/.vscode/extensions/github.copilot-chat-0.43.0/dist/o200k_base.tiktoken
+/home/schattenmacher/.vscode/extensions/github.copilot-chat-0.43.0/dist/cl100k_base.tiktoken
+/home/schattenmacher/.vscode/extensions/github.copilot-chat-0.43.0/dist/tikTokenizerWorker.js
+/home/schattenmacher/telegram-chatgpt-bot/.env
+/home/schattenmacher/eva-agent-template/secret.key
+/home/schattenmacher/AEVO_App/node_modules/builder-util-runtime/out/CancellationToken.js.map
+/home/schattenmacher/AEVO_App/node_modules/builder-util-runtime/out/CancellationToken.d.ts
+/home/schattenmacher/AEVO_App/node_modules/builder-util-runtime/out/CancellationToken.js
+/home/schattenmacher/next_step_telegram_tokens.sh
+/home/schattenmacher/setup_shadowmaker_discord_channels_wizard.sh.bak.token_guard_20260502_055129
+/home/schattenmacher/bots/telegrambot/.env
+/home/schattenmacher/shadowmaker-ai-stack/.env
+/home/schattenmacher/Downloads/jobcenter-nachweise-stuttgart.zip
+/home/schattenmacher/Downloads/client_secret_222831201635-p7tjo0452d1o68tl18s0pi54o4fva7l4.apps.googleusercontent.com.json
+/home/schattenmacher/Downloads/SKILL_Jobcenter_Nachweise_Stuttgart.md
+/home/schattenmacher/Downloads/freies-radio-stuttgart-web/node_modules/js-tokens/CHANGELOG.md
+/home/schattenmacher/Downloads/freies-radio-stuttgart-web/node_modules/js-tokens/package.json
+/home/schattenmacher/Downloads/freies-radio-stuttgart-web/node_modules/js-tokens/README.md
+/home/schattenmacher/Downloads/freies-radio-stuttgart-web/node_modules/js-tokens/LICENSE
+/home/schattenmacher/Downloads/freies-radio-stuttgart-web/node_modules/js-tokens/index.js
+/home/schattenmacher/Downloads/Personalbedarf_exakt_berechnen_und_steuern.m4a
+/home/schattenmacher/secrets/telegram_bots.env.bak.20260414_011115
+/home/schattenmacher/secrets/telegram_bots.env
+/home/schattenmacher/Android/Sdk/emulator/lib/ca-bundle.pem
+/home/schattenmacher/.cache/openclaw-upstream/docs/images/feishu-step3-credentials.png
+/home/schattenmacher/.cache/openclaw-upstream/docs/reference/token-use.md
+/home/schattenmacher/.cache/openclaw-upstream/.detect-secrets.cfg
+/home/schattenmacher/.cache/openclaw-upstream/skills/1password/SKILL.md
+/home/schattenmacher/.cache/openclaw-upstream/src/infra/pairing-token.ts
+/home/schattenmacher/.cache/openclaw-upstream/src/commands/onboard-auth.credentials.ts
+/home/schattenmacher/.cache/openclaw-upstream/src/commands/auth-token.ts
+/home/schattenmacher/.cache/openclaw-upstream/src/agents/anthropic.setup-token.live.test.ts
+/home/schattenmacher/.cache/openclaw-upstream/src/agents/models-config.auto-injects-github-copilot-provider-token-is.e2e.test.ts
+/home/schattenmacher/.cache/openclaw-upstream/src/agents/cli-credentials.ts
+/home/schattenmacher/.cache/openclaw-upstream/src/agents/models-config.skips-writing-models-json-no-env-token.e2e.test.ts
+/home/schattenmacher/.cache/openclaw-upstream/src/agents/cli-credentials.test.ts
+/home/schattenmacher/.cache/openclaw-upstream/src/agents/models-config.uses-first-github-copilot-profile-env-tokens.e2e.test.ts
+/home/schattenmacher/.cache/openclaw-upstream/src/agents/models-config.falls-back-default-baseurl-token-exchange-fails.e2e.test.ts
+/home/schattenmacher/.cache/openclaw-upstream/src/discord/token.test.ts
+/home/schattenmacher/.cache/openclaw-upstream/src/discord/token.ts
+/home/schattenmacher/.cache/openclaw-upstream/src/utils/normalize-secret-input.ts
+/home/schattenmacher/.cache/openclaw-upstream/src/providers/github-copilot-token.ts
+/home/schattenmacher/.cache/openclaw-upstream/src/providers/github-copilot-token.test.ts
+/home/schattenmacher/.cache/openclaw-upstream/src/browser/server.auth-token-gates-http.test.ts
+/home/schattenmacher/.cache/openclaw-upstream/src/browser/control-auth.auto-token.test.ts
+/home/schattenmacher/.cache/openclaw-upstream/src/config/telegram-webhook-secret.test.ts
+/home/schattenmacher/.cache/openclaw-upstream/src/config/slack-token-validation.test.ts
+/home/schattenmacher/.cache/openclaw-upstream/src/slack/token.ts
+/home/schattenmacher/.cache/openclaw-upstream/src/line/channel-access-token.ts
+/home/schattenmacher/.cache/openclaw-upstream/src/telegram/token.test.ts
+/home/schattenmacher/.cache/openclaw-upstream/src/telegram/token.ts
+/home/schattenmacher/.cache/openclaw-upstream/src/security/secret-equal.ts
+/home/schattenmacher/.cache/openclaw-upstream/src/auto-reply/tokens.ts
+/home/schattenmacher/.cache/openclaw-upstream/openclaw.podman.env
+/home/schattenmacher/.cache/openclaw-upstream/.secrets.baseline
+/home/schattenmacher/.docker/.token_seed.lock
+/home/schattenmacher/.docker/.token_seed
+/home/schattenmacher/.env
+/home/schattenmacher/nltk_data/tokenizers/punkt.zip
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/russian/ortho_context.tab
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/russian/collocations.tab
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/russian/abbrev_types.txt
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/russian/sent_starters.txt
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/slovene/ortho_context.tab
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/slovene/collocations.tab
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/slovene/abbrev_types.txt
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/slovene/sent_starters.txt
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/danish/ortho_context.tab
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/danish/collocations.tab
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/danish/abbrev_types.txt
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/danish/sent_starters.txt
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/dutch/ortho_context.tab
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/dutch/collocations.tab
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/dutch/abbrev_types.txt
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/dutch/sent_starters.txt
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/spanish/ortho_context.tab
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/spanish/collocations.tab
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/spanish/abbrev_types.txt
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/spanish/sent_starters.txt
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/finnish/ortho_context.tab
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/finnish/collocations.tab
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/finnish/abbrev_types.txt
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/finnish/sent_starters.txt
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/malayalam/ortho_context.tab
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/malayalam/collocations.tab
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/malayalam/abbrev_types.txt
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/malayalam/sent_starters.txt
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/norwegian/ortho_context.tab
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/norwegian/collocations.tab
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/norwegian/abbrev_types.txt
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/norwegian/sent_starters.txt
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/italian/ortho_context.tab
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/italian/collocations.tab
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/italian/abbrev_types.txt
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/italian/sent_starters.txt
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/czech/ortho_context.tab
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/czech/collocations.tab
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/czech/abbrev_types.txt
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/czech/sent_starters.txt
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/polish/ortho_context.tab
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/polish/collocations.tab
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/polish/abbrev_types.txt
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/polish/sent_starters.txt
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/greek/ortho_context.tab
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/greek/collocations.tab
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/greek/abbrev_types.txt
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/greek/sent_starters.txt
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/README
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/estonian/ortho_context.tab
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/estonian/collocations.tab
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/estonian/abbrev_types.txt
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/estonian/sent_starters.txt
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/swedish/ortho_context.tab
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/swedish/collocations.tab
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/swedish/abbrev_types.txt
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/swedish/sent_starters.txt
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/turkish/ortho_context.tab
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/turkish/collocations.tab
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/turkish/abbrev_types.txt
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/turkish/sent_starters.txt
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/english/ortho_context.tab
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/english/collocations.tab
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/english/abbrev_types.txt
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/english/sent_starters.txt
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/french/ortho_context.tab
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/french/collocations.tab
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/french/abbrev_types.txt
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/french/sent_starters.txt
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/portuguese/ortho_context.tab
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/portuguese/collocations.tab
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/portuguese/abbrev_types.txt
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/portuguese/sent_starters.txt
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/german/ortho_context.tab
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/german/collocations.tab
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/german/abbrev_types.txt
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/german/sent_starters.txt
+/home/schattenmacher/nltk_data/tokenizers/punkt/estonian.pickle
+/home/schattenmacher/nltk_data/tokenizers/punkt/italian.pickle
+/home/schattenmacher/nltk_data/tokenizers/punkt/danish.pickle
+/home/schattenmacher/nltk_data/tokenizers/punkt/polish.pickle
+/home/schattenmacher/nltk_data/tokenizers/punkt/german.pickle
+/home/schattenmacher/nltk_data/tokenizers/punkt/.DS_Store
+/home/schattenmacher/nltk_data/tokenizers/punkt/finnish.pickle
+/home/schattenmacher/nltk_data/tokenizers/punkt/czech.pickle
+/home/schattenmacher/nltk_data/tokenizers/punkt/portuguese.pickle
+/home/schattenmacher/nltk_data/tokenizers/punkt/greek.pickle
+/home/schattenmacher/nltk_data/tokenizers/punkt/dutch.pickle
+/home/schattenmacher/nltk_data/tokenizers/punkt/norwegian.pickle
+/home/schattenmacher/nltk_data/tokenizers/punkt/french.pickle
+/home/schattenmacher/nltk_data/tokenizers/punkt/swedish.pickle
+/home/schattenmacher/nltk_data/tokenizers/punkt/slovene.pickle
+/home/schattenmacher/nltk_data/tokenizers/punkt/PY3/estonian.pickle
+/home/schattenmacher/nltk_data/tokenizers/punkt/PY3/italian.pickle
+/home/schattenmacher/nltk_data/tokenizers/punkt/PY3/danish.pickle
+/home/schattenmacher/nltk_data/tokenizers/punkt/PY3/polish.pickle
+/home/schattenmacher/nltk_data/tokenizers/punkt/PY3/german.pickle
+/home/schattenmacher/nltk_data/tokenizers/punkt/PY3/finnish.pickle
+/home/schattenmacher/nltk_data/tokenizers/punkt/PY3/czech.pickle
+/home/schattenmacher/nltk_data/tokenizers/punkt/PY3/portuguese.pickle
+/home/schattenmacher/nltk_data/tokenizers/punkt/PY3/greek.pickle
+/home/schattenmacher/nltk_data/tokenizers/punkt/PY3/dutch.pickle
+/home/schattenmacher/nltk_data/tokenizers/punkt/PY3/norwegian.pickle
+/home/schattenmacher/nltk_data/tokenizers/punkt/PY3/french.pickle
+/home/schattenmacher/nltk_data/tokenizers/punkt/PY3/swedish.pickle
+/home/schattenmacher/nltk_data/tokenizers/punkt/PY3/slovene.pickle
+/home/schattenmacher/nltk_data/tokenizers/punkt/PY3/README
+/home/schattenmacher/nltk_data/tokenizers/punkt/PY3/malayalam.pickle
+/home/schattenmacher/nltk_data/tokenizers/punkt/PY3/russian.pickle
+/home/schattenmacher/nltk_data/tokenizers/punkt/PY3/english.pickle
+/home/schattenmacher/nltk_data/tokenizers/punkt/PY3/turkish.pickle
+/home/schattenmacher/nltk_data/tokenizers/punkt/PY3/spanish.pickle
+/home/schattenmacher/nltk_data/tokenizers/punkt/README
+/home/schattenmacher/nltk_data/tokenizers/punkt/malayalam.pickle
+/home/schattenmacher/nltk_data/tokenizers/punkt/russian.pickle
+/home/schattenmacher/nltk_data/tokenizers/punkt/english.pickle
+/home/schattenmacher/nltk_data/tokenizers/punkt/turkish.pickle
+/home/schattenmacher/nltk_data/tokenizers/punkt/spanish.pickle
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab.zip
+/home/schattenmacher/check_discord_bot_token.sh
+/home/schattenmacher/openclaw_backup_2026-02-20T21-03-49+01-00/home/schattenmacher/.openclaw/.env
+/home/schattenmacher/stack_runtime/openclaw/data/config/.env
+/home/schattenmacher/stack_runtime/openclaw/data/credentials/telegram-default-allowFrom.json
+/home/schattenmacher/stack_runtime/openclaw/data/credentials/telegram-pairing.json
+/home/schattenmacher/stack_runtime/openclaw/state/config/.env
+/home/schattenmacher/stack_runtime/openclaw/state/credentials/telegram-pairing.json
+/home/schattenmacher/stack_runtime/openclaw/.env
+/home/schattenmacher/stack_runtime/openclaw/openclaw/.detect-secrets.cfg
+/home/schattenmacher/stack_runtime/openclaw/openclaw/openclaw.podman.env
+/home/schattenmacher/stack_runtime/openclaw/openclaw/.secrets.baseline
+/home/schattenmacher/fix_openclaw_bot_token_service.sh
+/home/schattenmacher/.git-credentials
+/home/schattenmacher/openclaw_backup_2026-02-20T20-55-44+01-00/opt/openclaw/.env
+/home/schattenmacher/openclaw_backup_2026-02-20T20-55-44+01-00/opt/openclaw/openclaw/.detect-secrets.cfg
+/home/schattenmacher/openclaw_backup_2026-02-20T20-55-44+01-00/opt/openclaw/openclaw/openclaw.podman.env
+/home/schattenmacher/openclaw_backup_2026-02-20T20-55-44+01-00/opt/openclaw/openclaw/.secrets.baseline
+/home/schattenmacher/openclaw_backup_2026-02-20T20-55-44+01-00/home/schattenmacher/.openclaw/.env
+/home/schattenmacher/openclaw_training/extensions/agenteva/.env
+/home/schattenmacher/openclaw_training/docs/runbooks/latest_discord_bot_token_setup_guide.md
+/home/schattenmacher/openclaw_training/docs/runbooks/discord_bot_token_setup_guide.md
+/home/schattenmacher/openclaw_training/reports/discord_token_guard_reset_20260502_055936.txt
+/home/schattenmacher/openclaw_training/reports/repair_discord_channel_wizard_token_guard_20260502_055129.txt
+/home/schattenmacher/openclaw_training/reports/gmail_use_downloaded_client_secret_allinone_20260502_103811.txt
+/home/schattenmacher/openclaw_training/reports/shadowmaker_token_fix_wizard_20260501_233126.txt
+/home/schattenmacher/openclaw_training/mission_control/discord/discord.env
+/home/schattenmacher/openclaw_training/mission_control/discord/discord_channels.env
+/home/schattenmacher/openclaw_training/mission_control/mail_briefing/config/gmail_credentials.json
+/home/schattenmacher/openclaw_training/mission_control/mail_briefing/config/courier.env
+/home/schattenmacher/openclaw_training/mission_control/mail_briefing/config/gmail_credentials_missing_guide.md
+/home/schattenmacher/openclaw_training/artifacts/lora_training/mfp_lora_adapter/tokenizer_config.json
+/home/schattenmacher/openclaw_training/artifacts/lora_training/mfp_lora_adapter/tokenizer.json
+/home/schattenmacher/openclaw_backup_2026-02-20T20-57-59+01-00/home/schattenmacher/.openclaw/.env
+/home/schattenmacher/gmail_use_downloaded_client_secret_allinone.sh
+/home/schattenmacher/whispercpp-gpu/examples/talk-llama/models/wavtokenizer-dec.cpp
+/home/schattenmacher/whispercpp-gpu/bindings/ruby/ext/ruby_whisper_token.c
+/home/schattenmacher/whispercpp-gpu/bindings/ruby/test/test_token.rb
+/home/schattenmacher/repair_discord_channel_wizard_token_guard.sh
+/home/schattenmacher/Schreibtisch/Zusammenfassungen/Mitarbeiterführung+Personalmanagement/Personal/Aufhebungsvertrag _ Kündigungen.png
+/home/schattenmacher/_whispercpp/examples/talk-llama/models/wavtokenizer-dec.cpp
+/home/schattenmacher/_whispercpp/bindings/ruby/ext/ruby_whisper_token.c
+/home/schattenmacher/_whispercpp/bindings/ruby/test/test_token.rb
+/home/schattenmacher/shadowmaker_bots/.env
+/home/schattenmacher/shadowmaker_bots/logs/getMe_token_fix_20260501_233126.json
+/home/schattenmacher/Dokumente/GitHub_token.txt
+/home/schattenmacher/Dokumente/ShadowLearn_v2/node_modules/js-tokens/CHANGELOG.md
+/home/schattenmacher/Dokumente/ShadowLearn_v2/node_modules/js-tokens/package.json
+/home/schattenmacher/Dokumente/ShadowLearn_v2/node_modules/js-tokens/README.md
+/home/schattenmacher/Dokumente/ShadowLearn_v2/node_modules/js-tokens/LICENSE
+/home/schattenmacher/Dokumente/ShadowLearn_v2/node_modules/js-tokens/index.js
+/home/schattenmacher/Dokumente/ShadowLearn_v2/.env
+/home/schattenmacher/Dokumente/ARCHIV_2026-03-03/04_Finanzen_Behoerden/2025-04-30_Mitwirkung_DanielMassa_Wohngeld_Jobcenter_Stuttgart.pdf
+/home/schattenmacher/Dokumente/ARCHIV_2026-03-03/06_Tools_Secrets/Alle Token und APIs.txt
+/home/schattenmacher/Dokumente/frs-on-air/.env
+/home/schattenmacher/Dokumente/Antrag auf Gewährung einer Förderung Vermittlungsbudget ausgefüllt 2/2026-03-09_Antrag-Vermittlungsbudget_IHK-Pruefungsgebuehren_Nachweise_Kontoauszuege-3-Monate_Daniel-Massa.pdf
+/home/schattenmacher/Dokumente/Whg 11 [Vermietungsplan].pdf
+/home/schattenmacher/Dokumente/shadow-learn/node_modules/js-tokens/CHANGELOG.md
+/home/schattenmacher/Dokumente/shadow-learn/node_modules/js-tokens/package.json
+/home/schattenmacher/Dokumente/shadow-learn/node_modules/js-tokens/README.md
+/home/schattenmacher/Dokumente/shadow-learn/node_modules/js-tokens/LICENSE
+/home/schattenmacher/Dokumente/shadow-learn/node_modules/js-tokens/index.js
+/home/schattenmacher/Dokumente/shadow-learn/.env
+/home/schattenmacher/Dokumente/ShadowLearn App v1.2 (Passive Mode)/node_modules/js-tokens/CHANGELOG.md
+/home/schattenmacher/Dokumente/ShadowLearn App v1.2 (Passive Mode)/node_modules/js-tokens/package.json
+/home/schattenmacher/Dokumente/ShadowLearn App v1.2 (Passive Mode)/node_modules/js-tokens/README.md
+/home/schattenmacher/Dokumente/ShadowLearn App v1.2 (Passive Mode)/node_modules/js-tokens/LICENSE
+/home/schattenmacher/Dokumente/ShadowLearn App v1.2 (Passive Mode)/node_modules/js-tokens/index.js
+/home/schattenmacher/Dokumente/token/kimiApi.txt
+/home/schattenmacher/Dokumente/token/Perplexity API
+/home/schattenmacher/Dokumente/token/frs-radio-stuttgart
+/home/schattenmacher/Dokumente/token/discord.txt
+/home/schattenmacher/Dokumente/token/GeminiApi
+/home/schattenmacher/Dokumente/token/claude.txt
+/home/schattenmacher/Dokumente/token/.env
+/home/schattenmacher/Dokumente/token/openclaw.txt
+/home/schattenmacher/Dokumente/token/ShadowLearn.txt
+/home/schattenmacher/Dokumente/Jobcenter-Bescheid komplett.pdf
+/home/schattenmacher/Dokumente/Personal/Aufhebungsvertrag _ Kündigungen.png
+/home/schattenmacher/Dokumente/Kontoauszüge/Dezember.pdf
+/home/schattenmacher/Dokumente/Kontoauszüge/2026/img-235847f6-873f-47e4-a665-845b6cafb621
+/home/schattenmacher/Dokumente/Kontoauszüge/2026/2026-März.pdf
+/home/schattenmacher/Dokumente/Kontoauszüge/2026/2026-April.pdf
+/home/schattenmacher/Dokumente/Kontoauszüge/2026/2026-Februar.pdf
+/home/schattenmacher/Dokumente/Kontoauszüge/2026/2026-Januar.pdf
+/home/schattenmacher/Dokumente/Kontoauszüge/Mai.pdf
+/home/schattenmacher/Dokumente/Kontoauszüge/September.pdf
+/home/schattenmacher/Dokumente/Kontoauszüge/Februar.pdf
+/home/schattenmacher/Dokumente/Kontoauszüge/November.pdf
+/home/schattenmacher/Dokumente/Kontoauszüge/Januar.pdf
+/home/schattenmacher/Dokumente/Kontoauszüge/März.pdf
+/home/schattenmacher/Dokumente/Kontoauszüge/August.pdf
+/home/schattenmacher/Dokumente/Kontoauszüge/Juli.pdf
+/home/schattenmacher/Dokumente/Kontoauszüge/April.pdf
+/home/schattenmacher/Dokumente/Kontoauszüge/Oktober.pdf
+/home/schattenmacher/Dokumente/Kontoauszüge/Juni.pdf
+/home/schattenmacher/Dokumente/node_modules/postcss/lib/tokenize.js
+/home/schattenmacher/Dokumente/Mietvertrag Hackstraße 41 01-07-2024 (1).pdf
+/home/schattenmacher/Dokumente/Kontoauszüge.zip
+/home/schattenmacher/Dokumente/FINANZEN_ARCHIV_2026-03-03/FINANZEN_ARCHIV_2026-03-03/02_BANK_KONTOAUSZUEGE/statement-2025-01_250102_042353.pdf
+/home/schattenmacher/Dokumente/FINANZEN_ARCHIV_2026-03-03/FINANZEN_ARCHIV_2026-03-03/02_BANK_KONTOAUSZUEGE/N26_Kontoauszuege_Daniel_Massa_Jan_Bis_Maerz_2025.pdf
+/home/schattenmacher/Dokumente/FINANZEN_ARCHIV_2026-03-03/FINANZEN_ARCHIV_2026-03-03/02_BANK_KONTOAUSZUEGE/Kontoauszüge N26 (letzte 3 Monate).pdf
+/home/schattenmacher/Dokumente/FINANZEN_ARCHIV_2026-03-03/FINANZEN_ARCHIV_2026-03-03/01_PFAENDUNG_P-KONTO_RECHT/Kostenfestsetzungsbeschluss AG Stgt v. 17.10.24.pdf
+/home/schattenmacher/Dokumente/FINANZEN_ARCHIV_2026-03-03/FINANZEN_ARCHIV_2026-03-03/01_PFAENDUNG_P-KONTO_RECHT/Ratenvorschlag_Pfaendungsruecknahme_DanielMassa.pdf
+/home/schattenmacher/Dokumente/FINANZEN_ARCHIV_2026-03-03/FINANZEN_ARCHIV_2026-03-03/01_PFAENDUNG_P-KONTO_RECHT/Pfändungsbescheid Stadtkämmerei.pdf
+/home/schattenmacher/Dokumente/FINANZEN_ARCHIV_2026-03-03/FINANZEN_ARCHIV_2026-03-03/01_PFAENDUNG_P-KONTO_RECHT/Antrag auf Ausstellung einer Bescheinigung zur Erhöhung des Pfändungsfreibetrags.pdf
+/home/schattenmacher/Dokumente/FINANZEN_ARCHIV_2026-03-03/FINANZEN_ARCHIV_2026-03-03/05_BEHOERDEN_BESCHEIDE/2025-04-30_Mitwirkung_DanielMassa_Wohngeld_Jobcenter_Stuttgart.pdf
+/home/schattenmacher/Dokumente/USB_SORTED/2025-03-20/Praktikumsvertrag aidminutes GmbH.PDF
+/home/schattenmacher/Dokumente/USB_SORTED/2025-03-20/Aufhebungsvertrag.PDF
+/home/schattenmacher/Dokumente/USB_SORTED/2025-04-30/2025-04-30_Widerspruch_Aufhebungsbescheid_Jobcenter_OhneUnterschrift.pdf
+/home/schattenmacher/Dokumente/USB_SORTED/2025-04-30/2025-04-24_Aufhebungsbescheid Jobcenter.PDF
+/home/schattenmacher/Dokumente/USB_SORTED/2025-04-30/Vertrag_14284 Massa, Daniel-Alfonsin.pdf
+/home/schattenmacher/Dokumente/USB_SORTED/2025-04-30/2025-04-30_Mitwirkung_DanielMassa_Wohngeld_Jobcenter_Stuttgart.pdf
+/home/schattenmacher/Dokumente/USB_SORTED/2025-04-30/2025-04-30_Rueckfrage_Krankenversicherung_Jobcenter.pdf
+/home/schattenmacher/Dokumente/USB_SORTED/2025-04-30/2025-04-24_Aufforderung zur Mitwirkung_JobCenter_Ost.PDF
+/home/schattenmacher/Dokumente/USB_SORTED/2025-05-06/Errinnerung Übermittlung der Steueranmeldungen.pdf
+/home/schattenmacher/Dokumente/USB_SORTED/2025-04-03/Lohnsteuerbescheinigung_2025_Daniel_Massa.pdf
+/home/schattenmacher/Dokumente/USB_SORTED/2025-04-03/RECHNUNG-Vertragsbestätigung-Nr. 14284 .pdf
+/home/schattenmacher/Dokumente/USB_SORTED/2025-02-21/Aufhebungsvertrag _ Kündigungen.png
+/home/schattenmacher/Dokumente/USB_SORTED/2025-03-26/Tarifvertragsarten_TVG_Uebersicht_DanielMassa.pdf
+/home/schattenmacher/Dokumente/USB_SORTED/2025-09-13/JobCenter Stuttgart Ost Kooperationsvertrag.PDF
+/home/schattenmacher/Dokumente/USB_SORTED/2025-03-22/N26_Kontoauszuege_Daniel_Massa_Jan_Bis_Maerz_2025.pdf
+/home/schattenmacher/Dokumente/USB_SORTED/2025-03-22/Kontoauszüge N26 (letzte 3 Monate).pdf
+/home/schattenmacher/Dokumente/USB_SORTED/2025-03-27/Kontoaustzug vom 2025-04-05 11-31-03.pdf
+/home/schattenmacher/Dokumente/USB_SORTED/2025-06-10/Termin JobCenter.pdf
+/home/schattenmacher/Dokumente/USB_SORTED/2025-06-10/Proton-password-generator_2.png
+/home/schattenmacher/Dokumente/USB_SORTED/2025-06-10/password-protected.png
+/home/schattenmacher/Dokumente/USB_SORTED/2025-06-10/pass-extra-password_2.png
+/home/schattenmacher/Dokumente/USB_SORTED/2025-06-10/pass-extra-password.png
+/home/schattenmacher/Dokumente/USB_SORTED/2025-06-10/pass-extra-password_1.png
+/home/schattenmacher/Dokumente/USB_SORTED/2025-06-10/Proton-password-generator_1.png
+/home/schattenmacher/Dokumente/USB_SORTED/2025-06-10/Proton-password-generator.png
+/home/schattenmacher/Dokumente/USB_SORTED/2025-07-17/Jobcenter_Massa_komplett.pdf
+/home/schattenmacher/Dokumente/USB_SORTED/2025-07-17/Kontoauszuege_April_Juni_2025.pdf
+/home/schattenmacher/Dokumente/USB_SORTED/2025-07-17/final_merge_jobcenter.sh
+/home/schattenmacher/Dokumente/USB_SORTED/2025-06-21/shadowops-master-token-2025
+/home/schattenmacher/Dokumente/USB_SORTED/2025-05-28/Wohngeld-Beendigung-Mietzuschuss_20250528_025810.PDF
+/home/schattenmacher/Dokumente/USB_SORTED/2025-06-09/Lohnsteuerbescheinigung_2025_Daniel_Mass.json
+/home/schattenmacher/Dokumente/USB_SORTED/2025-06-09/Bescheinigung_§903_ZPO_Jobcenter_Stuttgart_Ost_metadata.json
+/home/schattenmacher/Dokumente/USB_SORTED/2025-06-09/Kontoauszüge N26 (letzte 3 Monate)_metadata.json
+/home/schattenmacher/Dokumente/USB_SORTED/2025-06-09/N26_Kontoauszuege_Daniel_Massa_Jan_Bis_Maerz_2025_metadata.json
+/home/schattenmacher/Dokumente/USB_SORTED/2025-06-09/RECHNUNG-Vertragsbestätigung-Nr. 14284 .txt
+/home/schattenmacher/Dokumente/USB_SORTED/2025-06-09/Bescheinigung_§903_ZPO_Jobcenter_Stuttgart_Ost.txt
+/home/schattenmacher/Dokumente/USB_SORTED/2025-06-09/Vertrag_14284 Massa, Daniel-Alfonsin.txt
+/home/schattenmacher/Dokumente/USB_SORTED/2025-06-09/2025-04-30_Widerspruch_Aufhebungsbescheid_Jobcenter_OhneUnterschrift.txt
+/home/schattenmacher/Dokumente/USB_SORTED/2025-06-09/Lohnsteuerbescheinigung_2025_Daniel_Massa.pdf
+/home/schattenmacher/Dokumente/USB_SORTED/2025-06-09/Lohnsteuerbescheinigung_2025_Daniel_Massa.txt
+/home/schattenmacher/Dokumente/USB_SORTED/2025-06-09/Antwort_Jobcenter_Massa.txt
+/home/schattenmacher/Dokumente/USB_SORTED/2025-06-09/Massa_Steuernummer.PDF.txt
+/home/schattenmacher/Dokumente/USB_SORTED/2025-06-09/Praktikumsvertrag aidminutes GmbH.PDF.txt
+/home/schattenmacher/Dokumente/USB_SORTED/2025-06-09/Errinnerung Übermittlung der Steueranmeldungen.txt
+/home/schattenmacher/Dokumente/USB_SORTED/2025-06-09/2025-04-30_Mitwirkung_DanielMassa_Wohngeld_Jobcenter_Stuttgart.txt
+/home/schattenmacher/Dokumente/USB_SORTED/2025-06-09/N26_Kontoauszuege_Daniel_Massa_Jan_Bis_Maerz_2025.txt
+/home/schattenmacher/Dokumente/USB_SORTED/2025-06-09/Kontoaustzug vom 2025-04-05 11-31-03.txt
+/home/schattenmacher/Dokumente/USB_SORTED/2025-06-09/Lohnsteuerbescheinigung_2025_Daniel_Massa_metadata.json
+/home/schattenmacher/Dokumente/USB_SORTED/2025-06-09/temp_2025-04-03_Lohnsteuerbescheinigung_2025_Daniel_Massa.pdf-1.png
+/home/schattenmacher/Dokumente/USB_SORTED/2025-06-09/Kontoaustzug vom 2025-04-05 11-31-03.pdf
+/home/schattenmacher/Dokumente/USB_SORTED/2025-06-09/2025-04-03_Lohnsteuerbescheinigung_2025_Daniel_Massa.txt
+/home/schattenmacher/Dokumente/USB_SORTED/2025-06-09/2025-04-30_Rueckfrage_Krankenversicherung_Jobcenter.txt
+/home/schattenmacher/Dokumente/USB_SORTED/2025-06-09/Aufhebungsvertrag.PDF.txt
+/home/schattenmacher/Dokumente/USB_SORTED/2025-06-09/Kontoauszüge N26 (letzte 3 Monate).txt
+/home/schattenmacher/Dokumente/USB_SORTED/2025-06-09/RECHNUNG-Vertragsbestätigung-Nr. 14284 .pdf
+/home/schattenmacher/Dokumente/USB_SORTED/2025-06-02/config.env
+/home/schattenmacher/Dokumente/USB_SORTED/2025-06-02/Vertrag_14284 Massa, Daniel-Alfonsin.pdf
+/home/schattenmacher/Dokumente/USB_SORTED/2025-05-24/Antwort_Jobcenter_Massa.pdf
+/home/schattenmacher/Dokumente/USB_SORTED/2025-06-19/shadowops-gh-actions-token
+/home/schattenmacher/Dokumente/USB_SORTED/2025-03-19/Massa_Steuernummer.PDF
+/home/schattenmacher/Dokumente/USB_SORTED/2025-04-05/Kontoaustzug vom 2025-04-05 11-31-03.png
+/home/schattenmacher/Dokumente/USB_SORTED/2025-03-24/Bescheinigung_§903_ZPO_Jobcenter_Stuttgart_Ost.pdf
+/home/schattenmacher/Dokumente/Anhörung zur senkung der Kaltmiete/wohungssuche nachweise/Bildschirmfoto vom 2026-03-11 19-15-55.png
+/home/schattenmacher/Dokumente/Anhörung zur senkung der Kaltmiete/wohungssuche nachweise/Wohnungssuche_Nachweise_Spingler_März2026.pdf
+/home/schattenmacher/Dokumente/Anhörung zur senkung der Kaltmiete/wohungssuche nachweise/Wohnungssuche_Beilagen_März2026.pdf
+/home/schattenmacher/Dokumente/Anhörung zur senkung der Kaltmiete/wohungssuche nachweise/Bildschirmfoto vom 2026-03-17 13-39-07.png
+/home/schattenmacher/Dokumente/Anhörung zur senkung der Kaltmiete/wohungssuche nachweise/Bildschirmfoto vom 2026-03-17 17-11-18.png
+/home/schattenmacher/Dokumente/Anhörung zur senkung der Kaltmiete/wohungssuche nachweise/Bildschirmfoto vom 2026-03-17 17-11-03.png
+/home/schattenmacher/Dokumente/Anhörung zur senkung der Kaltmiete/wohungssuche nachweise/Bildschirmfoto vom 2026-03-17 14-02-19.png
+/home/schattenmacher/Dokumente/Anhörung zur senkung der Kaltmiete/Ergaenzung_Stellungnahme_Kaltmiete_Massa_FINAL.pdf
+/home/schattenmacher/Dokumente/Anhörung zur senkung der Kaltmiete/01 Mieterselbstauskunft.pdf
+/home/schattenmacher/Dokumente/Anhörung zur senkung der Kaltmiete/Aufforderung zur Senkung Ihrer Kaltmiete.pdf
+/home/schattenmacher/Dokumente/Anhörung zur senkung der Kaltmiete/Nachweise_Massa_Gesamtpaket_mit_WBS.pdf
+/home/schattenmacher/Dokumente/Anhörung zur senkung der Kaltmiete/Anhörung zur Senkungt der Kaltmiete.pdf
+/home/schattenmacher/Dokumente/Anhörung zur senkung der Kaltmiete/Stellungnahme_Anhoerung_Kaltmiete_AZ-1020-753075_Massa.PDF.pdf
+/home/schattenmacher/Dokumente/WBS/april_2026_jobcenter_10plus_nachweise.pdf
+/home/schattenmacher/.config/discord/Trust Tokens
+/home/schattenmacher/.config/discord/Trust Tokens-journal
+/home/schattenmacher/.config/aevo-praesentations-app/Trust Tokens
+/home/schattenmacher/.config/aevo-praesentations-app/Trust Tokens-journal
+/home/schattenmacher/.config/google-chrome/Default/Trust Tokens
+/home/schattenmacher/.config/google-chrome/Default/Trust Tokens-journal
+/home/schattenmacher/.config/google-chrome/ZxcvbnData/3/passwords.txt
+/home/schattenmacher/.config/google-chrome/Profile 1/Trust Tokens
+/home/schattenmacher/.config/google-chrome/Profile 1/Trust Tokens-journal
+/home/schattenmacher/.config/google-chrome/TrustTokenKeyCommitments/2026.3.23.1/keys.json
+/home/schattenmacher/.config/google-chrome/TrustTokenKeyCommitments/2026.3.23.1/manifest.json
+/home/schattenmacher/.config/google-chrome/TrustTokenKeyCommitments/2026.3.23.1/LICENSE
+/home/schattenmacher/.config/shadowops/shadowops.env
+/home/schattenmacher/.config/Code/Trust Tokens
+/home/schattenmacher/.config/Code/Trust Tokens-journal
+/home/schattenmacher/.config/Signal/Trust Tokens
+/home/schattenmacher/.config/Signal/Trust Tokens-journal
+/home/schattenmacher/local_llm_pipeline/03_training/lora_output_20260413_153616/tokenizer_config.json
+/home/schattenmacher/local_llm_pipeline/03_training/lora_output_20260413_153616/tokenizer.json
+/home/schattenmacher/local_llm_pipeline/03_training/lora_output_20260413_150100/tokenizer_config.json
+/home/schattenmacher/local_llm_pipeline/03_training/lora_output_20260413_150100/tokenizer.json
+/home/schattenmacher/local_llm_pipeline/03_training/lora_output_20260413_151823/tokenizer_config.json
+/home/schattenmacher/local_llm_pipeline/03_training/lora_output_20260413_151823/tokenizer.json
+/home/schattenmacher/local_llm_pipeline/03_training/lora_output_20260413_144555/tokenizer_config.json
+/home/schattenmacher/local_llm_pipeline/03_training/lora_output_20260413_144555/tokenizer.json
+/home/schattenmacher/local_llm_pipeline/03_training/lora_output_20260413_152830/tokenizer_config.json
+/home/schattenmacher/local_llm_pipeline/03_training/lora_output_20260413_152830/tokenizer.json
+/home/schattenmacher/local_llm_pipeline/profiles/prep_only.env
+/home/schattenmacher/local_llm_pipeline/profiles/default.env
+/home/schattenmacher/local_llm_pipeline/profiles/fast.env
+/home/schattenmacher/local_llm_pipeline/runs/20260413_150032/profile_used.env
+/home/schattenmacher/local_llm_pipeline/runs/20260413_152830/profile_used.env
+/home/schattenmacher/local_llm_pipeline/runs/20260413_153616/profile_used.env
+/home/schattenmacher/local_llm_pipeline/runs/20260413_151823/profile_used.env
+/home/schattenmacher/local_llm_pipeline/runs/20260413_150100/profile_used.env
+/home/schattenmacher/.shadowvault/openclaw/quarantine_20260414_062334/.env
+/home/schattenmacher/.shadowvault/openclaw/tokens_backup_20260414_062801.txt
+/home/schattenmacher/Musik/Daniel Musique/Sampler/100hits/053-Michael Franks - Your Secret's Safe With Me.mp3
+/home/schattenmacher/Musik/Daniel Musique/Sampler/German TOP100 Single Charts 11.01.201/03 Secrets.mp3
+/home/schattenmacher/Musik/Daniel Musique/Sampler/German Top100 Single Charts 29.03.2010/062 - Onerepublic - Secrets.mp3
+/home/schattenmacher/Musik/Daniel Musique/Sampler/German Top100 Single Charts 29.03.2010 seeded by www.p2p-crew.to/062 - Onerepublic - Secrets.mp3
+/home/schattenmacher/Musik/Daniel Musique/Sampler/Bild 20 Jahre (Wir Sind Deutschland)-2CD-DE-2009 seeded by www.p2p-crew.to/212_die_gerd_show_-_der_steuersong_(las_kanzlern).mp3
+/home/schattenmacher/Musik/Daniel Musique/Sampler/German_TOP100_Single_Charts_18_01_2010-MiNiSTRY/009-onerepublic_-_secrets-ministry.mp3.!bt
+/home/schattenmacher/Musik/Daniel Musique/Sampler/German Top100 Single Charts 23.11.2009 seeded by www.p2p-crew.to/05 Secrets.mp3
+/home/schattenmacher/Musik/Daniel Musique/Musica  Don Vito/MUSICA 2000+/Ke$ha  -  Secret Weapon (Original) .mp3
+/home/schattenmacher/Musik/Daniel Musique/Musica  Don Vito/MUSICA 2000+/Usher   - Secrets .mp3
+/home/schattenmacher/Musik/Daniel Musique/Musica  Don Vito/MUSICA 2000+/One Republic  - Secrets.mp3
+/home/schattenmacher/Musik/Daniel Musique/Musica  Don Vito/Tech_House/Love And Rockets - This Heaven (Secret Knowledge Mix) (1993).mp3
+/home/schattenmacher/Musik/Daniel Musique/Musica  Don Vito/MUSICA LATINA/Los Secretos  - Dejame (New Version).mp3
+/home/schattenmacher/Musik/Daniel Musique/Musica  Don Vito/MUSICA ELECTRO HOUSE TRANCE/Mattyas ft. Kristina  - Secret love .mp3
+/home/schattenmacher/Musik/Hörbuch/neue ebooks/McNab, Andy - Nick Stone 01 - Ferngesteuert.pdf
+/home/schattenmacher/Musik/Hörbuch/neue ebooks/VERTRAG DANIEL MASSA.pdf
+/home/schattenmacher/Musik/Hörbuch/neue ebooks/VERTRAG DANIEL MASSA-4.pdf
+/home/schattenmacher/Musik/Hörbuch/neue ebooks/._VERTRAG DANIEL MASSA-3.pdf
+/home/schattenmacher/Musik/Hörbuch/neue ebooks/._VERTRAG DANIEL MASSA-4.pdf
+/home/schattenmacher/Musik/Hörbuch/neue ebooks/VERTRAG DANIEL MASSA-3.pdf
+/home/schattenmacher/Musik/Hörbuch/neue ebooks/._VERTRAG DANIEL MASSA.pdf
+/home/schattenmacher/fix_backup_bot_token_and_restart.sh
+/home/schattenmacher/Bilder/OperativePro_Rahmenplan_DarkMode_JPG/0033_Ausbildungsvertrag_BBiG.jpg
+/home/schattenmacher/Bilder/Projektmanagement/SA2 (Steuerung + Controlling).png
+/home/schattenmacher/Bilder/OperativePro_Rahmenplan_Slideshow_JPG/DarkMode_4K/0033_Ausbildungsvertrag_BBiG.jpg
+/home/schattenmacher/Bilder/AEVO_Unterweisung_Active_Directory_Nutzer_anlegen/AEVO_Master_Slideshow_JPG/0051_Phase_1__Zustand_steuern.jpg
+/home/schattenmacher/Bilder/AEVO_Unterweisung_Active_Directory_Nutzer_anlegen/AEVO_Slideshow_Strategie_Lerntyp_JPG/0003_Phase_1__Zustand_steuern.jpg
+/home/schattenmacher/shadowmaker_token_fix_wizard.sh
+/media/schattenmacher/USB-STICK1/USB_SORTED/2023-11-05/_tokenizer.py
+/media/schattenmacher/USB-STICK1/USB_SORTED/2022-06-21/gnome-keyring-secrets.desktop
+/media/schattenmacher/USB-STICK1/USB_SORTED/2025-07-23/.env
+/media/schattenmacher/USB-STICK1/USB_SORTED/2025-07-23/.shadow_secret
+/media/schattenmacher/USB-STICK1/USB_SORTED/2025-07-24/.env
+/media/schattenmacher/USB-STICK1/USB_SORTED/2025-08-05/ALL_AI_SECRETS.txt
+/media/schattenmacher/USB-STICK1/USB_SORTED/2025-06-22/huggingface_token_audit.sh
+/media/schattenmacher/USB-STICK1/USB_SORTED/2022-07-25/LVFS-CA.pem
+/media/schattenmacher/USB-STICK1/USB_SORTED/2023-06-20/tokenTypes.js
+/media/schattenmacher/USB-STICK1/USB_SORTED/2023-06-20/tokenize.js
+/media/schattenmacher/USB-STICK1/USB_SORTED/2020-05-29/auto_login_host_id_passwd.example
+/media/schattenmacher/USB-STICK1/USB_SORTED/2025-06-19/common-password
+/media/schattenmacher/USB-STICK1/USB_SORTED/2018-02-08/Microsoft.IdentityModel.Tokens.dll
+/media/schattenmacher/USB-STICK1/USB_SORTED/2018-02-08/System.IdentityModel.Tokens.Jwt.dll
+/media/schattenmacher/USB-STICK1/USB_SORTED/2025-08-10/60_Dark_Psychology_Secrets_You’ve_Never_Heard_Before!_(Part_1)_Transcript__59ae89cd.txt
+/media/schattenmacher/USB-STICK1/USB_SORTED/2025-08-10/60_Dark_Psychology_Secrets_You’ve_Never_Heard_Before!_(Part_1)_Transcript__plain.txt
+/media/schattenmacher/USB-STICK1/USB_SORTED/2025-08-10/60_Dark_Psychology_Secrets_You’ve_Never_Heard_Before!_(Part_2)_Transcript__plain.txt
+/media/schattenmacher/USB-STICK1/USB_SORTED/2025-08-10/60_Dark_Psychology_Secrets_You’ve_Never_Heard_Before!_(Part_2)_Transcript__3c6f1e5d.txt
+/media/schattenmacher/USB-STICK1/USB_SORTED/2023-03-28/npm-token.1
+/media/schattenmacher/USB-STICK1/USB_SORTED/2025-03-24/tokenizer.ini
+/media/schattenmacher/USB-STICK1/USB_SORTED/2023-02-16/npm-token.html
+/media/schattenmacher/USB-STICK1/USB_SORTED/2023-02-16/npm-token.md
+/media/schattenmacher/USB-STICK1/USB_SORTED/2023-02-16/tokenTypes.js
+/media/schattenmacher/USB-STICK1/USB_SORTED/2023-02-16/tokenize.js
+/media/schattenmacher/USB-STICK1/USB_SORTED/2023-02-16/token.js
+/media/schattenmacher/USB-STICK1/USB_SORTED/2024-05-08/npm-token.html
+/media/schattenmacher/USB-STICK1/USB_SORTED/2024-05-08/npm-token.md
+/media/schattenmacher/USB-STICK1/USB_SORTED/2024-05-08/npm-token.1
+/media/schattenmacher/USB-STICK1/USB_SORTED/2024-05-08/token.js
+/media/schattenmacher/USB-STICK1/USB_SORTED/2025-06-26/.env
+/media/schattenmacher/USB-STICK1/USB_SORTED/2025-07-11/passwd-
+/media/schattenmacher/USB-STICK1/USB_SORTED/2025-07-11/passwd
+/media/schattenmacher/USB-STICK1/USB_SORTED/2025-09-13/JobCenter Stuttgart Ost Kooperationsvertrag.PDF
+/media/schattenmacher/USB-STICK1/USB_SORTED/2025-04-16/jmxremote.password
+/media/schattenmacher/USB-STICK1/USB_SORTED/2021-11-11/chpasswd
+/media/schattenmacher/USB-STICK1/USB_SORTED/2021-11-11/passwd
+/media/schattenmacher/USB-STICK1/USB_SORTED/2025-08-09/.git-credentials
+/media/schattenmacher/USB-STICK1/USB_SORTED/2025-06-30/.claude.env
+/media/schattenmacher/USB-STICK1/USB_SORTED/2025-06-30/.openai.env
+/media/schattenmacher/USB-STICK1/AEVO_Backup_20251217/AEVO_Master_Slideshow_JPG/0051_Phase_1__Zustand_steuern.jpg
+/media/schattenmacher/USB-STICK1/AEVO_Backup_20251217/AEVO_Slideshow_Strategie_Lerntyp_JPG/0003_Phase_1__Zustand_steuern.jpg
+/media/schattenmacher/USB-STICK1/data/Kontoauszug Revolut (April–Juli 2025).pdf
+/media/schattenmacher/USB-STICK1/data/tmp_schattenmacher-revenue-system/scan_for_tokens.sh
+/media/schattenmacher/USB-STICK1/data/Wohnberechtigungsschein/Mietvertrag Hackstraße 41 01-07-2024_Unterschrieben.pdf
+/media/schattenmacher/USB-STICK1/data/Wohnberechtigungsschein/personalausweis.pdf
+/media/schattenmacher/USB-STICK1/data/Operative_Professionals_Backup/.env
+/media/schattenmacher/USB-STICK1/bilder/OperativePro_Rahmenplan_DarkMode_JPG/0033_Ausbildungsvertrag_BBiG.jpg
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/USER_DATA/60 Dark Psychology Secrets You’ve Never Heard Before! (Part 2)_Transcript.pdf
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/USER_DATA/60 Dark Psychology Secrets You’ve Never Heard Before! (Part 1)_Transcript.pdf
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/USER_DATA/Alle Token und APIs.txt
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/USER_DATA/neue ebooks/VERTRAG DANIEL MASSA-4.pdf
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/USER_DATA/neue ebooks/._VERTRAG DANIEL MASSA-4.pdf
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/USER_DATA/neue ebooks/._VERTRAG DANIEL MASSA.pdf
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/USER_DATA/neue ebooks/McNab, Andy - Nick Stone 01 - Ferngesteuert.pdf
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/USER_DATA/neue ebooks/._VERTRAG DANIEL MASSA-3.pdf
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/USER_DATA/neue ebooks/VERTRAG DANIEL MASSA-3.pdf
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/USER_DATA/neue ebooks/VERTRAG DANIEL MASSA.pdf
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/USER_DATA/pdf_texts/60 Dark Psychology Secrets You’ve Never Heard Before! (Part 2)_Transcript.txt
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/USER_DATA/pdf_texts/60 Dark Psychology Secrets You’ve Never Heard Before! (Part 1)_Transcript.txt
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/EML_RAW_ARCHIVE/2025-06-10_0044_=?utf-8?q?=C3=9Cberzeuge_als_Mieter:in_m_854.eml
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/EML_RAW_ARCHIVE/2025-06-10_0044_=?utf-8?q?50%_OFF_summer_tokens_=F0=9F=8_577.eml
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/EML_RAW_ARCHIVE/2025-06-10_0044_=?utf-8?q?Dein_Gmail-Konto_funktioniert__551.eml
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/EML_RAW_ARCHIVE/2025-06-10_0044_=?utf-8?q?Fw:_Fragebogen_Mietverh=C3=A4l_2806.eml
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/EML_RAW_ARCHIVE/2025-06-10_0044_Discover_Which_Token_is_+27.4%_in_the_La_1506.eml
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/EML_RAW_ARCHIVE/2025-06-10_0044_=?utf-8?q?Ihr_Konto_wird_mit_einem_neuen_1755.eml
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/EML_RAW_ARCHIVE/2025-06-10_0044_Dein_markt.de-Konto_wird_bald_deaktivier_1704.eml
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/EML_RAW_ARCHIVE/2025-06-10_0044_Discover_Which_Token_is_+49.13%_in_the_L_1717.eml
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/EML_RAW_ARCHIVE/2025-06-10_0044_Das_N26_Gemeinschaftskonto_ist_da!_948.eml
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/EML_RAW_ARCHIVE/2025-06-10_0044_Dein_Konto_auf_markt.de_wurde_deaktivier_1497.eml
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/EML_RAW_ARCHIVE/2025-06-10_0044_=?utf-8?q?Neuer_Kontowiederherstellungss_201.eml
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/EML_RAW_ARCHIVE/2025-06-10_0044_Discover_Which_Token_is_+50.17%_in_the_L_2080.eml
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/EML_RAW_ARCHIVE/2025-06-10_0044_=?utf-8?q?Wie_die_Grundsteuerreform_die__684.eml
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/EML_RAW_ARCHIVE/2025-06-10_0044_Ihr_Vodafone_Hotspot-Ticketkonto_1952.eml
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/EML_RAW_ARCHIVE/2025-06-10_0044_Schneller_zum_neuen_Mietvertrag,_Daniel!_872.eml
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/EML_RAW_ARCHIVE/2025-06-10_0044_New_Article:_The_Power_of_Utility_Tokens_712.eml
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/EML_RAW_ARCHIVE/2025-06-10_0044_[Free_Book]_Secret_to_a_Happier,_More_Fu_1523.eml
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/EML_RAW_ARCHIVE/2025-06-10_0044_Dein_N26_Konto_braucht_Aufmerksamkeit_1476.eml
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/EML_RAW_ARCHIVE/2025-06-10_0044_Discover_Which_Token_is_+78.81%_in_the_L_1954.eml
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/EML_RAW_ARCHIVE/2025-06-10_0044_You_temporarily_cannot_buy_&_send_tokens_695.eml
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/EML_RAW_ARCHIVE/2025-06-10_0044_Nice_to_miet_you,_Daniel!_839.eml
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/EML_RAW_ARCHIVE/2025-06-10_0045_Neue_Anmeldung_in_Ihrem_Opera-Konto_4873.eml
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/EML_RAW_ARCHIVE/2025-06-10_0045_Neue_Anmeldung_in_Ihrem_Opera-Konto_4875.eml
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/EML_RAW_ARCHIVE/2025-06-10_0045_Unlock_the_Secret_to_Smarter_Trading:_Jo_3058.eml
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/EML_RAW_ARCHIVE/2025-06-10_0044_[GitHub]_Please_reset_your_password_926.eml
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/EML_RAW_ARCHIVE/2025-06-10_0045_Your_Zoom_password_has_been_reset._3496.eml
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/EML_RAW_ARCHIVE/2025-06-10_0044_[GitHub]_Your_password_was_reset_925.eml
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/EML_RAW_ARCHIVE/2025-06-10_0045_=?utf-8?q?China=E2=80=99s_state_secrets__3090.eml
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/EML_RAW_ARCHIVE/2025-06-10_0045_Neue_Anmeldung_in_Ihrem_Opera-Konto_4871.eml
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/EML_RAW_ARCHIVE/2025-06-10_0045_=?utf-8?q?Kontobest=C3=A4tigung:_Ihr_Tes_5649.eml
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/EML_RAW_ARCHIVE/2025-06-10_0045_Sony-Konto_erstellen_4862.eml
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/EML_RAW_ARCHIVE/2025-06-10_0045_=?utf-8?q?Ihr_Konto_wird_mit_einem_neuen_3473.eml
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/EML_RAW_ARCHIVE/2025-06-10_0045_=?utf-8?q?=C3=84nderungen_der_Vertragsbe_3890.eml
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/EML_RAW_ARCHIVE/2025-06-10_0045_ibo_token_5371.eml
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/EML_RAW_ARCHIVE/2025-06-10_0045_=?utf-8?q?iPhone_15_mit_Vertrag_vorbeste_5105.eml
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/EML_RAW_ARCHIVE/2025-06-10_0045_Dein_Maskenbilder-Portal_Konto_wurde_ers_5154.eml
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/EML_RAW_ARCHIVE/2025-06-10_0045_=?utf-8?q?Benachrichtigung_zur_Kontosich_5030.eml
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/EML_RAW_ARCHIVE/2025-06-10_0045_Sony-Konto_wurde_erfolgreich_erstellt_4861.eml
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/EML_RAW_ARCHIVE/2025-06-10_0045_RE:_Sofortige_Stornierung_meines_Kontos__5625.eml
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/EML_RAW_ARCHIVE/2025-06-10_0045_These_Liquid_Staking_Tokens_Have_Caught__5522.eml
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/EML_RAW_ARCHIVE/2025-06-10_0045_Secure_Password_Sharing_now_available_in_3885.eml
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/EML_RAW_ARCHIVE/2025-06-10_0045_=?utf-8?q?Wichtig:_Ihr_Rechnungskonto_01_4181.eml
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/EML_RAW_ARCHIVE/2025-06-10_0045_[NEW]_5_Secret_A.I._Money_Making_Methods_5141.eml
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/EML_RAW_ARCHIVE/2025-06-10_0046_Implantat-Ausweis_5968.eml
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/EML_RAW_ARCHIVE/2025-06-10_0045_Konto_verifizieren_und_als_Anwendungsent_5511.eml
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/EML_RAW_ARCHIVE/2025-06-10_0045_RE:_Sofortige_Stornierung_meines_Kontos__5632.eml
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/EML_RAW_ARCHIVE/2025-06-10_0045_Teddy's_5_figures_month_secret_(wealth_h_3609.eml
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/EML_RAW_ARCHIVE/2025-06-10_0045_[Today]_5_Secret_Money-making_Methods_wi_5111.eml
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/EML_RAW_ARCHIVE/2025-06-10_0207_=?utf-8?q?Die_E-Mail-Adresse_zur_Kontowi_11338.eml
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/EML_RAW_ARCHIVE/2025-06-10_0214_=?utf-8?q?Letzte_Schritte_zur_Kontoer=C3_11818.eml
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/stable-diffusion-webui/javascript/token-counters.js
+/media/schattenmacher/USB-STICK/27-FEB-2026/Stellungnahme_Anhoerung_Kaltmiete_AZ-1020-753075_Massa.PDF
+/media/schattenmacher/USB-STICK/27-FEB-2026/Anhörung zur Senkungt der Kaltmiete.pdf
+/media/schattenmacher/USB-STICK/08-NOV-2025/Jobcenter Stuttgart Ost Aufforderung zur Mitwirkung 06.10.2025.PDF
+/media/schattenmacher/CAA9-512D/08-NOV-2025/Jobcenter Stuttgart Ost Aufforderung zur Mitwirkung 06.10.2025.PDF
+/media/schattenmacher/CAA9-512D/27-FEB-2026/Stellungnahme_Anhoerung_Kaltmiete_AZ-1020-753075_Massa.PDF
+/media/schattenmacher/CAA9-512D/27-FEB-2026/Anhörung zur Senkungt der Kaltmiete.pdf
+/media/schattenmacher/CAA9-512D/11-MAR-2026/Aufforderung zur Senkung Ihrer Kaltmiete.pdf
+/media/schattenmacher/C6C25F2BC25F1ECD/Hörbuch/neue ebooks/McNab, Andy - Nick Stone 01 - Ferngesteuert.pdf
+/media/schattenmacher/C6C25F2BC25F1ECD/Hörbuch/neue ebooks/._VERTRAG DANIEL MASSA-3.pdf
+/media/schattenmacher/C6C25F2BC25F1ECD/Hörbuch/neue ebooks/._VERTRAG DANIEL MASSA-4.pdf
+/media/schattenmacher/C6C25F2BC25F1ECD/Hörbuch/neue ebooks/._VERTRAG DANIEL MASSA.pdf
+/media/schattenmacher/C6C25F2BC25F1ECD/Hörbuch/neue ebooks/VERTRAG DANIEL MASSA-3.pdf
+/media/schattenmacher/C6C25F2BC25F1ECD/Hörbuch/neue ebooks/VERTRAG DANIEL MASSA-4.pdf
+/media/schattenmacher/C6C25F2BC25F1ECD/Hörbuch/neue ebooks/VERTRAG DANIEL MASSA.pdf
+/home/schattenmacher/ComfyUI/ComfyUI/comfy/text_encoders/spiece_tokenizer.py
+/home/schattenmacher/ComfyUI/ComfyUI/comfy/sd1_tokenizer/tokenizer_config.json
+/home/schattenmacher/ComfyUI/ComfyUI/comfy/sd1_tokenizer/special_tokens_map.json
+/home/schattenmacher/ComfyUI/ComfyUI/comfy/sd1_tokenizer/vocab.json
+/home/schattenmacher/ComfyUI/ComfyUI/comfy/sd1_tokenizer/merges.txt
+/home/schattenmacher/ComfyUI/comfy/text_encoders/t5_pile_tokenizer/tokenizer.model
+/home/schattenmacher/ComfyUI/comfy/text_encoders/llama_tokenizer/tokenizer_config.json
+/home/schattenmacher/ComfyUI/comfy/text_encoders/llama_tokenizer/tokenizer.json
+/home/schattenmacher/ComfyUI/comfy/text_encoders/hydit_clip_tokenizer/tokenizer_config.json
+/home/schattenmacher/ComfyUI/comfy/text_encoders/hydit_clip_tokenizer/special_tokens_map.json
+/home/schattenmacher/ComfyUI/comfy/text_encoders/hydit_clip_tokenizer/vocab.txt
+/home/schattenmacher/ComfyUI/comfy/text_encoders/__pycache__/spiece_tokenizer.cpython-312.pyc
+/home/schattenmacher/ComfyUI/comfy/text_encoders/byt5_tokenizer/tokenizer_config.json
+/home/schattenmacher/ComfyUI/comfy/text_encoders/byt5_tokenizer/special_tokens_map.json
+/home/schattenmacher/ComfyUI/comfy/text_encoders/byt5_tokenizer/added_tokens.json
+/home/schattenmacher/ComfyUI/comfy/text_encoders/spiece_tokenizer.py
+/home/schattenmacher/ComfyUI/comfy/text_encoders/ace_lyrics_tokenizer/vocab.json
+/home/schattenmacher/ComfyUI/comfy/text_encoders/qwen25_tokenizer/tokenizer_config.json
+/home/schattenmacher/ComfyUI/comfy/text_encoders/qwen25_tokenizer/vocab.json
+/home/schattenmacher/ComfyUI/comfy/text_encoders/qwen25_tokenizer/merges.txt
+/home/schattenmacher/ComfyUI/comfy/text_encoders/t5_tokenizer/tokenizer_config.json
+/home/schattenmacher/ComfyUI/comfy/text_encoders/t5_tokenizer/special_tokens_map.json
+/home/schattenmacher/ComfyUI/comfy/text_encoders/t5_tokenizer/tokenizer.json
+/home/schattenmacher/ComfyUI/comfy/sd1_tokenizer/tokenizer_config.json
+/home/schattenmacher/ComfyUI/comfy/sd1_tokenizer/special_tokens_map.json
+/home/schattenmacher/ComfyUI/comfy/sd1_tokenizer/vocab.json
+/home/schattenmacher/ComfyUI/comfy/sd1_tokenizer/merges.txt
+/home/schattenmacher/discord_token_guard_reset.sh
+/home/schattenmacher/Backups/AEVO_Backup_20251217_065916/AEVO_Unterweisung_Active_Directory_Nutzer_anlegen/AEVO_Master_Slideshow_JPG/0051_Phase_1__Zustand_steuern.jpg
+/home/schattenmacher/Backups/AEVO_Backup_20251217_065916/AEVO_Unterweisung_Active_Directory_Nutzer_anlegen/AEVO_Slideshow_Strategie_Lerntyp_JPG/0003_Phase_1__Zustand_steuern.jpg
+/home/schattenmacher/Videos/Video Aevo Unterweisung Aufnahmen/_tmp_aevo_poster_sim_full_2026-01-16_215647/auto_vbr.env
+/home/schattenmacher/Videos/Video Aevo Unterweisung Aufnahmen/_tmp_aevo_poster_sim_full_2026-01-16_215711/auto_vbr.env
+/home/schattenmacher/Videos/Video Aevo Unterweisung Aufnahmen/_tmp_aevo_fit_v2_2026-01-17_004752/fit.env
+/home/schattenmacher/Videos/Video Aevo Unterweisung Aufnahmen/_tmp_aevo_poster_sim_full_2026-01-16_220037/auto_vbr.env
+/home/schattenmacher/development/ShadowLearn/backend/.env
+/home/schattenmacher/development/ShadowLearn/ShadowLearnAI_FULL/backend/.env
+/home/schattenmacher/IBOGA-TOKEN-Projekt/docs/DISCLAIMER.md
+/home/schattenmacher/IBOGA-TOKEN-Projekt/docs/CHAT_ANALYSIS.md
+/home/schattenmacher/IBOGA-TOKEN-Projekt/.git/hooks/prepare-commit-msg.sample
+/home/schattenmacher/IBOGA-TOKEN-Projekt/.git/hooks/fsmonitor-watchman.sample
+/home/schattenmacher/IBOGA-TOKEN-Projekt/.git/hooks/commit-msg.sample
+/home/schattenmacher/IBOGA-TOKEN-Projekt/.git/hooks/pre-rebase.sample
+/home/schattenmacher/IBOGA-TOKEN-Projekt/.git/hooks/pre-push.sample
+/home/schattenmacher/IBOGA-TOKEN-Projekt/.git/hooks/sendemail-validate.sample
+/home/schattenmacher/IBOGA-TOKEN-Projekt/.git/hooks/pre-receive.sample
+/home/schattenmacher/IBOGA-TOKEN-Projekt/.git/hooks/applypatch-msg.sample
+/home/schattenmacher/IBOGA-TOKEN-Projekt/.git/hooks/pre-merge-commit.sample
+/home/schattenmacher/IBOGA-TOKEN-Projekt/.git/hooks/push-to-checkout.sample
+/home/schattenmacher/IBOGA-TOKEN-Projekt/.git/hooks/pre-applypatch.sample
+/home/schattenmacher/IBOGA-TOKEN-Projekt/.git/hooks/pre-commit.sample
+/home/schattenmacher/IBOGA-TOKEN-Projekt/.git/hooks/update.sample
+/home/schattenmacher/IBOGA-TOKEN-Projekt/.git/hooks/post-update.sample
+/home/schattenmacher/IBOGA-TOKEN-Projekt/.git/index
+/home/schattenmacher/IBOGA-TOKEN-Projekt/.git/refs/heads/main
+/home/schattenmacher/IBOGA-TOKEN-Projekt/.git/HEAD
+/home/schattenmacher/IBOGA-TOKEN-Projekt/.git/config
+/home/schattenmacher/IBOGA-TOKEN-Projekt/.git/objects/pack/pack-0bbd5586f21a58af59292ce0666e3b66306dbe58.idx
+/home/schattenmacher/IBOGA-TOKEN-Projekt/.git/objects/pack/pack-0bbd5586f21a58af59292ce0666e3b66306dbe58.pack
+/home/schattenmacher/IBOGA-TOKEN-Projekt/.git/objects/pack/pack-0bbd5586f21a58af59292ce0666e3b66306dbe58.rev
+/home/schattenmacher/IBOGA-TOKEN-Projekt/.git/objects/ec/e70ce9fb317b023a57a266ddeb0a7ca8e606f2
+/home/schattenmacher/IBOGA-TOKEN-Projekt/.git/objects/db/6bd64ddb347d81015c29ea4509161936895152
+/home/schattenmacher/IBOGA-TOKEN-Projekt/.git/objects/83/c0241d5abfed01e13bcf186649d3ddba91f95a
+/home/schattenmacher/IBOGA-TOKEN-Projekt/.git/objects/13/fce56b265171f75a37b20de4fecd1598142f84
+/home/schattenmacher/IBOGA-TOKEN-Projekt/.git/objects/cb/1296abc5f6a3373abd0d60c37ee319b6379775
+/home/schattenmacher/IBOGA-TOKEN-Projekt/.git/objects/da/4e08d73af021297f1b9ed834e71f93871ecfa2
+/home/schattenmacher/IBOGA-TOKEN-Projekt/.git/objects/f7/54d423faad99dfc358e71f746c92a647ab93b4
+/home/schattenmacher/IBOGA-TOKEN-Projekt/.git/description
+/home/schattenmacher/IBOGA-TOKEN-Projekt/.git/packed-refs
+/home/schattenmacher/IBOGA-TOKEN-Projekt/.git/COMMIT_EDITMSG
+/home/schattenmacher/IBOGA-TOKEN-Projekt/.git/logs/HEAD
+/home/schattenmacher/IBOGA-TOKEN-Projekt/.git/info/exclude
+/home/schattenmacher/IBOGA-TOKEN-Projekt/README.md
+/home/schattenmacher/IBOGA-TOKEN-Projekt/PROJECT_STATUS.md
+/home/schattenmacher/IBOGA-TOKEN-Projekt/LICENSE
+/home/schattenmacher/.openclaw/credentials/telegram-default-allowFrom.json
+/home/schattenmacher/.openclaw/credentials/telegram-pairing.json
+/home/schattenmacher/.openclaw/.env
+/home/schattenmacher/shadow-letta/.venv/bin/tokenize-rt
+/home/schattenmacher/usb-llm-data-pipeline/qwen25-15b-lora-clean/merged_model_1_5b/tokenizer_config.json
+/home/schattenmacher/usb-llm-data-pipeline/qwen25-15b-lora-clean/merged_model_1_5b/tokenizer.json
+/home/schattenmacher/usb-llm-data-pipeline/qwen25-15b-lora-clean/checkpoints/checkpoint-476/tokenizer_config.json
+/home/schattenmacher/usb-llm-data-pipeline/qwen25-15b-lora-clean/checkpoints/checkpoint-476/tokenizer.json
+/home/schattenmacher/usb-llm-data-pipeline/qwen25-15b-lora-clean/checkpoints/checkpoint-238/tokenizer_config.json
+/home/schattenmacher/usb-llm-data-pipeline/qwen25-15b-lora-clean/checkpoints/checkpoint-238/tokenizer.json
+/home/schattenmacher/usb-llm-data-pipeline/qwen25-15b-lora-clean/adapter/tokenizer_config.json
+/home/schattenmacher/usb-llm-data-pipeline/qwen25-15b-lora-clean/adapter/tokenizer.json
+/home/schattenmacher/usb-llm-data-pipeline/lora-output/tokenizer_config.json
+/home/schattenmacher/usb-llm-data-pipeline/lora-output/tokenizer.json
+/home/schattenmacher/usb-llm-data-pipeline/lora-output-clean-train/tokenizer_config.json
+/home/schattenmacher/usb-llm-data-pipeline/lora-output-clean-train/tokenizer.json
+/home/schattenmacher/usb-llm-data-pipeline/lora-output-psa_sa1_sa3/tokenizer_config.json
+/home/schattenmacher/usb-llm-data-pipeline/lora-output-psa_sa1_sa3/tokenizer.json
+/home/schattenmacher/usb-llm-data-pipeline/lora-output-ihk-cloud-migration/tokenizer_config.json
+/home/schattenmacher/usb-llm-data-pipeline/lora-output-ihk-cloud-migration/tokenizer.json
+/home/schattenmacher/usb-llm-data-pipeline/lora-output-psa-sa1-sa3/tokenizer_config.json
+/home/schattenmacher/usb-llm-data-pipeline/lora-output-psa-sa1-sa3/tokenizer.json
+/home/schattenmacher/usb-llm-data-pipeline/lora-output-psa-sa1-sa3-clean/tokenizer_config.json
+/home/schattenmacher/usb-llm-data-pipeline/lora-output-psa-sa1-sa3-clean/tokenizer.json
+/home/schattenmacher/.vscode/extensions/github.copilot-chat-0.36.1/dist/o200k_base.tiktoken
+/home/schattenmacher/.vscode/extensions/github.copilot-chat-0.36.1/dist/cl100k_base.tiktoken
+/home/schattenmacher/.vscode/extensions/github.copilot-chat-0.36.1/dist/tikTokenizerWorker.js
+/home/schattenmacher/.vscode/extensions/donjayamanne.python-environment-manager-1.2.7/pythonFiles/.env
+/home/schattenmacher/.vscode/extensions/github.copilot-chat-0.43.0/dist/o200k_base.tiktoken
+/home/schattenmacher/.vscode/extensions/github.copilot-chat-0.43.0/dist/cl100k_base.tiktoken
+/home/schattenmacher/.vscode/extensions/github.copilot-chat-0.43.0/dist/tikTokenizerWorker.js
+/home/schattenmacher/telegram-chatgpt-bot/.env
+/home/schattenmacher/eva-agent-template/secret.key
+/home/schattenmacher/AEVO_App/node_modules/builder-util-runtime/out/CancellationToken.js.map
+/home/schattenmacher/AEVO_App/node_modules/builder-util-runtime/out/CancellationToken.d.ts
+/home/schattenmacher/AEVO_App/node_modules/builder-util-runtime/out/CancellationToken.js
+/home/schattenmacher/next_step_telegram_tokens.sh
+/home/schattenmacher/setup_shadowmaker_discord_channels_wizard.sh.bak.token_guard_20260502_055129
+/home/schattenmacher/bots/telegrambot/.env
+/home/schattenmacher/shadowmaker-ai-stack/.env
+/home/schattenmacher/Downloads/jobcenter-nachweise-stuttgart.zip
+/home/schattenmacher/Downloads/client_secret_222831201635-p7tjo0452d1o68tl18s0pi54o4fva7l4.apps.googleusercontent.com.json
+/home/schattenmacher/Downloads/SKILL_Jobcenter_Nachweise_Stuttgart.md
+/home/schattenmacher/Downloads/freies-radio-stuttgart-web/node_modules/js-tokens/CHANGELOG.md
+/home/schattenmacher/Downloads/freies-radio-stuttgart-web/node_modules/js-tokens/package.json
+/home/schattenmacher/Downloads/freies-radio-stuttgart-web/node_modules/js-tokens/README.md
+/home/schattenmacher/Downloads/freies-radio-stuttgart-web/node_modules/js-tokens/LICENSE
+/home/schattenmacher/Downloads/freies-radio-stuttgart-web/node_modules/js-tokens/index.js
+/home/schattenmacher/Downloads/Personalbedarf_exakt_berechnen_und_steuern.m4a
+/home/schattenmacher/secrets/telegram_bots.env.bak.20260414_011115
+/home/schattenmacher/secrets/telegram_bots.env
+/home/schattenmacher/Android/Sdk/emulator/lib/ca-bundle.pem
+/home/schattenmacher/.cache/openclaw-upstream/docs/images/feishu-step3-credentials.png
+/home/schattenmacher/.cache/openclaw-upstream/docs/reference/token-use.md
+/home/schattenmacher/.cache/openclaw-upstream/.detect-secrets.cfg
+/home/schattenmacher/.cache/openclaw-upstream/skills/1password/SKILL.md
+/home/schattenmacher/.cache/openclaw-upstream/src/infra/pairing-token.ts
+/home/schattenmacher/.cache/openclaw-upstream/src/commands/onboard-auth.credentials.ts
+/home/schattenmacher/.cache/openclaw-upstream/src/commands/auth-token.ts
+/home/schattenmacher/.cache/openclaw-upstream/src/agents/anthropic.setup-token.live.test.ts
+/home/schattenmacher/.cache/openclaw-upstream/src/agents/models-config.auto-injects-github-copilot-provider-token-is.e2e.test.ts
+/home/schattenmacher/.cache/openclaw-upstream/src/agents/cli-credentials.ts
+/home/schattenmacher/.cache/openclaw-upstream/src/agents/models-config.skips-writing-models-json-no-env-token.e2e.test.ts
+/home/schattenmacher/.cache/openclaw-upstream/src/agents/cli-credentials.test.ts
+/home/schattenmacher/.cache/openclaw-upstream/src/agents/models-config.uses-first-github-copilot-profile-env-tokens.e2e.test.ts
+/home/schattenmacher/.cache/openclaw-upstream/src/agents/models-config.falls-back-default-baseurl-token-exchange-fails.e2e.test.ts
+/home/schattenmacher/.cache/openclaw-upstream/src/discord/token.test.ts
+/home/schattenmacher/.cache/openclaw-upstream/src/discord/token.ts
+/home/schattenmacher/.cache/openclaw-upstream/src/utils/normalize-secret-input.ts
+/home/schattenmacher/.cache/openclaw-upstream/src/providers/github-copilot-token.ts
+/home/schattenmacher/.cache/openclaw-upstream/src/providers/github-copilot-token.test.ts
+/home/schattenmacher/.cache/openclaw-upstream/src/browser/server.auth-token-gates-http.test.ts
+/home/schattenmacher/.cache/openclaw-upstream/src/browser/control-auth.auto-token.test.ts
+/home/schattenmacher/.cache/openclaw-upstream/src/config/telegram-webhook-secret.test.ts
+/home/schattenmacher/.cache/openclaw-upstream/src/config/slack-token-validation.test.ts
+/home/schattenmacher/.cache/openclaw-upstream/src/slack/token.ts
+/home/schattenmacher/.cache/openclaw-upstream/src/line/channel-access-token.ts
+/home/schattenmacher/.cache/openclaw-upstream/src/telegram/token.test.ts
+/home/schattenmacher/.cache/openclaw-upstream/src/telegram/token.ts
+/home/schattenmacher/.cache/openclaw-upstream/src/security/secret-equal.ts
+/home/schattenmacher/.cache/openclaw-upstream/src/auto-reply/tokens.ts
+/home/schattenmacher/.cache/openclaw-upstream/openclaw.podman.env
+/home/schattenmacher/.cache/openclaw-upstream/.secrets.baseline
+/home/schattenmacher/.docker/.token_seed.lock
+/home/schattenmacher/.docker/.token_seed
+/home/schattenmacher/.env
+/home/schattenmacher/nltk_data/tokenizers/punkt.zip
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/russian/ortho_context.tab
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/russian/collocations.tab
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/russian/abbrev_types.txt
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/russian/sent_starters.txt
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/slovene/ortho_context.tab
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/slovene/collocations.tab
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/slovene/abbrev_types.txt
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/slovene/sent_starters.txt
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/danish/ortho_context.tab
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/danish/collocations.tab
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/danish/abbrev_types.txt
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/danish/sent_starters.txt
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/dutch/ortho_context.tab
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/dutch/collocations.tab
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/dutch/abbrev_types.txt
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/dutch/sent_starters.txt
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/spanish/ortho_context.tab
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/spanish/collocations.tab
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/spanish/abbrev_types.txt
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/spanish/sent_starters.txt
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/finnish/ortho_context.tab
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/finnish/collocations.tab
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/finnish/abbrev_types.txt
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/finnish/sent_starters.txt
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/malayalam/ortho_context.tab
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/malayalam/collocations.tab
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/malayalam/abbrev_types.txt
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/malayalam/sent_starters.txt
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/norwegian/ortho_context.tab
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/norwegian/collocations.tab
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/norwegian/abbrev_types.txt
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/norwegian/sent_starters.txt
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/italian/ortho_context.tab
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/italian/collocations.tab
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/italian/abbrev_types.txt
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/italian/sent_starters.txt
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/czech/ortho_context.tab
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/czech/collocations.tab
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/czech/abbrev_types.txt
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/czech/sent_starters.txt
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/polish/ortho_context.tab
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/polish/collocations.tab
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/polish/abbrev_types.txt
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/polish/sent_starters.txt
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/greek/ortho_context.tab
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/greek/collocations.tab
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/greek/abbrev_types.txt
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/greek/sent_starters.txt
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/README
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/estonian/ortho_context.tab
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/estonian/collocations.tab
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/estonian/abbrev_types.txt
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/estonian/sent_starters.txt
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/swedish/ortho_context.tab
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/swedish/collocations.tab
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/swedish/abbrev_types.txt
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/swedish/sent_starters.txt
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/turkish/ortho_context.tab
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/turkish/collocations.tab
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/turkish/abbrev_types.txt
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/turkish/sent_starters.txt
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/english/ortho_context.tab
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/english/collocations.tab
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/english/abbrev_types.txt
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/english/sent_starters.txt
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/french/ortho_context.tab
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/french/collocations.tab
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/french/abbrev_types.txt
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/french/sent_starters.txt
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/portuguese/ortho_context.tab
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/portuguese/collocations.tab
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/portuguese/abbrev_types.txt
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/portuguese/sent_starters.txt
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/german/ortho_context.tab
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/german/collocations.tab
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/german/abbrev_types.txt
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab/german/sent_starters.txt
+/home/schattenmacher/nltk_data/tokenizers/punkt/estonian.pickle
+/home/schattenmacher/nltk_data/tokenizers/punkt/italian.pickle
+/home/schattenmacher/nltk_data/tokenizers/punkt/danish.pickle
+/home/schattenmacher/nltk_data/tokenizers/punkt/polish.pickle
+/home/schattenmacher/nltk_data/tokenizers/punkt/german.pickle
+/home/schattenmacher/nltk_data/tokenizers/punkt/.DS_Store
+/home/schattenmacher/nltk_data/tokenizers/punkt/finnish.pickle
+/home/schattenmacher/nltk_data/tokenizers/punkt/czech.pickle
+/home/schattenmacher/nltk_data/tokenizers/punkt/portuguese.pickle
+/home/schattenmacher/nltk_data/tokenizers/punkt/greek.pickle
+/home/schattenmacher/nltk_data/tokenizers/punkt/dutch.pickle
+/home/schattenmacher/nltk_data/tokenizers/punkt/norwegian.pickle
+/home/schattenmacher/nltk_data/tokenizers/punkt/french.pickle
+/home/schattenmacher/nltk_data/tokenizers/punkt/swedish.pickle
+/home/schattenmacher/nltk_data/tokenizers/punkt/slovene.pickle
+/home/schattenmacher/nltk_data/tokenizers/punkt/PY3/estonian.pickle
+/home/schattenmacher/nltk_data/tokenizers/punkt/PY3/italian.pickle
+/home/schattenmacher/nltk_data/tokenizers/punkt/PY3/danish.pickle
+/home/schattenmacher/nltk_data/tokenizers/punkt/PY3/polish.pickle
+/home/schattenmacher/nltk_data/tokenizers/punkt/PY3/german.pickle
+/home/schattenmacher/nltk_data/tokenizers/punkt/PY3/finnish.pickle
+/home/schattenmacher/nltk_data/tokenizers/punkt/PY3/czech.pickle
+/home/schattenmacher/nltk_data/tokenizers/punkt/PY3/portuguese.pickle
+/home/schattenmacher/nltk_data/tokenizers/punkt/PY3/greek.pickle
+/home/schattenmacher/nltk_data/tokenizers/punkt/PY3/dutch.pickle
+/home/schattenmacher/nltk_data/tokenizers/punkt/PY3/norwegian.pickle
+/home/schattenmacher/nltk_data/tokenizers/punkt/PY3/french.pickle
+/home/schattenmacher/nltk_data/tokenizers/punkt/PY3/swedish.pickle
+/home/schattenmacher/nltk_data/tokenizers/punkt/PY3/slovene.pickle
+/home/schattenmacher/nltk_data/tokenizers/punkt/PY3/README
+/home/schattenmacher/nltk_data/tokenizers/punkt/PY3/malayalam.pickle
+/home/schattenmacher/nltk_data/tokenizers/punkt/PY3/russian.pickle
+/home/schattenmacher/nltk_data/tokenizers/punkt/PY3/english.pickle
+/home/schattenmacher/nltk_data/tokenizers/punkt/PY3/turkish.pickle
+/home/schattenmacher/nltk_data/tokenizers/punkt/PY3/spanish.pickle
+/home/schattenmacher/nltk_data/tokenizers/punkt/README
+/home/schattenmacher/nltk_data/tokenizers/punkt/malayalam.pickle
+/home/schattenmacher/nltk_data/tokenizers/punkt/russian.pickle
+/home/schattenmacher/nltk_data/tokenizers/punkt/english.pickle
+/home/schattenmacher/nltk_data/tokenizers/punkt/turkish.pickle
+/home/schattenmacher/nltk_data/tokenizers/punkt/spanish.pickle
+/home/schattenmacher/nltk_data/tokenizers/punkt_tab.zip
+/home/schattenmacher/check_discord_bot_token.sh
+/home/schattenmacher/openclaw_backup_2026-02-20T21-03-49+01-00/home/schattenmacher/.openclaw/.env
+/home/schattenmacher/stack_runtime/openclaw/data/config/.env
+/home/schattenmacher/stack_runtime/openclaw/data/credentials/telegram-default-allowFrom.json
+/home/schattenmacher/stack_runtime/openclaw/data/credentials/telegram-pairing.json
+/home/schattenmacher/stack_runtime/openclaw/state/config/.env
+/home/schattenmacher/stack_runtime/openclaw/state/credentials/telegram-pairing.json
+/home/schattenmacher/stack_runtime/openclaw/.env
+/home/schattenmacher/stack_runtime/openclaw/openclaw/.detect-secrets.cfg
+/home/schattenmacher/stack_runtime/openclaw/openclaw/openclaw.podman.env
+/home/schattenmacher/stack_runtime/openclaw/openclaw/.secrets.baseline
+/home/schattenmacher/fix_openclaw_bot_token_service.sh
+/home/schattenmacher/.git-credentials
+/home/schattenmacher/openclaw_backup_2026-02-20T20-55-44+01-00/opt/openclaw/.env
+/home/schattenmacher/openclaw_backup_2026-02-20T20-55-44+01-00/opt/openclaw/openclaw/.detect-secrets.cfg
+/home/schattenmacher/openclaw_backup_2026-02-20T20-55-44+01-00/opt/openclaw/openclaw/openclaw.podman.env
+/home/schattenmacher/openclaw_backup_2026-02-20T20-55-44+01-00/opt/openclaw/openclaw/.secrets.baseline
+/home/schattenmacher/openclaw_backup_2026-02-20T20-55-44+01-00/home/schattenmacher/.openclaw/.env
+/home/schattenmacher/openclaw_training/extensions/agenteva/.env
+/home/schattenmacher/openclaw_training/docs/runbooks/latest_discord_bot_token_setup_guide.md
+/home/schattenmacher/openclaw_training/docs/runbooks/discord_bot_token_setup_guide.md
+/home/schattenmacher/openclaw_training/reports/discord_token_guard_reset_20260502_055936.txt
+/home/schattenmacher/openclaw_training/reports/repair_discord_channel_wizard_token_guard_20260502_055129.txt
+/home/schattenmacher/openclaw_training/reports/gmail_use_downloaded_client_secret_allinone_20260502_103811.txt
+/home/schattenmacher/openclaw_training/reports/shadowmaker_token_fix_wizard_20260501_233126.txt
+/home/schattenmacher/openclaw_training/mission_control/discord/discord.env
+/home/schattenmacher/openclaw_training/mission_control/discord/discord_channels.env
+/home/schattenmacher/openclaw_training/mission_control/mail_briefing/config/gmail_credentials.json
+/home/schattenmacher/openclaw_training/mission_control/mail_briefing/config/courier.env
+/home/schattenmacher/openclaw_training/mission_control/mail_briefing/config/gmail_credentials_missing_guide.md
+/home/schattenmacher/openclaw_training/artifacts/lora_training/mfp_lora_adapter/tokenizer_config.json
+/home/schattenmacher/openclaw_training/artifacts/lora_training/mfp_lora_adapter/tokenizer.json
+/home/schattenmacher/openclaw_backup_2026-02-20T20-57-59+01-00/home/schattenmacher/.openclaw/.env
+/home/schattenmacher/gmail_use_downloaded_client_secret_allinone.sh
+/home/schattenmacher/whispercpp-gpu/examples/talk-llama/models/wavtokenizer-dec.cpp
+/home/schattenmacher/whispercpp-gpu/bindings/ruby/ext/ruby_whisper_token.c
+/home/schattenmacher/whispercpp-gpu/bindings/ruby/test/test_token.rb
+/home/schattenmacher/repair_discord_channel_wizard_token_guard.sh
+/home/schattenmacher/Schreibtisch/Zusammenfassungen/Mitarbeiterführung+Personalmanagement/Personal/Aufhebungsvertrag _ Kündigungen.png
+/home/schattenmacher/_whispercpp/examples/talk-llama/models/wavtokenizer-dec.cpp
+/home/schattenmacher/_whispercpp/bindings/ruby/ext/ruby_whisper_token.c
+/home/schattenmacher/_whispercpp/bindings/ruby/test/test_token.rb
+/home/schattenmacher/shadowmaker_bots/.env
+/home/schattenmacher/shadowmaker_bots/logs/getMe_token_fix_20260501_233126.json
+/home/schattenmacher/Dokumente/GitHub_token.txt
+/home/schattenmacher/Dokumente/ShadowLearn_v2/node_modules/js-tokens/CHANGELOG.md
+/home/schattenmacher/Dokumente/ShadowLearn_v2/node_modules/js-tokens/package.json
+/home/schattenmacher/Dokumente/ShadowLearn_v2/node_modules/js-tokens/README.md
+/home/schattenmacher/Dokumente/ShadowLearn_v2/node_modules/js-tokens/LICENSE
+/home/schattenmacher/Dokumente/ShadowLearn_v2/node_modules/js-tokens/index.js
+/home/schattenmacher/Dokumente/ShadowLearn_v2/.env
+/home/schattenmacher/Dokumente/ARCHIV_2026-03-03/04_Finanzen_Behoerden/2025-04-30_Mitwirkung_DanielMassa_Wohngeld_Jobcenter_Stuttgart.pdf
+/home/schattenmacher/Dokumente/ARCHIV_2026-03-03/06_Tools_Secrets/Alle Token und APIs.txt
+/home/schattenmacher/Dokumente/frs-on-air/.env
+/home/schattenmacher/Dokumente/Antrag auf Gewährung einer Förderung Vermittlungsbudget ausgefüllt 2/2026-03-09_Antrag-Vermittlungsbudget_IHK-Pruefungsgebuehren_Nachweise_Kontoauszuege-3-Monate_Daniel-Massa.pdf
+/home/schattenmacher/Dokumente/Whg 11 [Vermietungsplan].pdf
+/home/schattenmacher/Dokumente/shadow-learn/node_modules/js-tokens/CHANGELOG.md
+/home/schattenmacher/Dokumente/shadow-learn/node_modules/js-tokens/package.json
+/home/schattenmacher/Dokumente/shadow-learn/node_modules/js-tokens/README.md
+/home/schattenmacher/Dokumente/shadow-learn/node_modules/js-tokens/LICENSE
+/home/schattenmacher/Dokumente/shadow-learn/node_modules/js-tokens/index.js
+/home/schattenmacher/Dokumente/shadow-learn/.env
+/home/schattenmacher/Dokumente/ShadowLearn App v1.2 (Passive Mode)/node_modules/js-tokens/CHANGELOG.md
+/home/schattenmacher/Dokumente/ShadowLearn App v1.2 (Passive Mode)/node_modules/js-tokens/package.json
+/home/schattenmacher/Dokumente/ShadowLearn App v1.2 (Passive Mode)/node_modules/js-tokens/README.md
+/home/schattenmacher/Dokumente/ShadowLearn App v1.2 (Passive Mode)/node_modules/js-tokens/LICENSE
+/home/schattenmacher/Dokumente/ShadowLearn App v1.2 (Passive Mode)/node_modules/js-tokens/index.js
+/home/schattenmacher/Dokumente/token/kimiApi.txt
+/home/schattenmacher/Dokumente/token/Perplexity API
+/home/schattenmacher/Dokumente/token/frs-radio-stuttgart

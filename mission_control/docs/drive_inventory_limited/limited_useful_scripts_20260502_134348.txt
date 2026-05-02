@@ -1,0 +1,337 @@
+/home/schattenmacher/AEVO_App/create_icon.sh
+/home/schattenmacher/ComfyUI/comfyui_install.sh
+/home/schattenmacher/ComfyUI/ComfyUI/utils/install_util.py
+/home/schattenmacher/ComfyUI/utils/install_util.py
+/home/schattenmacher/Dokumente/openclaw_task_booster_v1.sh
+/home/schattenmacher/Dokumente/shadow-learn/shadowlearn_fix_and_deploy.sh
+/home/schattenmacher/Dokumente/shadow-learn/shadowlearn_fix_pages.sh
+/home/schattenmacher/Dokumente/shadow-learn/shadowlearn_full_setup.sh
+/home/schattenmacher/Dokumente/shadow-learn/shadowlearn_git_fix.sh
+/home/schattenmacher/Dokumente/shadow-learn/shadowlearn_install_app.sh
+/home/schattenmacher/Dokumente/shadow-learn/shadowlearn_setup.sh
+/home/schattenmacher/Dokumente/transkripte/ihk-operative-professionals-2024-25/backup.sh
+/home/schattenmacher/Dokumente/transkripte/ihk-operative-professionals-2024-25/cf_ai_deploy.sh
+/home/schattenmacher/Dokumente/transkripte/ihk-operative-professionals-2024-25/complete_move.sh
+/home/schattenmacher/Dokumente/transkripte/ihk-operative-professionals-2024-25/deploy_workers_ai.sh
+/home/schattenmacher/Dokumente/transkripte/ihk-operative-professionals-2024-25/fix_organization.sh
+/home/schattenmacher/Dokumente/transkripte/ihk-operative-professionals-2024-25/monitor_live.sh
+/home/schattenmacher/Dokumente/transkripte/ihk-operative-professionals-2024-25/organize_videos.sh
+/home/schattenmacher/Dokumente/transkripte/ihk-operative-professionals-2024-25/scripts/organize_videos.sh
+/home/schattenmacher/Dokumente/transkripte/ihk-operative-professionals-2024-25/SHADOW_SCHEDULE_INTEGRATION.sh
+/home/schattenmacher/Dokumente/transkripte/ihk-operative-professionals-2024-25/tools/check_stripe_links.py
+/home/schattenmacher/Dokumente/transkripte/ihk-operative-professionals-2024-25/tools/patch_actions.sh
+/home/schattenmacher/Dokumente/transkripte/ihk-operative-professionals-2024-25/tools/pin_actions.sh
+/home/schattenmacher/Dokumente/transkripte/ihk-operative-professionals-2024-25/update_videos.sh
+/home/schattenmacher/Dokumente/USB_SORTED/2025-06-10/eva_integration_fix.sh
+/home/schattenmacher/Dokumente/USB_SORTED/2025-06-10/eva_shadow_storage_optimization.sh
+/home/schattenmacher/Downloads/freies-radio-stuttgart-web/frs_fix.sh
+/home/schattenmacher/Downloads/Notebook LM Videos und Audios/AEVO-UNTERWEISUNG /_AEVO_LOGS/content_undo_20260114_000334.sh
+/home/schattenmacher/Downloads/Notebook LM Videos und Audios/AEVO-UNTERWEISUNG /_AEVO_LOGS/content_undo_20260114_000336.sh
+/home/schattenmacher/Downloads/Notebook LM Videos und Audios/AEVO-UNTERWEISUNG /_AEVO_LOGS/content_undo_20260114_000434.sh
+/home/schattenmacher/Downloads/Notebook LM Videos und Audios/AEVO-UNTERWEISUNG /_AEVO_LOGS/content_undo_20260114_000755.sh
+/home/schattenmacher/Downloads/Notebook LM Videos und Audios/AEVO-UNTERWEISUNG /_AEVO_LOGS/content_undo_20260114_000811.sh
+/home/schattenmacher/Downloads/Notebook LM Videos und Audios/AEVO-UNTERWEISUNG /_AEVO_LOGS/content_undo_20260114_001306.sh
+/home/schattenmacher/Downloads/Notebook LM Videos und Audios/AEVO-UNTERWEISUNG /_AEVO_LOGS/content_undo_20260114_001342.sh
+/home/schattenmacher/Downloads/Notebook LM Videos und Audios/AEVO-UNTERWEISUNG /_AEVO_LOGS/content_undo_20260114_001444.sh
+/home/schattenmacher/Downloads/Notebook LM Videos und Audios/AEVO-UNTERWEISUNG /_AEVO_LOGS/content_undo_20260114_001558.sh
+/home/schattenmacher/Downloads/Notebook LM Videos und Audios/AEVO-UNTERWEISUNG /_AEVO_LOGS/content_undo_20260114_001619.sh
+/home/schattenmacher/Downloads/Notebook LM Videos und Audios/AEVO-UNTERWEISUNG /_AEVO_LOGS/content_undo_20260114_001719.sh
+/home/schattenmacher/Downloads/Notebook LM Videos und Audios/AEVO-UNTERWEISUNG /_AEVO_LOGS/content_undo_20260114_001813.sh
+/home/schattenmacher/Downloads/Notebook LM Videos und Audios/AEVO-UNTERWEISUNG/_AEVO_LOGS/merge_undo_20260114_004546.sh
+/home/schattenmacher/Downloads/Notebook LM Videos und Audios/AEVO-UNTERWEISUNG/_AEVO_LOGS/merge_undo_20260114_004555.sh
+/home/schattenmacher/Downloads/Notebook LM Videos und Audios/AEVO-UNTERWEISUNG /_AEVO_LOGS/rename_undo_20260113_234623.sh
+/home/schattenmacher/Downloads/Notebook LM Videos und Audios/AEVO-UNTERWEISUNG /_AEVO_LOGS/rename_undo_20260113_234921.sh
+/home/schattenmacher/Downloads/Notebook LM Videos und Audios/AEVO-UNTERWEISUNG /_AEVO_LOGS/rename_undo_20260113_235014.sh
+/home/schattenmacher/Downloads/Notebook LM Videos und Audios/AEVO-UNTERWEISUNG /_AEVO_LOGS/rename_undo_20260113_235115.sh
+/home/schattenmacher/Downloads/Notebook LM Videos und Audios/AEVO-UNTERWEISUNG /_AEVO_LOGS/rename_undo_20260113_235233.sh
+/home/schattenmacher/Downloads/Notebook LM Videos und Audios/AEVO-UNTERWEISUNG /_AEVO_LOGS/rename_undo_20260113_235252.sh
+/home/schattenmacher/Downloads/Notebook LM Videos und Audios/AEVO-UNTERWEISUNG /_AEVO_LOGS/rename_undo_20260113_235609.sh
+/home/schattenmacher/Downloads/Notebook LM Videos und Audios/AEVO-UNTERWEISUNG /_AEVO_LOGS/rename_undo_20260113_235714.sh
+/home/schattenmacher/Downloads/Notebook LM Videos und Audios/AEVO-UNTERWEISUNG /_AEVO_LOGS/rename_undo_20260113_235730.sh
+/home/schattenmacher/Downloads/Notebook LM Videos und Audios/AEVO-UNTERWEISUNG /_AEVO_LOGS/rename_undo_20260114_000134.sh
+/home/schattenmacher/Downloads/Notebook LM Videos und Audios/AEVO-UNTERWEISUNG /_AEVO_LOGS/rename_undo_20260114_000140.sh
+/home/schattenmacher/Downloads/Notebook LM Videos und Audios/AEVO-UNTERWEISUNG /aevo_make_folders.sh
+/home/schattenmacher/Downloads/Notebook LM Videos und Audios/AEVO-UNTERWEISUNG/aevo_merge_categories.sh
+/home/schattenmacher/Downloads/Notebook LM Videos und Audios/AEVO-UNTERWEISUNG /_AEVO_TOOLS/aevo_analyze_and_rename.sh
+/home/schattenmacher/Downloads/Notebook LM Videos und Audios/AEVO-UNTERWEISUNG /_AEVO_TOOLS/aevo_rename_all.sh
+/home/schattenmacher/Downloads/openclaw/openclaw_NO_DOCKER.sh
+/home/schattenmacher/Downloads/openclaw/openclaw_quickstart.sh
+/home/schattenmacher/Downloads/Programme/setup_magicdisc.exe
+/home/schattenmacher/Downloads/run_pipeline/03_train_lora.py
+/home/schattenmacher/Downloads/run_pipeline/merge_lora.py
+/home/schattenmacher/Downloads/shadowmaker_stack_allinone/shadowmaker_stack_allinone.sh
+/home/schattenmacher/eva-agent-template/eva-switch.sh
+/home/schattenmacher/EVA_IntelligentAgent/eva_live_dashboard.sh
+/home/schattenmacher/EVA_IntelligentAgent/eva_n8n_all_in_one.sh
+/home/schattenmacher/EVA_IntelligentAgent/openclaw_all_in_one_repro_restore.sh
+/home/schattenmacher/EVA_IntelligentAgent/openclaw_all_in_one_repro_restore_v4.sh
+/home/schattenmacher/local_llm_pipeline/09_logs/run_20260413_143819.log
+/home/schattenmacher/local_llm_pipeline/09_logs/run_20260413_144108.log
+/home/schattenmacher/local_llm_pipeline/09_logs/run_20260413_144555.log
+/home/schattenmacher/local_llm_pipeline/09_logs/run_20260413_150032.log
+/home/schattenmacher/local_llm_pipeline/09_logs/run_20260413_150100.log
+/home/schattenmacher/local_llm_pipeline/09_logs/run_20260413_151823.log
+/home/schattenmacher/local_llm_pipeline/09_logs/run_20260413_152830.log
+/home/schattenmacher/local_llm_pipeline/09_logs/run_20260413_153616.log
+/home/schattenmacher/local_llm_pipeline/run_all.sh
+/home/schattenmacher/local_llm_pipeline/run_pipeline.sh
+/home/schattenmacher/local_llm_pipeline/run_pipeline.sh.bak_20260413_152829
+/home/schattenmacher/local_llm_pipeline/runs/20260413_150032/run_summary.md
+/home/schattenmacher/local_llm_pipeline/runs/20260413_150100/run_summary.md
+/home/schattenmacher/local_llm_pipeline/runs/20260413_151823/run_summary.md
+/home/schattenmacher/local_llm_pipeline/runs/20260413_152830/run_summary.md
+/home/schattenmacher/local_llm_pipeline/runs/20260413_153616/run_summary.md
+/home/schattenmacher/.openclaw/completions/openclaw.bash
+/home/schattenmacher/.openclaw/completions/openclaw.zsh
+/home/schattenmacher/openclaw_training/local_exam_ai_test.sh
+/home/schattenmacher/openclaw_training/pipeline/run_pipeline.sh
+/home/schattenmacher/openclaw_training/prepare_final_dataset_split.sh
+/home/schattenmacher/openclaw_training/reports/audit_all_drives_data_inventory_allinone_20260502_131446.txt
+/home/schattenmacher/openclaw_training/reports/check_security_audit_timer_phase2_20260502_064713.txt
+/home/schattenmacher/openclaw_training/reports/check_security_audit_timer_phase2_20260502_065313.txt
+/home/schattenmacher/openclaw_training/reports/check_security_audit_timer_phase2_20260502_065330.txt
+/home/schattenmacher/openclaw_training/reports/fix_daily_brief_today_variable_20260502_011954.txt
+/home/schattenmacher/openclaw_training/reports/fix_freeze_report_patch_crashbandicot_20260502_010431.txt
+/home/schattenmacher/openclaw_training/reports/fix_gmail_oauth_testuser_and_retry_allinone_20260502_104545.txt
+/home/schattenmacher/openclaw_training/reports/fix_openclaw_gateway_bind_localhost_20260501_234103.txt
+/home/schattenmacher/openclaw_training/reports/fix_openclaw_loopback_proxy_20260501_234202.txt
+/home/schattenmacher/openclaw_training/reports/install_tina_huang_prompt_style_local_ai_allinone_20260502_122327.txt
+/home/schattenmacher/openclaw_training/reports/patch_crashbandicot_openclaw_internal_check_20260501_234423.txt
+/home/schattenmacher/openclaw_training/reports/repair_bashrc_after_bad_paste_20260502_055410.txt
+/home/schattenmacher/openclaw_training/reports/repair_bashrc_tina_aliases_20260502_000002.txt
+/home/schattenmacher/openclaw_training/reports/repair_courier_aliases_and_runner_allinone_20260502_095123.txt
+/home/schattenmacher/openclaw_training/reports/repair_courier_proton_starttls_selfsigned_allinone_20260502_095804.txt
+/home/schattenmacher/openclaw_training/reports/repair_courier_proton_starttls_selfsigned_allinone_20260502_095851.txt
+/home/schattenmacher/openclaw_training/reports/repair_crashbandicot_full_rewrite_20260501_234619.txt
+/home/schattenmacher/openclaw_training/reports/repair_discord_scripts_from_existing_env_20260502_005527.txt
+/home/schattenmacher/openclaw_training/reports/repair_discord_scripts_from_existing_env_20260502_005650.txt
+/home/schattenmacher/openclaw_training/reports/repair_local_inventory_aliases_and_status_20260502_064118.txt
+/home/schattenmacher/openclaw_training/reports/repair_mentor_today_var_safe_20260502_074730.txt
+/home/schattenmacher/openclaw_training/reports/repair_mission_control_phase2_allinone_20260502_065313.txt
+/home/schattenmacher/openclaw_training/reports/repair_mission_control_phase4_webui_allinone_20260502_072136.txt
+/home/schattenmacher/openclaw_training/reports/repair_mission_control_webui_tailwind_20260502_072653.txt
+/home/schattenmacher/openclaw_training/reports/repair_mnemosyne_today_var_allinone_20260502_073901.txt
+/home/schattenmacher/openclaw_training/reports/repair_mnemosyne_today_var_safe_20260502_073949.txt
+/home/schattenmacher/openclaw_training/reports/repair_phase3_deep_security_allinone_20260502_070753.txt
+/home/schattenmacher/openclaw_training/reports/repair_phase4_webui_final_safe_20260502_072307.txt
+/home/schattenmacher/openclaw_training/reports/repair_shadowmaker_control_bot_20260501_233353.txt
+/home/schattenmacher/openclaw_training/reports/setup_discord_shadowmaker_wizard_20260502_001801.txt
+/home/schattenmacher/openclaw_training/reports/setup_mission_control_phase2_allinone_20260502_064713.txt
+/home/schattenmacher/openclaw_training/reports/setup_mission_control_phase4_webui_allinone_20260502_071917.txt
+/home/schattenmacher/openclaw_training/reports/setup_phase5_linky_builder_agent_allinone_20260502_081321.txt
+/home/schattenmacher/openclaw_training/reports/setup_phase5_mentor_ihk_agent_allinone_20260502_074547.txt
+/home/schattenmacher/openclaw_training/reports/setup_phase5_mnemosyne_memory_agent_allinone_20260502_073747.txt
+/home/schattenmacher/openclaw_training/reports/setup_phase5_multi_agent_winky_allinone_20260502_073235.txt
+/home/schattenmacher/openclaw_training/reports/setup_phase5_steward_finance_housing_agent_allinone_20260502_080609.txt
+/home/schattenmacher/openclaw_training/reports/setup_phase5_strategist_career_agent_allinone_20260502_075509.txt
+/home/schattenmacher/openclaw_training/reports/setup_phase6_courier_mail_briefing_allinone_20260502_094411.txt
+/home/schattenmacher/openclaw_training/reports/setup_schatten_watch_bot_wizard_20260502_000858.txt
+/home/schattenmacher/openclaw_training/reports/setup_security_audit_discord_timer_allinone_20260502_063352.txt
+/home/schattenmacher/openclaw_training/reports/setup_shadowmaker_bots_telegram_discord_20260501_232148.txt
+/home/schattenmacher/openclaw_training/reports/setup_shadowmaker_discord_channels_wizard_20260502_054114.txt
+/home/schattenmacher/openclaw_training/run_final_scorer_test.sh
+/home/schattenmacher/openclaw_training/scripts/career_agent_template.sh
+/home/schattenmacher/openclaw_training/scripts/check_security_audit_timer_phase2.sh
+/home/schattenmacher/openclaw_training/scripts/courier_gmail_oauth.sh
+/home/schattenmacher/openclaw_training/scripts/courier_mail_briefing_run.sh
+/home/schattenmacher/openclaw_training/scripts/courier_status.sh
+/home/schattenmacher/openclaw_training/scripts/deep_security_check_readonly.sh
+/home/schattenmacher/openclaw_training/scripts/discord_channel_routing_test.sh
+/home/schattenmacher/openclaw_training/scripts/discord_send_channel.sh
+/home/schattenmacher/openclaw_training/scripts/discord_send.sh
+/home/schattenmacher/openclaw_training/scripts/discord_stack_report.sh
+/home/schattenmacher/openclaw_training/scripts/finance_housing_readonly_report.sh
+/home/schattenmacher/openclaw_training/scripts/ihk_mfp_drill.sh
+/home/schattenmacher/openclaw_training/scripts/install_courier_timer_optional.sh
+/home/schattenmacher/openclaw_training/scripts/install_linky_timer_optional.sh
+/home/schattenmacher/openclaw_training/scripts/install_mnemosyne_timer_optional.sh
+/home/schattenmacher/openclaw_training/scripts/install_steward_timer_optional.sh
+/home/schattenmacher/openclaw_training/scripts/install_strategist_timer_optional.sh
+/home/schattenmacher/openclaw_training/scripts/install_winky_timer_optional.sh
+/home/schattenmacher/openclaw_training/scripts/linky_builder_agent.sh
+/home/schattenmacher/openclaw_training/scripts/memory_wiki_status.sh
+/home/schattenmacher/openclaw_training/scripts/mentor_ihk_mfp_agent.sh
+/home/schattenmacher/openclaw_training/scripts/mission_control_phase2_status.sh
+/home/schattenmacher/openclaw_training/scripts/mission_control_webui_install.sh
+/home/schattenmacher/openclaw_training/scripts/mission_control_webui_start.sh
+/home/schattenmacher/openclaw_training/scripts/mission_control_webui_status.sh
+/home/schattenmacher/openclaw_training/scripts/mnemosyne_memory_curator_agent.sh
+/home/schattenmacher/openclaw_training/scripts/openclaw_operating_loop.sh
+/home/schattenmacher/openclaw_training/scripts/openclaw_security_health_twice_daily.sh
+/home/schattenmacher/openclaw_training/scripts/openclaw_status_to_discord.sh
+/home/schattenmacher/openclaw_training/scripts/openclaw_workspace_audit_readonly.sh
+/home/schattenmacher/openclaw_training/scripts/patch_router.py
+/home/schattenmacher/openclaw_training/scripts/phase5_crew_status.sh
+/home/schattenmacher/openclaw_training/scripts/prompt_to_code_review.sh
+/home/schattenmacher/openclaw_training/scripts/run_security_audit_discord_timer.sh
+/home/schattenmacher/openclaw_training/scripts/security_audit_to_discord.sh
+/home/schattenmacher/openclaw_training/scripts/shadowmaker_daily_brief.sh
+/home/schattenmacher/openclaw_training/scripts/shadowmaker_daily_brief_to_discord.sh
+/home/schattenmacher/openclaw_training/scripts/shadowmaker_daily_delight.sh
+/home/schattenmacher/openclaw_training/scripts/shadowmaker_freeze_report_no_sudo.sh
+/home/schattenmacher/openclaw_training/scripts/shadowmaker_freeze_report_to_discord.sh
+/home/schattenmacher/openclaw_training/scripts/shadowmaker_stack_healthcheck.sh
+/home/schattenmacher/openclaw_training/scripts/shadowmaker_stack_logs.sh
+/home/schattenmacher/openclaw_training/scripts/shadowmaker_stack_start.sh
+/home/schattenmacher/openclaw_training/scripts/shadowmaker_stack_status.sh
+/home/schattenmacher/openclaw_training/scripts/shadowmaker_stack_stop_controlbot_only.sh
+/home/schattenmacher/openclaw_training/scripts/steward_finance_housing_agent.sh
+/home/schattenmacher/openclaw_training/scripts/strategist_career_agent.sh
+/home/schattenmacher/openclaw_training/scripts/winky_system_monitor_agent.sh
+/home/schattenmacher/openclaw_training/test_hermes_agent.sh
+/home/schattenmacher/.openclaw/workspace/skills/infra-build/scripts/config-backup.sh
+/home/schattenmacher/.openclaw/workspace/skills/infra-build/scripts/env-sync.sh
+/home/schattenmacher/.openclaw/workspace/skills/infra-test/scripts/smoke-test.sh
+/home/schattenmacher/Schreibtisch/Openai Codex/tools/automate_fix_workflows.sh
+/home/schattenmacher/Schreibtisch/Openai Codex/tools/fix_github_workflows.py
+/home/schattenmacher/shadowmaker-ai-stack/init-dbs.sh
+/home/schattenmacher/usb-llm-data-pipeline/quick_start.sh
+/home/schattenmacher/usb-llm-data-pipeline/run_inference.py
+/home/schattenmacher/usb-llm-data-pipeline/run_lora_cloud_migration.sh
+/home/schattenmacher/usb-llm-data-pipeline/run_lora_generic.sh
+/home/schattenmacher/usb-llm-data-pipeline/run_lora_topic.sh
+/home/schattenmacher/usb-llm-data-pipeline/run_psa_full.sh
+/home/schattenmacher/usb-llm-data-pipeline/run_psa_sa1_sa3_loose.sh
+/home/schattenmacher/usb-llm-data-pipeline/run_psa_sa1_sa3.sh
+/home/schattenmacher/usb-llm-data-pipeline/run_psa_sa1_sa3_strict.sh
+/home/schattenmacher/usb-llm-data-pipeline/run_psa_segmented.sh
+/home/schattenmacher/usb-llm-data-pipeline/run_psa_segmented_v2.sh
+/home/schattenmacher/usb-llm-data-pipeline/setup_rag_cli.sh
+/home/schattenmacher/usb-llm-data-pipeline/setup_repo.sh
+/home/schattenmacher/usb-llm-data-pipeline/sm_all_in_one_backup.sh
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/EMERGENCY_BACKUP_20250610/EVA_SYSTEM/eva_integration_fix.sh
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/EMERGENCY_BACKUP_20250610/EVA_SYSTEM/eva_shadow_storage_optimization.sh
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/EVA-System-backup_20250610_201920/eva-system/eva_integration_fix.sh
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/EVA-System-backup_20250610_201920/eva-system/eva_shadow_storage_optimization.sh
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/EVA-System-backup/eva_integration_fix.sh
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/EVA-System-backup/eva_shadow_storage_optimization.sh
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/FULL_BACKUP_20250610/EVA_SYSTEM/eva_integration_fix.sh
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/FULL_BACKUP_20250610/EVA_SYSTEM/eva_shadow_storage_optimization.sh
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/multi_ai_agent/analyze_only.sh
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/multi_ai_agent/auto_repair.sh
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/multi_ai_agent/chatgpt_setup.sh
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/multi_ai_agent/chat.sh
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/multi_ai_agent/emergency_restore.sh
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/multi_ai_agent/health_check.sh
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/multi_ai_agent/run_chatgpt_analysis.sh
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/multi_ai_agent/safe_redistribute.sh
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/multi_ai_agent/safe_redistributor_setup.sh
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/multi_ai_agent/smart_commands.sh
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/multi_ai_agent/start.sh
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/ollama_backup/shadowops_llm_allinone.sh
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/shadow_backup/Documents/ai_email_routing_system/setup_ollama_management.sh
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/shadow_backup/Documents/ai_email_routing_system/setup_script.sh
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/shadow_backup/Documents/llm_models_backup_20250606_134638/email_system/check_bridge.py
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/shadow_backup/Documents/llm_models_backup_20250606_134638/email_system/create_mistral_management.sh
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/shadow_backup/Documents/llm_models_backup_20250606_134638/email_system/monitor_emails.sh
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/shadow_backup/Documents/llm_models_backup_20250606_134638/email_system/monitor_ollama.sh
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/shadow_backup/Documents/llm_models_backup_20250606_134638/email_system/run_router.sh
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/shadow_backup/Documents/llm_models_backup_20250606_134638/email_system/setup_ollama_management.sh
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/shadow_backup/Documents/llm_models_backup_20250606_134638/email_system/setup_script.sh
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/shadow_backup/Documents/llm_models_backup_20250606_134638/email_system/shadow_dns_failover.sh
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/shadow_backup/Documents/llm_models_backup_20250606_134638/email_system/start_ollama.sh
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/shadow_backup/Documents/llm_models_backup_20250606_134638/email_system/test_emails.sh
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/shadow_backup/Documents/llm_models_backup_20250606_134638/email_system/update_bridge_ports.sh
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/shadow_backup/Documents/llm_models_backup_20250606_134638/email_system/update_existing_system.sh
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/shadow_backup/Documents/llm_models_backup_20250606_134638/scripts/restore_models.sh
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/shadow_backup/Documents/shadow-ai-lab/setup_ollama_management.sh
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/shadow_backup/Documents/shadow-ai-lab/setup_script.sh
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/shadow_backup/Documents/shadow-ai-lab/shadow_benchmark_prompts.sh
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/shadow_backup/Documents/USB_SCAN/shadow_benchmark_prompts.sh
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/shadow_timeshift_scanner.sh
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/stable-diffusion-webui/architekt_full_setup.sh
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/stable-diffusion-webui/.github/workflows/run_tests.yaml
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/USER_DATA/shadowops_deploy_bundle/EVA/agent_control.sh
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/USER_DATA/shadowops_deploy_bundle/EVA/agent_loop.sh
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/USER_DATA/shadowops_deploy_bundle/eva-agent-template/eva-switch.sh
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/USER_DATA/shadowops_deploy_bundle/EVA_IntelligentAgent/eva_live_dashboard.sh
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/USER_DATA/shadowops_deploy_bundle/EVA-Mirror/agent_control.sh
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/USER_DATA/shadowops_deploy_bundle/EVA-Mirror/agent_loop.sh
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/USER_DATA/shadowops_deploy_bundle/EVA-Mirror/eva_autostart_prompt.sh
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/USER_DATA/shadowops_deploy_bundle/EVA-Mirror/modules/run_prompt.py
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/USER_DATA/shadowops_deploy_bundle/EVA-Mirror/prompts/prompt_selector.sh
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/USER_DATA/shadowops_deploy_bundle/ihk-schattenarchiv/skripte/restore-version.sh
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/USER_DATA/shadowops_deploy_bundle/ki-telefonagent-deep-shadow/install.sh
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/USER_DATA/shadowops_deploy_bundle/ki-telefonagent-deep-shadow/start_call_agent.sh
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/USER_DATA/shadowops_deploy_bundle/n8n-workflows/eva_boot_fusion.sh
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/USER_DATA/shadowops_deploy_bundle/n8n-workflows/eva_boot.sh
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/USER_DATA/shadowops_deploy_bundle/n8n-workflows/scripts/sync-status-report.sh
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/USER_DATA/shadowops_deploy_bundle/n8n-workflows/scripts/sync-to-github.sh
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/USER_DATA/shadowops_deploy_bundle/n8n-workflows/tools/n8n_control.sh
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/USER_DATA/shadowops_deploy_bundle/n8n-workflows/tools/restart_all_n8n.sh
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/USER_DATA/shadowops_deploy_bundle/n8n-workflows/tools/start_n8n.sh
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/USER_DATA/shadowops_deploy_bundle/n8n-workflows/tools/start_n8n_v2.sh
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/USER_DATA/shadowops_deploy_bundle/n8n-workflows/tools/status_n8n.sh
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/USER_DATA/shadowops_deploy_bundle/n8n-workflows/tools/stop_all_n8n.sh
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/USER_DATA/shadowops_deploy_bundle/schattenbot/n8n/install_tools.sh
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/USER_DATA/shadowops_deploy_bundle/schattenbot/shadowmaker-n8n-tools/n8n_control.sh
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/USER_DATA/shadowops_deploy_bundle/schattenbot/shadowmaker-n8n-tools/restart_all_n8n.sh
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/USER_DATA/shadowops_deploy_bundle/schattenbot/shadowmaker-n8n-tools/start_n8n.sh
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/USER_DATA/shadowops_deploy_bundle/schattenbot/shadowmaker-n8n-tools/start_n8n_v2.sh
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/USER_DATA/shadowops_deploy_bundle/schattenbot/shadowmaker-n8n-tools/status_n8n.sh
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/USER_DATA/shadowops_deploy_bundle/schattenbot/shadowmaker-n8n-tools/stop_all_n8n.sh
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/USER_DATA/shadowops_deploy_bundle/shadow-ai-lab/shadow_benchmark_prompts.sh
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/USER_DATA/shadowops_deploy_bundle/shadowmaker-core/scripts/github_auto_pull.sh
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/USER_DATA/shadowops_deploy_bundle/shadowmaker-core/scripts/github_auto_push.sh
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/USER_DATA/shadowops_deploy_bundle/shadowops-backup-20250619-064517/fix-deployment.sh
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/USER_DATA/shadowops_deploy_bundle/shadowops-backup-20250619-064517/fix-github-issues.sh
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/USER_DATA/shadowops_deploy_bundle/shadowops-ollama-aio-setup/scripts/aio-functions.sh
+/media/schattenmacher/USB-STICK1/AEVO_Backup_20251217/AEVO_App/create_icon.sh
+/media/schattenmacher/USB-STICK1/AEVO_Backup_20251217/generate_audio.sh
+/media/schattenmacher/USB-STICK1/AEVO_Backup_20251217/reorganize.sh
+/media/schattenmacher/USB-STICK1/AEVO_Backup_20251217/START_HIER.sh
+/media/schattenmacher/USB-STICK1/bilder/AEVO_Unterweisung_Active_Directory_Nutzer_anlegen/AEVO_App/create_icon.sh
+/media/schattenmacher/USB-STICK1/bilder/AEVO_Unterweisung_Active_Directory_Nutzer_anlegen/generate_audio.sh
+/media/schattenmacher/USB-STICK1/bilder/AEVO_Unterweisung_Active_Directory_Nutzer_anlegen/reorganize.sh
+/media/schattenmacher/USB-STICK1/data/master/ihk-linux-setup.sh
+/media/schattenmacher/USB-STICK1/data/setup_nvme_partitions.sh
+/media/schattenmacher/USB-STICK1/data/shadow-infrastructure/scripts/shadowmaker_broadcast.sh
+/media/schattenmacher/USB-STICK1/data/shadowmaker_model_exec.sh
+/media/schattenmacher/USB-STICK1/data/shadowmaker_symlink_migrate.sh
+/media/schattenmacher/USB-STICK1/data/shadow_nvme_setup.sh
+/media/schattenmacher/USB-STICK1/data/simple_mcp_app/install_ollama.sh
+/media/schattenmacher/USB-STICK1/data/tmp_schattenmacher-revenue-system/install_deepface_rtx3060.sh
+/media/schattenmacher/USB-STICK1/data/tmp_schattenmacher-revenue-system/install_ollama.sh
+/media/schattenmacher/USB-STICK1/data/tmp_schattenmacher-revenue-system/setup_mcp_ollama.sh
+/media/schattenmacher/USB-STICK1/data/tmp_schattenmacher-revenue-system/setup-real-apis.sh
+/media/schattenmacher/USB-STICK1/data/tmp_schattenmacher-revenue-system/setup_terminal_empire.sh
+/media/schattenmacher/USB-STICK1/data/tmp_schattenmacher-revenue-system/shadow_git_remote_setup.sh
+/media/schattenmacher/USB-STICK1/data/tmp_schattenmacher-revenue-system/shadow_master_permission.sh
+/media/schattenmacher/USB-STICK1/data/tmp_schattenmacher-revenue-system/shadow_permission_fix.sh
+/media/schattenmacher/USB-STICK1/data/tmp_schattenmacher-revenue-system/sozialstunden_setup.sh
+/media/schattenmacher/USB-STICK1/data/tmp_schattenmacher-revenue-system/website_counter_setup.sh
+/media/schattenmacher/USB-STICK1/usb 07.11.25/USB_SORTED/2025-06-10/eva_integration_fix.sh
+/media/schattenmacher/USB-STICK1/usb 07.11.25/USB_SORTED/2025-06-10/eva_shadow_storage_optimization.sh
+/media/schattenmacher/USB-STICK1/usb 07.11.25/USB_SORTED/2025-06-10/shadow_pipeline_fix.sh
+/media/schattenmacher/USB-STICK1/usb 07.11.25/USB_SORTED/2025-06-12/eva_status_FIXED.sh
+/media/schattenmacher/USB-STICK1/usb 07.11.25/USB_SORTED/2025-06-12/install_eva_ollama.sh
+/media/schattenmacher/USB-STICK1/usb 07.11.25/USB_SORTED/2025-07-17/final_merge_jobcenter.sh
+/media/schattenmacher/USB-STICK1/USB_SORTED/2021-07-24/keyboard-setup.sh
+/media/schattenmacher/USB-STICK1/USB_SORTED/2021-10-15/01-locale-fix.sh
+/media/schattenmacher/USB-STICK1/USB_SORTED/2024-05-30/installdependencies.sh
+/media/schattenmacher/USB-STICK1/USB_SORTED/2025-06-18/cached_setup_font.sh
+/media/schattenmacher/USB-STICK1/USB_SORTED/2025-06-18/cached_setup_keyboard.sh
+/media/schattenmacher/USB-STICK1/USB_SORTED/2025-06-18/cached_setup_terminal.sh
+/media/schattenmacher/USB-STICK1/USB_SORTED/2025-06-19/github_repos_reinstall.sh
+/media/schattenmacher/USB-STICK1/USB_SORTED/2025-06-22/find_llm_models_systemweit.sh
+/media/schattenmacher/USB-STICK1/USB_SORTED/2025-06-22/llm_model_pull_shadowops.sh
+/media/schattenmacher/USB-STICK1/USB_SORTED/2025-06-24/fix_and_optimize.py
+/media/schattenmacher/USB-STICK1/USB_SORTED/2025-06-24/gpt4all_finetune_fixed.sh
+/media/schattenmacher/USB-STICK1/USB_SORTED/2025-06-25/install_automation.sh
+/media/schattenmacher/USB-STICK1/USB_SORTED/2025-06-26/der_architekt_video_only_fixed.sh
+/media/schattenmacher/USB-STICK1/USB_SORTED/2025-06-28/deepface_security.sh
+/media/schattenmacher/USB-STICK1/USB_SORTED/2025-06-29/deploy_shadowmaker.sh
+/media/schattenmacher/USB-STICK1/USB_SORTED/2025-07-11/check_deadlines_telegram.sh
+/media/schattenmacher/USB-STICK/openclaw_backup_2026-04-14_014714/openclaw_batch_scorer.sh
+/media/schattenmacher/USB-STICK/openclaw_backup_2026-04-14_014714/openclaw_booster.sh
+/media/schattenmacher/USB-STICK/openclaw_backup_2026-04-14_014714/openclaw_bot_skills_install.sh
+/media/schattenmacher/USB-STICK/openclaw_backup_2026-04-14_014714/openclaw_selfimprove.sh
+/media/schattenmacher/USB-STICK/openclaw_backup_2026-04-14_014714/openclaw_usb_backup.sh
+/media/schattenmacher/USB-STICK/openclaw_backup_2026-04-14_014714/scripts/patch_router.py
+/media/schattenmacher/USB-STICK/openclaw_shadow_20260414_062334/repo/openclaw_all_in_one_push.sh
+/media/schattenmacher/USB-STICK/openclaw_shadow_20260414_062334/repo/openclaw_backup_all_in_one.sh
+/media/schattenmacher/USB-STICK/openclaw_shadow_20260414_062334/repo/openclaw_hybrid_backup.sh
+/media/schattenmacher/USB-STICK/openclaw_shadow_20260414_062334/repo/run_shadowops_query.sh
+/media/schattenmacher/USB-STICK/shadow_final_20260414_062801/repo/openclaw_all_in_one_push.sh
+/media/schattenmacher/USB-STICK/shadow_final_20260414_062801/repo/openclaw_backup_all_in_one.sh
+/media/schattenmacher/USB-STICK/shadow_final_20260414_062801/repo/openclaw_hybrid_backup.sh

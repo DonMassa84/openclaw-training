@@ -221,3 +221,9 @@ Entscheidung: Home-Skripte werden katalogisiert, aber nicht automatisch aktivier
 Begründung: Viele Skripte sind Reparatur-/Setup-/Patch-Skripte und dürfen nur gezielt genutzt werden.
 
 Freigegeben zur späteren Prüfung: Winky, Mnemosyne, Courier.
+
+## 2026-05-02 – Entscheidung Drive Inventory begrenzen
+
+Entscheidung: Keine Vollindexierung externer Laufwerke. Stattdessen maxdepth und Dateilimits.
+
+Begründung: Der erste Scan erzeugte einen Index mit ca. 17,7 Mio. Dateien und war operativ zu groß.

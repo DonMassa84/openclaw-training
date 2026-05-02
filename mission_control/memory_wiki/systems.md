@@ -73,3 +73,12 @@ Schrittweise Aktivierung, read-only bzw. kontrolliertes Memory-Wiki-Schreiben.
 - Useful Catalog: /home/schattenmacher/openclaw_training/mission_control/docs/home_script_inventory/latest_home_useful_scripts_catalog.md
 - Automation Candidates: /home/schattenmacher/openclaw_training/mission_control/automation_candidates/latest_home_automation_candidates.md
 - Keine Skripte ausgeführt, keine Timer aktiviert, keine Secrets gelesen.
+
+## 2026-05-02 – Limited Drive Inventory
+
+- Vollscan wurde durch begrenzten sicheren Lauf ersetzt.
+- Summary: /home/schattenmacher/openclaw_training/mission_control/docs/drive_inventory_limited/latest_limited_drive_inventory_summary.md
+- Nützliche Skripte: /home/schattenmacher/openclaw_training/mission_control/docs/drive_inventory_limited/limited_useful_scripts_20260502_134348.txt
+- Nützliche PDFs: /home/schattenmacher/openclaw_training/mission_control/docs/drive_inventory_limited/limited_useful_pdfs_20260502_134348.txt
+- Sensible Pfadtreffer: /home/schattenmacher/openclaw_training/mission_control/docs/drive_inventory_limited/limited_sensitive_path_hits_20260502_134348.txt
+- Keine Inhalte sensibler Dateien ausgegeben.

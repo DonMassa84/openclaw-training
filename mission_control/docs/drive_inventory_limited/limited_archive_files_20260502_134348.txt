@@ -1,0 +1,193 @@
+/home/schattenmacher/Documents/llm_backups/llm_pipeline_20260413_154446.tar.gz
+/home/schattenmacher/Dokumente/ALL_IN_ONE_OP_TEXT.zip
+/home/schattenmacher/Dokumente/ARCHIV_2026-03-03.zip
+/home/schattenmacher/Dokumente/Band1 und Band 2 Alle Kapitel_verkleinert.zip
+/home/schattenmacher/Dokumente/Belege_Vermittlungsbudget_BG621A289912/vinted_belege_merged_ALL_plus_statement.zip
+/home/schattenmacher/Dokumente/FINANZEN_ARCHIV_2026-03-03/FINANZEN_ARCHIV_2026-03-03.zip
+/home/schattenmacher/Dokumente/Freies Radio Stuttgart/Flutter_FRS_App_LinuxMint.zip
+/home/schattenmacher/Dokumente/Freies Radio Stuttgart/Web.zip
+/home/schattenmacher/Dokumente/Kontoauszüge.zip
+/home/schattenmacher/Dokumente/Personal-20251108T095508Z-1-001.zip
+/home/schattenmacher/Dokumente/ Position Service Desk Support in Stuttgart-Möhringen/CV_Daniel_Massa_Download.zip
+/home/schattenmacher/Dokumente/Prüfungen-20251121T160659Z-1-001.zip
+/home/schattenmacher/Dokumente/shadow-learn/ShadowLearn_v4_FULLSTACK.zip
+/home/schattenmacher/Dokumente/shadow-learn/ShadowLearn_v4.zip
+/home/schattenmacher/Dokumente/transkripte/ihk-operative-professionals-2024-25/VFB_VIDEOS_RAW_250817.tar
+/home/schattenmacher/Dokumente/USB_SORTED/2023-10-19/Exporte.zip
+/home/schattenmacher/Dokumente/USB_SORTED/2025-04-04/IHK_Musterloesungen_Paket.zip
+/home/schattenmacher/Dokumente/USB_SORTED/2025-04-06/uld_V1.00.39_01.17.tar.gz
+/home/schattenmacher/Dokumente/USB_SORTED/2025-05-12/EVA_USB_Ready_All_in_One.zip
+/home/schattenmacher/Dokumente/USB_SORTED/2025-06-10/ai_scan.log.gz
+/home/schattenmacher/Downloads/AEVO/AEVO_30min_Template_2026-01-14_061601.zip
+/home/schattenmacher/Downloads/AEVO_Feb2026_Slideshow_DarkMode_Lerntyp.zip
+/home/schattenmacher/Downloads/discord-0.0.135 (1).tar.gz
+/home/schattenmacher/Downloads/discord-0.0.135 (2).tar.gz
+/home/schattenmacher/Downloads/discord-0.0.135.tar.gz
+/home/schattenmacher/Downloads/files/slides_alle_98.zip
+/home/schattenmacher/Downloads/files.zip
+/home/schattenmacher/Downloads/freies-radio-stuttgart-web.zip
+/home/schattenmacher/Downloads/frsapp.zip
+/home/schattenmacher/Downloads/FRS_Radio_Final_App_2025-11-18(1).zip
+/home/schattenmacher/Downloads/Geprüfte Operative IT Professionals Prüfungen.zip
+/home/schattenmacher/Downloads/Geprüfte Operative IT Professionals  - Teilnehmerunterlagen -.zip
+/home/schattenmacher/Downloads/Geprüfte Operative IT Professionals - Teilnehmerunterlagen -.zip
+/home/schattenmacher/Downloads/jobcenter-nachweise-stuttgart.zip
+/home/schattenmacher/Downloads/MFP_90_Schattenmacher_Slides.zip
+/home/schattenmacher/Downloads/MFP_90_Slides.zip
+/home/schattenmacher/Downloads/Notebook LM Videos und Audios/OP Mitarbeiterführung Passive/pdf24_renderPdf.zip
+/home/schattenmacher/Downloads/Notebook LM Videos und Audios/OP Mitarbeiterführung Passive/pdf24_umgewandelt.zip
+/home/schattenmacher/Downloads/OperativePro_Rahmenplan_DarkMode_JPG.zip
+/home/schattenmacher/Downloads/Programme/Microsoft Windows 7 Iso Kit/Acer Aspire 7754 Driver/broadcom_bcm_51009142.zip
+/home/schattenmacher/Downloads/Programme/Microsoft Windows 7 Iso Kit/Acer Aspire 7754 Driver/intel_turboboost_1111007.zip
+/home/schattenmacher/Downloads/Programme/Microsoft Windows 7 Iso Kit/Windows 7 Grundlagen CW7LG/CHIP.part02.rar
+/home/schattenmacher/Downloads/Programme/Microsoft Windows 7 Iso Kit/Windows 7 Grundlagen CW7LG/CHIP.part03.rar
+/home/schattenmacher/Downloads/Programme/Microsoft Windows 7 Iso Kit/Windows 7 Grundlagen CW7LG/CHIP.part04.rar
+/home/schattenmacher/Downloads/Programme/Microsoft Windows 7 Iso Kit/Windows 7 Grundlagen CW7LG/CHIP.part05.rar
+/home/schattenmacher/Downloads/Programme/Microsoft Windows 7 Iso Kit/Windows 7 Grundlagen CW7LG/CHIP.part06.rar
+/home/schattenmacher/Downloads/Programme/Microsoft Windows 7 Iso Kit/Windows 7 Grundlagen CW7LG/CHIP.part07.rar
+/home/schattenmacher/Downloads/Programme/Microsoft Windows 7 Iso Kit/Windows 7 Grundlagen CW7LG/CHIP.part08.rar
+/home/schattenmacher/Downloads/Programme/Microsoft Windows 7 Iso Kit/Windows 7 Grundlagen CW7LG/CHIP.part09.rar
+/home/schattenmacher/Downloads/Programme/Microsoft Windows 7 Iso Kit/Windows 7 Grundlagen CW7LG/CHIP.part10.rar
+/home/schattenmacher/Downloads/SA_Dark_Mode_Slides_Part1.zip
+/home/schattenmacher/Downloads/SA_Dark_Mode_Slides_Part2.zip
+/home/schattenmacher/Downloads/ShadowLearnAI_FULL.zip
+/home/schattenmacher/Downloads/ShadowLearnAI.zip
+/home/schattenmacher/Downloads/ShadowLearn_FullRelease.zip
+/home/schattenmacher/Downloads/ShadowLearn_v2(1).zip
+/home/schattenmacher/Downloads/ShadowLearn_v2.zip
+/home/schattenmacher/Downloads/ShadowLearn_v4.zip
+/home/schattenmacher/Downloads/slides_monitor_98.zip
+/home/schattenmacher/Downloads/Transkripte_VFB_Videos.zip
+/home/schattenmacher/Downloads/Web.zip
+/home/schattenmacher/openclaw_training/artifacts/freezes/shadowmaker_freeze_20260502_005952.tar.gz
+/home/schattenmacher/openclaw_training/artifacts/freezes/shadowmaker_freeze_report_20260502_010438.tar.gz
+/home/schattenmacher/openclaw_training/artifacts/freezes/shadowmaker_freeze_report_20260502_010450.tar.gz
+/home/schattenmacher/openclaw_training/artifacts/freezes/shadowmaker_freeze_report_20260502_011230.tar.gz
+/home/schattenmacher/openclaw_training/artifacts/freezes/shadowmaker_freeze_report_20260502_052254.tar.gz
+/home/schattenmacher/openclaw_training/artifacts/freezes/shadowmaker_freeze_report_20260502_053818.tar.gz
+/home/schattenmacher/openclaw_training/artifacts/freezes/shadowmaker_freeze_report_20260502_062329.tar.gz
+/home/schattenmacher/openclaw_training/artifacts/freezes/shadowmaker_freeze_report_20260502_062802.tar.gz
+/home/schattenmacher/openclaw_training/artifacts/freezes/shadowmaker_freeze_report_20260502_065448.tar.gz
+/home/schattenmacher/openclaw_training/artifacts/freezes/shadowmaker_freeze_report_20260502_070907.tar.gz
+/home/schattenmacher/openclaw_training/artifacts/freezes/shadowmaker_freeze_report_20260502_072817.tar.gz
+/home/schattenmacher/openclaw_training/artifacts/freezes/shadowmaker_freeze_report_20260502_073347.tar.gz
+/home/schattenmacher/openclaw_training/artifacts/freezes/shadowmaker_freeze_report_20260502_074105.tar.gz
+/home/schattenmacher/openclaw_training/artifacts/freezes/shadowmaker_freeze_report_20260502_074840.tar.gz
+/home/schattenmacher/openclaw_training/artifacts/freezes/shadowmaker_freeze_report_20260502_075725.tar.gz
+/home/schattenmacher/openclaw_training/artifacts/freezes/shadowmaker_freeze_report_20260502_080905.tar.gz
+/home/schattenmacher/openclaw_training/artifacts/freezes/shadowmaker_freeze_report_20260502_093428.tar.gz
+/home/schattenmacher/openclaw_training/artifacts/freezes/shadowmaker_freeze_report_20260502_100002.tar.gz
+/home/schattenmacher/openclaw_training/artifacts/freezes/shadowmaker_freeze_report_20260502_105021.tar.gz
+/home/schattenmacher/openclaw_training/artifacts/freezes/shadowmaker_freeze_report_20260502_110557.tar.gz
+/home/schattenmacher/openclaw_training/artifacts/freezes/shadowmaker_freeze_report_20260502_121440.tar.gz
+/home/schattenmacher/openclaw_training/artifacts/freezes/shadowmaker_freeze_report_20260502_122554.tar.gz
+/home/schattenmacher/openclaw_training/artifacts/freezes/shadowmaker_freeze_report_20260502_125257.tar.gz
+/home/schattenmacher/Schreibtisch/AEVO_Export/AEVO_Passive_Loop.zip
+/home/schattenmacher/Schreibtisch/AEVO_Export/AEVO_Strategie_Lerntyp.zip
+/home/schattenmacher/Schreibtisch/Zusammenfassungen/Mitarbeiterführung+Personalmanagement/jpg/jpgs.zip
+/home/schattenmacher/Schreibtisch/Zusammenfassungen/Mitarbeiterführung+Personalmanagement/Personal-20260204T140959Z-3-001.zip
+/home/schattenmacher/Schreibtisch/Zusammenfassungen/Mitarbeiterführung+Personalmanagement/Prüfungen/2020/Frühjahrsprüfung/IHK_Exam_Blueprint.zip
+/home/schattenmacher/Schreibtisch/Zusammenfassungen/Mitarbeiterführung+Personalmanagement/Prüfungen/2020/Frühjahrsprüfung/IHK_Exam_Playbook.zip
+/home/schattenmacher/Schreibtisch/Zusammenfassungen/Mitarbeiterführung+Personalmanagement/Prüfungen/export IHK lernen mobil/Exporte.zip
+/home/schattenmacher/Schreibtisch/Zusammenfassungen/Mitarbeiterführung+Personalmanagement/Prüfungen/PrüfungH12024AL.zip
+/home/schattenmacher/Schreibtisch/Zusammenfassungen/Mitarbeiterführung+Personalmanagement/Prüfungen/SA_MASTER_2011_2023/FLAT_SAFE_ORIGINAL/2020_IHK_Exam_Blueprint.zip
+/home/schattenmacher/Schreibtisch/Zusammenfassungen/Mitarbeiterführung+Personalmanagement/Prüfungen/SA_MASTER_2011_2023/FLAT_SAFE_ORIGINAL/2020_IHK_Exam_Playbook.zip
+/home/schattenmacher/Schreibtisch/Zusammenfassungen/Mitarbeiterführung+Personalmanagement/Prüfungen.zip
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/Medien/shadow-ai-lab_backup_2025-06-23.zip
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/schattenmacher_emails.zip
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/shadow_backup/Documents/COMPLETE_LLM_SYSTEM_BACKUP_20250606.tar.gz
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/shadow_backup/Documents/shadow-ai-lab/email_strategy_analysis_20250605.tar.gz
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/shadow_backup/Documents/USB_SCAN/email_strategy_analysis_20250605.tar.gz
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/USER_DATA/__000_Weiterbildung Operative Professionals(1).zip
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/USER_DATA/2025-06-25T02_37_22 herunterladen.zip
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/USER_DATA/cmake-3.27.9-linux-x86_64.tar.gz
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/USER_DATA/comfyui_safe_start_kit.zip
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/USER_DATA/neue ebooks/Fotos Michi.zip
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/USER_DATA/Personal-20250624T164904Z-1-001.zip
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/USER_DATA/Projektmanagement-20250624T164857Z-1-001.zip
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/USER_DATA/Projektmanagement/Projektkoordinator_2023.zip
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/USER_DATA/shadow_logs_export/shadow_logs_export.zip
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/USER_DATA/shadowops_deploy_bundle/EVA-Mirror/shadow-sync-package.zip
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/USER_DATA/shadowops_deploy_bundle/eva-multiagent-workflows/eva-multiagent-workflows.zip
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/USER_DATA/shadowops_deploy_bundle/EVA/shadow-sync-package.zip
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/USER_DATA/shadowops_deploy_bundle/InterNetX-GmbH/my_rest_api.zip
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/USER_DATA/shadowops_deploy_bundle/PERSONALAKTEN-AGENTENKORPS-SPIEGELSYSTEM-Stand-12.-Mai-2025-Zugriffsebene-SCHATTENSTUFE-I/EVA_SYSTEM_ZIP_With_Workflow.zip
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/USER_DATA/shadowops_deploy_bundle/schattenbot/n8n/shadowmaker-n8n-tools.zip
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/USER_DATA/shadowops_deploy_bundle/schattenbot/shadowmaker-n8n-tools.zip
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/USER_DATA/shadowops_deploy_bundle/shadow-ai-lab/email_strategy_analysis_20250605.tar.gz
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/USER_DATA/shadowops_deploy_bundle/shadowmaker-suite/output/shadowmaker_package.zip
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/USER_DATA/shadowops_deploy_bundle/shadowops_deploy_bundle.zip
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/USER_DATA/shadowops_deploy_bundle/spiegelkern-eva/eva_autopush_fullbundle.zip
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/USER_DATA/thunderbird-139.0.2.tar.xz
+/media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7/USER_DATA/Trio9a_website.zip
+/media/schattenmacher/USB-STICK1/AEVO_2025_Prüfung/Backup/AEVO_Backup_20251217_0428.tar.gz
+/media/schattenmacher/USB-STICK1/AEVO_2025_Prüfung/Export/AEVO_Passive_Loop.zip
+/media/schattenmacher/USB-STICK1/AEVO_2025_Prüfung/Export/AEVO_Strategie_Lerntyp.zip
+/media/schattenmacher/USB-STICK1/AEVO_Backup_20251217/AEVO_Diashow_Combined_JPG.zip
+/media/schattenmacher/USB-STICK1/AEVO_Backup_20251217/AEVO_Diashow_JPG.zip
+/media/schattenmacher/USB-STICK1/AEVO_Backup_20251217/AEVO_Diashow_Lerntyp_AD_User.zip
+/media/schattenmacher/USB-STICK1/AEVO_Backup_20251217/AEVO_Export/AEVO_Passive_Loop.zip
+/media/schattenmacher/USB-STICK1/AEVO_Backup_20251217/AEVO_Export/AEVO_Strategie_Lerntyp.zip
+/media/schattenmacher/USB-STICK1/AEVO_Backup_20251217/AEVO_Passive_Slideshow_JPG.zip
+/media/schattenmacher/USB-STICK1/AEVO_Backup_20251217/AEVO_Slideshow_Lerntyp_Rebuild_JPG.zip
+/media/schattenmacher/USB-STICK1/AEVO_Backup_20251217/AEVO_Slideshow_Strategie_Lerntyp_JPG.zip
+/media/schattenmacher/USB-STICK1/AEVO_Backup_20251217/AEVO_Unterweisung_Active_Directory_Nutzer_anlegen.zip
+/media/schattenmacher/USB-STICK1/AEVO_Backup_20251217/angepasstes Fachgespräch-Skript.zip
+/media/schattenmacher/USB-STICK1/bilder/Aevo 20.01.26/AEVO_200_Lernfolien_JPG.zip
+/media/schattenmacher/USB-STICK1/bilder/Aevo 20.01.26/AEVO_IT_Szenarien_1-18_JPG_Paket.zip
+/media/schattenmacher/USB-STICK1/bilder/Aevo 20.01.26/AEVO_JPG_SMART.zip
+/media/schattenmacher/USB-STICK1/bilder/Aevo 20.01.26/AEVO_Methoden_Leitfaden_JPG_Paket.zip
+/media/schattenmacher/USB-STICK1/bilder/Aevo 20.01.26/AEVO_PassiveLoop_JPG_A.zip
+/media/schattenmacher/USB-STICK1/bilder/Aevo 20.01.26/AEVO_PassiveLoop_JPG.zip
+/media/schattenmacher/USB-STICK1/bilder/Aevo 20.01.26/AEVO_Unterweisungseinheiten_JPG_Paket_100.zip
+/media/schattenmacher/USB-STICK1/bilder/Aevo 20.01.26/AEVO_Unterweisungseinheiten_JPG_Paket_118.zip
+/media/schattenmacher/USB-STICK1/bilder/Aevo 20.01.26/AEVO_Unterweisungseinheiten_JPG_Paket_MEHR.zip
+/media/schattenmacher/USB-STICK1/bilder/Aevo 20.01.26/AEVO_Unterweisungseinheiten_JPG_Paket.zip
+/media/schattenmacher/USB-STICK1/bilder/AEVO_Feb2026_Slideshow_DarkMode_Lerntyp.zip
+/media/schattenmacher/USB-STICK1/bilder/AEVO_Unterweisung_Active_Directory_Nutzer_anlegen/AEVO_Diashow_Combined_JPG.zip
+/media/schattenmacher/USB-STICK1/bilder/AEVO_Unterweisung_Active_Directory_Nutzer_anlegen/AEVO_Diashow_JPG.zip
+/media/schattenmacher/USB-STICK1/bilder/AEVO_Unterweisung_Active_Directory_Nutzer_anlegen/AEVO_Diashow_Lerntyp_AD_User.zip
+/media/schattenmacher/USB-STICK1/bilder/AEVO_Unterweisung_Active_Directory_Nutzer_anlegen/AEVO_Export/AEVO_Passive_Loop.zip
+/media/schattenmacher/USB-STICK1/bilder/AEVO_Unterweisung_Active_Directory_Nutzer_anlegen/AEVO_Export/AEVO_Strategie_Lerntyp.zip
+/media/schattenmacher/USB-STICK1/bilder/AEVO_Unterweisung_Active_Directory_Nutzer_anlegen/AEVO_Passive_Slideshow_JPG.zip
+/media/schattenmacher/USB-STICK1/bilder/AEVO_Unterweisung_Active_Directory_Nutzer_anlegen/AEVO_Slideshow_Lerntyp_Rebuild_JPG.zip
+/media/schattenmacher/USB-STICK1/bilder/AEVO_Unterweisung_Active_Directory_Nutzer_anlegen/AEVO_Slideshow_Strategie_Lerntyp_JPG.zip
+/media/schattenmacher/USB-STICK1/bilder/AEVO_Unterweisung_Active_Directory_Nutzer_anlegen/AEVO_Unterweisung_Active_Directory_Nutzer_anlegen.zip
+/media/schattenmacher/USB-STICK1/bilder/AEVO_Unterweisung_Active_Directory_Nutzer_anlegen/angepasstes Fachgespräch-Skript.zip
+/media/schattenmacher/USB-STICK1/bilder/MaPoM slide/360-Grad-Feedback_Der_10-Punkte-Plan_JPG.zip
+/media/schattenmacher/USB-STICK1/bilder/MaPoM slide/HR_Management_and_Leadership.zip
+/media/schattenmacher/USB-STICK1/bilder/MaPoM slide/IHK_MA_PM_Situationsaufgabe1_Original_2022_JPG.zip
+/media/schattenmacher/USB-STICK1/bilder/MaPoM slide/Operative_Personalstrategie_Lösungen.zip
+/media/schattenmacher/USB-STICK1/bilder/MaPoM slide/SCADA_Mission_Control_Slides_JPG.zip
+/media/schattenmacher/USB-STICK1/bilder/OperativePro_Rahmenplan_DarkMode_JPG.zip
+/media/schattenmacher/USB-STICK1/bilder/Projektordner_Fuehrungszeugnis_Bundle.zip
+/media/schattenmacher/USB-STICK1/data/COURSE_COMPLETE_20250811.tar.gz
+/media/schattenmacher/USB-STICK1/data/Gehaltsabrechnung.zip
+/media/schattenmacher/USB-STICK1/data/IT-Business Manager/download_allinone.zip
+/media/schattenmacher/USB-STICK1/data/Madera exportacion MSL2018/Madera exportacion MSL expediente 26.03.2018.zip
+/media/schattenmacher/USB-STICK1/data/Projektantrag_IT-Projektmanager_DanielMassa/IHK_Projektdokumentation_DanielMassa_AllVersions (1).zip
+/media/schattenmacher/USB-STICK1/data/Projektantrag_IT-Projektmanager_DanielMassa/IHK_Projektdokumentation_DanielMassa_AllVersions.zip
+/media/schattenmacher/USB-STICK1/data/Projektantrag_IT-Projektmanager_DanielMassa/VorlageProjektdokumentationITBerufel.k,..zip
+/media/schattenmacher/USB-STICK1/data/Projektantrag_IT-Projektmanager_DanielMassa/Vorlage_Zero-Trust_Projektdokumentation_01_clean.zip
+/media/schattenmacher/USB-STICK1/data/shadow_nvme_setup.zip
+/media/schattenmacher/USB-STICK1/data/tmp_schattenmacher-revenue-system/auto_bewerbungen.tar.gz
+/media/schattenmacher/USB-STICK1/data/tmp_schattenmacher-revenue-system/fine_tune_extract_fullhome_20250620_123212.zip
+/media/schattenmacher/USB-STICK1/data/tmp_schattenmacher-revenue-system/ihk-md-backup.tar.gz
+/media/schattenmacher/USB-STICK1/data/Wohnberechtigungsschein/Gehaltsabrechnung.zip
+/media/schattenmacher/USB-STICK1/usb 07.11.25/USB_SORTED/2025-04-04/IHK_Musterloesungen_Paket.zip
+/media/schattenmacher/USB-STICK1/usb 07.11.25/USB_SORTED/2025-06-10/ai_scan.log.gz
+/media/schattenmacher/USB-STICK1/USB_SORTED/2024-01-09/cached_ISO-8859-1.acm.gz
+/media/schattenmacher/USB-STICK1/USB_SORTED/2024-01-09/cached_ISO-8859-1_del.kmap.gz
+/media/schattenmacher/USB-STICK1/USB_SORTED/2024-10-27/Exporte.zip
+/media/schattenmacher/USB-STICK1/USB_SORTED/2025-04-22/Projektkoordinator_2023.zip
+/media/schattenmacher/USB-STICK1/USB_SORTED/2025-04-27/Textband_Scan_Original.zip
+/media/schattenmacher/USB-STICK1/USB_SORTED/2025-06-18/cached_Uni2-Fixed16.psf.gz
+/media/schattenmacher/USB-STICK1/USB_SORTED/2025-06-18/cached_UTF-8_del.kmap.gz
+/media/schattenmacher/USB-STICK1/USB_SORTED/2025-06-18/Uni2-Fixed16.psf.gz
+/media/schattenmacher/USB-STICK1/USB_SORTED/2025-06-26/github_repos.tar.gz
+/media/schattenmacher/USB-STICK1/USB_SORTED/2025-07-03/massa-portfolio.zip
+/media/schattenmacher/USB-STICK1/USB_SORTED/2025-07-24/actions-runner-linux-x64-2.317.0.tar.gz
+/media/schattenmacher/USB-STICK1/USB_SORTED/2025-08-10/transcripts_package.zip
+/media/schattenmacher/USB-STICK1/USB_SORTED/2025-09-12/Geprüfte Operative IT Professionals  - Teilnehmerunterlagen -.zip
+/media/schattenmacher/USB-STICK1/Zero-Trust-Sicherheitskonzept mit GitHub-Integration_Massa_03-10-2025.zip
+/media/schattenmacher/USB-STICK/crash_snapshots/today_20260413_155818.tar.gz

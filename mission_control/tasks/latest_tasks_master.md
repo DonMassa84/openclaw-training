@@ -63,3 +63,12 @@ Duplikate, Cache, Browserdaten, Finanzdaten und Behördenunterlagen werden nicht
 | HOME-AUTO-001 | Inventory | Home-Skripte analysieren | Mnemosyne | erledigt | /home/schattenmacher/openclaw_training/mission_control/docs/home_script_inventory/latest_home_script_inventory.md |
 | HOME-AUTO-002 | Automation | Kandidaten dokumentieren | Linky | erledigt | /home/schattenmacher/openclaw_training/mission_control/automation_candidates/latest_home_automation_candidates.md |
 | HOME-AUTO-003 | Betrieb | Keine automatische Aktivierung ohne Freigabe | User | aktiv | systemctl --user list-timers --all |
+
+## 2026-05-02 – Limited Drive Inventory
+
+| ID | Bereich | Aufgabe | Owner | Status | Kontrolle |
+|---|---|---|---|---|---|
+| DRIVE-LIMIT-001 | Inventory | Begrenzten Laufwerksaudit durchführen | Mnemosyne | erledigt | /home/schattenmacher/openclaw_training/mission_control/docs/drive_inventory_limited/latest_limited_drive_inventory_summary.md |
+| DRIVE-LIMIT-002 | Daten | nützliche Skripte prüfen | User | offen | /home/schattenmacher/openclaw_training/mission_control/docs/drive_inventory_limited/limited_useful_scripts_20260502_134348.txt |
+| DRIVE-LIMIT-003 | Daten | nützliche PDFs prüfen | User | offen | /home/schattenmacher/openclaw_training/mission_control/docs/drive_inventory_limited/limited_useful_pdfs_20260502_134348.txt |
+| DRIVE-LIMIT-004 | Datenschutz | sensible Pfadtreffer nur lokal prüfen | User | offen | /home/schattenmacher/openclaw_training/mission_control/docs/drive_inventory_limited/limited_sensitive_path_hits_20260502_134348.txt |
