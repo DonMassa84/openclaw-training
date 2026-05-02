@@ -17,13 +17,30 @@ Rolle:
 System Monitor für OpenClaw, Docker, Flowise, n8n, Timer, failed services und Sicherheitslage.
 
 Status:
-Phase 5 produktiv aktiviert.
+produktiv aktiviert.
 
 Cadence:
-manuell über winky-run, später optional per Timer.
+manuell über winky-run, optional per Timer.
 
 Output:
 Markdown-Report, Discord-Meldung, Statusdokument.
+
+## Mnemosyne
+
+Rolle:
+Memory Curator.
+
+Status:
+produktiv aktiviert.
+
+Aufgabe:
+Reports, Entscheidungen, tägliche Zusammenfassungen, offene Punkte, Systeme und Risiken konsolidieren.
+
+Cadence:
+manuell über mnemosyne-run, später optional täglich.
+
+Grenzen:
+keine Secrets, keine Löschung, keine externen Inhalte im Klartext.
 
 ## Mentor
 
@@ -34,7 +51,7 @@ Status:
 vorbereitet, manuell nutzbar.
 
 Aktivierung:
-erst nach Winky-Stabilisierung.
+nach Mnemosyne-Stabilisierung.
 
 ## Strategist
 
@@ -68,14 +85,3 @@ vorbereitet.
 
 Grenzen:
 nur kleine Module, keine destruktiven Aktionen.
-
-## Mnemosyne
-
-Rolle:
-Memory Curator.
-
-Status:
-vorbereitet.
-
-Aufgabe:
-Reports, Entscheidungen, tägliche Zusammenfassungen und Wiki-Einträge konsolidieren.

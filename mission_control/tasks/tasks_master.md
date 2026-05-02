@@ -152,3 +152,12 @@ echo "============================================================"
 | P5-002 | Multi-Agent | Winky Timer optional entscheiden | User | offen | 2 | install-winky-timer-optional |
 | P5-003 | Multi-Agent | Mentor als zweiten Agent vorbereiten | Mentor | vorbereitet | 2 | ihk-mfp-drill |
 | P5-004 | Multi-Agent | Linky erst nach Winky-Stabilisierung aktivieren | Linky | wartend | 3 | prompt-to-code-review |
+
+## Phase 5 Mnemosyne Ergänzung – 2026-05-02
+
+| ID | Bereich | Aufgabe | Owner | Status | Priorität | Kontrolle |
+|---|---|---|---|---|---:|---|
+| P5-005 | Multi-Agent | Mnemosyne als Memory Curator produktiv ausführen | Mnemosyne | aktiv | 1 | mnemosyne-run |
+| P5-006 | Memory | Memory-Wiki-Wachstum beobachten | Mnemosyne | aktiv | 2 | phase5-crew-status |
+| P5-007 | Multi-Agent | Mnemosyne Timer optional entscheiden | User | offen | 2 | install-mnemosyne-timer-optional |
+| P5-008 | Multi-Agent | Mentor als dritten Agent später aktivieren | Mentor | wartend | 3 | ihk-mfp-drill |
