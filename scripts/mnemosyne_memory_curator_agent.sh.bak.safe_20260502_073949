@@ -64,7 +64,7 @@ LAST_WINKY="$(safe_latest_file "$WINKY_DIR")"
 LAST_PHASE5="$(safe_latest_file "$STATUS_DIR")"
 TASKS_FILE="$TASK_DIR/latest_tasks_master.md"
 
-SUMMARY="$MNEMO_DIR/memory_summary_${TODAY}_${TS}.md"
+SUMMARY="$MNEMO_DIR/memory_summary_$TODAY_$TS.md"
 
 {
   echo "# Mnemosyne Memory Curator Report"
