@@ -1,35 +1,18 @@
+# USER
 
-# user.md – Nutzerprofil für lokale Agenten
+Der Nutzer arbeitet mit einem lokalen Shadowmaker/OpenClaw-System für:
 
-## Nutzer
+- IHK/MFP Prüfungsvorbereitung
+- IT-/AI-Automation
+- OpenClaw/Flowise/n8n
+- Discord/Telegram Control
+- Bewerbungen und Karriere
+- Finanzen/Jobcenter/Wohnen
+- lokale Dateninventur und Wissensmanagement
 
-Schattenmacher / Daniel Massa
-
-## Arbeitsweise
-
-Der Nutzer arbeitet bevorzugt mit:
-
-```text
-All-in-one Bash-Blöcken
-cat << 'EOF' Skripten
-klaren Logs
-reproduzierbaren Healthchecks
-Telegram-Control
-lokalen AI-/Automation-Stacks
-OpenClaw, Flowise, n8n, Docker, Python, systemd
-```
-
-## Prioritäten
-
-```text
-1. Stabilität
-2. Kontrolle
-3. Automatisierung
-4. Dokumentation
-5. Wiederherstellbarkeit
-6. operative Effizienz
-```
-
-## Kommunikationsregel
-
-Terminalbefehle vollständig, direkt und ausführbar liefern.
+Arbeitsstil:
+- all-in-one Bash
+- klare Reports
+- Freeze vor großen Änderungen
+- Timeshift bei stabilen Zuständen
+- keine unnötige Theorie

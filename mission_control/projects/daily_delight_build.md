@@ -1,36 +1,25 @@
-
 # Daily Delight Build
 
-## Ziel
+## Zweck
 
-Jeden Tag soll ein kleiner, nützlicher Systembaustein entstehen.
-
-## Beispiele
-
-```text
-neues Healthcheck-Skript
-kleiner Report
-neues Runbook
-Telegram-Befehl
-n8n Workflow-Idee
-Flowise Agenten-Template
-Kostenübersicht
-Sicherheitscheck
-Lernmodul
-```
+Jeden Tag ein kleines nützliches Artefakt erzeugen, ohne das Fundament zu verändern.
 
 ## Regel
 
-Klein bauen. Sofort nutzbar. Dokumentieren. Git committen.
+Daily Delight baut keine riskanten Änderungen automatisch. Es erzeugt Vorschläge, Vorlagen oder kleine isolierte Module.
 
-## Tagesformat
+## Zielkanal
 
-```text
-Datum:
-Gebaut:
-Warum nützlich:
-Dateien:
-Test:
-Nächster Schritt:
-```
+Discord:
+#daily-delight
 
+## Lokaler Befehl
+
+```bash
+daily-delight-run
+Sicherheitsgrenze
+
+Kein sudo.
+Keine Löschung.
+Keine Secrets.
+Keine produktive Änderung ohne Freeze.

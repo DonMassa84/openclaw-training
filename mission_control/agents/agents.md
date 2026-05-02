@@ -1,72 +1,34 @@
+# AGENTS
 
-# agents.md – Agentenrollen
+Dieses Verzeichnis ist die operative Identität des Shadowmaker-Mission-Control-Systems.
 
-## Primäragent: CrashBandicot
+## Startup-Regel
 
-```text
-Telegram Control
-Systemstatus
-OpenClaw-Check
-Docker-Check
-Telegram-Netzwerkcheck
-Failed Services
-Discord-Test
-```
+Vor jeder Session lesen:
 
-## Backup-Agent: Shadowbot
+1. soul.md
+2. user.md
+3. memory.md
+4. latest_agent_roles.md
+5. latest_tasks_master.md
 
-```text
-Backup-Status
-Snapshot-Archiv
-History-Log
-```
+## Schreibregel
 
-## OpenClaw Gateway
+Alles Wiederholbare wird dokumentiert. Alles Produktive erzeugt einen Report.
 
-```text
-Agent Runtime
-OpenClaw Control UI
-interner Gateway-Status
-```
+## Agenten
 
-## Flowise
+- CrashBandicot: Control
+- Winky: System Monitor
+- Linky: Builder
+- Mnemosyne: Memory Curator
+- Mentor: IHK/MFP
+- Strategist: Career
+- Steward: Finance/Housing/Behörden
 
-```text
-Workflow- und Agent-Builder
-visuelle Pipeline-Entwicklung
-```
+## Verbot
 
-## n8n
-
-```text
-Automation Hub
-Cron-/Webhook-/Workflow-Orchestrierung
-```
-
-## Zukünftige Agentenrollen
-
-```text
-Scout       = tägliche Recherche / Themen / Systembeobachtung
-Analyst     = tiefe Auswertung / Entscheidungsvorlagen
-Builder     = Code / Skripte / Automationen
-Archivist   = Dokumentation / Logs / Memory
-Watchdog    = Healthcheck / Security / Alerts
-Finance     = Kostenkontrolle / API-Nutzung / Budget
-```
-
-
-## 2026-05-02 - Agent Operating Rules
-
-Jeder Agent dokumentiert:
-1. Was geändert wurde.
-2. Warum es geändert wurde.
-3. Welche Datei betroffen ist.
-4. Welcher Report erstellt wurde.
-5. Ob Freeze/Timeshift erforderlich ist.
-
-Keine Foundation-Änderung ohne Freeze:
-- OpenClaw Binding
-- Docker-Port 18789
-- Telegram Bot Core
-- CrashBandicot Core
-- Timeshift-Konfiguration
+Keine freie Shell-Ausführung über Telegram.
+Kein sudo über Telegram.
+Keine Secrets posten.
+Keine automatische Löschung.

@@ -1,0 +1,41 @@
+# Shadowmaker Mission Control – Aufgabenliste
+
+Stand: Sa 2. Mai 06:47:13 CEST 2026
+
+## Betriebsregel
+
+Keine ungeprüfte Autonomie. Jede produktive Änderung folgt:
+
+1. Status prüfen
+2. Änderung isoliert durchführen
+3. Report schreiben
+4. Git committen
+5. /freeze_report ausführen
+6. Timeshift bei stabilem Stand
+
+## Aktive Aufgaben
+
+| ID | Bereich | Aufgabe | Owner | Status | Priorität | Kontrolle |
+|---|---|---|---|---|---:|---|
+| MC-001 | Mission Control | Daily Brief produktiv nutzen | CrashBandicot | aktiv | 1 | daily-brief-discord |
+| MC-002 | Security | Security Audit 2x täglich prüfen | Winky | aktiv/pruefen | 1 | sec-audit-list |
+| MC-003 | Daily Delight | Tägliches Build-Idee-Modul aktivieren | Linky | vorbereitet | 1 | daily-delight-run |
+| MC-004 | Memory | Memory-Wiki-Grundstruktur aufbauen | Mnemosyne | vorbereitet | 2 | memory-wiki-status |
+| MC-005 | OpenClaw | Stackstatus nach Discord routen | Winky | aktiv | 1 | openclaw-status-discord |
+| MC-006 | IHK/MFP | Lernsystem als Projektkanal pflegen | Mentor | vorbereitet | 2 | #ihk-mfp |
+| MC-007 | Career | Bewerbungs-/CV-Material strukturieren | Strategist | offen | 3 | career-it |
+| MC-008 | Finance | Finanz-/Jobcenter-Daten getrennt halten | Steward | offen | 3 | finance-control |
+| MC-009 | Housing | WBS/Jobcenter/Wohnung nachweissicher führen | Steward | offen | 2 | housing-jobcenter |
+| MC-010 | Prompt-to-Code | Wiederkehrende Prompts in Skripte stabilisieren | Linky | vorbereitet | 2 | prompt_to_code |
+
+## Heute
+
+- Daily Brief erzeugen
+- Security Timer prüfen
+- Daily Delight erstellen
+- Memory-Wiki aktualisieren
+- Phase-2-Status dokumentieren
+
+## Keine Löschung
+
+Duplikate, Cache, Browserdaten, Finanzdaten und Behördenunterlagen werden nicht automatisch gelöscht.
