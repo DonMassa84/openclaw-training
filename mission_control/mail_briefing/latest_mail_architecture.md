@@ -1,0 +1,1 @@
+/home/schattenmacher/openclaw_training/mission_control/mail_briefing/mail_architecture_gmail_app_proton_local_20260502_104921.md

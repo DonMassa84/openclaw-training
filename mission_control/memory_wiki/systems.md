@@ -39,3 +39,11 @@ Aktive Runtime-Agenten:
 
 Status:
 Schrittweise Aktivierung, read-only bzw. kontrolliertes Memory-Wiki-Schreiben.
+
+## 2026-05-02 – Phase 6 Mail Architecture
+
+- Gmail wird über ChatGPT Gmail Connector/App genutzt.
+- Lokaler Google-OAuth für Gmail ist deaktiviert.
+- Proton läuft lokal über Proton Bridge + Courier.
+- Courier bleibt read-only und sendet nur Kurzstatus an Discord.
+- Nächster Sicherheitsstandard: Proton Bridge Passwort später neu generieren.
