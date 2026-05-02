@@ -72,3 +72,11 @@ Duplikate, Cache, Browserdaten, Finanzdaten und Behördenunterlagen werden nicht
 | DRIVE-LIMIT-002 | Daten | nützliche Skripte prüfen | User | offen | /home/schattenmacher/openclaw_training/mission_control/docs/drive_inventory_limited/limited_useful_scripts_20260502_134348.txt |
 | DRIVE-LIMIT-003 | Daten | nützliche PDFs prüfen | User | offen | /home/schattenmacher/openclaw_training/mission_control/docs/drive_inventory_limited/limited_useful_pdfs_20260502_134348.txt |
 | DRIVE-LIMIT-004 | Datenschutz | sensible Pfadtreffer nur lokal prüfen | User | offen | /home/schattenmacher/openclaw_training/mission_control/docs/drive_inventory_limited/limited_sensitive_path_hits_20260502_134348.txt |
+
+## 2026-05-02 – Deep OpenClaw Training Analysis
+
+| ID | Bereich | Aufgabe | Owner | Status | Kontrolle |
+|---|---|---|---|---|---|
+| OCT-001 | Inventory | openclaw_training tief analysieren | Mnemosyne | erledigt | /home/schattenmacher/openclaw_training/mission_control/docs/deep_openclaw_training_analysis/latest_deep_openclaw_training_summary.md |
+| OCT-002 | Automation | stabile Kandidaten dokumentieren | Winky/Linky | erledigt | /home/schattenmacher/openclaw_training/mission_control/docs/deep_openclaw_training_analysis/latest_openclaw_training_automation_candidates.md |
+| OCT-003 | Betrieb | keine Timer ohne Freigabe | User | aktiv | systemctl --user list-timers --all |

@@ -82,3 +82,11 @@ Schrittweise Aktivierung, read-only bzw. kontrolliertes Memory-Wiki-Schreiben.
 - Nützliche PDFs: /home/schattenmacher/openclaw_training/mission_control/docs/drive_inventory_limited/limited_useful_pdfs_20260502_134348.txt
 - Sensible Pfadtreffer: /home/schattenmacher/openclaw_training/mission_control/docs/drive_inventory_limited/limited_sensitive_path_hits_20260502_134348.txt
 - Keine Inhalte sensibler Dateien ausgegeben.
+
+## 2026-05-02 – Deep OpenClaw Training Analysis
+
+- openclaw_training wurde read-only tief analysiert.
+- Summary: /home/schattenmacher/openclaw_training/mission_control/docs/deep_openclaw_training_analysis/latest_deep_openclaw_training_summary.md
+- Useful Scripts: /home/schattenmacher/openclaw_training/mission_control/docs/deep_openclaw_training_analysis/latest_openclaw_training_useful_scripts_catalog.md
+- Automation Candidates: /home/schattenmacher/openclaw_training/mission_control/docs/deep_openclaw_training_analysis/latest_openclaw_training_automation_candidates.md
+- Keine Skripte ausgeführt, keine Timer aktiviert.

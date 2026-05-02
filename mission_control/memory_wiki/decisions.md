@@ -227,3 +227,9 @@ Freigegeben zur späteren Prüfung: Winky, Mnemosyne, Courier.
 Entscheidung: Keine Vollindexierung externer Laufwerke. Stattdessen maxdepth und Dateilimits.
 
 Begründung: Der erste Scan erzeugte einen Index mit ca. 17,7 Mio. Dateien und war operativ zu groß.
+
+## 2026-05-02 – Entscheidung OpenClaw-Automatisierung
+
+Entscheidung: Nur Winky, Mnemosyne und Courier bleiben spätere Automatisierungskandidaten.
+
+Nicht automatisieren: Mentor, Strategist, Steward, Linky, Repair/Patch/Docker/Training.
