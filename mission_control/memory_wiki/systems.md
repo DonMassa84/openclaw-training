@@ -30,3 +30,12 @@ Aktive Runtime-Agenten:
 
 Status:
 Schrittweise Aktivierung, read-only bzw. kontrolliertes Memory-Wiki-Schreiben.
+
+## 2026-05-02 – Multi-Agent Runtime
+
+Aktive Runtime-Agenten:
+- Winky: /home/schattenmacher/openclaw_training/mission_control/agent_runtime/winky/latest_winky_report.md
+- Mnemosyne: /home/schattenmacher/openclaw_training/mission_control/agent_runtime/mnemosyne/latest_mnemosyne_report.md
+
+Status:
+Schrittweise Aktivierung, read-only bzw. kontrolliertes Memory-Wiki-Schreiben.

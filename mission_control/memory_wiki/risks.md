@@ -28,3 +28,14 @@ Nicht verändern, solange Stack stabil ist.
 
 3. ShadowOps failed services bleiben offen.
    Kontrolle: separat reparieren oder deaktivieren, nicht automatisch.
+
+## 2026-05-02 – Risiken nach Mnemosyne-Aktivierung
+
+1. Memory-Wiki kann redundant wachsen.
+   Kontrolle: regelmäßige Konsolidierung statt Löschung.
+
+2. OpenClaw Host HTTP Warnung bleibt bestehen.
+   Kontrolle: Winky beobachtet weiter, keine voreilige Binding-Änderung.
+
+3. ShadowOps failed services bleiben offen.
+   Kontrolle: separat reparieren oder deaktivieren, nicht automatisch.
