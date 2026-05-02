@@ -29,3 +29,32 @@ sec-audit-timer
 
 sudo timeshift --create --comments "Shadowmaker stable freeze after <change>"
 sudo timeshift --list
+
+## Phase 4 WebUI
+
+```bash
+openclaw-workspace-audit
+mission-control-webui-status
+mission-control-webui-install
+mission-control-webui-start
+mc4-status
+
+## Phase 4 WebUI
+
+```bash
+openclaw-workspace-audit
+mission-control-webui-status
+mission-control-webui-install
+mission-control-webui-start
+mc4-status
+
+
+
+## Phase 4 WebUI
+
+Befehle:
+- openclaw-workspace-audit
+- mission-control-webui-status
+- mission-control-webui-install
+- mission-control-webui-start
+- mc4-status

@@ -39,3 +39,107 @@ Keine ungeprüfte Autonomie. Jede produktive Änderung folgt:
 ## Keine Löschung
 
 Duplikate, Cache, Browserdaten, Finanzdaten und Behördenunterlagen werden nicht automatisch gelöscht.
+
+Phase 4 Ergänzung – 2026-05-02
+ID	Bereich	Aufgabe	Owner	Status	Priorität	Kontrolle
+P4-001	Workspace Audit	echte OpenClaw/Mission-Control-Daten prüfen	Winky	aktiv	1	openclaw-workspace-audit
+P4-002	WebUI	Read-only Dashboard starten	Linky	vorbereitet	1	mission-control-webui-status
+P4-003	Security	keine Secrets / keine Schreibaktionen	Winky	aktiv	1	mc4-status
+MD						
+
+echo "[OK] Memory Wiki und Tasks aktualisiert."
+echo
+
+echo "============================================================"
+echo "7) ALIASE SETZEN"
+echo "============================================================"
+
+if [ -f "/home/schattenmacher/.bashrc" ]; then
+cp "/home/schattenmacher/.bashrc" "/home/schattenmacher/.bashrc.bak.mission_control_phase4_webui_20260502_071917"
+sed -i '/# >>> mission control phase4 webui aliases >>>/,/# <<< mission control phase4 webui aliases <<</d' "/home/schattenmacher/.bashrc" || true
+
+cat >> "/home/schattenmacher/.bashrc" << 'ALIASES'
+
+>>> mission control phase4 webui aliases >>>
+
+alias openclaw-workspace-audit='~/openclaw_workspace_audit.sh'
+alias mission-control-webui-status='~/mission_control_webui_status.sh'
+alias mission-control-webui-install='~/mission_control_webui_install.sh'
+alias mission-control-webui-start='~/mission_control_webui_start.sh'
+alias mc4-status='cat ~/openclaw_training/docs/status/latest_mission_control_phase4_webui_status.md'
+
+<<< mission control phase4 webui aliases <<<
+
+ALIASES
+
+bash -n "/home/schattenmacher/.bashrc"
+echo "[OK] Aliase gesetzt."
+fi
+
+echo
+
+echo "============================================================"
+echo "8) DISCORD MELDUNG"
+echo "============================================================"
+
+if [ -x "/home/schattenmacher/openclaw_training/scripts/discord_send_channel.sh" ]; then
+"/home/schattenmacher/openclaw_training/scripts/discord_send_channel.sh" DISCORD_MISSION_CONTROL_WEBHOOK_URL "Phase 4 vorbereitet: Workspace Audit + read-only Mission Control WebUI. Start lokal: mission-control-webui-install && mission-control-webui-start" || true
+fi
+
+echo
+
+echo "============================================================"
+echo "9) GIT COMMIT"
+echo "============================================================"
+
+if [ -d "/home/schattenmacher/openclaw_training/.git" ]; then
+cd "/home/schattenmacher/openclaw_training"
+git add mission_control docs scripts reports 2>/dev/null || true
+git commit -m "Prepare Mission Control Phase 4 WebUI 20260502_071917" 2>/dev/null || true
+git log --oneline -10 || true
+fi
+
+echo
+
+echo "============================================================"
+echo "10) ABSCHLUSS"
+echo "============================================================"
+echo "[OK] Phase 4 vorbereitet: Workspace Audit + Mission Control WebUI."
+echo
+echo "Jetzt prüfen:"
+echo "source ~/.bashrc"
+echo "mc4-status"
+echo "mission-control-webui-status"
+echo
+echo "Dann installieren:"
+echo "mission-control-webui-install"
+echo
+echo "Dann starten:"
+echo "mission-control-webui-start"
+echo
+echo "Browser:"
+echo "http://127.0.0.1:4173
+"
+echo
+echo "Nach erfolgreichem Test:"
+echo "/freeze_report"
+echo
+echo "Danach lokal:"
+echo "sudo timeshift --create --comments "Shadowmaker stable freeze after Mission Control Phase 4 WebUI""
+echo "sudo timeshift --list"
+echo
+echo "Report:"
+echo "/home/schattenmacher/openclaw_training/reports/setup_mission_control_phase4_webui_allinone_20260502_071917.txt"
+echo "============================================================"
+echo "FERTIG"
+echo "============================================================"
+
+
+## Phase 4 Ergänzung – 2026-05-02
+
+| ID | Bereich | Aufgabe | Owner | Status | Priorität | Kontrolle |
+|---|---|---|---|---|---:|---|
+| P4-001 | Workspace Audit | echte OpenClaw/Mission-Control-Daten prüfen | Winky | aktiv | 1 | openclaw-workspace-audit |
+| P4-002 | WebUI | Read-only Dashboard starten | Linky | vorbereitet | 1 | mission-control-webui-status |
+| P4-003 | Security | keine Secrets / keine Schreibaktionen | Winky | aktiv | 1 | mc4-status |
+| P4-004 | WebUI Test | npm install + localhost Test | Linky | offen | 1 | mission-control-webui-install |
