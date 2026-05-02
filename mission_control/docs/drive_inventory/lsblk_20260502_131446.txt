@@ -1,0 +1,26 @@
+NAME        FSTYPE  FSVER            LABEL                           UUID                                 FSAVAIL FSUSE% MOUNTPOINTS
+sda                                                                                                                      
+├─sda1      vfat    FAT32                                            C446-2E2A                             496,3M     3% /boot/efi
+└─sda2      ext4    1.0                                              8d308721-4fcb-4b5d-8c66-e8932c9fd66b    628G    61% /
+sdb                                                                                                                      
+└─sdb1      ntfs                                                     C6C25F2BC25F1ECD                      235,6G    75% /media/schattenmacher/C6C25F2BC25F1ECD
+sdc                                                                                                                      
+├─sdc1      ntfs                     System-reserviert               4A10A3AB10A39C87                                    
+├─sdc2      ntfs                                                     B4DCADF7DCADB450                                    
+├─sdc3      ntfs                                                     5012429412427F4A                                    
+├─sdc4                                                                                                                   
+├─sdc5      vfat    FAT32                                            5885-973A                                           
+└─sdc6      ext4    1.0                                              62e5982e-3753-423c-9fc2-3ea54f87a0fd                
+sdd                                                                                                                      
+└─sdd1      ext4    1.0                                              d51a4b61-cae4-47da-aa03-bd3bceb25279                
+sde                                                                                                                      
+└─sde1      ext4    1.0              USB-STICK                       9cc6ffd8-91f4-4525-aead-98f21b732771   89,7G    75% /media/schattenmacher/USB-STICK1
+sdf         vfat    FAT16                                            CAA9-512D                               1,7G     7% /media/schattenmacher/CAA9-512D
+sdg         iso9660 Joliet Extension Linux Mint 22.2 Cinnamon 64-bit 2025-08-28-08-52-38-00                              
+└─sdg1      vfat    FAT32            USB-STICK                       F4BC-5CA0                              22,5G    22% /media/schattenmacher/USB-STICK
+sdh                                                                                                                      
+└─sdh1      ext4    1.0                                              ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7  256,5G    81% /media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7
+nvme0n1                                                                                                                  
+├─nvme0n1p1 ext4    1.0              ROOT                            40c3e466-0f1d-4bc6-bd0e-6df56fb53f3c                
+├─nvme0n1p2 ext4    1.0              HOME                            40263943-c193-49cf-bd23-56c1b5b4ee85                
+└─nvme0n1p3 ext4    1.0              DATA                            b4469a55-bb63-491c-9ec1-bfee10915989                

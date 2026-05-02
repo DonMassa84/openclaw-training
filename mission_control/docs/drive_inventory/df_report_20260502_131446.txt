@@ -1,0 +1,13 @@
+Dateisystem    Typ      Größe Benutzt Verf. Verw% Eingehängt auf
+tmpfs          tmpfs     3,2G    2,5M  3,2G    1% /run
+efivarfs       efivarfs  128K     41K   83K   33% /sys/firmware/efi/efivars
+/dev/sda2      ext4      1,8T    1,1T  628G   64% /
+tmpfs          tmpfs      16G    2,4M   16G    1% /dev/shm
+tmpfs          tmpfs     5,0M     16K  5,0M    1% /run/lock
+/dev/sda1      vfat      511M     15M  497M    3% /boot/efi
+tmpfs          tmpfs     3,2G    392K  3,2G    1% /run/user/1000
+/dev/sdg1      vfat       29G    6,2G   23G   22% /media/schattenmacher/USB-STICK
+/dev/sdf       vfat      1,9G    137M  1,8G    8% /media/schattenmacher/CAA9-512D
+/dev/sde1      ext4      452G    340G   90G   80% /media/schattenmacher/USB-STICK1
+/dev/sdh1      ext4      1,8T    1,5T  257G   86% /media/schattenmacher/ed37f2a2-0df8-44bc-aa1f-9ea6d1405cb7
+/dev/sdb1      fuseblk   932G    696G  236G   75% /media/schattenmacher/C6C25F2BC25F1ECD
