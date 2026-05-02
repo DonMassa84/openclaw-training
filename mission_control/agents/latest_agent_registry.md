@@ -22,9 +22,6 @@ produktiv aktiviert.
 Cadence:
 manuell über winky-run, optional per Timer.
 
-Output:
-Markdown-Report, Discord-Meldung, Statusdokument.
-
 ## Mnemosyne
 
 Rolle:
@@ -39,19 +36,22 @@ Reports, Entscheidungen, tägliche Zusammenfassungen, offene Punkte, Systeme und
 Cadence:
 manuell über mnemosyne-run, später optional täglich.
 
-Grenzen:
-keine Secrets, keine Löschung, keine externen Inhalte im Klartext.
-
 ## Mentor
 
 Rolle:
-IHK/MFP Drill und Prüfungstraining.
+IHK/MFP Drill- und Prüfungstrainings-Agent.
 
 Status:
-vorbereitet, manuell nutzbar.
+produktiv aktiviert.
 
-Aktivierung:
-nach Mnemosyne-Stabilisierung.
+Aufgabe:
+SA1/SA2-Drills, Musterlösungen, Bewertungsraster, prüfungssichere Antwortmodule.
+
+Cadence:
+manuell über mentor-run, später optional täglich.
+
+Grenzen:
+nur Lernartefakte, keine Systemänderungen.
 
 ## Strategist
 
@@ -60,9 +60,6 @@ Career IT, CV, Anschreiben, LinkedIn-/Recruiter-Kommunikation.
 
 Status:
 vorbereitet, manuell nutzbar.
-
-Aktivierung:
-read-only und templatebasiert.
 
 ## Steward
 

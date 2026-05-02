@@ -22,5 +22,9 @@ echo "== Mnemosyne Latest =="
 cat "$MISSION/agent_runtime/mnemosyne/latest_mnemosyne_report.md" 2>/dev/null || echo "Kein Mnemosyne Report gefunden."
 echo
 
+echo "== Mentor Latest =="
+cat "$MISSION/agent_runtime/mentor/latest_mentor_report.md" 2>/dev/null || echo "Kein Mentor Report gefunden."
+echo
+
 echo "== Runtime Files =="
-find "$MISSION/agent_runtime" -maxdepth 3 -type f 2>/dev/null | sort | tail -120 || true
+find "$MISSION/agent_runtime" -maxdepth 3 -type f 2>/dev/null | sort | tail -180 || true

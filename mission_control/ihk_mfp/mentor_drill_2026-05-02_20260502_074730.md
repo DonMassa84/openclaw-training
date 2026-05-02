@@ -1,0 +1,97 @@
+# Mentor IHK/MFP Drill – 2026-05-02
+
+Stand: Sa 2. Mai 07:47:30 CEST 2026
+
+## Modus
+
+DRILL – SA1/SA2 Kurzfall, 25 Minuten Schreibzeit.
+
+## Prüfungsnaher Fall
+
+In einem IT-Service-Team häufen sich Fehler bei der Bearbeitung von Support-Tickets. Mehrere Mitarbeitende dokumentieren Tickets unvollständig, Eskalationen erfolgen zu spät und ein neuer Kollege fühlt sich nicht ausreichend eingearbeitet. Die Teamleitung erhält Beschwerden aus zwei Fachabteilungen. Gleichzeitig steht eine Systemumstellung bevor, bei der stabile Supportprozesse notwendig sind.
+
+## Aufgabe
+
+Entwickeln Sie als verantwortliche Führungskraft eine strukturierte Maßnahme zur Stabilisierung der Ticketbearbeitung und zur Verbesserung der Zusammenarbeit im Team.
+
+Bearbeiten Sie die Aufgabe im 10-Punkte-Gerüst.
+
+## Pflichtpunkte
+
+1. Situation kurz erfassen
+2. SMART-Ziel formulieren
+3. Stakeholder nennen
+4. Ursachen nach Mensch / Organisation / Prozess analysieren
+5. Drei Alternativen bilden
+6. Wirtschaftlich / menschlich / organisatorisch bewerten
+7. Entscheidung begründen
+8. Umsetzung mit Verantwortlichen, Zeitplan und Schritten darstellen
+9. Kontrolle mit KPIs definieren
+10. Nachhaltigkeit, Kommunikation und rechtliches Risiko aufnehmen
+
+## Musterlösung
+
+### 1 Situation
+
+Im IT-Service-Team bestehen Qualitäts- und Prozessprobleme bei der Ticketbearbeitung. Tickets werden unvollständig dokumentiert, Eskalationen erfolgen verspätet und die Einarbeitung eines neuen Mitarbeiters ist nicht ausreichend strukturiert. Dadurch entstehen Beschwerden aus Fachabteilungen und Risiken für die bevorstehende Systemumstellung.
+
+### 2 Ziel SMART
+
+Innerhalb von acht Wochen soll die Qualität der Ticketbearbeitung verbessert werden, indem mindestens 95 Prozent aller Tickets vollständig dokumentiert werden, Eskalationen gemäß SLA erfolgen und der neue Mitarbeiter anhand eines verbindlichen Einarbeitungsplans sicher in den Supportprozess integriert wird.
+
+### 3 Stakeholder
+
+Betroffen sind die Teamleitung, die Supportmitarbeitenden, der neue Kollege, die Fachabteilungen als interne Kunden, die IT-Leitung, gegebenenfalls der Betriebsrat sowie die Projektverantwortlichen der Systemumstellung.
+
+### 4 Ursachen
+
+Human: Unsicherheit im Umgang mit Eskalationsregeln, fehlende Routine beim neuen Mitarbeiter, unterschiedliche Arbeitsstandards im Team.  
+Organisation: unklare Verantwortlichkeiten, fehlender Einarbeitungsplan, keine regelmäßige Qualitätskontrolle.  
+Prozess: uneinheitliche Ticketdokumentation, fehlende Checkliste, unklare Eskalationsstufen und keine verbindlichen Review-Termine.
+
+### 5 Alternativen
+
+Alternative A: Kurzfristige Einzelanweisungen an alle Mitarbeitenden ohne strukturelle Änderung.  
+Alternative B: Einführung eines verbindlichen Ticketstandards mit Checkliste, Eskalationsmatrix und wöchentlichem Review.  
+Alternative C: Vollständige Umorganisation des Teams mit neuer Rollenverteilung und externem Training.
+
+### 6 Evaluation
+
+Wirtschaftlich ist Alternative B sinnvoll, weil sie mit geringem Aufwand eine schnelle Qualitätsverbesserung ermöglicht. Alternative A ist günstig, aber nicht nachhaltig. Alternative C kann wirksam sein, verursacht jedoch höheren Aufwand und ist vor der Systemumstellung zu umfangreich.  
+Menschlich stärkt Alternative B Orientierung, Fairness und Einarbeitung, ohne das Team zu überfordern.  
+Organisatorisch schafft Alternative B klare Standards, messbare Kontrolle und bessere Eskalationssicherheit.
+
+### 7 Entscheidung + Begründung
+
+Ich entscheide mich für Alternative B. Diese Lösung ist wirksam, kurzfristig umsetzbar und verbindet Prozessklarheit mit Mitarbeiterentwicklung. Sie reduziert Fehler, verbessert die Servicequalität und stabilisiert das Team vor der Systemumstellung.
+
+### 8 Implementation
+
+Die Teamleitung erstellt innerhalb einer Woche eine Ticket-Checkliste und eine Eskalationsmatrix. In Woche zwei findet eine Teamschulung statt. Der neue Mitarbeiter erhält einen Einarbeitungsplan mit Mentor. Ab Woche drei werden wöchentliche Ticketreviews durchgeführt. Verantwortlich ist die Teamleitung; erfahrene Mitarbeitende unterstützen als Paten. Die Fachabteilungen werden über die neuen Standards informiert.
+
+### 9 Control
+
+Kontrolliert wird über KPIs: Anteil vollständig dokumentierter Tickets, SLA-Einhaltung, Anzahl verspäteter Eskalationen, Anzahl Rückfragen aus Fachabteilungen und Feedback des neuen Mitarbeiters. Nach vier und acht Wochen erfolgt ein Review. Bei Abweichungen werden Nachschulung, Prozessanpassung oder Einzelgespräche eingeleitet.
+
+### 10 Sustainability & Communication
+
+Zur Nachhaltigkeit werden Checkliste und Eskalationsmatrix im Team-Wiki dokumentiert, neue Mitarbeitende erhalten künftig einen festen Einarbeitungsplan und die Ticketqualität wird monatlich überprüft. Die Kommunikation erfolgt transparent im Teammeeting und gegenüber den Fachabteilungen. Rechtlich ist bei Leistungs- oder Verhaltensproblemen auf faire, dokumentierte Gespräche zu achten; bei verbindlichen Verhaltensregeln oder Kontrollsystemen ist eine Beteiligung des Betriebsrats nach BetrVG zu prüfen.
+
+## Bewertungsraster 20 Punkte
+
+| Punkt | Kriterium | Max |
+|---|---|---:|
+| 1 | Situation korrekt erfasst | 2 |
+| 2 | SMART-Ziel messbar | 2 |
+| 3 | Stakeholder vollständig | 2 |
+| 4 | Ursachen Mensch/Organisation/Prozess | 2 |
+| 5 | Drei Alternativen | 2 |
+| 6 | Bewertung wirtschaftlich/menschlich/organisatorisch | 2 |
+| 7 | Entscheidung begründet | 2 |
+| 8 | Umsetzung konkret | 2 |
+| 9 | Kontrolle mit KPIs | 2 |
+| 10 | Nachhaltigkeit/Kommunikation/Recht | 2 |
+
+## Direkt schreibbarer Kernsatz
+
+Ich entscheide mich für die Einführung eines verbindlichen Ticketstandards mit Checkliste, Eskalationsmatrix, Einarbeitungsplan und wöchentlichem Review, da diese Maßnahme kurzfristig umsetzbar ist, die Servicequalität messbar verbessert und das Team vor der Systemumstellung stabilisiert.
