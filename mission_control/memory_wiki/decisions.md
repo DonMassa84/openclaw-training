@@ -233,3 +233,9 @@ Begründung: Der erste Scan erzeugte einen Index mit ca. 17,7 Mio. Dateien und w
 Entscheidung: Nur Winky, Mnemosyne und Courier bleiben spätere Automatisierungskandidaten.
 
 Nicht automatisieren: Mentor, Strategist, Steward, Linky, Repair/Patch/Docker/Training.
+
+## 2026-05-02 – Entscheidung nach Kontrolllauf
+
+Entscheidung: Nach dem ersten Kontrolllauf noch keine Automatisierung aktivieren.
+
+Begründung: Winky, Mnemosyne und Courier sollen erst über mehrere manuelle Läufe stabil beobachtet werden.

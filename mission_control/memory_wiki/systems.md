@@ -90,3 +90,11 @@ Schrittweise Aktivierung, read-only bzw. kontrolliertes Memory-Wiki-Schreiben.
 - Useful Scripts: /home/schattenmacher/openclaw_training/mission_control/docs/deep_openclaw_training_analysis/latest_openclaw_training_useful_scripts_catalog.md
 - Automation Candidates: /home/schattenmacher/openclaw_training/mission_control/docs/deep_openclaw_training_analysis/latest_openclaw_training_automation_candidates.md
 - Keine Skripte ausgeführt, keine Timer aktiviert.
+
+## 2026-05-02 – Post Deep OpenClaw Control Run
+
+- Winky, Mnemosyne und Courier wurden manuell kontrolliert.
+- Control Report: /home/schattenmacher/openclaw_training/mission_control/control_runs/latest_post_deep_openclaw_control_run.md
+- Status: /home/schattenmacher/openclaw_training/docs/status/latest_post_deep_openclaw_control_status.md
+- Keine Timer aktiviert.
+- Keine Repair-/Patch-/Docker-Skripte ausgeführt.

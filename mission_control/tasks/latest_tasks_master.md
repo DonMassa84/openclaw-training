@@ -80,3 +80,12 @@ Duplikate, Cache, Browserdaten, Finanzdaten und Behördenunterlagen werden nicht
 | OCT-001 | Inventory | openclaw_training tief analysieren | Mnemosyne | erledigt | /home/schattenmacher/openclaw_training/mission_control/docs/deep_openclaw_training_analysis/latest_deep_openclaw_training_summary.md |
 | OCT-002 | Automation | stabile Kandidaten dokumentieren | Winky/Linky | erledigt | /home/schattenmacher/openclaw_training/mission_control/docs/deep_openclaw_training_analysis/latest_openclaw_training_automation_candidates.md |
 | OCT-003 | Betrieb | keine Timer ohne Freigabe | User | aktiv | systemctl --user list-timers --all |
+
+## 2026-05-02 – Post Deep OpenClaw Control
+
+| ID | Bereich | Aufgabe | Owner | Status | Kontrolle |
+|---|---|---|---|---|---|
+| CTRL-001 | Betrieb | Winky manuell prüfen | Winky | erledigt | /home/schattenmacher/openclaw_training/mission_control/control_runs/latest_post_deep_openclaw_control_run.md |
+| CTRL-002 | Betrieb | Mnemosyne manuell prüfen | Mnemosyne | erledigt | /home/schattenmacher/openclaw_training/mission_control/control_runs/latest_post_deep_openclaw_control_run.md |
+| CTRL-003 | Betrieb | Courier manuell prüfen | Courier | erledigt | /home/schattenmacher/openclaw_training/mission_control/control_runs/latest_post_deep_openclaw_control_run.md |
+| CTRL-004 | Automation | Timer weiterhin nicht aktivieren | User | aktiv | systemctl --user list-timers --all |
