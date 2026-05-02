@@ -1,8 +1,34 @@
 # Tina Huang – Full OpenClaw Setup
 
-Quelle: https://www.youtube.com/watch?v=oOCN30ulVyo  
-Veröffentlicht: 28.04.2026  
-Thema: vollständiger OpenClaw-Aufbau mit Mission Control, Discord, Git, Multi-Agent-System, Security Checks, Memory Fixes und Advanced Workflows.
+## Quelle
+
+```text
+Video-ID: oOCN30ulVyo
+URL: https://www.youtube.com/watch?v=oOCN30ulVyo
+Veröffentlicht: 28.04.2026
+Aufrufe laut Nutzerangabe: 105.768
+Creator: Tina Huang
+Thema: Full OpenClaw Setup
+````
+
+## Beschreibung
+
+Tina Huang zeigt einen kompletten OpenClaw-Aufbau mit:
+
+```text
+Hardware-Auswahl
+Onboarding Wizard
+Modellstrategie
+Telegram
+Discord
+Mission Control
+Projektaufbau
+Git-Versionierung
+Multi-Agent Framework
+Security Checks
+Memory Fixes
+Advanced Workflows
+```
 
 ## Kapitel
 
@@ -18,12 +44,51 @@ Thema: vollständiger OpenClaw-Aufbau mit Mission Control, Discord, Git, Multi-A
 20:08 Security Check
 20:46 Memory Fixes
 22:32 Advanced Workflows
-Shadowmaker-Übernahme
-CrashBandicot = Telegram Control Bot
-OpenClaw = container-intern OK
-Flowise = Workflow Builder
-n8n = Automation Hub
-Mission Control = Markdown-basierte Kontrollschicht
-Security Check = zweimal täglich
-Memory = soul.md, user.md, memory.md, agents.md, heartbeat.md
+```
+
+## Technische Kernaussage
+
+OpenClaw sollte nicht als einzelner Chatbot betrachtet werden, sondern als operatives System mit:
+
+```text
+klarer Hardware-/Isolationsstrategie
+sauberem Kommunikationskanal
+Markdown-basierter Agentenidentität
+Mission Control
+projektorientierter Umsetzung
+Version Control
+Multi-Agent-Aufteilung
+Security-/Healthchecks
+Memory-Konsolidierung
+Prompt-to-Code-Stabilisierung
+```
+
+## Hinweis zum Prompt-Link
+
+Der Google-Docs-Link aus der Beschreibung ist gekürzt sichtbar:
+
+```text
+https://docs.google.com/document/d/1c...
+```
+
+Ohne vollständige URL ist kein automatischer Import möglich.
+
+Sobald der vollständige Link vorhanden ist, speichern unter:
+
+```text
+~/openclaw_training/prompts/tina_huang_original_prompts.md
+```
+
+## Sponsor-Hinweis
+
+Bolt wird im Video als Sponsor erwähnt.
+
+Aktuelle Entscheidung:
+
+```text
+Keine automatische Bolt-Integration.
+Keine Zugangsdaten.
+Keine neue Abhängigkeit.
+Nur als optionales UI-/Dashboard-Prototyping-Werkzeug dokumentiert.
+```
 

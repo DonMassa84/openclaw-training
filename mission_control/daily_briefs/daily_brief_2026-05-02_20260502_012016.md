@@ -1,0 +1,209 @@
+# Shadowmaker Daily Brief
+
+Stand: Sa 2. Mai 01:20:27 CEST 2026
+
+## 1. Lagebild
+
+| Bereich | Status |
+|---|---:|
+| CrashBandicot | OK |
+| SchattenWatchBot | OK |
+| BackupBot | OK |
+| OpenClaw container-intern | YES |
+| Flowise | YES |
+| n8n | YES |
+| Telegram IPv4 | YES |
+| Telegram IPv6 | NO |
+| Freeze Report vorhanden | YES |
+| Timeshift Status | LOCAL_SUDO_REQUIRED |
+
+## 2. Bewertung
+
+```text
+OpenClaw ist OK, wenn container-intern HTTP/1.1 200 OK erscheint.
+Host-HTTP-Fail/Reset bleibt dokumentierte Binding-Einschränkung und ist kein Ausfall.
+Telegram IPv6 darf FAIL bleiben, solange IPv4 OK ist.
+Vor größeren Änderungen: /freeze_report + lokaler Timeshift Snapshot.
+```
+
+## 3. System
+
+### Uptime
+
+```text
+ 01:20:27 up  2:23,  1 user,  load average: 2,14, 3,08, 3,36
+```
+
+### RAM
+
+```text
+               gesamt       benutzt     frei      gemns.  Puffer/Cache verfügbar
+Speicher:       31Gi        13Gi       1,3Gi       484Mi        17Gi        17Gi
+Auslager:      2,0Gi       1,6Mi       2,0Gi
+```
+
+### Disk
+
+```text
+Dateisystem    Größe Benutzt Verf. Verw% Eingehängt auf
+/dev/sda2       1,8T    1,1T  632G   64% /
+```
+
+## 4. Docker
+
+```text
+NAMES                         IMAGE                                STATUS                 PORTS
+openclaw-openclaw-gateway-1   openclaw:local                       Up 2 hours             127.0.0.1:18789->18789/tcp
+shadowmaker-agents            flowiseai/flowise:latest             Up 2 hours             0.0.0.0:3001->3000/tcp, [::]:3001->3000/tcp
+shadow-command-hub            docker.n8n.io/n8nio/n8n:latest       Up 2 hours             0.0.0.0:5678->5678/tcp, [::]:5678->5678/tcp
+shadow-postgres               postgres:16-alpine                   Up 2 hours (healthy)   5432/tcp
+shadow-redis                  redis:7-alpine                       Up 2 hours (healthy)   6379/tcp
+open-webui                    ghcr.io/open-webui/open-webui:main   Up 2 hours (healthy)   0.0.0.0:3000->8080/tcp, [::]:3000->8080/tcp
+```
+
+## 5. OpenClaw
+
+### Host-Test
+
+```text
+curl: (56) Recv failure: Die Verbindung wurde vom Kommunikationspartner zurückgesetzt
+```
+
+### Container-intern
+
+```text
+HTTP/1.1 200 OK
+X-Content-Type-Options: nosniff
+Referrer-Policy: no-referrer
+X-Frame-Options: DENY
+Content-Security-Policy: default-src 'self'; base-uri 'none'; object-src 'none'; frame-ancestors 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; connect-src 'self' ws: wss:
+Content-Type: text/html; charset=utf-8
+Cache-Control: no-cache
+Date: Fri, 01 May 2026 23:20:16 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+```
+
+## 6. Flowise
+
+```text
+HTTP/1.1 200 OK
+Vary: Origin
+Accept-Ranges: bytes
+Cache-Control: public, max-age=0
+Last-Modified: Tue, 14 Apr 2026 11:32:51 GMT
+ETag: W/"c46-19d8bc3feb8"
+Content-Type: text/html; charset=UTF-8
+Content-Length: 3142
+Date: Fri, 01 May 2026 23:20:16 GMT
+Connection: keep-alive
+```
+
+## 7. n8n
+
+```text
+HTTP/1.1 200 OK
+Accept-Ranges: bytes
+Cache-Control: public, max-age=86400
+Last-Modified: Fri, 01 May 2026 20:57:50 GMT
+ETag: W/"4066-19de5556084"
+Content-Type: text/html; charset=utf-8
+Content-Length: 16486
+Vary: Accept-Encoding
+Date: Fri, 01 May 2026 23:20:16 GMT
+Connection: keep-alive
+```
+
+## 8. Telegram Netzwerk
+
+### IPv4
+
+```text
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0   145    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+HTTP/2 302 
+server: nginx/1.18.0
+date: Fri, 01 May 2026 23:20:17 GMT
+content-type: text/html
+content-length: 145
+location: https://core.telegram.org/bots
+strict-transport-security: max-age=31536000; includeSubDomains; preload
+access-control-allow-origin: *
+access-control-allow-methods: GET, POST, OPTIONS
+access-control-expose-headers: Content-Length,Content-Type,Date,Server,Connection
+
+```
+
+### IPv6
+
+```text
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:03 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:04 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:05 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:06 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:07 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:08 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:09 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:10 --:--:--     0
+curl: (28) Connection timed out after 10003 milliseconds
+```
+
+## 9. Failed Services
+
+### User
+
+```text
+  UNIT                        LOAD   ACTIVE SUB    DESCRIPTION
+● shadowops-autopilot.service loaded failed failed ShadowOps autonomous encrypted log watchdog
+● shadowops-log-push.service  loaded failed failed ShadowOps encrypted log push
+
+Legend: LOAD   → Reflects whether the unit definition was properly loaded.
+        ACTIVE → The high-level unit activation state, i.e. generalization of SUB.
+        SUB    → The low-level unit activation state, values depend on unit type.
+
+2 loaded units listed.
+```
+
+### System
+
+```text
+  UNIT                    LOAD   ACTIVE SUB    DESCRIPTION
+● casper-md5check.service loaded failed failed casper-md5check Verify Live ISO checksums
+
+Legend: LOAD   → Reflects whether the unit definition was properly loaded.
+        ACTIVE → The high-level unit activation state, i.e. generalization of SUB.
+        SUB    → The low-level unit activation state, values depend on unit type.
+
+1 loaded units listed.
+```
+
+## 10. Offene Punkte
+
+- Telegram IPv6 bleibt dokumentierter Warnpunkt
+- ShadowOps Autopilot separat entscheiden: reparieren oder deaktivieren
+- ShadowOps Log Push separat entscheiden: reparieren oder deaktivieren
+- casper-md5check ist unkritisch; optional reset-failed
+- Timeshift-Prüfung braucht lokalen sudo
+
+## 11. Priorität 1–3 des Tages
+
+```text
+1. Fundament nicht verändern: OpenClaw-Binding, Docker-Port 18789 und CrashBandicot-Core unberührt lassen.
+2. Produktivmodul fokussieren: Daily Brief / Mission Control / Projektoutput statt Reparaturschleifen.
+3. Vor jeder Änderung: /freeze_report ausführen und danach lokal Timeshift sichern.
+```
+
+## 12. Nächster sicherer Schritt
+
+```text
+Wenn der Stack stabil bleibt:
+- Keine Systemänderung.
+- Nur produktive Inhalte erzeugen.
+- Bei neuer Änderung zuerst /freeze_report.
+```
+
+## 13. Pfade
+
+```text
+Daily Brief: /home/schattenmacher/openclaw_training/mission_control/daily_briefs/daily_brief_2026-05-02_20260502_012016.md
+Latest:      /home/schattenmacher/openclaw_training/mission_control/daily_briefs/latest_daily_brief.md
+TXT Report:  /home/schattenmacher/openclaw_training/reports/daily_brief_20260502_012016.txt
+Freeze:      /home/schattenmacher/openclaw_training/docs/status/latest_shadowmaker_freeze_report.md
+```
