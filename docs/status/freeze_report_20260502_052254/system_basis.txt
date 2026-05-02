@@ -1,0 +1,26 @@
+== hostnamectl ==
+ Static hostname: schattenmacher-D3161-B1
+       Icon name: computer-desktop
+         Chassis: desktop 🖥️
+      Machine ID: c422a272681a4029982269652952b174
+         Boot ID: d18a9a5c9ac14ffcbbc254757d482b63
+Operating System: Linux Mint 22.3
+          Kernel: Linux 6.17.0-23-generic
+    Architecture: x86-64
+ Hardware Vendor: FUJITSU
+  Hardware Model: D3161-B1
+Firmware Version: V4.6.5.3 R1.16.0 for D3161-B1x
+   Firmware Date: Mon 2012-10-29
+    Firmware Age: 13y 6month 2d
+
+== uptime ==
+ 05:23:05 up  6:25,  1 user,  load average: 1,68, 1,80, 1,52
+
+== free -h ==
+               gesamt       benutzt     frei      gemns.  Puffer/Cache verfügbar
+Speicher:       31Gi        12Gi       1,4Gi       617Mi        18Gi        19Gi
+Auslager:      2,0Gi       1,6Mi       2,0Gi
+
+== df -h / ==
+Dateisystem    Größe Benutzt Verf. Verw% Eingehängt auf
+/dev/sda2       1,8T    1,1T  635G   64% /

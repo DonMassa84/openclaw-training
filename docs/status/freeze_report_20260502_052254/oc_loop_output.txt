@@ -1,0 +1,32 @@
+============================================================
+ OPENCLAW OPERATING LOOP
+============================================================
+Zeit: Sa 2. Mai 05:23:05 CEST 2026
+
+1) CrashBandicot Status
+active
+● shadowmaker-control-bot.service - Shadowmaker Control Bot Telegram Discord
+     Loaded: loaded (/home/schattenmacher/.config/systemd/user/shadowmaker-control-bot.service; enabled; preset: enabled)
+     Active: active (running) since Sat 2026-05-02 01:20:06 CEST; 4h 2min ago
+   Main PID: 123831 (python)
+      Tasks: 9 (limit: 37946)
+     Memory: 37.4M (peak: 51.5M)
+        CPU: 7.002s
+     CGroup: /user.slice/user-1000.slice/user@1000.service/app.slice/shadowmaker-control-bot.service
+             ├─123831 /home/schattenmacher/shadowmaker_bots/.venv/bin/python /home/schattenmacher/shadowmaker_bots/shadowmaker_control_bot.py
+             ├─303320 bash /home/schattenmacher/openclaw_training/scripts/shadowmaker_freeze_report_no_sudo.sh
+             ├─303323 tee -a /home/schattenmacher/openclaw_training/reports/freeze_report_no_sudo_20260502_052254.txt
+             ├─303516 bash /home/schattenmacher/openclaw_operating_loop.sh
+             ├─303519 systemctl --user status shadowmaker-control-bot.service --no-pager
+             └─303520 sed -n 1,18p
+
+Mai 02 03:45:03 schattenmacher-D3161-B1 run_shadowmaker_control_bot.sh[123831]:   File "/home/schattenmacher/shadowmaker_bots/.venv/lib/python3.12/site-packages/telegram/request/_baserequest.py", line 198, in post
+Mai 02 03:45:03 schattenmacher-D3161-B1 run_shadowmaker_control_bot.sh[123831]:     result = await self._request_wrapper(
+Mai 02 03:45:03 schattenmacher-D3161-B1 run_shadowmaker_control_bot.sh[123831]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+2) Docker Status
+openclaw-openclaw-gateway-1   Up 6 hours             127.0.0.1:18789->18789/tcp
+shadowmaker-agents            Up 6 hours             0.0.0.0:3001->3000/tcp, [::]:3001->3000/tcp
+
+3) OpenClaw Host-Test
+/home/schattenmacher/openclaw_operating_loop.sh: Zeile 20: Syntaxfehler beim unerwarteten Wort »(«
