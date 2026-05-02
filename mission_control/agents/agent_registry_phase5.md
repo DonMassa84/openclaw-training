@@ -19,9 +19,6 @@ System Monitor für OpenClaw, Docker, Flowise, n8n, Timer, failed services und S
 Status:
 produktiv aktiviert.
 
-Cadence:
-manuell über winky-run, optional per Timer.
-
 ## Mnemosyne
 
 Rolle:
@@ -32,9 +29,6 @@ produktiv aktiviert.
 
 Aufgabe:
 Reports, Entscheidungen, tägliche Zusammenfassungen, offene Punkte, Systeme und Risiken konsolidieren.
-
-Cadence:
-manuell über mnemosyne-run, später optional täglich.
 
 ## Mentor
 
@@ -47,9 +41,6 @@ produktiv aktiviert.
 Aufgabe:
 SA1/SA2-Drills, Musterlösungen, Bewertungsraster, prüfungssichere Antwortmodule.
 
-Cadence:
-manuell über mentor-run, später optional täglich.
-
 ## Strategist
 
 Rolle:
@@ -61,22 +52,22 @@ produktiv aktiviert.
 Aufgabe:
 Fit-Analyse, ATS-CV-Bausteine, Anschreiben-Module, Recruiter-Antworten, Interview-Argumente.
 
-Cadence:
-manuell über strategist-run, später optional bei Job-Input.
-
 Grenzen:
 nur Entwürfe und Analyse, kein Versand, keine Portale bedienen.
 
 ## Steward
 
 Rolle:
-Finance/Housing/Jobcenter read-only Strukturierung.
+Finance/Housing/Jobcenter read-only Agent.
 
 Status:
-vorbereitet, manuell nutzbar.
+produktiv aktiviert.
+
+Aufgabe:
+Finanz-, Wohnungs-, WBS-, KdU- und Jobcenter-Lagebilder strukturieren.
 
 Grenzen:
-keine Zahlungen, keine Rechtsentscheidung, keine automatische Kommunikation.
+read-only, keine Zahlungen, keine Rechtsentscheidung, kein Versand.
 
 ## Linky
 

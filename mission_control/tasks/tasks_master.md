@@ -171,3 +171,13 @@ echo "============================================================"
 | P5-015 | Career | CV-/Anschreiben-Bausteine erzeugen | Strategist | vorbereitet | 1 | latest_strategist_career_template |
 | P5-016 | Multi-Agent | Strategist Timer optional entscheiden | User | offen | 3 | install-strategist-timer-optional |
 | P5-017 | Multi-Agent | Steward später aktivieren | Steward | wartend | 3 | finance-housing-readonly |
+
+## Phase 5 Steward Ergänzung – 2026-05-02
+
+| ID | Bereich | Aufgabe | Owner | Status | Priorität | Kontrolle |
+|---|---|---|---|---|---:|---|
+| P5-018 | Multi-Agent | Steward als Finance/Housing Agent produktiv ausführen | Steward | aktiv | 1 | steward-run |
+| P5-019 | Finance | offene Forderungen nur strukturiert erfassen | Steward | vorbereitet | 2 | steward-latest |
+| P5-020 | Housing | WBS/Jobcenter/Wohnungsnachweise strukturieren | Steward | vorbereitet | 1 | steward-latest |
+| P5-021 | Multi-Agent | Steward Timer optional entscheiden | User | offen | 3 | install-steward-timer-optional |
+| P5-022 | Multi-Agent | Linky später aktivieren | Linky | wartend | 3 | prompt-to-code |
