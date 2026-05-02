@@ -47,3 +47,11 @@ Duplikate, Cache, Browserdaten, Finanzdaten und Behördenunterlagen werden nicht
 | DOC-AI-001 | Local AI | Master-Dokumentation erstellt | Mnemosyne | erledigt | /home/schattenmacher/openclaw_training/mission_control/docs/local_ai_inventory/latest_local_ai_system_documentation.md |
 | DOC-AI-002 | OpenClaw | OpenClaw-Brief erstellt | Mnemosyne | erledigt | /home/schattenmacher/openclaw_training/mission_control/docs/local_ai_inventory/latest_openclaw_local_ai_documentation_brief.md |
 | DOC-AI-003 | Betrieb | Agenten weiter manuell beobachten | Winky | aktiv | phase5-crew-status |
+
+## 2026-05-02 – Promptstandard
+
+| ID | Bereich | Aufgabe | Owner | Status | Kontrolle |
+|---|---|---|---|---|---|
+| PROMPT-001 | OpenClaw | Tina-Huang-Master-Prompt erstellt | Mnemosyne | erledigt | /home/schattenmacher/openclaw_training/mission_control/prompt_library/tina_huang_style/latest_tina_huang_local_ai_master_prompt.md |
+| PROMPT-002 | Betrieb | Korrigierten Operating Prompt erstellt | Mnemosyne | erledigt | /home/schattenmacher/openclaw_training/mission_control/prompt_library/tina_huang_style/latest_corrected_local_ai_operating_prompt.md |
+| PROMPT-003 | OpenClaw | Execution Brief im Workspace bereitgestellt | Mnemosyne | erledigt | /home/schattenmacher/openclaw_training/mission_control/prompt_library/tina_huang_style/latest_openclaw_tina_huang_execution_brief.md |

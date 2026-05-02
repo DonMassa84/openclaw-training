@@ -205,3 +205,11 @@ Entscheidung: Das lokale KI-System wird zentral in Mission Control und optional 
 Begründung: Ein zentrales, read-only Lagebild verhindert Informationsverlust und macht den Stack prüfbar.
 
 Dokument: /home/schattenmacher/openclaw_training/mission_control/docs/local_ai_inventory/latest_local_ai_system_documentation.md
+
+## 2026-05-02 – Entscheidung Promptstil
+
+Entscheidung: Künftige lokale KI-/OpenClaw-Antworten folgen einem outputorientierten Tina-Huang-Style.
+
+Begründung: Das System soll weniger erklären und mehr verwertbare, prüfbare Artefakte liefern.
+
+Grenze: Keine produktive Änderung ohne Freigabe, keine Secrets, keine Timer-Aktivierung.

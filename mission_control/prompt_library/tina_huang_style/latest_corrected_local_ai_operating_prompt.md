@@ -1,0 +1,1 @@
+/home/schattenmacher/openclaw_training/mission_control/prompt_library/tina_huang_style/corrected_local_ai_operating_prompt_20260502_122327.md

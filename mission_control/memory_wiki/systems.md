@@ -56,3 +56,12 @@ Schrittweise Aktivierung, read-only bzw. kontrolliertes Memory-Wiki-Schreiben.
 - OpenClaw Workspace Kopie: /home/schattenmacher/.openclaw/workspace/docs/latest_local_ai_system_documentation.md
 - Aktueller stabiler Stand: Shadowmaker stable freeze after disabling broken ShadowOps timers.
 - Agenten bleiben manuell, Security-Timer bleiben aktiv, ShadowOps-Timer sind deaktiviert.
+
+## 2026-05-02 – Tina-Huang-Style Promptstandard
+
+- Lokaler Promptstandard wurde erstellt.
+- Fokus: Output, klare Struktur, prüfbare Artefakte, keine Scheinautonomie.
+- Master Prompt: /home/schattenmacher/openclaw_training/mission_control/prompt_library/tina_huang_style/latest_tina_huang_local_ai_master_prompt.md
+- Operating Prompt: /home/schattenmacher/openclaw_training/mission_control/prompt_library/tina_huang_style/latest_corrected_local_ai_operating_prompt.md
+- OpenClaw Brief: /home/schattenmacher/openclaw_training/mission_control/prompt_library/tina_huang_style/latest_openclaw_tina_huang_execution_brief.md
+- OpenClaw Workspace Kopie: /home/schattenmacher/.openclaw/workspace/prompts/latest_openclaw_tina_huang_execution_brief.md

@@ -1,0 +1,1 @@
+/home/schattenmacher/openclaw_training/mission_control/prompt_library/tina_huang_style/openclaw_tina_huang_execution_brief_20260502_122327.md
