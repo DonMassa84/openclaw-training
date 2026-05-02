@@ -1,0 +1,356 @@
+import os
+import re
+import ssl
+import json
+import base64
+import email
+import imaplib
+from pathlib import Path
+from datetime import datetime
+from email.header import decode_header
+from email.utils import parsedate_to_datetime
+from dotenv import load_dotenv
+from bs4 import BeautifulSoup
+
+BASE = Path.home() / "openclaw_training"
+MISSION = BASE / "mission_control"
+MAIL_DIR = MISSION / "mail_briefing"
+CONFIG_DIR = MAIL_DIR / "config"
+BRIEF_DIR = MAIL_DIR / "briefs"
+RUNTIME_DIR = MISSION / "agent_runtime" / "courier"
+STATUS_DIR = BASE / "docs" / "status"
+
+for p in [BRIEF_DIR, RUNTIME_DIR, STATUS_DIR]:
+    p.mkdir(parents=True, exist_ok=True)
+
+ENV_FILE = CONFIG_DIR / "courier.env"
+load_dotenv(ENV_FILE)
+
+MAX_RESULTS = int(os.getenv("COURIER_MAX_RESULTS", "25"))
+MAX_BODY_CHARS = int(os.getenv("COURIER_MAX_BODY_CHARS", "900"))
+SUMMARY_ONLY = os.getenv("COURIER_DISCORD_SUMMARY_ONLY", "1") == "1"
+
+def clean_text(value: str) -> str:
+    value = value or ""
+    value = re.sub(r"\s+", " ", value)
+    return value.strip()
+
+def decode_mime(value: str) -> str:
+    if not value:
+        return ""
+    parts = decode_header(value)
+    out = []
+    for part, enc in parts:
+        if isinstance(part, bytes):
+            out.append(part.decode(enc or "utf-8", errors="replace"))
+        else:
+            out.append(part)
+    return clean_text("".join(out))
+
+def strip_html(html: str) -> str:
+    try:
+        soup = BeautifulSoup(html or "", "lxml")
+        return clean_text(soup.get_text(" "))
+    except Exception:
+        return clean_text(html or "")
+
+def classify_mail(sender: str, subject: str, snippet: str) -> dict:
+    text = f"{sender} {subject} {snippet}".lower()
+
+    category = "Allgemein"
+    priority = "P3"
+    reason = "Keine akute Frist erkannt."
+    action = "Bei Gelegenheit prüfen."
+
+    rules = [
+        ("Jobcenter/Wohnen", ["jobcenter", "wbs", "wohnung", "miete", "vermieter", "makler", "kdu", "doppelmiete", "wohnungsamt"], "P1", "Wohn-/Jobcenter-Bezug erkannt.", "Heute prüfen und Nachweise sichern."),
+        ("Finanzen/Rechnung", ["rechnung", "zahlung", "mahnung", "forderung", "rate", "ratenzahlung", "konto", "bank", "paypal", "klarna", "inkasso"], "P1", "Finanz- oder Zahlungsbezug erkannt.", "Betrag, Frist und Handlungsbedarf prüfen."),
+        ("Bewerbung/Karriere", ["bewerbung", "recruiter", "linkedin", "stelle", "interview", "vorstellungsgespräch", "karriere", "job", "position"], "P1", "Karriere- oder Bewerbungsbezug erkannt.", "Antwortbedarf und Terminoptionen prüfen."),
+        ("Behörde/Recht", ["behörde", "bescheid", "frist", "anhörung", "anwalt", "gericht", "polizei", "ordnungswidrigkeit"], "P1", "Behördlicher oder rechtlicher Bezug erkannt.", "Frist und Nachweise sofort prüfen."),
+        ("Termin", ["termin", "einladung", "meeting", "kalender", "besichtigung", "rückmeldung", "bestätigung"], "P2", "Terminbezug erkannt.", "Kalender und Antwortbedarf prüfen."),
+        ("IT/System", ["github", "security", "alert", "server", "docker", "proton", "openai", "api", "token", "login"], "P2", "Technischer Systembezug erkannt.", "Sicherheits- oder Systemrelevanz prüfen."),
+        ("Newsletter/Info", ["newsletter", "angebot", "sale", "rabatt", "webinar", "digest", "update"], "P3", "Eher Informationsmail.", "Nur lesen oder später archivieren.")
+    ]
+
+    for cat, keys, prio, why, act in rules:
+        if any(k in text for k in keys):
+            category = cat
+            priority = prio
+            reason = why
+            action = act
+            break
+
+    if any(k in text for k in ["heute", "frist", "sofort", "dringend", "urgent", "last chance", "letzte erinnerung"]):
+        priority = "P1"
+        reason = reason + " Dringlichkeitswort erkannt."
+        action = "Heute bearbeiten."
+
+    return {"priority": priority, "category": category, "reason": reason, "action": action}
+
+def gmail_collect():
+    if os.getenv("GMAIL_ENABLED", "1") != "1":
+        return []
+
+    credentials_path = Path(os.getenv("GMAIL_CREDENTIALS_JSON", str(CONFIG_DIR / "gmail_credentials.json")))
+    token_path = Path(os.getenv("GMAIL_TOKEN_JSON", str(CONFIG_DIR / "gmail_token.json")))
+    query = os.getenv("GMAIL_QUERY", "newer_than:2d")
+
+    if not credentials_path.exists():
+        return [{"source": "Gmail", "error": f"Credentials fehlen: {credentials_path}"}]
+
+    try:
+        from google.oauth2.credentials import Credentials
+        from google_auth_oauthlib.flow import InstalledAppFlow
+        from google.auth.transport.requests import Request
+        from googleapiclient.discovery import build
+    except Exception as e:
+        return [{"source": "Gmail", "error": f"Google Libraries fehlen: {e}"}]
+
+    scopes = ["https://www.googleapis.com/auth/gmail.readonly"]
+    creds = None
+
+    if token_path.exists():
+        creds = Credentials.from_authorized_user_file(str(token_path), scopes)
+
+    if not creds or not creds.valid:
+        if creds and creds.expired and creds.refresh_token:
+            creds.refresh(Request())
+        else:
+            flow = InstalledAppFlow.from_client_secrets_file(str(credentials_path), scopes)
+            creds = flow.run_local_server(port=0)
+        token_path.write_text(creds.to_json(), encoding="utf-8")
+        os.chmod(token_path, 0o600)
+
+    service = build("gmail", "v1", credentials=creds)
+    result = service.users().messages().list(userId="me", q=query, maxResults=MAX_RESULTS).execute()
+    messages = result.get("messages", [])
+    items = []
+
+    for msg in messages:
+        full = service.users().messages().get(userId="me", id=msg["id"], format="full").execute()
+        payload = full.get("payload", {})
+        headers = payload.get("headers", [])
+        h = {x.get("name", "").lower(): x.get("value", "") for x in headers}
+        subject = decode_mime(h.get("subject", ""))
+        sender = decode_mime(h.get("from", ""))
+        date = decode_mime(h.get("date", ""))
+        snippet = clean_text(full.get("snippet", ""))
+
+        cls = classify_mail(sender, subject, snippet)
+        items.append({
+            "source": "Gmail",
+            "id": msg["id"],
+            "sender": sender,
+            "subject": subject,
+            "date": date,
+            "snippet": snippet[:MAX_BODY_CHARS],
+            **cls
+        })
+
+    return items
+
+def get_text_from_email_message(msg):
+    body_text = ""
+    if msg.is_multipart():
+        for part in msg.walk():
+            ctype = part.get_content_type()
+            disp = str(part.get("Content-Disposition", ""))
+            if "attachment" in disp.lower():
+                continue
+            payload = part.get_payload(decode=True)
+            if not payload:
+                continue
+            charset = part.get_content_charset() or "utf-8"
+            text = payload.decode(charset, errors="replace")
+            if ctype == "text/plain":
+                body_text += " " + text
+            elif ctype == "text/html" and not body_text:
+                body_text += " " + strip_html(text)
+    else:
+        payload = msg.get_payload(decode=True)
+        if payload:
+            charset = msg.get_content_charset() or "utf-8"
+            text = payload.decode(charset, errors="replace")
+            if msg.get_content_type() == "text/html":
+                text = strip_html(text)
+            body_text += " " + text
+    return clean_text(body_text)
+
+def proton_collect():
+    if os.getenv("PROTON_ENABLED", "0") != "1":
+        return []
+
+    host = os.getenv("PROTON_IMAP_HOST", "127.0.0.1")
+    port = int(os.getenv("PROTON_IMAP_PORT", "1143"))
+    use_tls = os.getenv("PROTON_IMAP_TLS", "0") == "1"
+    use_starttls = os.getenv("PROTON_IMAP_STARTTLS", "0") == "1"
+    user = os.getenv("PROTON_IMAP_USER", "")
+    password = os.getenv("PROTON_IMAP_PASS", "")
+    mailbox = os.getenv("PROTON_MAILBOX", "INBOX")
+    limit = int(os.getenv("PROTON_LIMIT", "25"))
+
+    if not user or not password:
+        return [{"source": "Proton", "error": "PROTON_IMAP_USER oder PROTON_IMAP_PASS fehlt in courier.env"}]
+
+    try:
+        if use_tls:
+            imap = imaplib.IMAP4_SSL(host, port)
+        else:
+            imap = imaplib.IMAP4(host, port)
+            if use_starttls:
+                imap.starttls(ssl.create_default_context())
+
+        imap.login(user, password)
+        imap.select(mailbox)
+        status, data = imap.search(None, "ALL")
+        ids = data[0].split()[-limit:] if data and data[0] else []
+        items = []
+
+        for mid in reversed(ids):
+            status, msg_data = imap.fetch(mid, "(RFC822)")
+            if status != "OK":
+                continue
+            raw = msg_data[0][1]
+            msg = email.message_from_bytes(raw)
+            subject = decode_mime(msg.get("Subject", ""))
+            sender = decode_mime(msg.get("From", ""))
+            date = decode_mime(msg.get("Date", ""))
+            text = get_text_from_email_message(msg)
+            snippet = text[:MAX_BODY_CHARS]
+            cls = classify_mail(sender, subject, snippet)
+            items.append({
+                "source": "Proton",
+                "id": mid.decode(errors="ignore"),
+                "sender": sender,
+                "subject": subject,
+                "date": date,
+                "snippet": snippet,
+                **cls
+            })
+
+        imap.logout()
+        return items
+
+    except Exception as e:
+        return [{"source": "Proton", "error": str(e)}]
+
+def sort_key(item):
+    prio_order = {"P1": 0, "P2": 1, "P3": 2}
+    return (prio_order.get(item.get("priority", "P3"), 3), item.get("category", ""), item.get("source", ""))
+
+def render_report(items):
+    now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    errors = [x for x in items if "error" in x]
+    mails = [x for x in items if "error" not in x]
+    mails = sorted(mails, key=sort_key)
+
+    p1 = [m for m in mails if m.get("priority") == "P1"]
+    p2 = [m for m in mails if m.get("priority") == "P2"]
+    p3 = [m for m in mails if m.get("priority") == "P3"]
+
+    lines = []
+    lines.append(f"# Courier Mail Briefing – {now}")
+    lines.append("")
+    lines.append("## Sicherheitsmodus")
+    lines.append("")
+    lines.append("- Read-only")
+    lines.append("- Keine Mails gesendet")
+    lines.append("- Keine Mails gelöscht")
+    lines.append("- Keine Mails archiviert")
+    lines.append("- Keine Anhänge geöffnet")
+    lines.append("- Discord nur Kurzstatus")
+    lines.append("")
+    lines.append("## Kurzlage")
+    lines.append("")
+    lines.append(f"- Gesamt erfasste Mails: {len(mails)}")
+    lines.append(f"- P1 Heute bearbeiten: {len(p1)}")
+    lines.append(f"- P2 Diese Woche bearbeiten: {len(p2)}")
+    lines.append(f"- P3 Lesen/ablegen: {len(p3)}")
+    lines.append(f"- Fehler/fehlende Konfiguration: {len(errors)}")
+    lines.append("")
+    if errors:
+        lines.append("## Fehler / Setup-Hinweise")
+        lines.append("")
+        for e in errors:
+            lines.append(f"- {e.get('source')}: {e.get('error')}")
+        lines.append("")
+
+    for title, group in [("P1 – Heute bearbeiten", p1), ("P2 – Diese Woche bearbeiten", p2), ("P3 – Lesen / später", p3)]:
+        lines.append(f"## {title}")
+        lines.append("")
+        if not group:
+            lines.append("Keine Einträge.")
+            lines.append("")
+            continue
+        for i, m in enumerate(group, 1):
+            lines.append(f"### {i}. [{m.get('source')}] {m.get('subject') or '(ohne Betreff)'}")
+            lines.append("")
+            lines.append(f"- Von: {m.get('sender')}")
+            lines.append(f"- Datum: {m.get('date')}")
+            lines.append(f"- Kategorie: {m.get('category')}")
+            lines.append(f"- Priorität: {m.get('priority')}")
+            lines.append(f"- Grund: {m.get('reason')}")
+            lines.append(f"- Nächste Aktion: {m.get('action')}")
+            lines.append(f"- Auszug: {m.get('snippet')}")
+            lines.append("")
+    return "\n".join(lines), {"total": len(mails), "p1": len(p1), "p2": len(p2), "p3": len(p3), "errors": len(errors)}
+
+def write_status(report_path, summary):
+    status = STATUS_DIR / "latest_courier_agent_status.md"
+    content = f"""# Courier Agent Status
+
+Stand: {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}
+
+Status:
+OK
+
+Read-only:
+Ja
+
+Gesamt:
+{summary["total"]}
+
+P1:
+{summary["p1"]}
+
+P2:
+{summary["p2"]}
+
+P3:
+{summary["p3"]}
+
+Fehler:
+{summary["errors"]}
+
+Latest Report:
+{report_path}
+"""
+    status.write_text(content, encoding="utf-8")
+
+def main():
+    items = []
+    items.extend(gmail_collect())
+    items.extend(proton_collect())
+
+    report, summary = render_report(items)
+    ts = datetime.now().strftime("%Y%m%d_%H%M%S")
+    out = BRIEF_DIR / f"courier_mail_brief_{ts}.md"
+    latest = BRIEF_DIR / "latest_courier_mail_brief.md"
+    runtime_latest = RUNTIME_DIR / "latest_courier_report.md"
+
+    out.write_text(report, encoding="utf-8")
+    latest.write_text(report, encoding="utf-8")
+    runtime_latest.write_text(report, encoding="utf-8")
+    write_status(out, summary)
+
+    print(report)
+    print("")
+    print("============================================================")
+    print("COURIER FERTIG")
+    print("============================================================")
+    print(f"Report: {out}")
+    print(f"Latest: {latest}")
+    print(json.dumps(summary, ensure_ascii=False))
+
+if __name__ == "__main__":
+    main()

@@ -212,3 +212,10 @@ Aktive Agenten:
 
 Pfad:
 /home/schattenmacher/openclaw_training/mission_control/agent_runtime/linky/latest_linky_report.md
+
+## 2026-05-02 – Courier Summary – 20260502_094411
+
+Phase 6 wurde vorbereitet. Courier ist als read-only Mail-Briefing-Agent lokal installiert. Gmail OAuth und Proton Bridge müssen lokal einmalig konfiguriert werden. Courier sendet keine Mails, löscht nichts, archiviert nichts und postet nach Discord nur Kurzstatus ohne sensible Inhalte.
+
+Pfad:
+/home/schattenmacher/openclaw_training/mission_control/mail_briefing

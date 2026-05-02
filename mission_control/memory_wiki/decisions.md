@@ -183,3 +183,17 @@ Kein sudo, keine Löschung, keine Fundamentänderung, keine automatische Aktivie
 
 Kontrolle:
 linky-run, latest_linky_report.md, latest_linky_module.md.
+
+## 2026-05-02 – Entscheidung: Courier Mail Briefing vorbereiten
+
+Entscheidung:
+Courier wird als read-only Mail-Briefing-Agent für Gmail und Proton Bridge vorbereitet.
+
+Begründung:
+Ein täglicher Mailbericht mit Prioritätenliste reduziert Inbox-Druck und erhöht Handlungsklarheit.
+
+Grenzen:
+Read-only. Kein Versand, keine Löschung, kein Archivieren, keine Anhänge, keine vollständigen sensiblen Inhalte nach Discord.
+
+Kontrolle:
+courier-status, courier-gmail-oauth, courier-run.

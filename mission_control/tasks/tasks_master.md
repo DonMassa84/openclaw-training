@@ -191,3 +191,13 @@ echo "============================================================"
 | P5-025 | Safety | keine automatischen produktiven Änderungen | Linky | aktiv | 1 | phase5-crew-status |
 | P5-026 | Multi-Agent | Linky Timer optional entscheiden | User | offen | 3 | install-linky-timer-optional |
 | P5-027 | Phase 5 | komplette Agent-Crew sichern | User | offen | 1 | freeze_report + timeshift |
+
+## Phase 6 Courier Ergänzung – 2026-05-02
+
+| ID | Bereich | Aufgabe | Owner | Status | Priorität | Kontrolle |
+|---|---|---|---|---|---:|---|
+| P6-001 | Mail | Courier read-only Agent installieren | Courier | aktiv | 1 | courier-status |
+| P6-002 | Gmail | credentials.json lokal ablegen und OAuth durchführen | User | offen | 1 | courier-gmail-oauth |
+| P6-003 | Proton | Proton Bridge starten und IMAP-Daten lokal eintragen | User | offen | 1 | courier-status |
+| P6-004 | Mail | ersten Courier Bericht erzeugen | Courier | vorbereitet | 1 | courier-run |
+| P6-005 | Safety | Timer erst nach erfolgreichem Test aktivieren | User | offen | 2 | install-courier-timer-optional |
