@@ -57,3 +57,17 @@ Nur Lernartefakte. Keine Systemänderung, keine Secrets, keine Löschung.
 
 Kontrolle:
 mentor-run, latest_mentor_report.md, latest_mentor_drill.md.
+
+## 2026-05-02 – Entscheidung: Mentor aktivieren
+
+Entscheidung:
+Mentor wird als dritter echter Agent produktiv gemacht.
+
+Begründung:
+IHK/MFP-Training erzeugt hohen Nutzen, hat geringes Systemrisiko und passt direkt zum bestehenden Mission-Control-Ziel.
+
+Grenzen:
+Nur Lernartefakte. Keine Systemänderung, keine Secrets, keine Löschung.
+
+Kontrolle:
+mentor-run, latest_mentor_report.md, latest_mentor_drill.md.
