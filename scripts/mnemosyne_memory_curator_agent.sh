@@ -94,7 +94,7 @@ SUMMARY="$MNEMO_DIR/memory_summary_${TODAY}_${TS}.md"
   echo "## Offene Punkte"
   echo
   echo "- OpenClaw Host HTTP bleibt Warnpunkt, intern/containerseitig war es zuvor funktionsfähig."
-  echo "- shadowops-autopilot.service und shadowops-log-push.service müssen separat entschieden werden."
+  echo "- shadowops-autopilot.timer und shadowops-log-push.timer wurden deaktiviert, weil SHADOWOPS_PASSPHRASE fehlte."
   echo "- casper-md5check.service bleibt unkritisch, sofern Live-ISO-Reststatus."
   echo "- Next.js Workspace-Root-Warnung kann später optional bereinigt werden."
   echo

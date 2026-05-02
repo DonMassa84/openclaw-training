@@ -89,3 +89,12 @@ Duplikate, Cache, Browserdaten, Finanzdaten und Behördenunterlagen werden nicht
 | CTRL-002 | Betrieb | Mnemosyne manuell prüfen | Mnemosyne | erledigt | /home/schattenmacher/openclaw_training/mission_control/control_runs/latest_post_deep_openclaw_control_run.md |
 | CTRL-003 | Betrieb | Courier manuell prüfen | Courier | erledigt | /home/schattenmacher/openclaw_training/mission_control/control_runs/latest_post_deep_openclaw_control_run.md |
 | CTRL-004 | Automation | Timer weiterhin nicht aktivieren | User | aktiv | systemctl --user list-timers --all |
+
+## 2026-05-02 – Runtime Control Repair
+
+| ID | Bereich | Aufgabe | Owner | Status | Kontrolle |
+|---|---|---|---|---|---|
+| RUNTIME-001 | WebUI | Mission Control WebUI prüfen/starten | Winky | erledigt | /home/schattenmacher/openclaw_training/docs/status/latest_runtime_control_repair_status.md |
+| RUNTIME-002 | Courier | Proton Bridge Port prüfen | Courier | erledigt | /home/schattenmacher/openclaw_training/docs/status/latest_runtime_control_repair_status.md |
+| RUNTIME-003 | ShadowOps | Veraltete Hinweise korrigieren | Mnemosyne | erledigt | /home/schattenmacher/openclaw_training/docs/status/latest_runtime_control_repair_status.md |
+| RUNTIME-004 | Skripte | Absolute Pfade statt Aliase verwenden | Linky | aktiv | zukünftige Kontrollskripte |

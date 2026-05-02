@@ -98,3 +98,29 @@ Schrittweise Aktivierung, read-only bzw. kontrolliertes Memory-Wiki-Schreiben.
 - Status: /home/schattenmacher/openclaw_training/docs/status/latest_post_deep_openclaw_control_status.md
 - Keine Timer aktiviert.
 - Keine Repair-/Patch-/Docker-Skripte ausgeführt.
+
+## 2026-05-02 – Multi-Agent Runtime
+
+Aktive Runtime-Agenten:
+- Winky: /home/schattenmacher/openclaw_training/mission_control/agent_runtime/winky/latest_winky_report.md
+- Mnemosyne: /home/schattenmacher/openclaw_training/mission_control/agent_runtime/mnemosyne/latest_mnemosyne_report.md
+
+Status:
+Schrittweise Aktivierung, read-only bzw. kontrolliertes Memory-Wiki-Schreiben.
+
+## 2026-05-02 – Multi-Agent Runtime
+
+Aktive Runtime-Agenten:
+- Winky: /home/schattenmacher/openclaw_training/mission_control/agent_runtime/winky/latest_winky_report.md
+- Mnemosyne: /home/schattenmacher/openclaw_training/mission_control/agent_runtime/mnemosyne/latest_mnemosyne_report.md
+
+Status:
+Schrittweise Aktivierung, read-only bzw. kontrolliertes Memory-Wiki-Schreiben.
+
+## 2026-05-02 – Runtime Control Repair
+
+- Mission Control WebUI wurde bei Bedarf gestartet.
+- Courier prüft Proton Bridge; bei Connection refused muss Proton Bridge manuell laufen.
+- Winky/Mnemosyne wurden von alten ShadowOps-Hinweisen bereinigt.
+- Nicht-interaktive Skripte nutzen künftig absolute Pfade statt Aliase.
+- Status: /home/schattenmacher/openclaw_training/docs/status/latest_runtime_control_repair_status.md

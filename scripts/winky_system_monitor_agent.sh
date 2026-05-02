@@ -138,7 +138,7 @@ $WEBUI
 
 ## Nächste Entscheidung
 
-shadowops-log-push.service separat entscheiden: reparieren oder deaktivieren.  
+shadowops-log-push.timer ist deaktiviert.  
 casper-md5check.service bleibt unkritisch, wenn es nur Live-ISO-Reststatus ist.
 MD
 
