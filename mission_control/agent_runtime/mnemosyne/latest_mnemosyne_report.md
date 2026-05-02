@@ -1,6 +1,6 @@
 # Mnemosyne Memory Curator Report
 
-Stand: Sa 2. Mai 07:39:59 CEST 2026
+Stand: Sa 2. Mai 14:01:33 CEST 2026
 
 ## Rolle
 
@@ -11,7 +11,7 @@ Mnemosyne konsolidiert Systemzustand, Entscheidungen, offene Punkte und nutzbare
 - Daily Brief: /home/schattenmacher/openclaw_training/mission_control/daily_briefs/latest_daily_brief.md
 - Daily Delight: /home/schattenmacher/openclaw_training/mission_control/daily_delight/latest_daily_delight.md
 - Winky Report: /home/schattenmacher/openclaw_training/mission_control/agent_runtime/winky/latest_winky_report.md
-- Status: /home/schattenmacher/openclaw_training/docs/status/latest_mnemosyne_repair_status.md
+- Status: /home/schattenmacher/openclaw_training/docs/status/latest_winky_agent_status.md
 - Tasks: /home/schattenmacher/openclaw_training/mission_control/tasks/latest_tasks_master.md
 
 ## Konsolidierte Lage
@@ -25,7 +25,7 @@ Mnemosyne konsolidiert Systemzustand, Entscheidungen, offene Punkte und nutzbare
 ## Offene Punkte
 
 - OpenClaw Host HTTP bleibt Warnpunkt, intern/containerseitig war es zuvor funktionsfähig.
-- shadowops-autopilot.service und shadowops-log-push.service müssen separat entschieden werden.
+- shadowops-autopilot.timer und shadowops-log-push.timer wurden deaktiviert, weil SHADOWOPS_PASSPHRASE fehlte.
 - casper-md5check.service bleibt unkritisch, sofern Live-ISO-Reststatus.
 - Next.js Workspace-Root-Warnung kann später optional bereinigt werden.
 

@@ -1,6 +1,6 @@
 # Courier Agent Status
 
-Stand: 2026-05-02 10:49:22
+Stand: 2026-05-02 14:01:36
 
 Status:
 OK
@@ -12,16 +12,16 @@ Gesamt:
 25
 
 P1:
-12
+15
 
 P2:
-7
+6
 
 P3:
-6
+4
 
 Fehler:
 0
 
 Latest Report:
-/home/schattenmacher/openclaw_training/mission_control/mail_briefing/briefs/courier_mail_brief_20260502_104922.md
+/home/schattenmacher/openclaw_training/mission_control/mail_briefing/briefs/courier_mail_brief_20260502_140136.md

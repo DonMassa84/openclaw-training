@@ -1,6 +1,6 @@
 # Mnemosyne Memory Curator Report
 
-Stand: Sa 2. Mai 14:01:33 CEST 2026
+Stand: Sa 2. Mai 13:58:49 CEST 2026
 
 ## Rolle
 
@@ -25,7 +25,7 @@ Mnemosyne konsolidiert Systemzustand, Entscheidungen, offene Punkte und nutzbare
 ## Offene Punkte
 
 - OpenClaw Host HTTP bleibt Warnpunkt, intern/containerseitig war es zuvor funktionsfähig.
-- shadowops-autopilot.timer und shadowops-log-push.timer wurden deaktiviert, weil SHADOWOPS_PASSPHRASE fehlte.
+- shadowops-autopilot.service und shadowops-log-push.service müssen separat entschieden werden.
 - casper-md5check.service bleibt unkritisch, sofern Live-ISO-Reststatus.
 - Next.js Workspace-Root-Warnung kann später optional bereinigt werden.
 

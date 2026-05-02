@@ -1,0 +1,27 @@
+============================================================
+ OPENCLAW OPERATING LOOP
+============================================================
+Zeit: Sa 2. Mai 14:04:57 CEST 2026
+
+1) CrashBandicot Status
+active
+● shadowmaker-control-bot.service - Shadowmaker Control Bot Telegram Discord
+     Loaded: loaded (/home/schattenmacher/.config/systemd/user/shadowmaker-control-bot.service; enabled; preset: enabled)
+     Active: active (running) since Sat 2026-05-02 10:58:51 CEST; 3h 6min ago
+   Main PID: 2525 (python)
+      Tasks: 5 (limit: 37946)
+     Memory: 43.4M (peak: 55.3M)
+        CPU: 7.338s
+     CGroup: /user.slice/user-1000.slice/user@1000.service/app.slice/shadowmaker-control-bot.service
+             └─2525 /home/schattenmacher/shadowmaker_bots/.venv/bin/python /home/schattenmacher/shadowmaker_bots/shadowmaker_control_bot.py
+
+Mai 02 10:58:51 schattenmacher-D3161-B1 systemd[1289]: shadowmaker-control-bot.service: Scheduled restart job, restart counter is at 1.
+Mai 02 10:58:51 schattenmacher-D3161-B1 systemd[1289]: Started shadowmaker-control-bot.service - Shadowmaker Control Bot Telegram Discord.
+Mai 02 10:58:51 schattenmacher-D3161-B1 run_shadowmaker_control_bot.sh[2525]: 2026-05-02 10:58:51 | Shadowmaker Control Bot startet.
+
+2) Docker Status
+openclaw-openclaw-gateway-1   Up 3 hours             127.0.0.1:18789->18789/tcp
+shadowmaker-agents            Up 3 hours             0.0.0.0:3001->3000/tcp, [::]:3001->3000/tcp
+
+3) OpenClaw Host-Test
+/home/schattenmacher/openclaw_operating_loop.sh: Zeile 20: Syntaxfehler beim unerwarteten Wort »(«
