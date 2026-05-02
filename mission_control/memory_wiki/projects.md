@@ -93,3 +93,29 @@ Grenzen:
 - keine Secrets
 - keine Schreibaktionen
 - localhost only
+
+## Phase 5 – Multi-Agent Crew – 2026-05-02
+
+Ziel:
+Echte Multi-Agent-Crew schrittweise produktiv machen.
+
+Status:
+Winky wurde als erster echter read-only Agent produktiv aktiviert.
+
+Aktiv:
+- Winky System Monitor
+
+Vorbereitet, aber nicht autonom:
+- Mentor
+- Strategist
+- Steward
+- Linky
+- Mnemosyne
+- CrashBandicot
+
+Sicherheitsgrenzen:
+- kein sudo
+- keine Secrets
+- keine Löschung
+- keine freien Shell-Kommandos
+- keine Finanz- oder E-Mail-Automation

@@ -58,3 +58,10 @@ Befehle:
 - mission-control-webui-install
 - mission-control-webui-start
 - mc4-status
+
+## Phase 5 Multi-Agent Crew
+
+Befehle:
+- winky-run
+- phase5-crew-status
+- install-winky-timer-optional

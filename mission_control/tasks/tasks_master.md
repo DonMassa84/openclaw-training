@@ -143,3 +143,12 @@ echo "============================================================"
 | P4-002 | WebUI | Read-only Dashboard starten | Linky | vorbereitet | 1 | mission-control-webui-status |
 | P4-003 | Security | keine Secrets / keine Schreibaktionen | Winky | aktiv | 1 | mc4-status |
 | P4-004 | WebUI Test | npm install + localhost Test | Linky | offen | 1 | mission-control-webui-install |
+
+## Phase 5 Ergänzung – 2026-05-02
+
+| ID | Bereich | Aufgabe | Owner | Status | Priorität | Kontrolle |
+|---|---|---|---|---|---:|---|
+| P5-001 | Multi-Agent | Winky als ersten echten Agent produktiv ausführen | Winky | aktiv | 1 | winky-run |
+| P5-002 | Multi-Agent | Winky Timer optional entscheiden | User | offen | 2 | install-winky-timer-optional |
+| P5-003 | Multi-Agent | Mentor als zweiten Agent vorbereiten | Mentor | vorbereitet | 2 | ihk-mfp-drill |
+| P5-004 | Multi-Agent | Linky erst nach Winky-Stabilisierung aktivieren | Linky | wartend | 3 | prompt-to-code-review |
