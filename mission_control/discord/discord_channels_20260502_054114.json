@@ -1,0 +1,41 @@
+{
+  "server_name": "Shadowmaker Command Center",
+  "categories": [
+    {
+      "name": "00-command-center",
+      "channels": [
+        {"name": "system-alerts", "topic": "Kritische Systemmeldungen, Discord-Test, Stack-Warnungen."},
+        {"name": "daily-brief", "topic": "Täglicher Shadowmaker Daily Brief."},
+        {"name": "freeze-reports", "topic": "Freeze-Report-Ausgaben, Archivpfade, SHA256."},
+        {"name": "openclaw-status", "topic": "OpenClaw intern, Flowise, n8n, Docker, Host-Binding-Hinweise."}
+      ]
+    },
+    {
+      "name": "10-operations",
+      "channels": [
+        {"name": "mission-control", "topic": "Zentrale Übersicht, Aufgaben, Projektsteuerung, Betriebsentscheidungen."},
+        {"name": "agent-logs", "topic": "Agentenaktivitäten, Laufzeitlogs, Aktionen."},
+        {"name": "security-audit", "topic": "Security-/Healthcheck, offene Ports, Services, Secrets redacted."},
+        {"name": "incident-review", "topic": "Fehleranalyse, Maßnahmen, Postmortem."}
+      ]
+    },
+    {
+      "name": "20-projects",
+      "channels": [
+        {"name": "daily-delight", "topic": "Tägliche produktive Build-Idee / Ergebnis."},
+        {"name": "openclaw-projects", "topic": "OpenClaw-Module, Prompt-to-Code, Integrationen."},
+        {"name": "automation-n8n-flowise", "topic": "n8n, Flowise, Automationspläne."},
+        {"name": "memory-wiki", "topic": "Memory, Wiki, Soul, Agents, Daily Logs."}
+      ]
+    },
+    {
+      "name": "30-personal-strategy",
+      "channels": [
+        {"name": "ihk-mfp", "topic": "IHK Mitarbeiterführung & Personalmanagement, SA1/SA2, Lernsystem."},
+        {"name": "career-it", "topic": "Bewerbungen, IT-Rollen, AI-Agent-Portfolio."},
+        {"name": "finance-control", "topic": "Budget, Rücklagen, Schulden, leiser Wohlstand."},
+        {"name": "housing-jobcenter", "topic": "WBS, Wohnung, Jobcenter, Nachweise."}
+      ]
+    }
+  ]
+}

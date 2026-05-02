@@ -1,0 +1,1 @@
+1) Server von Schattenmacher | GUILD_ID=1499904347826426086 | owner=False | permissions=2248474002706001
