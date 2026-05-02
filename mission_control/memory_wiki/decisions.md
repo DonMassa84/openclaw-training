@@ -155,3 +155,31 @@ Kein sudo, keine Löschung, keine Fundamentänderung, keine automatische Aktivie
 
 Kontrolle:
 linky-run, latest_linky_report.md, latest_linky_module.md.
+
+## 2026-05-02 – Entscheidung: Linky aktivieren
+
+Entscheidung:
+Linky wird als sechster echter Agent produktiv gemacht.
+
+Begründung:
+Prompt-to-Code erzeugt hohen Nutzen, solange Linky nur kleine, prüfbare, nicht-destruktive Module erstellt und keine produktiven Dienste automatisch verändert.
+
+Grenzen:
+Kein sudo, keine Löschung, keine Fundamentänderung, keine automatische Aktivierung.
+
+Kontrolle:
+linky-run, latest_linky_report.md, latest_linky_module.md.
+
+## 2026-05-02 – Entscheidung: Linky aktivieren
+
+Entscheidung:
+Linky wird als sechster echter Agent produktiv gemacht.
+
+Begründung:
+Prompt-to-Code erzeugt hohen Nutzen, solange Linky nur kleine, prüfbare, nicht-destruktive Module erstellt und keine produktiven Dienste automatisch verändert.
+
+Grenzen:
+Kein sudo, keine Löschung, keine Fundamentänderung, keine automatische Aktivierung.
+
+Kontrolle:
+linky-run, latest_linky_report.md, latest_linky_module.md.
