@@ -71,3 +71,17 @@ Nur Lernartefakte. Keine Systemänderung, keine Secrets, keine Löschung.
 
 Kontrolle:
 mentor-run, latest_mentor_report.md, latest_mentor_drill.md.
+
+## 2026-05-02 – Entscheidung: Strategist aktivieren
+
+Entscheidung:
+Strategist wird als vierter echter Agent produktiv gemacht.
+
+Begründung:
+Career-/CV-/Recruiter-Kommunikation erzeugt hohen beruflichen Nutzen und bleibt sicher, solange nur Entwürfe erstellt und keine Nachrichten automatisch versendet werden.
+
+Grenzen:
+Nur Analyse und Textentwürfe. Kein Versand, keine Portalbedienung, keine falschen Skills.
+
+Kontrolle:
+strategist-run, latest_strategist_report.md, latest_strategist_career_template.md.

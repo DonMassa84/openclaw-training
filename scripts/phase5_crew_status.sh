@@ -26,5 +26,9 @@ echo "== Mentor Latest =="
 cat "$MISSION/agent_runtime/mentor/latest_mentor_report.md" 2>/dev/null || echo "Kein Mentor Report gefunden."
 echo
 
+echo "== Strategist Latest =="
+cat "$MISSION/agent_runtime/strategist/latest_strategist_report.md" 2>/dev/null || echo "Kein Strategist Report gefunden."
+echo
+
 echo "== Runtime Files =="
-find "$MISSION/agent_runtime" -maxdepth 3 -type f 2>/dev/null | sort | tail -180 || true
+find "$MISSION/agent_runtime" -maxdepth 3 -type f 2>/dev/null | sort | tail -220 || true

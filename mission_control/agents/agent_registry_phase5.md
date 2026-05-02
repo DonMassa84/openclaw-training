@@ -50,16 +50,22 @@ SA1/SA2-Drills, Musterlösungen, Bewertungsraster, prüfungssichere Antwortmodul
 Cadence:
 manuell über mentor-run, später optional täglich.
 
-Grenzen:
-nur Lernartefakte, keine Systemänderungen.
-
 ## Strategist
 
 Rolle:
 Career IT, CV, Anschreiben, LinkedIn-/Recruiter-Kommunikation.
 
 Status:
-vorbereitet, manuell nutzbar.
+produktiv aktiviert.
+
+Aufgabe:
+Fit-Analyse, ATS-CV-Bausteine, Anschreiben-Module, Recruiter-Antworten, Interview-Argumente.
+
+Cadence:
+manuell über strategist-run, später optional bei Job-Input.
+
+Grenzen:
+nur Entwürfe und Analyse, kein Versand, keine Portale bedienen.
 
 ## Steward
 

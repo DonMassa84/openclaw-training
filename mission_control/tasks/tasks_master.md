@@ -161,3 +161,13 @@ echo "============================================================"
 | P5-006 | Memory | Memory-Wiki-Wachstum beobachten | Mnemosyne | aktiv | 2 | phase5-crew-status |
 | P5-007 | Multi-Agent | Mnemosyne Timer optional entscheiden | User | offen | 2 | install-mnemosyne-timer-optional |
 | P5-008 | Multi-Agent | Mentor als dritten Agent später aktivieren | Mentor | wartend | 3 | ihk-mfp-drill |
+
+## Phase 5 Strategist Ergänzung – 2026-05-02
+
+| ID | Bereich | Aufgabe | Owner | Status | Priorität | Kontrolle |
+|---|---|---|---|---|---:|---|
+| P5-013 | Multi-Agent | Strategist als Career Agent produktiv ausführen | Strategist | aktiv | 1 | strategist-run |
+| P5-014 | Career | Stellenanzeigen nach Fit-Raster analysieren | Strategist | vorbereitet | 1 | strategist-latest |
+| P5-015 | Career | CV-/Anschreiben-Bausteine erzeugen | Strategist | vorbereitet | 1 | latest_strategist_career_template |
+| P5-016 | Multi-Agent | Strategist Timer optional entscheiden | User | offen | 3 | install-strategist-timer-optional |
+| P5-017 | Multi-Agent | Steward später aktivieren | Steward | wartend | 3 | finance-housing-readonly |
