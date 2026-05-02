@@ -98,3 +98,11 @@ Duplikate, Cache, Browserdaten, Finanzdaten und Behördenunterlagen werden nicht
 | RUNTIME-002 | Courier | Proton Bridge Port prüfen | Courier | erledigt | /home/schattenmacher/openclaw_training/docs/status/latest_runtime_control_repair_status.md |
 | RUNTIME-003 | ShadowOps | Veraltete Hinweise korrigieren | Mnemosyne | erledigt | /home/schattenmacher/openclaw_training/docs/status/latest_runtime_control_repair_status.md |
 | RUNTIME-004 | Skripte | Absolute Pfade statt Aliase verwenden | Linky | aktiv | zukünftige Kontrollskripte |
+
+## 2026-05-02 – Runtime Control OK
+
+| ID | Bereich | Aufgabe | Owner | Status | Kontrolle |
+|---|---|---|---|---|---|
+| RUNTIME-OK-001 | WebUI | Statusausgabe bereinigen | Linky | erledigt | mission-control-webui-status |
+| RUNTIME-OK-002 | Courier | Read-only Status dokumentieren | Courier | erledigt | courier-status |
+| RUNTIME-OK-003 | Betrieb | Keine neuen Timer aktivieren | User | aktiv | systemctl --user list-timers --all |

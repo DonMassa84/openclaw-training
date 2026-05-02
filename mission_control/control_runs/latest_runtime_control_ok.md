@@ -1,0 +1,1 @@
+/home/schattenmacher/openclaw_training/mission_control/control_runs/runtime_control_ok_20260502_140443.md

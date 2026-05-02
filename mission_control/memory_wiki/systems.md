@@ -124,3 +124,11 @@ Schrittweise Aktivierung, read-only bzw. kontrolliertes Memory-Wiki-Schreiben.
 - Winky/Mnemosyne wurden von alten ShadowOps-Hinweisen bereinigt.
 - Nicht-interaktive Skripte nutzen künftig absolute Pfade statt Aliase.
 - Status: /home/schattenmacher/openclaw_training/docs/status/latest_runtime_control_repair_status.md
+
+## 2026-05-02 – Runtime Control OK
+
+- Mission Control WebUI Statusausgabe wurde beruhigt.
+- Courier Status ist dokumentiert.
+- User failed units bleiben 0.
+- Keine neuen Timer aktiviert.
+- Runtime-Control-OK-Status: /home/schattenmacher/openclaw_training/docs/status/latest_runtime_control_ok_status.md

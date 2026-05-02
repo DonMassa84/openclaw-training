@@ -273,3 +273,9 @@ mnemosyne-run, latest_mnemosyne_report.md, Discord-Agent-Log.
 Entscheidung: Keine Agent-Timer aktivieren. Kontrollläufe bleiben manuell oder über absolute Pfade.
 
 Begründung: Aliase funktionieren nicht zuverlässig in nicht-interaktiven Skripten; absolute Pfade sind robuster.
+
+## 2026-05-02 – Runtime Control Entscheidung
+
+Entscheidung: Der aktuelle Runtime-Control-Stand wird als stabiler manueller Betriebszustand geführt.
+
+Begründung: WebUI, Courier, Security-Timer und User-Units sind kontrolliert; zusätzliche Autonomie ist aktuell nicht nötig.
