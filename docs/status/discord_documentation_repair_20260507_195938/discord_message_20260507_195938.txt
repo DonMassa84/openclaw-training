@@ -1,0 +1,43 @@
+✅ **Shadowmaker Discord Agent – Abschlussstatus**
+
+**GitHub:** OK  
+**Branch:** `main`  
+**HEAD:** `9783f6c`  
+**Commit:** `chore: ignore discord router local config backups`
+
+**Discord Commands:**  
+`/status` OK  
+`/winky` OK  
+`/courier` OK  
+`/ask` OK  
+
+**/ask Modell:** `qwen2.5:3b`  
+**Backend-Test:** `DISCORD_DOC_OK`
+
+**Dienste:**  
+Open WebUI: Port 3000  
+OpenClaw Gateway: Port 18789  
+Ollama: Port 11434  
+
+**Sicherungen:**  
+ASK_OK Freeze ✅  
+ASK_FAST_OK Freeze ✅  
+Timeshift Snapshot ✅  
+Timeshift Automation: `enabled`  
+Safe Git Push Automation: `enabled`
+
+**History bereinigt:**  
+`node_modules`, große Dateien, Discord-/Telegram-/Webhook-/Google-Secrets, `.env`-/Backup-Dateien, `gmail_credentials.json`, `home_script_inventory`, `config_redacted`
+
+⚠️ **Rotation erforderlich:** Discord Bot Token, Discord Webhooks, Telegram Tokens, Google OAuth Secret.
+
+**Bedienung:**
+```text
+/status
+/winky
+/courier
+/ask prompt: ...
+```
+
+Lokaler Report:
+`/home/schattenmacher/openclaw_training/docs/status/discord_documentation_repair_20260507_195938/SHADOWMAKER_DISCORD_FINAL_STATUS_20260507_195938.md`
