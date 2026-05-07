@@ -317,3 +317,9 @@ Begründung: Dadurch wird der dauerhafte 'denkt nach'-Zustand vermieden.
 Entscheidung: Ergebnisse werden über Interaction Follow-ups gesendet.
 
 Begründung: Vermeidet Hänger und Channel-Send-Probleme.
+
+## 2026-05-07 – Discord Router Entscheidung
+
+Entscheidung: Discord ist ab sofort Kontroll-/Lesekanal, nicht Ausführungskanal.
+
+Begründung: Stabilität und Sicherheit vor Direkt-Automation.

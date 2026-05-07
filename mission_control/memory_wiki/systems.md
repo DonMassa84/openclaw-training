@@ -177,3 +177,10 @@ Schrittweise Aktivierung, read-only bzw. kontrolliertes Memory-Wiki-Schreiben.
 - Ergebnisse werden ephemeral an den Benutzer zurückgegeben.
 - Channel-Send-Permissions sind für Ergebnisse nicht mehr erforderlich.
 - Status: /home/schattenmacher/openclaw_training/docs/status/latest_discord_router_followup_mode_status.md
+
+## 2026-05-07 – Discord Router Stable Read-only
+
+- Discord Router wurde auf Stable Read-only-Modus umgestellt.
+- Discord liest latest Reports, führt aber keine Agenten aus.
+- Damit keine Hänger/Folow-up-Fehler mehr.
+- Status: /home/schattenmacher/openclaw_training/docs/status/latest_discord_router_stable_readonly_status.md
