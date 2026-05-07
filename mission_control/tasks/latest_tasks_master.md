@@ -115,3 +115,11 @@ Duplikate, Cache, Browserdaten, Finanzdaten und Behördenunterlagen werden nicht
 | PROMPTPACK-002 | Mission Control | Builder Prompt für Phase 7 vormerken | User | offen | /home/schattenmacher/openclaw_training/mission_control/prompt_library/openclaw_google_doc_pack/04_mission_control_builder_prompt.md |
 | PROMPTPACK-003 | Memory | Memory Identity Prompt prüfen | Mnemosyne | offen | /home/schattenmacher/openclaw_training/mission_control/prompt_library/openclaw_google_doc_pack/07_memory_identity_prompt.md |
 | PROMPTPACK-004 | Security | Keine zusätzliche Audit-Automation ohne Freigabe | User | aktiv | /home/schattenmacher/openclaw_training/mission_control/prompt_library/openclaw_google_doc_pack/09_security_audit_prompt.md |
+
+## 2026-05-07 – Discord Agent Router
+
+| ID | Bereich | Aufgabe | Owner | Status | Kontrolle |
+|---|---|---|---|---|---|
+| DISCORD-ROUTER-001 | Discord | Router installieren | Linky | erledigt | /home/schattenmacher/openclaw_training/docs/status/latest_discord_agent_router_status.md |
+| DISCORD-ROUTER-002 | Security | Allowlist prüfen | User | aktiv | ENV-Datei |
+| DISCORD-ROUTER-003 | Betrieb | Bot-Service testen | User | offen | !status |

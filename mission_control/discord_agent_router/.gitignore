@@ -1,0 +1,7 @@
+config/*.env
+config/*.token
+config/*secret*
+config/*credentials*
+*.env
+*.token
+*.secret

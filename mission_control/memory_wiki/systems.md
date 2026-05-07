@@ -141,3 +141,10 @@ Schrittweise Aktivierung, read-only bzw. kontrolliertes Memory-Wiki-Schreiben.
 - Index: /home/schattenmacher/openclaw_training/mission_control/prompt_library/openclaw_google_doc_pack/latest_openclaw_google_doc_prompt_pack_index.md
 - Keine Timer aktiviert.
 - Keine Dienste gestartet.
+
+## 2026-05-07 – Discord Agent Router
+
+- Discord Agent Router installiert.
+- Befehle: !status, !winky, !mnemosyne, !courier, !mentor, !strategist, !steward, !linky.
+- Keine freie Shell, kein sudo, keine Löschung, keine Timer-Aktivierung.
+- Status: /home/schattenmacher/openclaw_training/docs/status/latest_discord_agent_router_status.md

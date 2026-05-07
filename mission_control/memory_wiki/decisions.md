@@ -287,3 +287,9 @@ Entscheidung: Der Prompt-Satz wird als lokale Bibliothek aufgenommen, aber nicht
 Begründung: Die Prompts sind strategisch nützlich, müssen aber kontrolliert und einzeln eingesetzt werden.
 
 Nächster sinnvoller Einsatz: Mission Control Builder, Memory Identity, Multi Agent Framework.
+
+## 2026-05-07 – Entscheidung Discord Agent Router
+
+Entscheidung: Discord wird als command-basierter Agenteneingang genutzt, nicht als freie Shell.
+
+Begründung: feste Befehle sind kontrollierbar und verhindern unbeabsichtigte Systemänderungen.
