@@ -155,3 +155,11 @@ Schrittweise Aktivierung, read-only bzw. kontrolliertes Memory-Wiki-Schreiben.
 - Grund: Message Content Intent war nicht aktiviert und führte zu PrivilegedIntentsRequired.
 - Neue Befehle: /status, /winky, /mnemosyne, /courier, /mentor, /strategist, /steward, /linky.
 - Status: /home/schattenmacher/openclaw_training/docs/status/latest_discord_router_slash_status.md
+
+## 2026-05-07 – Discord Router No-Hang Repair
+
+- Discord Router wurde auf No-Hang-Modus gepatcht.
+- /status nutzt Thread-Offload.
+- Agentenläufe haben Timeout.
+- Fehler werden zurückgemeldet statt bei 'denkt nach' hängen zu bleiben.
+- Status: /home/schattenmacher/openclaw_training/docs/status/latest_discord_router_no_hang_status.md

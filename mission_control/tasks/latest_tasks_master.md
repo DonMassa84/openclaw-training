@@ -130,3 +130,11 @@ Duplikate, Cache, Browserdaten, Finanzdaten und Behördenunterlagen werden nicht
 |---|---|---|---|---|---|
 | DISCORD-SLASH-001 | Discord | Slash Commands aktivieren | Linky | erledigt | /status |
 | DISCORD-SLASH-002 | Security | Message Content Intent vermeiden | Linky | erledigt | Logs READY |
+
+## 2026-05-07 – Discord Router No-Hang
+
+| ID | Bereich | Aufgabe | Owner | Status | Kontrolle |
+|---|---|---|---|---|---|
+| DISCORD-NOHANG-001 | Discord | No-Hang Patch anwenden | Linky | erledigt | /status |
+| DISCORD-NOHANG-002 | Discord | Winky testen | User | offen | /winky |
+| DISCORD-NOHANG-003 | Discord | Latest testen | User | offen | /latest agent:winky |

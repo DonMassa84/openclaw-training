@@ -299,3 +299,9 @@ Begründung: feste Befehle sind kontrollierbar und verhindern unbeabsichtigte Sy
 Entscheidung: Discord Router nutzt Slash Commands statt Message Content Intent.
 
 Begründung: weniger privilegiert, stabiler und sicherer.
+
+## 2026-05-07 – Discord Router Betriebsentscheidung
+
+Entscheidung: Router bleibt Slash-basiert und bekommt harte Timeout-/Fehlerlogik.
+
+Begründung: Slash Commands sind sicherer als Message Content Intent; Hänger müssen aktiv verhindert werden.
