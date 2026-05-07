@@ -132,3 +132,12 @@ Schrittweise Aktivierung, read-only bzw. kontrolliertes Memory-Wiki-Schreiben.
 - User failed units bleiben 0.
 - Keine neuen Timer aktiviert.
 - Runtime-Control-OK-Status: /home/schattenmacher/openclaw_training/docs/status/latest_runtime_control_ok_status.md
+
+## 2026-05-07 – OpenClaw Google Doc Prompt Pack
+
+- Externer OpenClaw-Prompt-Satz wurde lokal aufgenommen.
+- Module: Hardware, Setup Wizard, About Me, Mission Control, First Project, Multi Agent Framework, Memory, Karpathy LLM Wiki, Security Audit.
+- Prompt-Pack: /home/schattenmacher/openclaw_training/mission_control/prompt_library/openclaw_google_doc_pack/latest_openclaw_google_doc_prompt_pack_master.md
+- Index: /home/schattenmacher/openclaw_training/mission_control/prompt_library/openclaw_google_doc_pack/latest_openclaw_google_doc_prompt_pack_index.md
+- Keine Timer aktiviert.
+- Keine Dienste gestartet.

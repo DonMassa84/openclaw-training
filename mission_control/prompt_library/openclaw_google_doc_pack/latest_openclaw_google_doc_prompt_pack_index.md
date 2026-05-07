@@ -1,0 +1,1 @@
+/home/schattenmacher/openclaw_training/mission_control/prompt_library/openclaw_google_doc_pack/openclaw_google_doc_prompt_pack_index_20260507_175055.md

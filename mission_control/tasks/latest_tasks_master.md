@@ -106,3 +106,12 @@ Duplikate, Cache, Browserdaten, Finanzdaten und Behördenunterlagen werden nicht
 | RUNTIME-OK-001 | WebUI | Statusausgabe bereinigen | Linky | erledigt | mission-control-webui-status |
 | RUNTIME-OK-002 | Courier | Read-only Status dokumentieren | Courier | erledigt | courier-status |
 | RUNTIME-OK-003 | Betrieb | Keine neuen Timer aktivieren | User | aktiv | systemctl --user list-timers --all |
+
+## 2026-05-07 – OpenClaw Google Doc Prompt Pack
+
+| ID | Bereich | Aufgabe | Owner | Status | Kontrolle |
+|---|---|---|---|---|---|
+| PROMPTPACK-001 | OpenClaw | Prompt-Pack importieren | Mnemosyne | erledigt | /home/schattenmacher/openclaw_training/mission_control/prompt_library/openclaw_google_doc_pack/latest_openclaw_google_doc_prompt_pack_index.md |
+| PROMPTPACK-002 | Mission Control | Builder Prompt für Phase 7 vormerken | User | offen | /home/schattenmacher/openclaw_training/mission_control/prompt_library/openclaw_google_doc_pack/04_mission_control_builder_prompt.md |
+| PROMPTPACK-003 | Memory | Memory Identity Prompt prüfen | Mnemosyne | offen | /home/schattenmacher/openclaw_training/mission_control/prompt_library/openclaw_google_doc_pack/07_memory_identity_prompt.md |
+| PROMPTPACK-004 | Security | Keine zusätzliche Audit-Automation ohne Freigabe | User | aktiv | /home/schattenmacher/openclaw_training/mission_control/prompt_library/openclaw_google_doc_pack/09_security_audit_prompt.md |

@@ -279,3 +279,11 @@ Begründung: Aliase funktionieren nicht zuverlässig in nicht-interaktiven Skrip
 Entscheidung: Der aktuelle Runtime-Control-Stand wird als stabiler manueller Betriebszustand geführt.
 
 Begründung: WebUI, Courier, Security-Timer und User-Units sind kontrolliert; zusätzliche Autonomie ist aktuell nicht nötig.
+
+## 2026-05-07 – Entscheidung OpenClaw Prompt Pack
+
+Entscheidung: Der Prompt-Satz wird als lokale Bibliothek aufgenommen, aber nicht automatisch ausgeführt.
+
+Begründung: Die Prompts sind strategisch nützlich, müssen aber kontrolliert und einzeln eingesetzt werden.
+
+Nächster sinnvoller Einsatz: Mission Control Builder, Memory Identity, Multi Agent Framework.
