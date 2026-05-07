@@ -1,12 +1,12 @@
 import asyncio
 import os
 import re
-import shlex
 import subprocess
 from pathlib import Path
-from typing import Dict, List, Tuple
+from typing import List, Tuple
 
 import discord
+from discord import app_commands
 from dotenv import load_dotenv
 
 BASE = Path.home() / "openclaw_training"
@@ -15,7 +15,6 @@ ENV_FILE = MISSION / "discord_agent_router" / "config" / "discord_agent_router.e
 load_dotenv(ENV_FILE)
 
 TOKEN = os.getenv("DISCORD_BOT_TOKEN", "").strip()
-PREFIX = os.getenv("DISCORD_COMMAND_PREFIX", "!").strip() or "!"
 MAX_OUTPUT = int(os.getenv("ROUTER_MAX_OUTPUT_CHARS", "1800"))
 TIMEOUT = int(os.getenv("ROUTER_TIMEOUT_SECONDS", "180"))
 
@@ -63,7 +62,7 @@ def sanitize(text: str) -> str:
     return cleaned
 
 def trim(text: str, limit: int = MAX_OUTPUT) -> str:
-    text = sanitize(text.strip())
+    text = sanitize((text or "").strip())
     if len(text) <= limit:
         return text
     return text[:limit] + "\n...[gekürzt]"
@@ -142,100 +141,127 @@ def status_text() -> str:
 def help_text() -> str:
     return (
         "**Shadowmaker Discord Agent Router**\n\n"
-        f"Prefix: `{PREFIX}`\n\n"
-        "**Status:**\n"
-        f"`{PREFIX}status` Gesamtstatus\n"
-        f"`{PREFIX}help` Hilfe\n\n"
-        "**Agenten ausführen:**\n"
-        f"`{PREFIX}winky` Systemmonitor\n"
-        f"`{PREFIX}mnemosyne` Memory Curator\n"
-        f"`{PREFIX}courier` Mail-Briefing read-only\n"
-        f"`{PREFIX}mentor` IHK/MFP Drill\n"
-        f"`{PREFIX}strategist` Karriere/CV Template\n"
-        f"`{PREFIX}steward` Finance/Housing/Jobcenter read-only\n"
-        f"`{PREFIX}linky` Prompt-to-Code Modul\n\n"
-        "**Latest lesen ohne Ausführung:**\n"
-        f"`{PREFIX}latest winky|mnemosyne|courier|mentor|strategist|steward|linky`\n\n"
+        "**Slash Commands:**\n"
+        "`/status` Gesamtstatus\n"
+        "`/latest agent:<name>` letzten Report lesen\n"
+        "`/winky` Systemmonitor\n"
+        "`/mnemosyne` Memory Curator\n"
+        "`/courier` Mail-Briefing read-only\n"
+        "`/mentor` IHK/MFP Drill\n"
+        "`/strategist` Karriere/CV Template\n"
+        "`/steward` Finance/Housing/Jobcenter read-only\n"
+        "`/linky` Prompt-to-Code Modul\n\n"
         "**Grenzen:** keine freie Shell, kein sudo, keine Löschung, keine Timer-Aktivierung, keine Mail-Aktion."
     )
 
-async def send_chunked(channel: discord.abc.Messageable, text: str):
+async def allowed(interaction: discord.Interaction) -> bool:
+    if ALLOWED_USERS and interaction.user.id not in ALLOWED_USERS:
+        await interaction.response.send_message("Nicht autorisiert.", ephemeral=True)
+        return False
+    if ALLOWED_CHANNELS and interaction.channel_id not in ALLOWED_CHANNELS:
+        await interaction.response.send_message("Channel nicht autorisiert.", ephemeral=True)
+        return False
+    return True
+
+async def respond_long(interaction: discord.Interaction, text: str, ephemeral: bool = False):
     text = trim(text, 3500)
     chunks: List[str] = []
     while text:
         chunks.append(text[:1900])
         text = text[1900:]
+    first = True
     for chunk in chunks:
-        await channel.send(chunk)
+        if first:
+            if interaction.response.is_done():
+                await interaction.followup.send(chunk, ephemeral=ephemeral)
+            else:
+                await interaction.response.send_message(chunk, ephemeral=ephemeral)
+            first = False
+        else:
+            await interaction.followup.send(chunk, ephemeral=ephemeral)
 
-intents = discord.Intents.default()
-intents.message_content = True
-client = discord.Client(intents=intents)
+class ShadowmakerClient(discord.Client):
+    def __init__(self):
+        intents = discord.Intents.default()
+        super().__init__(intents=intents)
+        self.tree = app_commands.CommandTree(self)
+
+    async def setup_hook(self):
+        await self.tree.sync()
+
+client = ShadowmakerClient()
 
 @client.event
 async def on_ready():
-    print(f"READY {client.user} guilds={len(client.guilds)}")
+    print(f"READY {client.user} guilds={len(client.guilds)} slash_commands_synced=yes")
 
-@client.event
-async def on_message(message: discord.Message):
-    if message.author.bot:
+@client.tree.command(name="hilfe", description="Shadowmaker Agent Router Hilfe")
+async def slash_hilfe(interaction: discord.Interaction):
+    if not await allowed(interaction):
         return
+    await interaction.response.send_message(help_text(), ephemeral=True)
 
-    if ALLOWED_USERS and message.author.id not in ALLOWED_USERS:
+@client.tree.command(name="status", description="Shadowmaker Gesamtstatus lesen")
+async def slash_status(interaction: discord.Interaction):
+    if not await allowed(interaction):
         return
+    await interaction.response.defer(thinking=True, ephemeral=False)
+    await interaction.followup.send(status_text())
 
-    if ALLOWED_CHANNELS and message.channel.id not in ALLOWED_CHANNELS:
+async def run_agent_interaction(interaction: discord.Interaction, name: str):
+    if not await allowed(interaction):
         return
+    await interaction.response.defer(thinking=True, ephemeral=False)
+    code, output = await run_script(name)
+    latest = LATEST_FILES.get(name)
+    latest_text = read_text(latest, 1200) if latest else ""
+    response = (
+        f"**{name} fertig**\n"
+        f"Exit: `{code}`\n"
+        f"Latest: `{latest}`\n\n"
+        f"```text\n{trim(latest_text or output, 1500)}\n```"
+    )
+    await interaction.followup.send(trim(response, 1900))
 
-    content = message.content.strip()
-    if not content.startswith(PREFIX):
+@client.tree.command(name="winky", description="Winky Systemmonitor ausführen")
+async def slash_winky(interaction: discord.Interaction):
+    await run_agent_interaction(interaction, "winky")
+
+@client.tree.command(name="mnemosyne", description="Mnemosyne Memory Curator ausführen")
+async def slash_mnemosyne(interaction: discord.Interaction):
+    await run_agent_interaction(interaction, "mnemosyne")
+
+@client.tree.command(name="courier", description="Courier Mail Briefing read-only ausführen")
+async def slash_courier(interaction: discord.Interaction):
+    await run_agent_interaction(interaction, "courier")
+
+@client.tree.command(name="mentor", description="Mentor IHK/MFP Drill erzeugen")
+async def slash_mentor(interaction: discord.Interaction):
+    await run_agent_interaction(interaction, "mentor")
+
+@client.tree.command(name="strategist", description="Strategist Career/CV Template erzeugen")
+async def slash_strategist(interaction: discord.Interaction):
+    await run_agent_interaction(interaction, "strategist")
+
+@client.tree.command(name="steward", description="Steward Finance/Housing read-only Lagebild erzeugen")
+async def slash_steward(interaction: discord.Interaction):
+    await run_agent_interaction(interaction, "steward")
+
+@client.tree.command(name="linky", description="Linky Prompt-to-Code Modul erzeugen")
+async def slash_linky(interaction: discord.Interaction):
+    await run_agent_interaction(interaction, "linky")
+
+@app_commands.describe(agent="winky, mnemosyne, courier, mentor, strategist, steward oder linky")
+@client.tree.command(name="latest", description="Letzten Agentenreport lesen")
+async def slash_latest(interaction: discord.Interaction, agent: str):
+    if not await allowed(interaction):
         return
-
-    raw = content[len(PREFIX):].strip()
-    if not raw:
+    name = agent.strip().lower()
+    if name not in LATEST_FILES:
+        await interaction.response.send_message("Nicht erlaubt. Erlaubt: winky, mnemosyne, courier, mentor, strategist, steward, linky", ephemeral=True)
         return
-
-    parts = shlex.split(raw)
-    if not parts:
-        return
-
-    cmd = parts[0].lower()
-
-    if cmd in {"help", "hilfe"}:
-        await send_chunked(message.channel, help_text())
-        return
-
-    if cmd == "status":
-        await message.channel.send("Status wird gelesen...")
-        await send_chunked(message.channel, status_text())
-        return
-
-    if cmd == "latest":
-        if len(parts) < 2:
-            await message.channel.send(f"Nutzung: `{PREFIX}latest winky|mnemosyne|courier|mentor|strategist|steward|linky`")
-            return
-        name = parts[1].lower()
-        if name not in LATEST_FILES:
-            await message.channel.send("Nicht erlaubt.")
-            return
-        await send_chunked(message.channel, f"**Latest {name}**\n```text\n{read_text(LATEST_FILES[name], 1600)}\n```")
-        return
-
-    if cmd in PATHS:
-        await message.channel.send(f"`{cmd}` wird read-only/kontrolliert ausgeführt...")
-        code, output = await run_script(cmd)
-        latest = LATEST_FILES.get(cmd)
-        latest_text = read_text(latest, 1200) if latest else ""
-        response = (
-            f"**{cmd} fertig**\n"
-            f"Exit: `{code}`\n"
-            f"Latest: `{latest}`\n\n"
-            f"```text\n{trim(latest_text or output, 1500)}\n```"
-        )
-        await send_chunked(message.channel, response)
-        return
-
-    await message.channel.send("Befehl nicht erlaubt. Nutze `!help`.")
+    text = read_text(LATEST_FILES[name], 1600)
+    await interaction.response.send_message(f"**Latest {name}**\n```text\n{text}\n```", ephemeral=False)
 
 if not TOKEN:
     raise SystemExit("DISCORD_BOT_TOKEN fehlt.")

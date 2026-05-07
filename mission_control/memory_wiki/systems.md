@@ -148,3 +148,10 @@ Schrittweise Aktivierung, read-only bzw. kontrolliertes Memory-Wiki-Schreiben.
 - Befehle: !status, !winky, !mnemosyne, !courier, !mentor, !strategist, !steward, !linky.
 - Keine freie Shell, kein sudo, keine Löschung, keine Timer-Aktivierung.
 - Status: /home/schattenmacher/openclaw_training/docs/status/latest_discord_agent_router_status.md
+
+## 2026-05-07 – Discord Router Slash Repair
+
+- Discord Agent Router wurde auf Slash Commands umgestellt.
+- Grund: Message Content Intent war nicht aktiviert und führte zu PrivilegedIntentsRequired.
+- Neue Befehle: /status, /winky, /mnemosyne, /courier, /mentor, /strategist, /steward, /linky.
+- Status: /home/schattenmacher/openclaw_training/docs/status/latest_discord_router_slash_status.md

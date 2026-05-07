@@ -123,3 +123,10 @@ Duplikate, Cache, Browserdaten, Finanzdaten und Behördenunterlagen werden nicht
 | DISCORD-ROUTER-001 | Discord | Router installieren | Linky | erledigt | /home/schattenmacher/openclaw_training/docs/status/latest_discord_agent_router_status.md |
 | DISCORD-ROUTER-002 | Security | Allowlist prüfen | User | aktiv | ENV-Datei |
 | DISCORD-ROUTER-003 | Betrieb | Bot-Service testen | User | offen | !status |
+
+## 2026-05-07 – Discord Router Slash Repair
+
+| ID | Bereich | Aufgabe | Owner | Status | Kontrolle |
+|---|---|---|---|---|---|
+| DISCORD-SLASH-001 | Discord | Slash Commands aktivieren | Linky | erledigt | /status |
+| DISCORD-SLASH-002 | Security | Message Content Intent vermeiden | Linky | erledigt | Logs READY |

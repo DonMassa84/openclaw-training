@@ -293,3 +293,9 @@ Nächster sinnvoller Einsatz: Mission Control Builder, Memory Identity, Multi Ag
 Entscheidung: Discord wird als command-basierter Agenteneingang genutzt, nicht als freie Shell.
 
 Begründung: feste Befehle sind kontrollierbar und verhindern unbeabsichtigte Systemänderungen.
+
+## 2026-05-07 – Entscheidung Discord Slash Commands
+
+Entscheidung: Discord Router nutzt Slash Commands statt Message Content Intent.
+
+Begründung: weniger privilegiert, stabiler und sicherer.
