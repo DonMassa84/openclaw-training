@@ -91,3 +91,4 @@ mission_control/discord_agent_router/*.env
 mission_control/discord_agent_router/*.env.*
 mission_control/discord_agent_router/*.bak
 mission_control/discord_agent_router/*.bak.*
+.env.*
