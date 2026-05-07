@@ -1,0 +1,268 @@
+import os
+import re
+import subprocess
+from pathlib import Path
+
+import discord
+from discord import app_commands
+from dotenv import load_dotenv
+
+BASE = Path.home() / "openclaw_training"
+MISSION = BASE / "mission_control"
+ENV_FILE = MISSION / "discord_agent_router" / "config" / "discord_agent_router.env"
+load_dotenv(ENV_FILE)
+
+TOKEN = os.getenv("DISCORD_BOT_TOKEN", "").strip()
+MAX_OUTPUT = int(os.getenv("ROUTER_MAX_OUTPUT_CHARS", "1800"))
+
+def parse_ids(value: str) -> set[int]:
+    out = set()
+    for part in (value or "").split(","):
+        part = part.strip()
+        if part.isdigit():
+            out.add(int(part))
+    return out
+
+ALLOWED_USERS = parse_ids(os.getenv("DISCORD_ALLOWED_USER_IDS", ""))
+ALLOWED_CHANNELS = parse_ids(os.getenv("DISCORD_ALLOWED_CHANNEL_IDS", ""))
+
+LATEST_FILES = {
+    "winky": MISSION / "agent_runtime" / "winky" / "latest_winky_report.md",
+    "mnemosyne": MISSION / "agent_runtime" / "mnemosyne" / "latest_mnemosyne_report.md",
+    "courier": MISSION / "mail_briefing" / "briefs" / "latest_courier_mail_brief.md",
+    "mentor": MISSION / "ihk_mfp" / "latest_mentor_drill.md",
+    "strategist": MISSION / "career_it" / "latest_strategist_career_template.md",
+    "steward": MISSION / "finance_housing_readonly" / "latest_steward_finance_housing_readonly.md",
+    "linky": MISSION / "prompt_to_code" / "latest_linky_module.md",
+}
+
+def sanitize(text: str) -> str:
+    patterns = [
+        r"(?i)(token|secret|password|pass|api[_-]?key)\s*[:=]\s*\S+",
+        r"\b[A-Za-z0-9_\-]{24}\.[A-Za-z0-9_\-]{6}\.[A-Za-z0-9_\-]{20,}\b",
+        r"xox[baprs]-[A-Za-z0-9\-]+",
+        r"sk-[A-Za-z0-9_\-]{20,}",
+    ]
+    cleaned = text or ""
+    for pat in patterns:
+        cleaned = re.sub(pat, lambda m: ((m.group(1) if m.lastindex else m.group(0).split("=", 1)[0]) + "=***REDACTED***"), cleaned)
+    return cleaned
+
+def trim(text: str, limit: int = MAX_OUTPUT) -> str:
+    text = sanitize((text or "").strip())
+    if not text:
+        text = "Kein Inhalt vorhanden."
+    if len(text) <= limit:
+        return text
+    return text[:limit] + "\n...[gekürzt]"
+
+def read_text(path: Path, limit: int = MAX_OUTPUT) -> str:
+    if not path.exists():
+        return f"Datei nicht gefunden: {path}"
+    return trim(path.read_text(encoding="utf-8", errors="ignore"), limit)
+
+def cmd(cmdline: str, timeout: int = 6) -> str:
+    try:
+        return subprocess.run(
+            ["bash", "-lc", cmdline],
+            stdout=subprocess.PIPE,
+            stderr=subprocess.STDOUT,
+            text=True,
+            timeout=timeout,
+        ).stdout
+    except Exception as exc:
+        return f"{type(exc).__name__}: {exc}"
+
+def compact_status() -> str:
+    failed = cmd("systemctl --user --failed --no-pager | head -20", 5)
+    timers = cmd("systemctl --user list-timers --all --no-pager | grep -E 'openclaw|shadowmaker|security|shadowops|NEXT|LEFT' || true", 5)
+    webui = cmd("curl -I --max-time 3 http://127.0.0.1:3000 2>&1 | head -8 || true", 4)
+    courier_file = LATEST_FILES["courier"]
+    courier = "Courier latest nicht vorhanden."
+    if courier_file.exists():
+        txt = courier_file.read_text(encoding="utf-8", errors="ignore")
+        lines = []
+        for line in txt.splitlines():
+            if any(k in line for k in ["Gesamt erfasste Mails", "P1 Heute", "P2 Diese Woche", "P3 Lesen", "Fehler/fehlende"]):
+                lines.append(line)
+        courier = "\n".join(lines) if lines else "Courier latest vorhanden."
+
+    return trim(
+        "**Shadowmaker Status**\n\n"
+        "**User Failed**\n"
+        f"```text\n{failed}\n```\n"
+        "**Timer**\n"
+        f"```text\n{timers}\n```\n"
+        "**WebUI**\n"
+        f"```text\n{webui}\n```\n"
+        "**Courier Kurzlage**\n"
+        f"```text\n{courier}\n```",
+        1800,
+    )
+
+def help_text() -> str:
+    return (
+        "**Shadowmaker Discord Agent Router – Stable Read-only Mode**\n\n"
+        "**Slash Commands:**\n"
+        "`/hilfe` Hilfe\n"
+        "`/status` Gesamtstatus lesen\n"
+        "`/latest agent:<name>` letzten Report lesen\n"
+        "`/winky` letzten Winky-Report lesen\n"
+        "`/mnemosyne` letzten Mnemosyne-Report lesen\n"
+        "`/courier` letzten Courier-Brief lesen\n"
+        "`/mentor` letzten Mentor-Drill lesen\n"
+        "`/strategist` letztes Career-Template lesen\n"
+        "`/steward` letztes Finance/Housing-Lagebild lesen\n"
+        "`/linky` letztes Linky-Modul lesen\n\n"
+        "**Wichtig:** Discord führt keine Agenten mehr aus. Es liest nur latest Reports.\n"
+        "**Grenzen:** keine freie Shell, kein sudo, keine Löschung, keine Timer-Aktivierung, keine Mail-Aktion."
+    )
+
+async def allowed(interaction: discord.Interaction) -> bool:
+    user_id = interaction.user.id
+    user_name = str(interaction.user)
+    channel_id = interaction.channel_id
+
+    if ALLOWED_USERS and user_id not in ALLOWED_USERS:
+        await interaction.response.send_message(
+            f"Nicht autorisiert.\nDeine echte Discord User ID ist: `{user_id}`\nUser: `{user_name}`\nChannel ID: `{channel_id}`",
+            ephemeral=True,
+        )
+        return False
+
+    if ALLOWED_CHANNELS and channel_id not in ALLOWED_CHANNELS:
+        await interaction.response.send_message(
+            f"Channel nicht autorisiert.\nChannel ID: `{channel_id}`\nUser ID: `{user_id}`",
+            ephemeral=True,
+        )
+        return False
+
+    return True
+
+class ShadowmakerClient(discord.Client):
+    def __init__(self):
+        intents = discord.Intents.default()
+        super().__init__(intents=intents)
+        self.tree = app_commands.CommandTree(self)
+
+    async def setup_hook(self):
+        await self.tree.sync()
+
+client = ShadowmakerClient()
+
+@client.event
+async def on_ready():
+    print(f"READY {client.user} guilds={len(client.guilds)} stable_readonly=yes", flush=True)
+
+@client.tree.error
+async def on_app_command_error(interaction: discord.Interaction, error: app_commands.AppCommandError):
+    try:
+        if interaction.response.is_done():
+            await interaction.followup.send(f"Routerfehler: `{type(error).__name__}`", ephemeral=True)
+        else:
+            await interaction.response.send_message(f"Routerfehler: `{type(error).__name__}`", ephemeral=True)
+    except Exception:
+        pass
+    print(f"APP_COMMAND_ERROR {type(error).__name__}: {error}", flush=True)
+
+@client.tree.command(name="hilfe", description="Shadowmaker Agent Router Hilfe")
+async def slash_hilfe(interaction: discord.Interaction):
+    if not await allowed(interaction):
+        return
+    await interaction.response.send_message(help_text(), ephemeral=True)
+
+@client.tree.command(name="status", description="Shadowmaker Gesamtstatus lesen")
+async def slash_status(interaction: discord.Interaction):
+    if not await allowed(interaction):
+        return
+    await interaction.response.send_message(compact_status(), ephemeral=True)
+
+async def send_latest(interaction: discord.Interaction, name: str):
+    if not await allowed(interaction):
+        return
+    path = LATEST_FILES.get(name)
+    if not path:
+        await interaction.response.send_message("Nicht erlaubt.", ephemeral=True)
+        return
+    txt = read_text(path, 1600)
+    await interaction.response.send_message(f"**Latest {name}**\n```text\n{txt}\n```", ephemeral=True)
+
+@client.tree.command(name="winky", description="Letzten Winky-Report lesen")
+async def slash_winky(interaction: discord.Interaction):
+    await send_latest(interaction, "winky")
+
+@client.tree.command(name="mnemosyne", description="Letzten Mnemosyne-Report lesen")
+async def slash_mnemosyne(interaction: discord.Interaction):
+    await send_latest(interaction, "mnemosyne")
+
+@client.tree.command(name="courier", description="Letzten Courier-Brief lesen")
+async def slash_courier(interaction: discord.Interaction):
+    await send_latest(interaction, "courier")
+
+@client.tree.command(name="mentor", description="Letzten Mentor-Drill lesen")
+async def slash_mentor(interaction: discord.Interaction):
+    await send_latest(interaction, "mentor")
+
+@client.tree.command(name="strategist", description="Letztes Strategist-Template lesen")
+async def slash_strategist(interaction: discord.Interaction):
+    await send_latest(interaction, "strategist")
+
+@client.tree.command(name="steward", description="Letztes Steward-Lagebild lesen")
+async def slash_steward(interaction: discord.Interaction):
+    await send_latest(interaction, "steward")
+
+@client.tree.command(name="linky", description="Letztes Linky-Modul lesen")
+async def slash_linky(interaction: discord.Interaction):
+    await send_latest(interaction, "linky")
+
+@app_commands.describe(agent="winky, mnemosyne, courier, mentor, strategist, steward oder linky")
+@client.tree.command(name="latest", description="Letzten Agentenreport lesen")
+async def slash_latest(interaction: discord.Interaction, agent: str):
+    name = agent.strip().lower()
+    if name not in LATEST_FILES:
+        await interaction.response.send_message("Nicht erlaubt. Erlaubt: winky, mnemosyne, courier, mentor, strategist, steward, linky", ephemeral=True)
+        return
+    await send_latest(interaction, name)
+
+if not TOKEN:
+    raise SystemExit("DISCORD_BOT_TOKEN fehlt.")
+
+
+# === SHADOWMAKER ASK COMMAND BEGIN ===
+import subprocess as _shadowmaker_subprocess
+from pathlib import Path as _ShadowmakerPath
+
+_ASK_BACKEND = str(_ShadowmakerPath.home() / "openclaw_training/mission_control/discord_agent_router/ask_backend.sh")
+
+@tree.command(name="ask", description="Freie Frage an den lokalen Shadowmaker Agent")
+@app_commands.describe(prompt="Deine Frage oder Aufgabe an den Agent")
+async def slash_ask(interaction, prompt: str):
+    await interaction.response.defer(thinking=True, ephemeral=False)
+
+    def _run_ask_backend():
+        try:
+            proc = _shadowmaker_subprocess.run(
+                [_ASK_BACKEND],
+                input=prompt,
+                text=True,
+                capture_output=True,
+                timeout=90,
+            )
+            out = (proc.stdout or "").strip()
+            err = (proc.stderr or "").strip()
+            if proc.returncode != 0:
+                return f"ASK_BACKEND_EXIT={proc.returncode}\n{out}\n{err}".strip()
+            return out or err or "Ask Backend lieferte keine Ausgabe."
+        except Exception as exc:
+            return f"Ask Backend Fehler: {type(exc).__name__}: {exc}"
+
+    body = await asyncio.to_thread(_run_ask_backend)
+    await send_followup(
+        interaction,
+        f"🧠 **Shadowmaker Ask**\n```text\n{trim(body, 1700)}\n```",
+        ephemeral=False,
+    )
+# === SHADOWMAKER ASK COMMAND END ===
+
+
+client.run(TOKEN)
