@@ -1,0 +1,1 @@
+/home/schattenmacher/openclaw_training/docs/memory_wiki/shadowmaker_automation_commands_20260507_204102.md
