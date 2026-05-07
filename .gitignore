@@ -75,3 +75,11 @@ mission_control/docs/home_script_inventory/*.txt
 **/*token*.json
 **/*.env
 **/*.env.*
+docs/status/**/config_redacted/
+docs/status/**/config_redacted/*
+docs/status/**/bashrc.snapshot
+docs/status/**/discord.env*
+docs/status/**/telegram*.env*
+docs/status/**/gmail_credentials.json
+**/config_redacted/
+**/config_redacted/*
