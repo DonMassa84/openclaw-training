@@ -1,0 +1,20 @@
+● schatten-watch-bot.service - Schatten Watch Telegram Bot
+     Loaded: loaded (/home/schattenmacher/.config/systemd/user/schatten-watch-bot.service; enabled; preset: enabled)
+     Active: active (running) since Thu 2026-05-07 20:13:51 CEST; 11min ago
+   Main PID: 70509 (python3)
+      Tasks: 2 (limit: 37946)
+     Memory: 29.5M (peak: 30.4M)
+        CPU: 623ms
+     CGroup: /user.slice/user-1000.slice/user@1000.service/app.slice/schatten-watch-bot.service
+             └─70509 python3 schatten_watch_bot.py
+
+Mai 07 20:23:50 schattenmacher-D3161-B1 run_schatten_watch_bot.sh[70509]: 2026-05-07 20:23:50,399 | INFO | httpx | HTTP Request: POST https://api.telegram.org/bot8586229072:AAHk08vqpXQjmF5uM3ho8aJK2W3yw0e65ho/getUpdates "HTTP/1.1 200 OK"
+Mai 07 20:24:00 schattenmacher-D3161-B1 run_schatten_watch_bot.sh[70509]: 2026-05-07 20:24:00,484 | INFO | httpx | HTTP Request: POST https://api.telegram.org/bot8586229072:AAHk08vqpXQjmF5uM3ho8aJK2W3yw0e65ho/getUpdates "HTTP/1.1 200 OK"
+Mai 07 20:24:10 schattenmacher-D3161-B1 run_schatten_watch_bot.sh[70509]: 2026-05-07 20:24:10,552 | INFO | httpx | HTTP Request: POST https://api.telegram.org/bot8586229072:AAHk08vqpXQjmF5uM3ho8aJK2W3yw0e65ho/getUpdates "HTTP/1.1 200 OK"
+Mai 07 20:24:20 schattenmacher-D3161-B1 run_schatten_watch_bot.sh[70509]: 2026-05-07 20:24:20,614 | INFO | httpx | HTTP Request: POST https://api.telegram.org/bot8586229072:AAHk08vqpXQjmF5uM3ho8aJK2W3yw0e65ho/getUpdates "HTTP/1.1 200 OK"
+Mai 07 20:24:30 schattenmacher-D3161-B1 run_schatten_watch_bot.sh[70509]: 2026-05-07 20:24:30,733 | INFO | httpx | HTTP Request: POST https://api.telegram.org/bot8586229072:AAHk08vqpXQjmF5uM3ho8aJK2W3yw0e65ho/getUpdates "HTTP/1.1 200 OK"
+Mai 07 20:24:40 schattenmacher-D3161-B1 run_schatten_watch_bot.sh[70509]: 2026-05-07 20:24:40,816 | INFO | httpx | HTTP Request: POST https://api.telegram.org/bot8586229072:AAHk08vqpXQjmF5uM3ho8aJK2W3yw0e65ho/getUpdates "HTTP/1.1 200 OK"
+Mai 07 20:24:50 schattenmacher-D3161-B1 run_schatten_watch_bot.sh[70509]: 2026-05-07 20:24:50,865 | INFO | httpx | HTTP Request: POST https://api.telegram.org/bot8586229072:AAHk08vqpXQjmF5uM3ho8aJK2W3yw0e65ho/getUpdates "HTTP/1.1 200 OK"
+Mai 07 20:25:00 schattenmacher-D3161-B1 run_schatten_watch_bot.sh[70509]: 2026-05-07 20:25:00,934 | INFO | httpx | HTTP Request: POST https://api.telegram.org/bot8586229072:AAHk08vqpXQjmF5uM3ho8aJK2W3yw0e65ho/getUpdates "HTTP/1.1 200 OK"
+Mai 07 20:25:11 schattenmacher-D3161-B1 run_schatten_watch_bot.sh[70509]: 2026-05-07 20:25:11,137 | INFO | httpx | HTTP Request: POST https://api.telegram.org/bot8586229072:AAHk08vqpXQjmF5uM3ho8aJK2W3yw0e65ho/getUpdates "HTTP/1.1 200 OK"
+Mai 07 20:25:21 schattenmacher-D3161-B1 run_schatten_watch_bot.sh[70509]: 2026-05-07 20:25:21,206 | INFO | httpx | HTTP Request: POST https://api.telegram.org/bot8586229072:AAHk08vqpXQjmF5uM3ho8aJK2W3yw0e65ho/getUpdates "HTTP/1.1 200 OK"

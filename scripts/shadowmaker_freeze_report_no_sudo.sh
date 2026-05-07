@@ -4,14 +4,14 @@ set -Eeuo pipefail
 TS="$(date +%Y%m%d_%H%M%S)"
 BASE="$HOME/openclaw_training"
 DOC_DIR="$BASE/docs/status"
-REPORT_DIR="$BASE/reports"
-ARTIFACT_DIR="$BASE/artifacts/freezes"
 FREEZE_DIR="$DOC_DIR/freeze_report_$TS"
+REPORT_DIR="$BASE/reports"
+ARCHIVE_DIR="$BASE/artifacts/freezes"
 REPORT_TXT="$REPORT_DIR/freeze_report_no_sudo_$TS.txt"
 REPORT_MD="$FREEZE_DIR/SHADOWMAKER_FREEZE_REPORT_$TS.md"
-ARCHIVE="$ARTIFACT_DIR/shadowmaker_freeze_report_$TS.tar.gz"
+ARCHIVE="$ARCHIVE_DIR/shadowmaker_freeze_report_$TS.tar.gz"
 
-mkdir -p "$DOC_DIR" "$REPORT_DIR" "$ARTIFACT_DIR" "$FREEZE_DIR"
+mkdir -p "$DOC_DIR" "$FREEZE_DIR" "$REPORT_DIR" "$ARCHIVE_DIR"
 
 exec > >(tee -a "$REPORT_TXT") 2>&1
 
@@ -34,7 +34,7 @@ redact_file() {
   fi
 }
 
-user_service_state() {
+service_state_user() {
   local svc="$1"
   if systemctl --user is-active --quiet "$svc"; then
     echo "OK"
@@ -52,15 +52,14 @@ echo " SHADOWMAKER FREEZE REPORT NO SUDO"
 echo "============================================================"
 echo "Zeit: $(date)"
 echo "Host: $(hostname)"
-echo "TXT: $REPORT_TXT"
-echo "MD:  $REPORT_MD"
+echo "Report TXT: $REPORT_TXT"
+echo "Report MD:  $REPORT_MD"
 echo
 
-CONTROL_STATUS="$(user_service_state shadowmaker-control-bot.service)"
-WATCH_STATUS="$(user_service_state schatten-watch-bot.service)"
-BACKUP_STATUS="$(user_service_state schatten-backup-bot.service)"
+CONTROL_STATUS="$(service_state_user shadowmaker-control-bot.service)"
+WATCH_STATUS="$(service_state_user schatten-watch-bot.service)"
+BACKUP_STATUS="$(service_state_user schatten-backup-bot.service)"
 
-DOCKER_PS="$(docker ps --format 'table {{.Names}}\t{{.Image}}\t{{.Status}}\t{{.Ports}}' 2>&1 || true)"
 OPENCLAW_INTERNAL="$(docker exec -i openclaw-openclaw-gateway-1 sh -lc 'curl -sS -I --max-time 8 http://127.0.0.1:18789 2>&1 | head -20' 2>&1 || true)"
 FLOWISE_HTTP="$(curl -sS -I --max-time 8 http://127.0.0.1:3001 2>&1 | head -10 || true)"
 N8N_HTTP="$(curl -sS -I --max-time 8 http://127.0.0.1:5678 2>&1 | head -10 || true)"
@@ -68,6 +67,7 @@ TG4="$(curl -4 -I --max-time 10 https://api.telegram.org 2>&1 || true)"
 TG6="$(curl -6 -I --max-time 10 https://api.telegram.org 2>&1 || true)"
 USER_FAILED="$(systemctl --user --failed 2>&1 || true)"
 SYSTEM_FAILED="$(systemctl --failed 2>&1 || true)"
+DOCKER_PS="$(docker ps --format 'table {{.Names}}\t{{.Image}}\t{{.Status}}\t{{.Ports}}' 2>&1 || true)"
 
 OPENCLAW_OK="NO"
 FLOWISE_OK="NO"
@@ -141,19 +141,21 @@ $TG4
 $TG6
 \`\`\`
 
-## 9. Failed Services User
+## 9. Failed Services
+
+### User
 
 \`\`\`text
 $USER_FAILED
 \`\`\`
 
-## 10. Failed Services System
+### System
 
 \`\`\`text
 $SYSTEM_FAILED
 \`\`\`
 
-## 11. Offene Punkte
+## 10. Offene Punkte
 
 \`\`\`text
 - ShadowOps Autopilot separat reparieren oder deaktivieren.
@@ -163,7 +165,20 @@ $SYSTEM_FAILED
 - Discord Webhook nur produktiv, wenn echte Channel-Webhook-URL gesetzt ist.
 \`\`\`
 
-## 12. Pfade
+## 11. Standardbefehle
+
+\`\`\`bash
+oc-loop
+sm-health
+sm-status
+sm-logs
+watch-status
+watch-logs
+discord-status
+discord-stack
+\`\`\`
+
+## 12. Freeze-Pfade
 
 \`\`\`text
 Freeze Dir: $FREEZE_DIR
