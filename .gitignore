@@ -85,3 +85,9 @@ docs/status/**/gmail_credentials.json
 **/config_redacted/*
 docs/status/*home_script_inventory*
 docs/status/*inventory_status*
+mission_control/discord_agent_router/config/
+mission_control/discord_agent_router/config/*
+mission_control/discord_agent_router/*.env
+mission_control/discord_agent_router/*.env.*
+mission_control/discord_agent_router/*.bak
+mission_control/discord_agent_router/*.bak.*
