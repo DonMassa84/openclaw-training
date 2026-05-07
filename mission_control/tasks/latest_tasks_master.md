@@ -146,3 +146,11 @@ Duplikate, Cache, Browserdaten, Finanzdaten und Behördenunterlagen werden nicht
 | DISCORD-ACK-001 | Discord | Immediate Ack Patch anwenden | Linky | erledigt | /status |
 | DISCORD-ACK-002 | Discord | Latest testen | User | offen | /latest agent:winky |
 | DISCORD-ACK-003 | Discord | Winky testen | User | offen | /winky |
+
+## 2026-05-07 – Discord Router Follow-up
+
+| ID | Bereich | Aufgabe | Owner | Status | Kontrolle |
+|---|---|---|---|---|---|
+| DISCORD-FOLLOWUP-001 | Discord | Follow-up Patch anwenden | Linky | erledigt | /status |
+| DISCORD-FOLLOWUP-002 | Discord | Latest testen | User | offen | /latest agent:winky |
+| DISCORD-FOLLOWUP-003 | Discord | Winky testen | User | offen | /winky |

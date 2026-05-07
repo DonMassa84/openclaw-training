@@ -17,7 +17,7 @@ load_dotenv(ENV_FILE)
 
 TOKEN = os.getenv("DISCORD_BOT_TOKEN", "").strip()
 MAX_OUTPUT = int(os.getenv("ROUTER_MAX_OUTPUT_CHARS", "1800"))
-TIMEOUT = int(os.getenv("ROUTER_TIMEOUT_SECONDS", "60"))
+TIMEOUT = int(os.getenv("ROUTER_TIMEOUT_SECONDS", "75"))
 
 def parse_ids(value: str) -> set[int]:
     out = set()
@@ -99,12 +99,12 @@ async def allowed(interaction: discord.Interaction) -> bool:
 
     return True
 
-async def channel_send(channel, text: str):
+async def send_followup(interaction: discord.Interaction, text: str, ephemeral: bool = False):
     text = trim(text, 1900)
     try:
-        await channel.send(text)
+        await interaction.followup.send(text, ephemeral=ephemeral)
     except Exception as exc:
-        print(f"CHANNEL_SEND_ERROR {type(exc).__name__}: {exc}", flush=True)
+        print(f"FOLLOWUP_SEND_ERROR {type(exc).__name__}: {exc}", flush=True)
 
 async def run_script(name: str) -> Tuple[int, str]:
     script = PATHS.get(name)
@@ -196,7 +196,7 @@ client = ShadowmakerClient()
 
 @client.event
 async def on_ready():
-    print(f"READY {client.user} guilds={len(client.guilds)} slash_commands_synced=yes immediate_ack=yes", flush=True)
+    print(f"READY {client.user} guilds={len(client.guilds)} slash_commands_synced=yes followup_mode=yes", flush=True)
 
 @client.tree.error
 async def on_app_command_error(interaction: discord.Interaction, error: app_commands.AppCommandError):
@@ -220,15 +220,17 @@ async def slash_hilfe(interaction: discord.Interaction):
 async def slash_status(interaction: discord.Interaction):
     if not await allowed(interaction):
         return
-    await interaction.response.send_message("✅ `/status` angenommen. Ergebnis folgt im Channel.", ephemeral=True)
-    async def job():
-        text = await asyncio.to_thread(status_text)
-        await channel_send(interaction.channel, text)
-    asyncio.create_task(job())
+    await interaction.response.send_message("✅ `/status` angenommen. Ergebnis folgt hier als Follow-up.", ephemeral=True)
+    text = await asyncio.to_thread(status_text)
+    await send_followup(interaction, text, ephemeral=True)
 
-async def run_agent_background(channel, name: str):
+async def run_agent_interaction(interaction: discord.Interaction, name: str):
+    if not await allowed(interaction):
+        return
+
+    await interaction.response.send_message(f"✅ `/{name}` angenommen. Agent läuft kontrolliert.", ephemeral=True)
+
     try:
-        await channel_send(channel, f"⚙️ `{name}` gestartet.")
         code, output = await run_script(name)
         latest = LATEST_FILES.get(name)
         latest_text = read_text(latest, 1200) if latest else ""
@@ -239,16 +241,10 @@ async def run_agent_background(channel, name: str):
             f"Latest: `{latest}`\n\n"
             f"```text\n{trim(body, 1400)}\n```"
         )
-        await channel_send(channel, response)
+        await send_followup(interaction, response, ephemeral=True)
     except Exception as exc:
-        print(f"BACKGROUND_AGENT_ERROR {name}: {type(exc).__name__}: {exc}", flush=True)
-        await channel_send(channel, f"❌ Agent `{name}` Fehler: `{type(exc).__name__}`")
-
-async def run_agent_interaction(interaction: discord.Interaction, name: str):
-    if not await allowed(interaction):
-        return
-    await interaction.response.send_message(f"✅ `/{name}` angenommen. Agent läuft im Hintergrund.", ephemeral=True)
-    asyncio.create_task(run_agent_background(interaction.channel, name))
+        print(f"AGENT_ERROR {name}: {type(exc).__name__}: {exc}", flush=True)
+        await send_followup(interaction, f"❌ Agent `{name}` Fehler: `{type(exc).__name__}`: `{exc}`", ephemeral=True)
 
 @client.tree.command(name="winky", description="Winky Systemmonitor ausführen")
 async def slash_winky(interaction: discord.Interaction):
@@ -288,7 +284,7 @@ async def slash_latest(interaction: discord.Interaction, agent: str):
         await interaction.response.send_message("Nicht erlaubt. Erlaubt: winky, mnemosyne, courier, mentor, strategist, steward, linky", ephemeral=True)
         return
     text = read_text(LATEST_FILES[name], 1600)
-    await interaction.response.send_message(f"**Latest {name}**\n```text\n{trim(text, 1500)}\n```", ephemeral=False)
+    await interaction.response.send_message(f"**Latest {name}**\n```text\n{trim(text, 1500)}\n```", ephemeral=True)
 
 if not TOKEN:
     raise SystemExit("DISCORD_BOT_TOKEN fehlt.")

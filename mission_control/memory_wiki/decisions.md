@@ -311,3 +311,9 @@ Begründung: Slash Commands sind sicherer als Message Content Intent; Hänger m�
 Entscheidung: Slash Commands nutzen Immediate Ack + Hintergrundausführung.
 
 Begründung: Dadurch wird der dauerhafte 'denkt nach'-Zustand vermieden.
+
+## 2026-05-07 – Discord Router Entscheidung
+
+Entscheidung: Ergebnisse werden über Interaction Follow-ups gesendet.
+
+Begründung: Vermeidet Hänger und Channel-Send-Probleme.

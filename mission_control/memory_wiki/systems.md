@@ -170,3 +170,10 @@ Schrittweise Aktivierung, read-only bzw. kontrolliertes Memory-Wiki-Schreiben.
 - Slash Commands antworten sofort.
 - Ergebnisse werden im Channel gepostet.
 - Status: /home/schattenmacher/openclaw_training/docs/status/latest_discord_router_immediate_ack_status.md
+
+## 2026-05-07 – Discord Router Follow-up Mode
+
+- Discord Router wurde auf Interaction-Follow-up-Modus umgestellt.
+- Ergebnisse werden ephemeral an den Benutzer zurückgegeben.
+- Channel-Send-Permissions sind für Ergebnisse nicht mehr erforderlich.
+- Status: /home/schattenmacher/openclaw_training/docs/status/latest_discord_router_followup_mode_status.md
