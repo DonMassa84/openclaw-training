@@ -1,0 +1,120 @@
+Mai 07 19:18:00 schattenmacher-D3161-B1 run_discord_agent_router.sh[10665]: NameError: name 'tree' is not defined. Did you mean: 'True'?
+Mai 07 19:18:00 schattenmacher-D3161-B1 systemd[1319]: shadowmaker-discord-agent-router.service: Main process exited, code=exited, status=1/FAILURE
+Mai 07 19:18:00 schattenmacher-D3161-B1 systemd[1319]: shadowmaker-discord-agent-router.service: Failed with result 'exit-code'.
+Mai 07 19:18:10 schattenmacher-D3161-B1 systemd[1319]: shadowmaker-discord-agent-router.service: Scheduled restart job, restart counter is at 35.
+Mai 07 19:18:10 schattenmacher-D3161-B1 systemd[1319]: Started shadowmaker-discord-agent-router.service - Shadowmaker Discord Agent Router.
+Mai 07 19:18:10 schattenmacher-D3161-B1 run_discord_agent_router.sh[10776]: Traceback (most recent call last):
+Mai 07 19:18:10 schattenmacher-D3161-B1 run_discord_agent_router.sh[10776]:   File "/home/schattenmacher/openclaw_training/mission_control/discord_agent_router/discord_agent_router.py", line 237, in <module>
+Mai 07 19:18:10 schattenmacher-D3161-B1 run_discord_agent_router.sh[10776]:     @tree.command(name="ask", description="Freie Frage an den lokalen Shadowmaker Agent")
+Mai 07 19:18:10 schattenmacher-D3161-B1 run_discord_agent_router.sh[10776]:      ^^^^
+Mai 07 19:18:10 schattenmacher-D3161-B1 run_discord_agent_router.sh[10776]: NameError: name 'tree' is not defined. Did you mean: 'True'?
+Mai 07 19:18:10 schattenmacher-D3161-B1 systemd[1319]: shadowmaker-discord-agent-router.service: Main process exited, code=exited, status=1/FAILURE
+Mai 07 19:18:10 schattenmacher-D3161-B1 systemd[1319]: shadowmaker-discord-agent-router.service: Failed with result 'exit-code'.
+Mai 07 19:18:21 schattenmacher-D3161-B1 systemd[1319]: shadowmaker-discord-agent-router.service: Scheduled restart job, restart counter is at 36.
+Mai 07 19:18:21 schattenmacher-D3161-B1 systemd[1319]: Started shadowmaker-discord-agent-router.service - Shadowmaker Discord Agent Router.
+Mai 07 19:18:21 schattenmacher-D3161-B1 run_discord_agent_router.sh[10871]: Traceback (most recent call last):
+Mai 07 19:18:21 schattenmacher-D3161-B1 run_discord_agent_router.sh[10871]:   File "/home/schattenmacher/openclaw_training/mission_control/discord_agent_router/discord_agent_router.py", line 237, in <module>
+Mai 07 19:18:21 schattenmacher-D3161-B1 run_discord_agent_router.sh[10871]:     @tree.command(name="ask", description="Freie Frage an den lokalen Shadowmaker Agent")
+Mai 07 19:18:21 schattenmacher-D3161-B1 run_discord_agent_router.sh[10871]:      ^^^^
+Mai 07 19:18:21 schattenmacher-D3161-B1 run_discord_agent_router.sh[10871]: NameError: name 'tree' is not defined. Did you mean: 'True'?
+Mai 07 19:18:21 schattenmacher-D3161-B1 systemd[1319]: shadowmaker-discord-agent-router.service: Main process exited, code=exited, status=1/FAILURE
+Mai 07 19:18:21 schattenmacher-D3161-B1 systemd[1319]: shadowmaker-discord-agent-router.service: Failed with result 'exit-code'.
+Mai 07 19:18:31 schattenmacher-D3161-B1 systemd[1319]: shadowmaker-discord-agent-router.service: Scheduled restart job, restart counter is at 37.
+Mai 07 19:18:31 schattenmacher-D3161-B1 systemd[1319]: Started shadowmaker-discord-agent-router.service - Shadowmaker Discord Agent Router.
+Mai 07 19:18:31 schattenmacher-D3161-B1 run_discord_agent_router.sh[11143]: Traceback (most recent call last):
+Mai 07 19:18:31 schattenmacher-D3161-B1 run_discord_agent_router.sh[11143]:   File "/home/schattenmacher/openclaw_training/mission_control/discord_agent_router/discord_agent_router.py", line 237, in <module>
+Mai 07 19:18:31 schattenmacher-D3161-B1 run_discord_agent_router.sh[11143]:     @tree.command(name="ask", description="Freie Frage an den lokalen Shadowmaker Agent")
+Mai 07 19:18:31 schattenmacher-D3161-B1 run_discord_agent_router.sh[11143]:      ^^^^
+Mai 07 19:18:31 schattenmacher-D3161-B1 run_discord_agent_router.sh[11143]: NameError: name 'tree' is not defined. Did you mean: 'True'?
+Mai 07 19:18:31 schattenmacher-D3161-B1 systemd[1319]: shadowmaker-discord-agent-router.service: Main process exited, code=exited, status=1/FAILURE
+Mai 07 19:18:31 schattenmacher-D3161-B1 systemd[1319]: shadowmaker-discord-agent-router.service: Failed with result 'exit-code'.
+Mai 07 19:18:42 schattenmacher-D3161-B1 systemd[1319]: shadowmaker-discord-agent-router.service: Scheduled restart job, restart counter is at 38.
+Mai 07 19:18:42 schattenmacher-D3161-B1 systemd[1319]: Started shadowmaker-discord-agent-router.service - Shadowmaker Discord Agent Router.
+Mai 07 19:18:42 schattenmacher-D3161-B1 run_discord_agent_router.sh[11255]: Traceback (most recent call last):
+Mai 07 19:18:42 schattenmacher-D3161-B1 run_discord_agent_router.sh[11255]:   File "/home/schattenmacher/openclaw_training/mission_control/discord_agent_router/discord_agent_router.py", line 237, in <module>
+Mai 07 19:18:42 schattenmacher-D3161-B1 run_discord_agent_router.sh[11255]:     @tree.command(name="ask", description="Freie Frage an den lokalen Shadowmaker Agent")
+Mai 07 19:18:42 schattenmacher-D3161-B1 run_discord_agent_router.sh[11255]:      ^^^^
+Mai 07 19:18:42 schattenmacher-D3161-B1 run_discord_agent_router.sh[11255]: NameError: name 'tree' is not defined. Did you mean: 'True'?
+Mai 07 19:18:42 schattenmacher-D3161-B1 systemd[1319]: shadowmaker-discord-agent-router.service: Main process exited, code=exited, status=1/FAILURE
+Mai 07 19:18:42 schattenmacher-D3161-B1 systemd[1319]: shadowmaker-discord-agent-router.service: Failed with result 'exit-code'.
+Mai 07 19:18:52 schattenmacher-D3161-B1 systemd[1319]: shadowmaker-discord-agent-router.service: Scheduled restart job, restart counter is at 39.
+Mai 07 19:18:52 schattenmacher-D3161-B1 systemd[1319]: Started shadowmaker-discord-agent-router.service - Shadowmaker Discord Agent Router.
+Mai 07 19:18:53 schattenmacher-D3161-B1 run_discord_agent_router.sh[11377]: Traceback (most recent call last):
+Mai 07 19:18:53 schattenmacher-D3161-B1 run_discord_agent_router.sh[11377]:   File "/home/schattenmacher/openclaw_training/mission_control/discord_agent_router/discord_agent_router.py", line 237, in <module>
+Mai 07 19:18:53 schattenmacher-D3161-B1 run_discord_agent_router.sh[11377]:     @tree.command(name="ask", description="Freie Frage an den lokalen Shadowmaker Agent")
+Mai 07 19:18:53 schattenmacher-D3161-B1 run_discord_agent_router.sh[11377]:      ^^^^
+Mai 07 19:18:53 schattenmacher-D3161-B1 run_discord_agent_router.sh[11377]: NameError: name 'tree' is not defined. Did you mean: 'True'?
+Mai 07 19:18:53 schattenmacher-D3161-B1 systemd[1319]: shadowmaker-discord-agent-router.service: Main process exited, code=exited, status=1/FAILURE
+Mai 07 19:18:53 schattenmacher-D3161-B1 systemd[1319]: shadowmaker-discord-agent-router.service: Failed with result 'exit-code'.
+Mai 07 19:19:03 schattenmacher-D3161-B1 systemd[1319]: shadowmaker-discord-agent-router.service: Scheduled restart job, restart counter is at 40.
+Mai 07 19:19:03 schattenmacher-D3161-B1 systemd[1319]: Started shadowmaker-discord-agent-router.service - Shadowmaker Discord Agent Router.
+Mai 07 19:19:03 schattenmacher-D3161-B1 run_discord_agent_router.sh[11524]: Traceback (most recent call last):
+Mai 07 19:19:03 schattenmacher-D3161-B1 run_discord_agent_router.sh[11524]:   File "/home/schattenmacher/openclaw_training/mission_control/discord_agent_router/discord_agent_router.py", line 237, in <module>
+Mai 07 19:19:03 schattenmacher-D3161-B1 run_discord_agent_router.sh[11524]:     @tree.command(name="ask", description="Freie Frage an den lokalen Shadowmaker Agent")
+Mai 07 19:19:03 schattenmacher-D3161-B1 run_discord_agent_router.sh[11524]:      ^^^^
+Mai 07 19:19:03 schattenmacher-D3161-B1 run_discord_agent_router.sh[11524]: NameError: name 'tree' is not defined. Did you mean: 'True'?
+Mai 07 19:19:03 schattenmacher-D3161-B1 systemd[1319]: shadowmaker-discord-agent-router.service: Main process exited, code=exited, status=1/FAILURE
+Mai 07 19:19:03 schattenmacher-D3161-B1 systemd[1319]: shadowmaker-discord-agent-router.service: Failed with result 'exit-code'.
+Mai 07 19:19:13 schattenmacher-D3161-B1 systemd[1319]: shadowmaker-discord-agent-router.service: Scheduled restart job, restart counter is at 41.
+Mai 07 19:19:13 schattenmacher-D3161-B1 systemd[1319]: Started shadowmaker-discord-agent-router.service - Shadowmaker Discord Agent Router.
+Mai 07 19:19:13 schattenmacher-D3161-B1 run_discord_agent_router.sh[11614]: Traceback (most recent call last):
+Mai 07 19:19:13 schattenmacher-D3161-B1 run_discord_agent_router.sh[11614]:   File "/home/schattenmacher/openclaw_training/mission_control/discord_agent_router/discord_agent_router.py", line 237, in <module>
+Mai 07 19:19:13 schattenmacher-D3161-B1 run_discord_agent_router.sh[11614]:     @tree.command(name="ask", description="Freie Frage an den lokalen Shadowmaker Agent")
+Mai 07 19:19:13 schattenmacher-D3161-B1 run_discord_agent_router.sh[11614]:      ^^^^
+Mai 07 19:19:13 schattenmacher-D3161-B1 run_discord_agent_router.sh[11614]: NameError: name 'tree' is not defined. Did you mean: 'True'?
+Mai 07 19:19:14 schattenmacher-D3161-B1 systemd[1319]: shadowmaker-discord-agent-router.service: Main process exited, code=exited, status=1/FAILURE
+Mai 07 19:19:14 schattenmacher-D3161-B1 systemd[1319]: shadowmaker-discord-agent-router.service: Failed with result 'exit-code'.
+Mai 07 19:19:24 schattenmacher-D3161-B1 systemd[1319]: shadowmaker-discord-agent-router.service: Scheduled restart job, restart counter is at 42.
+Mai 07 19:19:24 schattenmacher-D3161-B1 systemd[1319]: Started shadowmaker-discord-agent-router.service - Shadowmaker Discord Agent Router.
+Mai 07 19:19:24 schattenmacher-D3161-B1 run_discord_agent_router.sh[11741]: Traceback (most recent call last):
+Mai 07 19:19:24 schattenmacher-D3161-B1 run_discord_agent_router.sh[11741]:   File "/home/schattenmacher/openclaw_training/mission_control/discord_agent_router/discord_agent_router.py", line 237, in <module>
+Mai 07 19:19:24 schattenmacher-D3161-B1 run_discord_agent_router.sh[11741]:     @tree.command(name="ask", description="Freie Frage an den lokalen Shadowmaker Agent")
+Mai 07 19:19:24 schattenmacher-D3161-B1 run_discord_agent_router.sh[11741]:      ^^^^
+Mai 07 19:19:24 schattenmacher-D3161-B1 run_discord_agent_router.sh[11741]: NameError: name 'tree' is not defined. Did you mean: 'True'?
+Mai 07 19:19:24 schattenmacher-D3161-B1 systemd[1319]: shadowmaker-discord-agent-router.service: Main process exited, code=exited, status=1/FAILURE
+Mai 07 19:19:24 schattenmacher-D3161-B1 systemd[1319]: shadowmaker-discord-agent-router.service: Failed with result 'exit-code'.
+Mai 07 19:19:34 schattenmacher-D3161-B1 systemd[1319]: shadowmaker-discord-agent-router.service: Scheduled restart job, restart counter is at 43.
+Mai 07 19:19:34 schattenmacher-D3161-B1 systemd[1319]: Started shadowmaker-discord-agent-router.service - Shadowmaker Discord Agent Router.
+Mai 07 19:19:34 schattenmacher-D3161-B1 run_discord_agent_router.sh[12020]: Traceback (most recent call last):
+Mai 07 19:19:34 schattenmacher-D3161-B1 run_discord_agent_router.sh[12020]:   File "/home/schattenmacher/openclaw_training/mission_control/discord_agent_router/discord_agent_router.py", line 237, in <module>
+Mai 07 19:19:34 schattenmacher-D3161-B1 run_discord_agent_router.sh[12020]:     @tree.command(name="ask", description="Freie Frage an den lokalen Shadowmaker Agent")
+Mai 07 19:19:34 schattenmacher-D3161-B1 run_discord_agent_router.sh[12020]:      ^^^^
+Mai 07 19:19:34 schattenmacher-D3161-B1 run_discord_agent_router.sh[12020]: NameError: name 'tree' is not defined. Did you mean: 'True'?
+Mai 07 19:19:34 schattenmacher-D3161-B1 systemd[1319]: shadowmaker-discord-agent-router.service: Main process exited, code=exited, status=1/FAILURE
+Mai 07 19:19:34 schattenmacher-D3161-B1 systemd[1319]: shadowmaker-discord-agent-router.service: Failed with result 'exit-code'.
+Mai 07 19:19:45 schattenmacher-D3161-B1 systemd[1319]: shadowmaker-discord-agent-router.service: Scheduled restart job, restart counter is at 44.
+Mai 07 19:19:45 schattenmacher-D3161-B1 systemd[1319]: Started shadowmaker-discord-agent-router.service - Shadowmaker Discord Agent Router.
+Mai 07 19:19:45 schattenmacher-D3161-B1 run_discord_agent_router.sh[12099]: Traceback (most recent call last):
+Mai 07 19:19:45 schattenmacher-D3161-B1 run_discord_agent_router.sh[12099]:   File "/home/schattenmacher/openclaw_training/mission_control/discord_agent_router/discord_agent_router.py", line 237, in <module>
+Mai 07 19:19:45 schattenmacher-D3161-B1 run_discord_agent_router.sh[12099]:     @tree.command(name="ask", description="Freie Frage an den lokalen Shadowmaker Agent")
+Mai 07 19:19:45 schattenmacher-D3161-B1 run_discord_agent_router.sh[12099]:      ^^^^
+Mai 07 19:19:45 schattenmacher-D3161-B1 run_discord_agent_router.sh[12099]: NameError: name 'tree' is not defined. Did you mean: 'True'?
+Mai 07 19:19:45 schattenmacher-D3161-B1 systemd[1319]: shadowmaker-discord-agent-router.service: Main process exited, code=exited, status=1/FAILURE
+Mai 07 19:19:45 schattenmacher-D3161-B1 systemd[1319]: shadowmaker-discord-agent-router.service: Failed with result 'exit-code'.
+Mai 07 19:19:55 schattenmacher-D3161-B1 systemd[1319]: shadowmaker-discord-agent-router.service: Scheduled restart job, restart counter is at 45.
+Mai 07 19:19:55 schattenmacher-D3161-B1 systemd[1319]: Started shadowmaker-discord-agent-router.service - Shadowmaker Discord Agent Router.
+Mai 07 19:19:55 schattenmacher-D3161-B1 run_discord_agent_router.sh[12213]: Traceback (most recent call last):
+Mai 07 19:19:55 schattenmacher-D3161-B1 run_discord_agent_router.sh[12213]:   File "/home/schattenmacher/openclaw_training/mission_control/discord_agent_router/discord_agent_router.py", line 237, in <module>
+Mai 07 19:19:55 schattenmacher-D3161-B1 run_discord_agent_router.sh[12213]:     @tree.command(name="ask", description="Freie Frage an den lokalen Shadowmaker Agent")
+Mai 07 19:19:55 schattenmacher-D3161-B1 run_discord_agent_router.sh[12213]:      ^^^^
+Mai 07 19:19:55 schattenmacher-D3161-B1 run_discord_agent_router.sh[12213]: NameError: name 'tree' is not defined. Did you mean: 'True'?
+Mai 07 19:19:55 schattenmacher-D3161-B1 systemd[1319]: shadowmaker-discord-agent-router.service: Main process exited, code=exited, status=1/FAILURE
+Mai 07 19:19:55 schattenmacher-D3161-B1 systemd[1319]: shadowmaker-discord-agent-router.service: Failed with result 'exit-code'.
+Mai 07 19:20:05 schattenmacher-D3161-B1 systemd[1319]: Stopped shadowmaker-discord-agent-router.service - Shadowmaker Discord Agent Router.
+Mai 07 19:20:07 schattenmacher-D3161-B1 systemd[1319]: Started shadowmaker-discord-agent-router.service - Shadowmaker Discord Agent Router.
+Mai 07 19:20:08 schattenmacher-D3161-B1 run_discord_agent_router.sh[12385]: [2026-05-07 19:20:08] [INFO    ] discord.client: logging in using static token
+Mai 07 19:20:10 schattenmacher-D3161-B1 run_discord_agent_router.sh[12385]: [2026-05-07 19:20:10] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: d8d2a6b09343fb25ebc181959043ddb9).
+Mai 07 19:20:12 schattenmacher-D3161-B1 run_discord_agent_router.sh[12385]: READY Shadowmaker Control Bot#2213 guilds=1 stable_readonly=yes
+Mai 07 19:21:43 schattenmacher-D3161-B1 systemd[1319]: Stopping shadowmaker-discord-agent-router.service - Shadowmaker Discord Agent Router...
+Mai 07 19:21:43 schattenmacher-D3161-B1 systemd[1319]: Stopped shadowmaker-discord-agent-router.service - Shadowmaker Discord Agent Router.
+Mai 07 19:23:16 schattenmacher-D3161-B1 systemd[1319]: Started shadowmaker-discord-agent-router.service - Shadowmaker Discord Agent Router.
+Mai 07 19:23:16 schattenmacher-D3161-B1 run_discord_agent_router.sh[15588]: [2026-05-07 19:23:16] [INFO    ] discord.client: logging in using static token
+Mai 07 19:23:19 schattenmacher-D3161-B1 run_discord_agent_router.sh[15588]: [2026-05-07 19:23:19] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: bd11474f9d7eb85c999b0dcb297d6e05).
+Mai 07 19:23:21 schattenmacher-D3161-B1 run_discord_agent_router.sh[15588]: READY Shadowmaker Control Bot#2213 guilds=1 stable_readonly=yes
+Mai 07 19:24:41 schattenmacher-D3161-B1 run_discord_agent_router.sh[15588]: APP_COMMAND_ERROR CommandInvokeError: Command 'ask' raised an exception: NameError: name 'asyncio' is not defined
+Mai 07 19:26:10 schattenmacher-D3161-B1 systemd[1319]: Stopping shadowmaker-discord-agent-router.service - Shadowmaker Discord Agent Router...
+Mai 07 19:26:10 schattenmacher-D3161-B1 systemd[1319]: Stopped shadowmaker-discord-agent-router.service - Shadowmaker Discord Agent Router.
+Mai 07 19:26:10 schattenmacher-D3161-B1 systemd[1319]: Started shadowmaker-discord-agent-router.service - Shadowmaker Discord Agent Router.
+Mai 07 19:26:11 schattenmacher-D3161-B1 run_discord_agent_router.sh[18205]: [2026-05-07 19:26:11] [INFO    ] discord.client: logging in using static token
+Mai 07 19:26:13 schattenmacher-D3161-B1 run_discord_agent_router.sh[18205]: [2026-05-07 19:26:13] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: dd3c189d6c7ac660608c93e4982bfa4a).
+Mai 07 19:26:15 schattenmacher-D3161-B1 run_discord_agent_router.sh[18205]: READY Shadowmaker Control Bot#2213 guilds=1 stable_readonly=yes

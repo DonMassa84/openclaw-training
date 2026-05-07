@@ -1,0 +1,14 @@
+● shadowmaker-discord-agent-router.service - Shadowmaker Discord Agent Router
+     Loaded: loaded (/home/schattenmacher/.config/systemd/user/shadowmaker-discord-agent-router.service; enabled; preset: enabled)
+     Active: active (running) since Thu 2026-05-07 19:26:10 CEST; 2min 47s ago
+   Main PID: 18205 (python)
+      Tasks: 3 (limit: 37946)
+     Memory: 30.6M (peak: 41.3M)
+        CPU: 687ms
+     CGroup: /user.slice/user-1000.slice/user@1000.service/app.slice/shadowmaker-discord-agent-router.service
+             └─18205 /home/schattenmacher/openclaw_training/mission_control/discord_agent_router/.venv/bin/python /home/schattenmacher/openclaw_training/mission_control/discord_agent_router/discord_agent_router.py
+
+Mai 07 19:26:10 schattenmacher-D3161-B1 systemd[1319]: Started shadowmaker-discord-agent-router.service - Shadowmaker Discord Agent Router.
+Mai 07 19:26:11 schattenmacher-D3161-B1 run_discord_agent_router.sh[18205]: [2026-05-07 19:26:11] [INFO    ] discord.client: logging in using static token
+Mai 07 19:26:13 schattenmacher-D3161-B1 run_discord_agent_router.sh[18205]: [2026-05-07 19:26:13] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: dd3c189d6c7ac660608c93e4982bfa4a).
+Mai 07 19:26:15 schattenmacher-D3161-B1 run_discord_agent_router.sh[18205]: READY Shadowmaker Control Bot#2213 guilds=1 stable_readonly=yes
