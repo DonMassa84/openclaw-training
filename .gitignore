@@ -64,3 +64,14 @@ mission_control/mail_briefing/config/*credentials*.json
 *.env.*
 *credentials*.json
 *token*.json
+mission_control/discord/*.env
+mission_control/discord/*.env.*
+mission_control/discord/discord_channel_create_result_*.json
+mission_control/docs/home_script_inventory/
+mission_control/docs/home_script_inventory/*.tsv
+mission_control/docs/home_script_inventory/*.json
+mission_control/docs/home_script_inventory/*.txt
+**/*credentials*.json
+**/*token*.json
+**/*.env
+**/*.env.*

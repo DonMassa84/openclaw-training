@@ -3,7 +3,7 @@
 Webhook-URL ist nicht Bot-Token.
 
 Webhook:
-https://discord.com/api/webhooks/ZAHLEN/TOKEN
+DISCORD_WEBHOOK_URL=***REDACTED***
 
 Bot Token:
 echter Token aus Discord Developer Portal, keine URL.
