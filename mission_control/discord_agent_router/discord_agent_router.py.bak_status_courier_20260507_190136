@@ -76,7 +76,7 @@ def cmd(cmdline: str, timeout: int = 6) -> str:
 def compact_status() -> str:
     failed = cmd("systemctl --user --failed --no-pager | head -20", 5)
     timers = cmd("systemctl --user list-timers --all --no-pager | grep -E 'openclaw|shadowmaker|security|shadowops|NEXT|LEFT' || true", 5)
-    webui = cmd("curl -I --max-time 3 http://127.0.0.1:3000 2>&1 | head -8 || true", 4)
+    webui = cmd("curl -I --max-time 3 http://127.0.0.1:4173 2>&1 | head -8 || true", 4)
     courier_file = LATEST_FILES["courier"]
     courier = "Courier latest nicht vorhanden."
     if courier_file.exists():

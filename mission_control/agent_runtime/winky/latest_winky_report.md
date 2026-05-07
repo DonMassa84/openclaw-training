@@ -1,6 +1,6 @@
 # Winky System Monitor Report
 
-Stand: Do 7. Mai 18:19:37 CEST 2026
+Stand: Do 7. Mai 18:45:05 CEST 2026
 
 ## Rolle
 
@@ -17,14 +17,14 @@ Mission Control WebUI: WARN
 ## Uptime
 
 ```text
- 18:19:37 up  5:36,  1 user,  load average: 4,54, 5,66, 6,53
+ 18:45:05 up  6:02,  1 user,  load average: 3,95, 7,21, 7,80
 ```
 
 ## RAM
 
 ```text
                gesamt       benutzt     frei      gemns.  Puffer/Cache verfügbar
-Speicher:       31Gi        13Gi       3,3Gi       304Mi        15Gi        17Gi
+Speicher:       31Gi        12Gi       5,4Gi       319Mi        14Gi        18Gi
 Auslager:      2,0Gi       8,0Ki       2,0Gi
 ```
 
@@ -49,13 +49,13 @@ open-webui | Up 5 hours (healthy) | 0.0.0.0:3000->8080/tcp, [::]:3000->8080/tcp
 ## Relevante Ports
 
 ```text
-tcp   LISTEN 0      4096       127.0.0.1:18789      0.0.0.0:*                                        
-tcp   LISTEN 0      4096         0.0.0.0:3000       0.0.0.0:*                                        
-tcp   LISTEN 0      4096         0.0.0.0:3001       0.0.0.0:*                                        
-tcp   LISTEN 0      4096         0.0.0.0:5678       0.0.0.0:*                                        
-tcp   LISTEN 0      4096            [::]:3000          [::]:*                                        
-tcp   LISTEN 0      4096            [::]:3001          [::]:*                                        
-tcp   LISTEN 0      4096            [::]:5678          [::]:*                                        
+tcp   LISTEN 0      4096       127.0.0.1:18789      0.0.0.0:*                                         
+tcp   LISTEN 0      4096         0.0.0.0:3000       0.0.0.0:*                                         
+tcp   LISTEN 0      4096         0.0.0.0:3001       0.0.0.0:*                                         
+tcp   LISTEN 0      4096         0.0.0.0:5678       0.0.0.0:*                                         
+tcp   LISTEN 0      4096            [::]:3000          [::]:*                                         
+tcp   LISTEN 0      4096            [::]:3001          [::]:*                                         
+tcp   LISTEN 0      4096            [::]:5678          [::]:*                                         
 ```
 
 ## User Failed Services
@@ -83,13 +83,13 @@ Legend: LOAD   → Reflects whether the unit definition was properly loaded.
 
 ```text
 NEXT                             LEFT LAST                               PASSED UNIT                                     ACTIVATES
-Thu 2026-05-07 18:20:52 CEST 1min 14s Thu 2026-05-07 18:18:52 CEST      45s ago monitor-apply-fixed.timer                monitor-apply-fixed.service
-Thu 2026-05-07 18:21:12 CEST 1min 34s Thu 2026-05-07 18:16:12 CEST 3min 25s ago monitor-color-guard.timer                monitor-color-guard.service
-Thu 2026-05-07 19:30:00 CEST 1h 10min Wed 2026-05-06 19:30:00 CEST            - monitor-color-warm.timer                 monitor-color@warm.service
-Thu 2026-05-07 21:00:00 CEST 2h 40min Thu 2026-05-07 09:00:01 CEST            - openclaw-security-health.timer           openclaw-security-health.service
-Thu 2026-05-07 21:00:09 CEST 2h 40min Thu 2026-05-07 09:01:24 CEST            - shadowmaker-security-audit-discord.timer shadowmaker-security-audit-discord.service
-Fri 2026-05-08 08:30:00 CEST      14h Thu 2026-05-07 08:30:01 CEST            - monitor-color-neutral.timer              monitor-color@neutral.service
-Fri 2026-05-08 12:48:16 CEST      18h Thu 2026-05-07 12:48:16 CEST 5h 31min ago launchpadlib-cache-clean.timer           launchpadlib-cache-clean.service
+Thu 2026-05-07 18:46:15 CEST 1min 10s Thu 2026-05-07 18:41:15 CEST 3min 49s ago monitor-color-guard.timer                monitor-color-guard.service
+Thu 2026-05-07 18:47:03 CEST 1min 58s Thu 2026-05-07 18:45:03 CEST       1s ago monitor-apply-fixed.timer                monitor-apply-fixed.service
+Thu 2026-05-07 19:30:00 CEST    44min Wed 2026-05-06 19:30:00 CEST            - monitor-color-warm.timer                 monitor-color@warm.service
+Thu 2026-05-07 21:00:00 CEST 2h 14min Thu 2026-05-07 09:00:01 CEST            - openclaw-security-health.timer           openclaw-security-health.service
+Thu 2026-05-07 21:01:38 CEST 2h 16min Thu 2026-05-07 09:01:24 CEST            - shadowmaker-security-audit-discord.timer shadowmaker-security-audit-discord.service
+Fri 2026-05-08 08:30:00 CEST      13h Thu 2026-05-07 08:30:01 CEST            - monitor-color-neutral.timer              monitor-color@neutral.service
+Fri 2026-05-08 12:48:16 CEST      18h Thu 2026-05-07 12:48:16 CEST 5h 56min ago launchpadlib-cache-clean.timer           launchpadlib-cache-clean.service
 7 timers listed.
 ```
 
@@ -110,7 +110,7 @@ Last-Modified: Tue, 14 Apr 2026 11:32:51 GMT
 ETag: W/"c46-19d8bc3feb8"
 Content-Type: text/html; charset=UTF-8
 Content-Length: 3142
-Date: Thu, 07 May 2026 16:19:37 GMT
+Date: Thu, 07 May 2026 16:45:05 GMT
 Connection: keep-alive
 ```
 
@@ -125,7 +125,7 @@ ETag: W/"4066-19e02295994"
 Content-Type: text/html; charset=utf-8
 Content-Length: 16486
 Vary: Accept-Encoding
-Date: Thu, 07 May 2026 16:19:37 GMT
+Date: Thu, 07 May 2026 16:45:05 GMT
 Connection: keep-alive
 ```
 
