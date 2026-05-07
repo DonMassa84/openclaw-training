@@ -54,3 +54,13 @@ mission_control/webui/node_modules/
 **/.next/
 dist/
 build/
+mission_control/discord_agent_router/config/*.env
+mission_control/discord_agent_router/config/*.env.*
+mission_control/discord_agent_router/config/*.bak.*
+mission_control/mail_briefing/config/gmail_credentials.json
+mission_control/mail_briefing/config/*credentials*.json
+*.env
+*.env.local
+*.env.*
+*credentials*.json
+*token*.json
