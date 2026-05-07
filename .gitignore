@@ -83,3 +83,5 @@ docs/status/**/telegram*.env*
 docs/status/**/gmail_credentials.json
 **/config_redacted/
 **/config_redacted/*
+docs/status/*home_script_inventory*
+docs/status/*inventory_status*
