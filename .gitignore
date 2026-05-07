@@ -47,3 +47,10 @@ cache/
 .mypy_cache/
 .ruff_cache/
 .DS_Store
+node_modules/
+**/node_modules/
+mission_control/webui/node_modules/
+.next/
+**/.next/
+dist/
+build/
