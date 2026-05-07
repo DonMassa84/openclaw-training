@@ -4,7 +4,7 @@ import re
 import subprocess
 import traceback
 from pathlib import Path
-from typing import List, Tuple
+from typing import Tuple
 
 import discord
 from discord import app_commands
@@ -17,7 +17,7 @@ load_dotenv(ENV_FILE)
 
 TOKEN = os.getenv("DISCORD_BOT_TOKEN", "").strip()
 MAX_OUTPUT = int(os.getenv("ROUTER_MAX_OUTPUT_CHARS", "1800"))
-TIMEOUT = int(os.getenv("ROUTER_TIMEOUT_SECONDS", "75"))
+TIMEOUT = int(os.getenv("ROUTER_TIMEOUT_SECONDS", "60"))
 
 def parse_ids(value: str) -> set[int]:
     out = set()
@@ -82,37 +82,29 @@ async def allowed(interaction: discord.Interaction) -> bool:
     channel_id = interaction.channel_id
 
     if ALLOWED_USERS and user_id not in ALLOWED_USERS:
-        msg = (
-            f"Nicht autorisiert.\n"
-            f"Deine echte Discord User ID ist: `{user_id}`\n"
-            f"User: `{user_name}`\n"
-            f"Channel ID: `{channel_id}`"
+        await interaction.response.send_message(
+            f"Nicht autorisiert.\nDeine echte Discord User ID ist: `{user_id}`\nUser: `{user_name}`\nChannel ID: `{channel_id}`",
+            ephemeral=True,
         )
         print(f"UNAUTHORIZED_USER id={user_id} name={user_name} channel={channel_id}", flush=True)
-        await interaction.response.send_message(msg, ephemeral=True)
         return False
 
     if ALLOWED_CHANNELS and channel_id not in ALLOWED_CHANNELS:
-        msg = (
-            f"Channel nicht autorisiert.\n"
-            f"Channel ID: `{channel_id}`\n"
-            f"User ID: `{user_id}`"
+        await interaction.response.send_message(
+            f"Channel nicht autorisiert.\nChannel ID: `{channel_id}`\nUser ID: `{user_id}`",
+            ephemeral=True,
         )
         print(f"UNAUTHORIZED_CHANNEL user={user_id} channel={channel_id}", flush=True)
-        await interaction.response.send_message(msg, ephemeral=True)
         return False
 
     return True
 
-async def send_safe(interaction: discord.Interaction, text: str, ephemeral: bool = False):
+async def channel_send(channel, text: str):
     text = trim(text, 1900)
     try:
-        if interaction.response.is_done():
-            await interaction.followup.send(text, ephemeral=ephemeral)
-        else:
-            await interaction.response.send_message(text, ephemeral=ephemeral)
+        await channel.send(text)
     except Exception as exc:
-        print(f"SEND_ERROR {type(exc).__name__}: {exc}", flush=True)
+        print(f"CHANNEL_SEND_ERROR {type(exc).__name__}: {exc}", flush=True)
 
 async def run_script(name: str) -> Tuple[int, str]:
     script = PATHS.get(name)
@@ -143,7 +135,7 @@ async def run_script(name: str) -> Tuple[int, str]:
             pass
         return 124, f"Timeout nach {TIMEOUT}s: {name}"
 
-def run_cmd(cmd: str, timeout: int = 15) -> str:
+def run_cmd(cmd: str, timeout: int = 12) -> str:
     try:
         return subprocess.run(
             ["bash", "-lc", cmd],
@@ -156,21 +148,21 @@ def run_cmd(cmd: str, timeout: int = 15) -> str:
         return f"CMD_ERROR {type(exc).__name__}: {exc}"
 
 def status_text() -> str:
-    failed = run_cmd("systemctl --user --failed --no-pager", 15)
-    timers = run_cmd("systemctl --user list-timers --all --no-pager | grep -E 'winky|mnemosyne|courier|openclaw|shadowmaker|security|shadowops|NEXT|LEFT' || true", 15)
-    webui = run_cmd("curl -I --max-time 5 http://127.0.0.1:4173 2>&1 | head -20 || true", 10)
-    courier_status = run_cmd("source ~/.bashrc >/dev/null 2>&1 || true; courier-status 2>&1 | grep -E 'Status:|Read-only:|Gesamt:|P1:|P2:|P3:|Fehler:' -A1 || true", 20)
+    failed = run_cmd("systemctl --user --failed --no-pager", 10)
+    timers = run_cmd("systemctl --user list-timers --all --no-pager | grep -E 'openclaw|shadowmaker|security|shadowops|winky|mnemosyne|courier|NEXT|LEFT' || true", 10)
+    webui = run_cmd("curl -I --max-time 5 http://127.0.0.1:4173 2>&1 | head -20 || true", 8)
+    courier = run_cmd("source ~/.bashrc >/dev/null 2>&1 || true; courier-status 2>&1 | grep -E 'Status:|Read-only:|Gesamt:|P1:|P2:|P3:|Fehler:' -A1 || true", 12)
 
     return trim(
-        "# Shadowmaker Status\n\n"
-        "## User Failed\n"
+        "**Shadowmaker Status**\n\n"
+        "**User Failed**\n"
         f"```text\n{failed}\n```\n"
-        "## Timer\n"
+        "**Timer**\n"
         f"```text\n{timers}\n```\n"
-        "## WebUI\n"
+        "**WebUI**\n"
         f"```text\n{webui}\n```\n"
-        "## Courier\n"
-        f"```text\n{courier_status}\n```",
+        "**Courier**\n"
+        f"```text\n{courier}\n```",
         1800,
     )
 
@@ -204,14 +196,17 @@ client = ShadowmakerClient()
 
 @client.event
 async def on_ready():
-    print(f"READY {client.user} guilds={len(client.guilds)} slash_commands_synced=yes", flush=True)
+    print(f"READY {client.user} guilds={len(client.guilds)} slash_commands_synced=yes immediate_ack=yes", flush=True)
 
 @client.tree.error
 async def on_app_command_error(interaction: discord.Interaction, error: app_commands.AppCommandError):
     print("APP_COMMAND_ERROR:", repr(error), flush=True)
     traceback.print_exception(type(error), error, error.__traceback__)
     try:
-        await send_safe(interaction, f"Fehler im Router: `{type(error).__name__}`", ephemeral=True)
+        if interaction.response.is_done():
+            await interaction.followup.send(f"Routerfehler: `{type(error).__name__}`", ephemeral=True)
+        else:
+            await interaction.response.send_message(f"Routerfehler: `{type(error).__name__}`", ephemeral=True)
     except Exception:
         pass
 
@@ -225,31 +220,35 @@ async def slash_hilfe(interaction: discord.Interaction):
 async def slash_status(interaction: discord.Interaction):
     if not await allowed(interaction):
         return
-    await interaction.response.defer(thinking=True, ephemeral=False)
-    text = await asyncio.to_thread(status_text)
-    await interaction.followup.send(trim(text, 1900))
+    await interaction.response.send_message("✅ `/status` angenommen. Ergebnis folgt im Channel.", ephemeral=True)
+    async def job():
+        text = await asyncio.to_thread(status_text)
+        await channel_send(interaction.channel, text)
+    asyncio.create_task(job())
 
-async def run_agent_interaction(interaction: discord.Interaction, name: str):
-    if not await allowed(interaction):
-        return
-
-    await interaction.response.defer(thinking=True, ephemeral=False)
-
+async def run_agent_background(channel, name: str):
     try:
+        await channel_send(channel, f"⚙️ `{name}` gestartet.")
         code, output = await run_script(name)
         latest = LATEST_FILES.get(name)
         latest_text = read_text(latest, 1200) if latest else ""
         body = latest_text or output
         response = (
-            f"**{name} fertig**\n"
+            f"✅ **{name} fertig**\n"
             f"Exit: `{code}`\n"
             f"Latest: `{latest}`\n\n"
             f"```text\n{trim(body, 1400)}\n```"
         )
-        await interaction.followup.send(trim(response, 1900))
+        await channel_send(channel, response)
     except Exception as exc:
-        print(f"RUN_AGENT_ERROR {name}: {type(exc).__name__}: {exc}", flush=True)
-        await interaction.followup.send(f"Agent `{name}` Fehler: `{type(exc).__name__}`")
+        print(f"BACKGROUND_AGENT_ERROR {name}: {type(exc).__name__}: {exc}", flush=True)
+        await channel_send(channel, f"❌ Agent `{name}` Fehler: `{type(exc).__name__}`")
+
+async def run_agent_interaction(interaction: discord.Interaction, name: str):
+    if not await allowed(interaction):
+        return
+    await interaction.response.send_message(f"✅ `/{name}` angenommen. Agent läuft im Hintergrund.", ephemeral=True)
+    asyncio.create_task(run_agent_background(interaction.channel, name))
 
 @client.tree.command(name="winky", description="Winky Systemmonitor ausführen")
 async def slash_winky(interaction: discord.Interaction):

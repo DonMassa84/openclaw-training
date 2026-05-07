@@ -138,3 +138,11 @@ Duplikate, Cache, Browserdaten, Finanzdaten und Behördenunterlagen werden nicht
 | DISCORD-NOHANG-001 | Discord | No-Hang Patch anwenden | Linky | erledigt | /status |
 | DISCORD-NOHANG-002 | Discord | Winky testen | User | offen | /winky |
 | DISCORD-NOHANG-003 | Discord | Latest testen | User | offen | /latest agent:winky |
+
+## 2026-05-07 – Discord Router Immediate Ack
+
+| ID | Bereich | Aufgabe | Owner | Status | Kontrolle |
+|---|---|---|---|---|---|
+| DISCORD-ACK-001 | Discord | Immediate Ack Patch anwenden | Linky | erledigt | /status |
+| DISCORD-ACK-002 | Discord | Latest testen | User | offen | /latest agent:winky |
+| DISCORD-ACK-003 | Discord | Winky testen | User | offen | /winky |

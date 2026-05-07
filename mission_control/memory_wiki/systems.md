@@ -163,3 +163,10 @@ Schrittweise Aktivierung, read-only bzw. kontrolliertes Memory-Wiki-Schreiben.
 - Agentenläufe haben Timeout.
 - Fehler werden zurückgemeldet statt bei 'denkt nach' hängen zu bleiben.
 - Status: /home/schattenmacher/openclaw_training/docs/status/latest_discord_router_no_hang_status.md
+
+## 2026-05-07 – Discord Router Immediate Ack Repair
+
+- Discord Router wurde auf Immediate-Ack-Modus umgestellt.
+- Slash Commands antworten sofort.
+- Ergebnisse werden im Channel gepostet.
+- Status: /home/schattenmacher/openclaw_training/docs/status/latest_discord_router_immediate_ack_status.md
