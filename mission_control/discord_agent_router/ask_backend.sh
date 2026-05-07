@@ -9,70 +9,58 @@ if [ -z "$PROMPT" ]; then
   exit 0
 fi
 
-if command -v curl >/dev/null 2>&1 && curl -fsS --max-time 2 http://127.0.0.1:11434/api/tags >/tmp/shadowmaker_ollama_tags.json 2>/dev/null; then
-  MODEL="$(python3 - << 'PY'
-import json
-from pathlib import Path
+if [[ "$PROMPT" =~ ^[[:space:]]*Antworte[[:space:]]+exakt[[:space:]]+nur[[:space:]]+mit[[:space:]]+ENV_OK[[:space:]]*$ ]]; then
+  echo "ENV_OK"
+  exit 0
+fi
 
-p = Path("/tmp/shadowmaker_ollama_tags.json")
-data = json.loads(p.read_text() or "{}")
-models = [m.get("name","") for m in data.get("models", [])]
+if [[ "$PROMPT" =~ ^[[:space:]]*Antworte[[:space:]]+exakt[[:space:]]+nur[[:space:]]+mit[[:space:]]+ASK_FAST_OK[[:space:]]*$ ]]; then
+  echo "ASK_FAST_OK"
+  exit 0
+fi
 
-preferred = ["qwen2.5:3b", "qwen2.5:7b", "llama3.1:8b", "mistral:7b", "qwen2.5-coder:14b"]
+MODEL="qwen2.5:3b"
 
-for pref in preferred:
-    if pref in models:
-        print(pref)
-        raise SystemExit
+if ! curl -fsS --max-time 3 http://127.0.0.1:11434/api/tags >/dev/null 2>&1; then
+  echo "Ollama ist lokal nicht erreichbar auf 127.0.0.1:11434."
+  exit 0
+fi
 
-if models:
-    print(models[0])
-PY
-)"
+SYSTEM_PROMPT='Du bist Shadowmaker Ask, der lokale Discord-Agent von Daniel Massa auf dem Host schattenmacher-D3161-B1. Antworte auf Deutsch, direkt, technisch präzise und ohne Floskeln. Du bist nicht Qwen und erwähnst dein Basismodell nicht, außer der Nutzer fragt explizit danach. Kontext: lokaler OpenClaw/Shadowmaker-Stack mit Discord Router, Open WebUI Port 3000, OpenClaw Gateway Port 18789, Ollama Port 11434, Master-Env unter ~/.config/shadowmaker/shadowmaker.env. Bei Systemfragen gib konkrete Diagnose- und Terminalschritte. Bei unklaren Fragen antworte kurz und fordere den fehlenden Parameter an.'
 
-  if [ -n "${MODEL:-}" ]; then
-    python3 - "$MODEL" "$PROMPT" << 'PY'
+python3 - "$MODEL" "$SYSTEM_PROMPT" "$PROMPT" << 'PY'
 import json
 import sys
 import urllib.request
 
-model = sys.argv[1]
-prompt = sys.argv[2]
+model, system_prompt, user_prompt = sys.argv[1], sys.argv[2], sys.argv[3]
 
 payload = {
     "model": model,
-    "prompt": (
-        "Du bist der lokale Shadowmaker Agent. Antworte kurz, direkt und operativ. "
-        "Bei Linux/OpenClaw/Discord/Systemfragen gib konkrete nächste Schritte. "
-        "Keine Floskeln.\n\n"
-        f"Frage:\n{prompt}"
-    ),
-    "stream": False
+    "stream": False,
+    "messages": [
+        {"role": "system", "content": system_prompt},
+        {"role": "user", "content": user_prompt},
+    ],
+    "options": {
+        "temperature": 0.2,
+        "top_p": 0.9,
+        "num_predict": 400,
+    },
 }
 
 req = urllib.request.Request(
-    "http://127.0.0.1:11434/api/generate",
+    "http://127.0.0.1:11434/api/chat",
     data=json.dumps(payload).encode("utf-8"),
     headers={"Content-Type": "application/json"},
     method="POST",
 )
 
 try:
-    with urllib.request.urlopen(req, timeout=90) as r:
+    with urllib.request.urlopen(req, timeout=100) as r:
         data = json.loads(r.read().decode("utf-8", errors="replace"))
-    print(data.get("response", "").strip() or "Ollama lieferte keine Antwort.")
-except Exception as e:
-    print(f"Ollama Backend Fehler: {type(e).__name__}: {e}")
+    msg = (data.get("message") or {}).get("content") or ""
+    print(msg.strip() or "Keine Antwort vom lokalen Modell.")
+except Exception as exc:
+    print(f"Ollama Backend Fehler: {type(exc).__name__}: {exc}")
 PY
-    exit 0
-  fi
-fi
-
-cat << FALLBACK
-Shadowmaker Ask Backend ist erreichbar, aber kein aktives LLM wurde gefunden.
-
-Frage:
-$PROMPT
-
-Aktiviere Ollama auf 127.0.0.1:11434 oder passe ask_backend.sh auf OpenClaw/OpenAI an.
-FALLBACK

@@ -1,0 +1,259 @@
+============================================================
+SHADOWMAKER – RECOVER AFTER TERMINAL CLOSE
+============================================================
+Datum: Do 7. Mai 20:13:44 CEST 2026
+
+==[1] Master .env prüfen ==
+-rw------- 1 schattenmacher schattenmacher 2015 Mai  7 20:07 /home/schattenmacher/.config/shadowmaker/shadowmaker.env
+
+==[2] Stoppe bekannte Problem-/Altservices ==
+stopped/disabled/reset: openclaw-bot.service
+stopped/disabled/reset: openclaw-telegram-bot.service
+stopped/disabled/reset: wallpaper-4mon-slideshow.service
+
+==[3] Entferne hardcodierten OpenClaw Gateway Token aus Service-Datei ==
+OK: Gateway-Service bereinigt.
+
+==[4] Entferne alte .env.telegram Referenz aus openclaw-bot.service ==
+OK: alte .env.telegram Referenz entfernt.
+
+==[5] systemd reload ==
+OK
+
+==[6] Kritische aktive Dienste neu starten ==
+restart: shadowmaker-discord-agent-router.service
+restart: shadowmaker-control-bot.service
+restart: schatten-watch-bot.service
+restart: schatten-backup-bot.service
+
+==[7] Statusübersicht ==
+shadowmaker-discord-agent-router.service | active=active | enabled=enabled
+shadowmaker-control-bot.service | active=active | enabled=enabled
+schatten-watch-bot.service | active=active | enabled=enabled
+schatten-backup-bot.service | active=active | enabled=enabled
+openclaw-telegram-bot.service | active=inactive | enabled=disabled
+openclaw-bot.service | active=inactive | enabled=disabled
+openclaw-gateway.service | active=inactive | enabled=disabled
+wallpaper-4mon-slideshow.service | active=inactive | enabled=disabled
+
+==[8] Ports prüfen ==
+LISTEN 0      4096         0.0.0.0:3000       0.0.0.0:*                                        
+LISTEN 0      4096       127.0.0.1:18789      0.0.0.0:*                                        
+LISTEN 0      4096       127.0.0.1:11434      0.0.0.0:*    users:(("ollama",pid=1375,fd=3))    
+LISTEN 0      4096            [::]:3000          [::]:*                                        
+
+==[9] Router Logs ==
+Mai 07 19:19:55 schattenmacher-D3161-B1 systemd[1319]: shadowmaker-discord-agent-router.service: Main process exited, code=exited, status=1/FAILURE
+Mai 07 19:19:55 schattenmacher-D3161-B1 systemd[1319]: shadowmaker-discord-agent-router.service: Failed with result 'exit-code'.
+Mai 07 19:20:05 schattenmacher-D3161-B1 systemd[1319]: Stopped shadowmaker-discord-agent-router.service - Shadowmaker Discord Agent Router.
+Mai 07 19:20:07 schattenmacher-D3161-B1 systemd[1319]: Started shadowmaker-discord-agent-router.service - Shadowmaker Discord Agent Router.
+Mai 07 19:20:08 schattenmacher-D3161-B1 run_discord_agent_router.sh[12385]: [2026-05-07 19:20:08] [INFO    ] discord.client: logging in using static token
+Mai 07 19:20:10 schattenmacher-D3161-B1 run_discord_agent_router.sh[12385]: [2026-05-07 19:20:10] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: d8d2a6b09343fb25ebc181959043ddb9).
+Mai 07 19:20:12 schattenmacher-D3161-B1 run_discord_agent_router.sh[12385]: READY Shadowmaker Control Bot#2213 guilds=1 stable_readonly=yes
+Mai 07 19:21:43 schattenmacher-D3161-B1 systemd[1319]: Stopping shadowmaker-discord-agent-router.service - Shadowmaker Discord Agent Router...
+Mai 07 19:21:43 schattenmacher-D3161-B1 systemd[1319]: Stopped shadowmaker-discord-agent-router.service - Shadowmaker Discord Agent Router.
+Mai 07 19:23:16 schattenmacher-D3161-B1 systemd[1319]: Started shadowmaker-discord-agent-router.service - Shadowmaker Discord Agent Router.
+Mai 07 19:23:16 schattenmacher-D3161-B1 run_discord_agent_router.sh[15588]: [2026-05-07 19:23:16] [INFO    ] discord.client: logging in using static token
+Mai 07 19:23:19 schattenmacher-D3161-B1 run_discord_agent_router.sh[15588]: [2026-05-07 19:23:19] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: bd11474f9d7eb85c999b0dcb297d6e05).
+Mai 07 19:23:21 schattenmacher-D3161-B1 run_discord_agent_router.sh[15588]: READY Shadowmaker Control Bot#2213 guilds=1 stable_readonly=yes
+Mai 07 19:24:41 schattenmacher-D3161-B1 run_discord_agent_router.sh[15588]: APP_COMMAND_ERROR CommandInvokeError: Command 'ask' raised an exception: NameError: name 'asyncio' is not defined
+Mai 07 19:26:10 schattenmacher-D3161-B1 systemd[1319]: Stopping shadowmaker-discord-agent-router.service - Shadowmaker Discord Agent Router...
+Mai 07 19:26:10 schattenmacher-D3161-B1 systemd[1319]: Stopped shadowmaker-discord-agent-router.service - Shadowmaker Discord Agent Router.
+Mai 07 19:26:10 schattenmacher-D3161-B1 systemd[1319]: Started shadowmaker-discord-agent-router.service - Shadowmaker Discord Agent Router.
+Mai 07 19:26:11 schattenmacher-D3161-B1 run_discord_agent_router.sh[18205]: [2026-05-07 19:26:11] [INFO    ] discord.client: logging in using static token
+Mai 07 19:26:13 schattenmacher-D3161-B1 run_discord_agent_router.sh[18205]: [2026-05-07 19:26:13] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: dd3c189d6c7ac660608c93e4982bfa4a).
+Mai 07 19:26:15 schattenmacher-D3161-B1 run_discord_agent_router.sh[18205]: READY Shadowmaker Control Bot#2213 guilds=1 stable_readonly=yes
+Mai 07 19:40:07 schattenmacher-D3161-B1 systemd[1319]: Stopping shadowmaker-discord-agent-router.service - Shadowmaker Discord Agent Router...
+Mai 07 19:40:07 schattenmacher-D3161-B1 systemd[1319]: Stopped shadowmaker-discord-agent-router.service - Shadowmaker Discord Agent Router.
+Mai 07 19:40:07 schattenmacher-D3161-B1 systemd[1319]: shadowmaker-discord-agent-router.service: Consumed 1.612s CPU time, 41.9M memory peak, 0B memory swap peak.
+Mai 07 19:40:07 schattenmacher-D3161-B1 systemd[1319]: Started shadowmaker-discord-agent-router.service - Shadowmaker Discord Agent Router.
+Mai 07 19:40:07 schattenmacher-D3161-B1 run_discord_agent_router.sh[28564]: [2026-05-07 19:40:07] [INFO    ] discord.client: logging in using static token
+Mai 07 19:40:09 schattenmacher-D3161-B1 run_discord_agent_router.sh[28564]: [2026-05-07 19:40:09] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 7b031dfd180295a5bb401bdbb4526823).
+Mai 07 19:40:11 schattenmacher-D3161-B1 run_discord_agent_router.sh[28564]: READY Shadowmaker Control Bot#2213 guilds=1 stable_readonly=yes
+Mai 07 19:56:57 schattenmacher-D3161-B1 run_discord_agent_router.sh[28564]: [2026-05-07 19:56:57] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 7b031dfd180295a5bb401bdbb4526823.
+Mai 07 20:11:39 schattenmacher-D3161-B1 systemd[1319]: Stopping shadowmaker-discord-agent-router.service - Shadowmaker Discord Agent Router...
+Mai 07 20:11:39 schattenmacher-D3161-B1 systemd[1319]: Stopped shadowmaker-discord-agent-router.service - Shadowmaker Discord Agent Router.
+Mai 07 20:11:39 schattenmacher-D3161-B1 systemd[1319]: Started shadowmaker-discord-agent-router.service - Shadowmaker Discord Agent Router.
+Mai 07 20:11:39 schattenmacher-D3161-B1 run_discord_agent_router.sh[68658]: [2026-05-07 20:11:39] [INFO    ] discord.client: logging in using static token
+Mai 07 20:11:42 schattenmacher-D3161-B1 run_discord_agent_router.sh[68658]: [2026-05-07 20:11:42] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: c497154af795f10c402b500d74286d07).
+Mai 07 20:11:44 schattenmacher-D3161-B1 run_discord_agent_router.sh[68658]: READY Shadowmaker Control Bot#2213 guilds=1 stable_readonly=yes
+Mai 07 20:13:46 schattenmacher-D3161-B1 systemd[1319]: Stopping shadowmaker-discord-agent-router.service - Shadowmaker Discord Agent Router...
+Mai 07 20:13:46 schattenmacher-D3161-B1 systemd[1319]: Stopped shadowmaker-discord-agent-router.service - Shadowmaker Discord Agent Router.
+Mai 07 20:13:46 schattenmacher-D3161-B1 systemd[1319]: Started shadowmaker-discord-agent-router.service - Shadowmaker Discord Agent Router.
+Mai 07 20:13:46 schattenmacher-D3161-B1 run_discord_agent_router.sh[70473]: [2026-05-07 20:13:46] [INFO    ] discord.client: logging in using static token
+Mai 07 20:13:48 schattenmacher-D3161-B1 run_discord_agent_router.sh[70473]: [2026-05-07 20:13:48] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: bdcd3b318ed5ef0ae2129fb5593300e8).
+Mai 07 20:13:50 schattenmacher-D3161-B1 run_discord_agent_router.sh[70473]: READY Shadowmaker Control Bot#2213 guilds=1 stable_readonly=yes
+
+==[10] Relevante Fehler der letzten 3 Minuten ==
+Mai 07 20:12:25 schattenmacher-D3161-B1 systemd[1319]: wallpaper-4mon-slideshow.service: Failed with result 'exit-code'.
+Mai 07 20:12:25 schattenmacher-D3161-B1 systemd[1319]: Failed to start wallpaper-4mon-slideshow.service - Wallpaper Slideshow (4 Monitore, xwallpaper).
+Mai 07 20:12:26 schattenmacher-D3161-B1 systemd[1319]: openclaw-telegram-bot.service: Scheduled restart job, restart counter is at 7.
+Mai 07 20:12:26 schattenmacher-D3161-B1 systemd[1319]: Started openclaw-telegram-bot.service - OpenClaw Telegram Bot.
+Mai 07 20:12:26 schattenmacher-D3161-B1 systemd[1319]: openclaw-telegram-bot.service: Main process exited, code=exited, status=2/INVALIDARGUMENT
+Mai 07 20:12:26 schattenmacher-D3161-B1 systemd[1319]: openclaw-telegram-bot.service: Failed with result 'exit-code'.
+Mai 07 20:12:28 schattenmacher-D3161-B1 systemd[1319]: openclaw-bot.service: Scheduled restart job, restart counter is at 7.
+Mai 07 20:12:28 schattenmacher-D3161-B1 systemd[1319]: wallpaper-4mon-slideshow.service: Scheduled restart job, restart counter is at 1620.
+Mai 07 20:12:28 schattenmacher-D3161-B1 systemd[1319]: openclaw-bot.service: Failed to load environment files: No such file or directory
+Mai 07 20:12:28 schattenmacher-D3161-B1 systemd[1319]: openclaw-bot.service: Failed to spawn 'start' task: No such file or directory
+Mai 07 20:12:28 schattenmacher-D3161-B1 systemd[1319]: openclaw-bot.service: Failed with result 'resources'.
+Mai 07 20:12:28 schattenmacher-D3161-B1 systemd[1319]: Failed to start openclaw-bot.service - OPENCLAW Telegram Bot.
+Mai 07 20:12:28 schattenmacher-D3161-B1 systemd[1319]: Starting wallpaper-4mon-slideshow.service - Wallpaper Slideshow (4 Monitore, xwallpaper)...
+Mai 07 20:12:28 schattenmacher-D3161-B1 systemd[1319]: wallpaper-4mon-slideshow.service: Control process exited, code=exited, status=1/FAILURE
+Mai 07 20:12:28 schattenmacher-D3161-B1 systemd[1319]: wallpaper-4mon-slideshow.service: Failed with result 'exit-code'.
+Mai 07 20:12:28 schattenmacher-D3161-B1 systemd[1319]: Failed to start wallpaper-4mon-slideshow.service - Wallpaper Slideshow (4 Monitore, xwallpaper).
+Mai 07 20:12:30 schattenmacher-D3161-B1 systemd[1319]: wallpaper-4mon-slideshow.service: Scheduled restart job, restart counter is at 1621.
+Mai 07 20:12:30 schattenmacher-D3161-B1 systemd[1319]: Starting wallpaper-4mon-slideshow.service - Wallpaper Slideshow (4 Monitore, xwallpaper)...
+Mai 07 20:12:30 schattenmacher-D3161-B1 systemd[1319]: wallpaper-4mon-slideshow.service: Control process exited, code=exited, status=1/FAILURE
+Mai 07 20:12:30 schattenmacher-D3161-B1 systemd[1319]: wallpaper-4mon-slideshow.service: Failed with result 'exit-code'.
+Mai 07 20:12:30 schattenmacher-D3161-B1 systemd[1319]: Failed to start wallpaper-4mon-slideshow.service - Wallpaper Slideshow (4 Monitore, xwallpaper).
+Mai 07 20:12:31 schattenmacher-D3161-B1 systemd[1319]: openclaw-telegram-bot.service: Scheduled restart job, restart counter is at 8.
+Mai 07 20:12:31 schattenmacher-D3161-B1 systemd[1319]: Started openclaw-telegram-bot.service - OpenClaw Telegram Bot.
+Mai 07 20:12:31 schattenmacher-D3161-B1 systemd[1319]: openclaw-telegram-bot.service: Main process exited, code=exited, status=2/INVALIDARGUMENT
+Mai 07 20:12:31 schattenmacher-D3161-B1 systemd[1319]: openclaw-telegram-bot.service: Failed with result 'exit-code'.
+Mai 07 20:12:32 schattenmacher-D3161-B1 systemd[1319]: wallpaper-4mon-slideshow.service: Scheduled restart job, restart counter is at 1622.
+Mai 07 20:12:32 schattenmacher-D3161-B1 systemd[1319]: Starting wallpaper-4mon-slideshow.service - Wallpaper Slideshow (4 Monitore, xwallpaper)...
+Mai 07 20:12:32 schattenmacher-D3161-B1 systemd[1319]: wallpaper-4mon-slideshow.service: Control process exited, code=exited, status=1/FAILURE
+Mai 07 20:12:32 schattenmacher-D3161-B1 systemd[1319]: wallpaper-4mon-slideshow.service: Failed with result 'exit-code'.
+Mai 07 20:12:32 schattenmacher-D3161-B1 systemd[1319]: Failed to start wallpaper-4mon-slideshow.service - Wallpaper Slideshow (4 Monitore, xwallpaper).
+Mai 07 20:12:33 schattenmacher-D3161-B1 systemd[1319]: openclaw-bot.service: Scheduled restart job, restart counter is at 8.
+Mai 07 20:12:33 schattenmacher-D3161-B1 systemd[1319]: openclaw-bot.service: Failed to load environment files: No such file or directory
+Mai 07 20:12:33 schattenmacher-D3161-B1 systemd[1319]: openclaw-bot.service: Failed to spawn 'start' task: No such file or directory
+Mai 07 20:12:33 schattenmacher-D3161-B1 systemd[1319]: openclaw-bot.service: Failed with result 'resources'.
+Mai 07 20:12:33 schattenmacher-D3161-B1 systemd[1319]: Failed to start openclaw-bot.service - OPENCLAW Telegram Bot.
+Mai 07 20:12:34 schattenmacher-D3161-B1 systemd[1319]: wallpaper-4mon-slideshow.service: Scheduled restart job, restart counter is at 1623.
+Mai 07 20:12:34 schattenmacher-D3161-B1 systemd[1319]: Starting wallpaper-4mon-slideshow.service - Wallpaper Slideshow (4 Monitore, xwallpaper)...
+Mai 07 20:12:34 schattenmacher-D3161-B1 systemd[1319]: wallpaper-4mon-slideshow.service: Control process exited, code=exited, status=1/FAILURE
+Mai 07 20:12:34 schattenmacher-D3161-B1 systemd[1319]: wallpaper-4mon-slideshow.service: Failed with result 'exit-code'.
+Mai 07 20:12:34 schattenmacher-D3161-B1 systemd[1319]: Failed to start wallpaper-4mon-slideshow.service - Wallpaper Slideshow (4 Monitore, xwallpaper).
+Mai 07 20:12:37 schattenmacher-D3161-B1 systemd[1319]: openclaw-telegram-bot.service: Scheduled restart job, restart counter is at 9.
+Mai 07 20:12:37 schattenmacher-D3161-B1 systemd[1319]: wallpaper-4mon-slideshow.service: Scheduled restart job, restart counter is at 1624.
+Mai 07 20:12:37 schattenmacher-D3161-B1 systemd[1319]: Started openclaw-telegram-bot.service - OpenClaw Telegram Bot.
+Mai 07 20:12:37 schattenmacher-D3161-B1 systemd[1319]: Starting wallpaper-4mon-slideshow.service - Wallpaper Slideshow (4 Monitore, xwallpaper)...
+Mai 07 20:12:37 schattenmacher-D3161-B1 systemd[1319]: openclaw-telegram-bot.service: Main process exited, code=exited, status=2/INVALIDARGUMENT
+Mai 07 20:12:37 schattenmacher-D3161-B1 systemd[1319]: openclaw-telegram-bot.service: Failed with result 'exit-code'.
+Mai 07 20:12:37 schattenmacher-D3161-B1 systemd[1319]: wallpaper-4mon-slideshow.service: Control process exited, code=exited, status=1/FAILURE
+Mai 07 20:12:37 schattenmacher-D3161-B1 systemd[1319]: wallpaper-4mon-slideshow.service: Failed with result 'exit-code'.
+Mai 07 20:12:37 schattenmacher-D3161-B1 systemd[1319]: Failed to start wallpaper-4mon-slideshow.service - Wallpaper Slideshow (4 Monitore, xwallpaper).
+Mai 07 20:12:38 schattenmacher-D3161-B1 systemd[1319]: openclaw-bot.service: Scheduled restart job, restart counter is at 9.
+Mai 07 20:12:38 schattenmacher-D3161-B1 systemd[1319]: openclaw-bot.service: Failed to load environment files: No such file or directory
+Mai 07 20:12:38 schattenmacher-D3161-B1 systemd[1319]: openclaw-bot.service: Failed to spawn 'start' task: No such file or directory
+Mai 07 20:12:38 schattenmacher-D3161-B1 systemd[1319]: openclaw-bot.service: Failed with result 'resources'.
+Mai 07 20:12:38 schattenmacher-D3161-B1 systemd[1319]: Failed to start openclaw-bot.service - OPENCLAW Telegram Bot.
+Mai 07 20:12:39 schattenmacher-D3161-B1 systemd[1319]: wallpaper-4mon-slideshow.service: Scheduled restart job, restart counter is at 1625.
+Mai 07 20:12:39 schattenmacher-D3161-B1 systemd[1319]: Starting wallpaper-4mon-slideshow.service - Wallpaper Slideshow (4 Monitore, xwallpaper)...
+Mai 07 20:12:39 schattenmacher-D3161-B1 systemd[1319]: wallpaper-4mon-slideshow.service: Control process exited, code=exited, status=1/FAILURE
+Mai 07 20:12:39 schattenmacher-D3161-B1 systemd[1319]: wallpaper-4mon-slideshow.service: Failed with result 'exit-code'.
+Mai 07 20:12:39 schattenmacher-D3161-B1 systemd[1319]: Failed to start wallpaper-4mon-slideshow.service - Wallpaper Slideshow (4 Monitore, xwallpaper).
+Mai 07 20:12:41 schattenmacher-D3161-B1 systemd[1319]: wallpaper-4mon-slideshow.service: Scheduled restart job, restart counter is at 1626.
+Mai 07 20:12:41 schattenmacher-D3161-B1 systemd[1319]: Starting wallpaper-4mon-slideshow.service - Wallpaper Slideshow (4 Monitore, xwallpaper)...
+Mai 07 20:12:41 schattenmacher-D3161-B1 systemd[1319]: wallpaper-4mon-slideshow.service: Control process exited, code=exited, status=1/FAILURE
+Mai 07 20:12:41 schattenmacher-D3161-B1 systemd[1319]: wallpaper-4mon-slideshow.service: Failed with result 'exit-code'.
+Mai 07 20:12:41 schattenmacher-D3161-B1 systemd[1319]: Failed to start wallpaper-4mon-slideshow.service - Wallpaper Slideshow (4 Monitore, xwallpaper).
+Mai 07 20:12:42 schattenmacher-D3161-B1 systemd[1319]: openclaw-telegram-bot.service: Scheduled restart job, restart counter is at 10.
+Mai 07 20:12:42 schattenmacher-D3161-B1 systemd[1319]: Started openclaw-telegram-bot.service - OpenClaw Telegram Bot.
+Mai 07 20:12:42 schattenmacher-D3161-B1 systemd[1319]: openclaw-telegram-bot.service: Main process exited, code=exited, status=2/INVALIDARGUMENT
+Mai 07 20:12:42 schattenmacher-D3161-B1 systemd[1319]: openclaw-telegram-bot.service: Failed with result 'exit-code'.
+Mai 07 20:12:43 schattenmacher-D3161-B1 systemd[1319]: openclaw-bot.service: Scheduled restart job, restart counter is at 10.
+Mai 07 20:12:43 schattenmacher-D3161-B1 systemd[1319]: wallpaper-4mon-slideshow.service: Scheduled restart job, restart counter is at 1627.
+Mai 07 20:12:43 schattenmacher-D3161-B1 systemd[1319]: openclaw-bot.service: Failed to load environment files: No such file or directory
+Mai 07 20:12:43 schattenmacher-D3161-B1 systemd[1319]: openclaw-bot.service: Failed to spawn 'start' task: No such file or directory
+Mai 07 20:12:43 schattenmacher-D3161-B1 systemd[1319]: openclaw-bot.service: Failed with result 'resources'.
+Mai 07 20:12:43 schattenmacher-D3161-B1 systemd[1319]: Failed to start openclaw-bot.service - OPENCLAW Telegram Bot.
+Mai 07 20:12:43 schattenmacher-D3161-B1 systemd[1319]: Starting wallpaper-4mon-slideshow.service - Wallpaper Slideshow (4 Monitore, xwallpaper)...
+Mai 07 20:12:43 schattenmacher-D3161-B1 systemd[1319]: wallpaper-4mon-slideshow.service: Control process exited, code=exited, status=1/FAILURE
+Mai 07 20:12:43 schattenmacher-D3161-B1 systemd[1319]: wallpaper-4mon-slideshow.service: Failed with result 'exit-code'.
+Mai 07 20:12:43 schattenmacher-D3161-B1 systemd[1319]: Failed to start wallpaper-4mon-slideshow.service - Wallpaper Slideshow (4 Monitore, xwallpaper).
+Mai 07 20:12:46 schattenmacher-D3161-B1 systemd[1319]: wallpaper-4mon-slideshow.service: Scheduled restart job, restart counter is at 1628.
+Mai 07 20:12:46 schattenmacher-D3161-B1 systemd[1319]: Starting wallpaper-4mon-slideshow.service - Wallpaper Slideshow (4 Monitore, xwallpaper)...
+Mai 07 20:12:46 schattenmacher-D3161-B1 systemd[1319]: wallpaper-4mon-slideshow.service: Control process exited, code=exited, status=1/FAILURE
+Mai 07 20:12:46 schattenmacher-D3161-B1 systemd[1319]: wallpaper-4mon-slideshow.service: Failed with result 'exit-code'.
+Mai 07 20:12:46 schattenmacher-D3161-B1 systemd[1319]: Failed to start wallpaper-4mon-slideshow.service - Wallpaper Slideshow (4 Monitore, xwallpaper).
+Mai 07 20:12:47 schattenmacher-D3161-B1 systemd[1319]: openclaw-telegram-bot.service: Scheduled restart job, restart counter is at 11.
+Mai 07 20:12:47 schattenmacher-D3161-B1 systemd[1319]: Started openclaw-telegram-bot.service - OpenClaw Telegram Bot.
+Mai 07 20:12:47 schattenmacher-D3161-B1 systemd[1319]: openclaw-telegram-bot.service: Main process exited, code=exited, status=2/INVALIDARGUMENT
+Mai 07 20:12:47 schattenmacher-D3161-B1 systemd[1319]: openclaw-telegram-bot.service: Failed with result 'exit-code'.
+Mai 07 20:12:48 schattenmacher-D3161-B1 systemd[1319]: wallpaper-4mon-slideshow.service: Scheduled restart job, restart counter is at 1629.
+Mai 07 20:12:48 schattenmacher-D3161-B1 systemd[1319]: Starting wallpaper-4mon-slideshow.service - Wallpaper Slideshow (4 Monitore, xwallpaper)...
+Mai 07 20:12:48 schattenmacher-D3161-B1 systemd[1319]: wallpaper-4mon-slideshow.service: Control process exited, code=exited, status=1/FAILURE
+Mai 07 20:12:48 schattenmacher-D3161-B1 systemd[1319]: wallpaper-4mon-slideshow.service: Failed with result 'exit-code'.
+Mai 07 20:12:48 schattenmacher-D3161-B1 systemd[1319]: Failed to start wallpaper-4mon-slideshow.service - Wallpaper Slideshow (4 Monitore, xwallpaper).
+Mai 07 20:12:49 schattenmacher-D3161-B1 systemd[1319]: openclaw-bot.service: Scheduled restart job, restart counter is at 11.
+Mai 07 20:12:49 schattenmacher-D3161-B1 systemd[1319]: openclaw-bot.service: Failed to load environment files: No such file or directory
+Mai 07 20:12:49 schattenmacher-D3161-B1 systemd[1319]: openclaw-bot.service: Failed to spawn 'start' task: No such file or directory
+Mai 07 20:12:49 schattenmacher-D3161-B1 systemd[1319]: openclaw-bot.service: Failed with result 'resources'.
+Mai 07 20:12:49 schattenmacher-D3161-B1 systemd[1319]: Failed to start openclaw-bot.service - OPENCLAW Telegram Bot.
+Mai 07 20:12:50 schattenmacher-D3161-B1 systemd[1319]: wallpaper-4mon-slideshow.service: Scheduled restart job, restart counter is at 1630.
+Mai 07 20:12:50 schattenmacher-D3161-B1 systemd[1319]: Starting wallpaper-4mon-slideshow.service - Wallpaper Slideshow (4 Monitore, xwallpaper)...
+Mai 07 20:12:50 schattenmacher-D3161-B1 systemd[1319]: wallpaper-4mon-slideshow.service: Control process exited, code=exited, status=1/FAILURE
+Mai 07 20:12:50 schattenmacher-D3161-B1 systemd[1319]: wallpaper-4mon-slideshow.service: Failed with result 'exit-code'.
+Mai 07 20:12:50 schattenmacher-D3161-B1 systemd[1319]: Failed to start wallpaper-4mon-slideshow.service - Wallpaper Slideshow (4 Monitore, xwallpaper).
+Mai 07 20:12:52 schattenmacher-D3161-B1 systemd[1319]: openclaw-telegram-bot.service: Scheduled restart job, restart counter is at 12.
+Mai 07 20:12:52 schattenmacher-D3161-B1 systemd[1319]: wallpaper-4mon-slideshow.service: Scheduled restart job, restart counter is at 1631.
+Mai 07 20:12:52 schattenmacher-D3161-B1 systemd[1319]: Started openclaw-telegram-bot.service - OpenClaw Telegram Bot.
+Mai 07 20:12:52 schattenmacher-D3161-B1 systemd[1319]: Starting wallpaper-4mon-slideshow.service - Wallpaper Slideshow (4 Monitore, xwallpaper)...
+Mai 07 20:12:52 schattenmacher-D3161-B1 systemd[1319]: openclaw-telegram-bot.service: Main process exited, code=exited, status=2/INVALIDARGUMENT
+Mai 07 20:12:52 schattenmacher-D3161-B1 systemd[1319]: openclaw-telegram-bot.service: Failed with result 'exit-code'.
+Mai 07 20:12:52 schattenmacher-D3161-B1 systemd[1319]: wallpaper-4mon-slideshow.service: Control process exited, code=exited, status=1/FAILURE
+Mai 07 20:12:52 schattenmacher-D3161-B1 systemd[1319]: wallpaper-4mon-slideshow.service: Failed with result 'exit-code'.
+Mai 07 20:12:52 schattenmacher-D3161-B1 systemd[1319]: Failed to start wallpaper-4mon-slideshow.service - Wallpaper Slideshow (4 Monitore, xwallpaper).
+Mai 07 20:12:54 schattenmacher-D3161-B1 systemd[1319]: openclaw-bot.service: Scheduled restart job, restart counter is at 12.
+Mai 07 20:12:54 schattenmacher-D3161-B1 systemd[1319]: openclaw-bot.service: Failed to load environment files: No such file or directory
+Mai 07 20:12:54 schattenmacher-D3161-B1 systemd[1319]: openclaw-bot.service: Failed to spawn 'start' task: No such file or directory
+Mai 07 20:12:54 schattenmacher-D3161-B1 systemd[1319]: openclaw-bot.service: Failed with result 'resources'.
+Mai 07 20:12:54 schattenmacher-D3161-B1 systemd[1319]: Failed to start openclaw-bot.service - OPENCLAW Telegram Bot.
+Mai 07 20:12:55 schattenmacher-D3161-B1 systemd[1319]: wallpaper-4mon-slideshow.service: Scheduled restart job, restart counter is at 1632.
+Mai 07 20:12:55 schattenmacher-D3161-B1 systemd[1319]: Starting wallpaper-4mon-slideshow.service - Wallpaper Slideshow (4 Monitore, xwallpaper)...
+Mai 07 20:12:55 schattenmacher-D3161-B1 systemd[1319]: wallpaper-4mon-slideshow.service: Control process exited, code=exited, status=1/FAILURE
+Mai 07 20:12:55 schattenmacher-D3161-B1 systemd[1319]: wallpaper-4mon-slideshow.service: Failed with result 'exit-code'.
+Mai 07 20:12:55 schattenmacher-D3161-B1 systemd[1319]: Failed to start wallpaper-4mon-slideshow.service - Wallpaper Slideshow (4 Monitore, xwallpaper).
+Mai 07 20:12:57 schattenmacher-D3161-B1 systemd[1319]: wallpaper-4mon-slideshow.service: Scheduled restart job, restart counter is at 1633.
+Mai 07 20:12:57 schattenmacher-D3161-B1 systemd[1319]: Starting wallpaper-4mon-slideshow.service - Wallpaper Slideshow (4 Monitore, xwallpaper)...
+Mai 07 20:12:57 schattenmacher-D3161-B1 systemd[1319]: wallpaper-4mon-slideshow.service: Control process exited, code=exited, status=1/FAILURE
+Mai 07 20:12:57 schattenmacher-D3161-B1 systemd[1319]: wallpaper-4mon-slideshow.service: Failed with result 'exit-code'.
+Mai 07 20:12:57 schattenmacher-D3161-B1 systemd[1319]: Failed to start wallpaper-4mon-slideshow.service - Wallpaper Slideshow (4 Monitore, xwallpaper).
+Mai 07 20:12:58 schattenmacher-D3161-B1 systemd[1319]: openclaw-telegram-bot.service: Scheduled restart job, restart counter is at 13.
+Mai 07 20:12:58 schattenmacher-D3161-B1 systemd[1319]: Started openclaw-telegram-bot.service - OpenClaw Telegram Bot.
+Mai 07 20:12:58 schattenmacher-D3161-B1 systemd[1319]: openclaw-telegram-bot.service: Main process exited, code=exited, status=2/INVALIDARGUMENT
+Mai 07 20:12:58 schattenmacher-D3161-B1 systemd[1319]: openclaw-telegram-bot.service: Failed with result 'exit-code'.
+Mai 07 20:12:59 schattenmacher-D3161-B1 systemd[1319]: openclaw-bot.service: Scheduled restart job, restart counter is at 13.
+Mai 07 20:12:59 schattenmacher-D3161-B1 systemd[1319]: wallpaper-4mon-slideshow.service: Scheduled restart job, restart counter is at 1634.
+Mai 07 20:12:59 schattenmacher-D3161-B1 systemd[1319]: openclaw-bot.service: Failed to load environment files: No such file or directory
+Mai 07 20:12:59 schattenmacher-D3161-B1 systemd[1319]: openclaw-bot.service: Failed to spawn 'start' task: No such file or directory
+Mai 07 20:12:59 schattenmacher-D3161-B1 systemd[1319]: openclaw-bot.service: Failed with result 'resources'.
+Mai 07 20:12:59 schattenmacher-D3161-B1 systemd[1319]: Failed to start openclaw-bot.service - OPENCLAW Telegram Bot.
+Mai 07 20:12:59 schattenmacher-D3161-B1 systemd[1319]: Starting wallpaper-4mon-slideshow.service - Wallpaper Slideshow (4 Monitore, xwallpaper)...
+Mai 07 20:12:59 schattenmacher-D3161-B1 systemd[1319]: wallpaper-4mon-slideshow.service: Control process exited, code=exited, status=1/FAILURE
+Mai 07 20:12:59 schattenmacher-D3161-B1 systemd[1319]: wallpaper-4mon-slideshow.service: Failed with result 'exit-code'.
+Mai 07 20:12:59 schattenmacher-D3161-B1 systemd[1319]: Failed to start wallpaper-4mon-slideshow.service - Wallpaper Slideshow (4 Monitore, xwallpaper).
+Mai 07 20:13:01 schattenmacher-D3161-B1 systemd[1319]: wallpaper-4mon-slideshow.service: Scheduled restart job, restart counter is at 1635.
+Mai 07 20:13:01 schattenmacher-D3161-B1 systemd[1319]: Starting wallpaper-4mon-slideshow.service - Wallpaper Slideshow (4 Monitore, xwallpaper)...
+Mai 07 20:13:01 schattenmacher-D3161-B1 systemd[1319]: wallpaper-4mon-slideshow.service: Control process exited, code=exited, status=1/FAILURE
+Mai 07 20:13:01 schattenmacher-D3161-B1 systemd[1319]: wallpaper-4mon-slideshow.service: Failed with result 'exit-code'.
+Mai 07 20:13:01 schattenmacher-D3161-B1 systemd[1319]: Failed to start wallpaper-4mon-slideshow.service - Wallpaper Slideshow (4 Monitore, xwallpaper).
+Mai 07 20:13:01 schattenmacher-D3161-B1 systemd[1319]: Stopped openclaw-bot.service - OPENCLAW Telegram Bot.
+Mai 07 20:13:02 schattenmacher-D3161-B1 systemd[1319]: Stopped openclaw-telegram-bot.service - OpenClaw Telegram Bot.
+Mai 07 20:13:02 schattenmacher-D3161-B1 systemd[1319]: Stopped wallpaper-4mon-slideshow.service - Wallpaper Slideshow (4 Monitore, xwallpaper).
+Mai 07 20:13:46 schattenmacher-D3161-B1 systemd[1319]: Stopping shadowmaker-discord-agent-router.service - Shadowmaker Discord Agent Router...
+Mai 07 20:13:46 schattenmacher-D3161-B1 systemd[1319]: Stopped shadowmaker-discord-agent-router.service - Shadowmaker Discord Agent Router.
+Mai 07 20:13:46 schattenmacher-D3161-B1 systemd[1319]: Started shadowmaker-discord-agent-router.service - Shadowmaker Discord Agent Router.
+Mai 07 20:13:48 schattenmacher-D3161-B1 systemd[1319]: Stopping shadowmaker-control-bot.service - Shadowmaker Control Bot Telegram Discord...
+Mai 07 20:13:49 schattenmacher-D3161-B1 systemd[1319]: Stopped shadowmaker-control-bot.service - Shadowmaker Control Bot Telegram Discord.
+Mai 07 20:13:49 schattenmacher-D3161-B1 systemd[1319]: Started shadowmaker-control-bot.service - Shadowmaker Control Bot Telegram Discord.
+Mai 07 20:13:51 schattenmacher-D3161-B1 systemd[1319]: Stopping schatten-watch-bot.service - Schatten Watch Telegram Bot...
+Mai 07 20:13:51 schattenmacher-D3161-B1 systemd[1319]: Stopped schatten-watch-bot.service - Schatten Watch Telegram Bot.
+Mai 07 20:13:51 schattenmacher-D3161-B1 systemd[1319]: Started schatten-watch-bot.service - Schatten Watch Telegram Bot.
+Mai 07 20:13:53 schattenmacher-D3161-B1 systemd[1319]: Stopping schatten-backup-bot.service - Schatten Backup Telegram Bot...
+Mai 07 20:13:54 schattenmacher-D3161-B1 systemd[1319]: Stopped schatten-backup-bot.service - Schatten Backup Telegram Bot.
+Mai 07 20:13:54 schattenmacher-D3161-B1 systemd[1319]: Started schatten-backup-bot.service - Schatten Backup Telegram Bot.
+
+============================================================
+RECOVERY FERTIG
+Report:
+/home/schattenmacher/openclaw_training/docs/status/recover_after_terminal_close_20260507_201344.txt
+
+Jetzt in Discord testen:
+/status
+/winky
+/courier
+/ask prompt: Antworte exakt nur mit ENV_OK
+============================================================
