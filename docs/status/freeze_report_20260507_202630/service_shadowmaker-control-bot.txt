@@ -1,0 +1,15 @@
+● shadowmaker-control-bot.service - Shadowmaker Control Bot Telegram Discord
+     Loaded: loaded (/home/schattenmacher/.config/systemd/user/shadowmaker-control-bot.service; enabled; preset: enabled)
+     Active: active (running) since Thu 2026-05-07 20:25:08 CEST; 1min 32s ago
+   Main PID: 78778 (python)
+      Tasks: 5 (limit: 37946)
+     Memory: 33.2M (peak: 41.6M)
+        CPU: 595ms
+     CGroup: /user.slice/user-1000.slice/user@1000.service/app.slice/shadowmaker-control-bot.service
+             ├─78778 /home/schattenmacher/shadowmaker_bots/.venv/bin/python /home/schattenmacher/shadowmaker_bots/shadowmaker_control_bot.py
+             ├─79825 bash /home/schattenmacher/openclaw_training/scripts/shadowmaker_freeze_report_no_sudo.sh
+             ├─79828 tee -a /home/schattenmacher/openclaw_training/reports/freeze_report_no_sudo_20260507_202630.txt
+             └─80052 systemctl --user status shadowmaker-control-bot.service --no-pager
+
+Mai 07 20:25:08 schattenmacher-D3161-B1 systemd[1319]: Started shadowmaker-control-bot.service - Shadowmaker Control Bot Telegram Discord.
+Mai 07 20:25:09 schattenmacher-D3161-B1 run_shadowmaker_control_bot.sh[78778]: 2026-05-07 20:25:09 | Shadowmaker Control Bot startet.
