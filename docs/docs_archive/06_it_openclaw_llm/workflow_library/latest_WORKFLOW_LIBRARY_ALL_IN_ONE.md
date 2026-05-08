@@ -66,3 +66,16 @@ Stand: 2026-05-08T10:15:25.724186
 /home/schattenmacher/openclaw_training/docs/docs_archive/06_it_openclaw_llm/workflow_library/latest_ai_provider_all_in_one_cat.txt
 /home/schattenmacher/openclaw_training/bin/shadowmaker_ai_provider_smoke_test.sh
 ```
+
+---
+
+# 📦 Discord Archive Addendum
+
+Stand: 2026-05-08T10:56:25+02:00
+
+```text
+/home/schattenmacher/openclaw_training/docs/docs_archive/06_it_openclaw_llm/workflow_library/discord_archive_audit/latest_discord_archive_audit.md
+/home/schattenmacher/openclaw_training/docs/docs_archive/06_it_openclaw_llm/workflow_library/latest_discord_archive_all_in_one.md
+/home/schattenmacher/openclaw_training/docs/docs_archive/06_it_openclaw_llm/workflow_library/latest_discord_archive_all_in_one_cat.txt
+/home/schattenmacher/openclaw_training/docs/docs_archive/06_it_openclaw_llm/workflow_library/latest_discord_archive_commands.md
+```
