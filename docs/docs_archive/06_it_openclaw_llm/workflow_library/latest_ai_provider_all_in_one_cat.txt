@@ -1,0 +1,70 @@
+# 🤖⚡ ShadowMaker AI Provider Workflow — ALL IN ONE
+
+Stand: 2026-05-08T10:15:25.723480
+
+## Provider
+
+```text
+OpenAI      OPENAI_API_KEY
+Claude      ANTHROPIC_API_KEY / CLAUDE_API_KEY
+Kimi        MOONSHOT_API_KEY / KIMI_API_KEY
+Perplexity  PERPLEXITY_API_KEY
+HF          HF_TOKEN / HUGGING_FACE_HUB_TOKEN
+```
+
+## Dateien
+
+```text
+Env:    /home/schattenmacher/.config/shadowmaker/shadowmaker.env
+Loader: /home/schattenmacher/.config/shadowmaker/load_shadowmaker_env.sh
+Smoke:  /home/schattenmacher/openclaw_training/bin/shadowmaker_ai_provider_smoke_test.sh
+```
+
+## Commands
+
+```bash
+source ~/.config/shadowmaker/load_shadowmaker_env.sh
+~/openclaw_training/bin/shadowmaker_ai_provider_smoke_test.sh
+```
+
+## Git Savepoint ohne Secrets
+
+```bash
+cd ~/openclaw_training
+git add .gitignore bin/shadowmaker_ai_provider_smoke_test.sh docs/docs_archive/06_it_openclaw_llm/workflow_library/latest_ai_provider_*
+git commit -m "Add AI provider all-in-one workflow"
+git push
+```
+
+## Timeshift
+
+```bash
+sudo -E timeshift --create --comments "AI provider workflow savepoint $(date +%Y%m%d_%H%M%S)" --tags D
+```
+
+## Sicherheitsregeln
+
+- Keine echten Keys in Git.
+- Keine echten Keys in Screenshots.
+- Keine echten Keys in Reports.
+- Nur SET len dokumentieren.
+
+# 🤖⚡ AI Provider Workflow
+
+## Check
+
+```bash
+source ~/.config/shadowmaker/load_shadowmaker_env.sh
+~/openclaw_training/bin/shadowmaker_ai_provider_smoke_test.sh
+```
+
+## Regel
+
+Keine echten Keys in Git, Chat, Screenshots oder Logs.
+
+# ⚔️ AI Provider Commands
+
+```bash
+source ~/.config/shadowmaker/load_shadowmaker_env.sh
+~/openclaw_training/bin/shadowmaker_ai_provider_smoke_test.sh
+```
