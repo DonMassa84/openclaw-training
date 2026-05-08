@@ -1,0 +1,163 @@
+
+WF-034 ALL-IN-ONE CAT
+
+Generated: 2026-05-09T00:09:19+02:00
+
+Files
+
+WIKI=/home/schattenmacher/openclaw_training/docs/docs_archive/06_it_openclaw_llm/workflow_library/latest_wf034_thunderbird_local_ai_full_integration.md
+PROMPT=/home/schattenmacher/openclaw_training/docs/docs_archive/06_it_openclaw_llm/workflow_library/latest_wf034_thunderbird_tina_huang_style_prompt.md
+COMMANDS=/home/schattenmacher/openclaw_training/docs/docs_archive/06_it_openclaw_llm/workflow_library/latest_wf034_thunderbird_commands.md
+REPORT=/home/schattenmacher/openclaw_training/reports/wf034_thunderbird_local_ai_full_integration_20260509_000919.txt
+
+# WF-034 — Thunderbird Local AI Full Integration
+
+## Status
+
+Technischer Workflow zur lokalen Thunderbird-Integration in ShadowMaker/OpenClaw.
+
+## Architektur
+
+Thunderbird Mailbox  
+→ sichere lokale Extraktion  
+→ Mailtext + sichere Anhänge  
+→ Secret-Redaction  
+→ SQLite FTS Index  
+→ `shadowmaker-thunderbird-search`  
+→ `askmail-backend`  
+→ Telegram Skill Bot `/run askmail ...`  
+→ Discord askmail/Workflow-Nutzung
+
+## Installierte Kommandos
+
+```bash
+shadowmaker-thunderbird-ingest
+shadowmaker-thunderbird-search "Suchbegriff"
+askmail "Suchbegriff"
+askmail-backend "Suchbegriff"
+```
+
+## Sicherheitsmodell
+
+Nicht verarbeitet:
+
+- logins.json
+- key4.db
+- cert9.db
+- cookies.sqlite
+- gespeicherte Passwörter
+- Tokens/Credentials als Zielinformation
+
+Verarbeitet:
+
+- Mailtexte
+- sichere Metadaten
+- sichere Anhänge
+- PDF/TXT/MD/DOCX/ODT/CSV/XML/JSON soweit lokal verfügbar
+
+## Telegram-Nutzung
+
+```text
+/run askmail Jobcenter
+/run askmail Rechnung
+/run askmail Bewerbung
+/run askmail Thunderbird Discord Passwort
+```
+
+## Reindex
+
+```bash
+shadowmaker-thunderbird-ingest
+```
+
+## Test
+
+```bash
+askmail "Thunderbird"
+askmail "Discord Passwort"
+askmail "Jobcenter"
+```
+
+## Erstellt
+
+2026-05-09T00:09:19+02:00
+
+# WF-034 Prompt — Thunderbird Local AI Integration
+
+## Rolle
+
+Du bist ein klarer, praxisorientierter AI-Workflow-Builder. Erkläre nicht abstrakt, sondern baue ein System Schritt für Schritt: Warum, Architektur, Umsetzung, Test, Ergebnis.
+
+## Aufgabe
+
+Erstelle eine technische, motivierende und umsetzbare Beschreibung der lokalen Thunderbird-KI-Integration.
+
+## Kontext
+
+Thunderbird läuft auf Linux und wird als lokale Kommunikations- und Dokumentenquelle in ein ShadowMaker/OpenClaw-System integriert.
+
+Das System verbindet:
+
+- Thunderbird Mailarchiv
+- sichere Mail-/Attachment-Extraktion
+- PDF-/Text-Verarbeitung
+- lokale SQLite-FTS/RAG-Suche
+- askmail-backend
+- Telegram Skill Bot
+- Discord/Workflow-Dokumentation
+- Secret-Scan und Commit-Schutz
+
+## Sicherheitsgrenzen
+
+- Keine Passwörter extrahieren.
+- Keine logins.json/key4.db verarbeiten.
+- Keine Tokens ausgeben.
+- Keine Cloud-Pflicht.
+- Keine Secrets committen.
+- Nur lokale, berechtigte Daten nutzen.
+
+## Output-Struktur
+
+1. Hook
+2. Warum Thunderbird relevant ist
+3. Architektur
+4. Was automatisiert wurde
+5. Sicherheitsmodell
+6. Konkrete Kommandos
+7. Ergebnis
+8. Strategische Einordnung
+9. Hashtags
+
+## Schreibstil
+
+Klar, schnell, technisch, lernorientiert, mit Energie. Keine übertriebene Werbung. Fokus auf Build, Systemdenken und Kontrolle.
+
+## Beispiel-Hook
+
+Thunderbird ist bei mir kein Mail-Client mehr.  
+Thunderbird ist jetzt ein lokaler Datenknoten meiner KI-Infrastruktur.
+
+## Beispiel-Kernaussage
+
+Lokale KI entsteht nicht durch ein einzelnes Modell.  
+Sie entsteht, wenn Datenquellen, Indizes, Tools, Bots und Workflows zu einem kontrollierbaren System verbunden werden.
+
+# WF-034 Commands
+
+```bash
+shadowmaker-thunderbird-ingest
+shadowmaker-thunderbird-search "Jobcenter"
+shadowmaker-thunderbird-search "Rechnung"
+shadowmaker-thunderbird-search "Bewerbung"
+askmail "Thunderbird Discord Passwort"
+askmail "Jobcenter"
+askmail "Rechnung"
+
+Telegram:
+
+/run askmail Jobcenter
+/run askmail Rechnung
+/run askmail Bewerbung
+/run askmail Thunderbird Discord Passwort
+/run secret_scan
+/run all_status
