@@ -1,0 +1,145 @@
+
+
+######## PASS 1 ########
+============================================================
+SHADOWMAKER PERFECTION LOOP CLEAN
+============================================================
+Zeit=2026-05-08T12:18:30.413732
+
+== Command existence ==
+OK_CMD ask
+OK_CMD askhousing
+OK_CMD askihk
+OK_CMD askmail
+OK_CMD asksecurity
+OK_CMD askdocs
+OK_CMD askfinance
+OK_CMD asklocal
+OK_CMD shadowmaker-auto-answer
+OK_CMD shadowmaker-answer-engine
+OK_CMD shadowmaker-answer-postfilter
+OK_CMD shadowmaker-local-only-guard
+
+== Sample outputs ==
+
+--- TEST: askhousing Hausenring 53 Zusicherung Jobcenter ---
+✅ **Zusicherung Hausenring 53 gefunden**
+
+🎯 **Wichtigster Treffer:**
+`/home/schattenmacher/Dokumente/WBS/Jobcenter_Zusicherung_Hausenring_53_2026-05-06.pdf`
+→ Jobcenter-Zusicherung vom 06.05.2026 für die Adresse Hausenring 53
+
+🧠 **Bewertung:**
+Lokale Datei vorhanden und aktuell (vor 2 Tagen erstellt). Enthält die offizielle Zusicherung des Jobcenters zur Wohnungsanmietung. Begleitdokumente zur WBS-Bewerbung und Wohnungssuche ebenfalls archiviert.
+
+⚔️ **Nächste Aktion:**
+1. PDF öffnen → Zusicherungsnummer, Gültigkeitsdauer und Mietobergrenzen prüfen
+2. Mit Wohnungsgeberbestätigung und WBS-Schein abgleichen
+3. Bei Jobcenter-Anfragen diese Referenznummer nutzen
+
+🧪 **Lokaler Prüf-Befehl:**
+```bash
+file ~/Dokumente/WBS/Jobcenter_Zusicherung_Hausenring_53_2026-05-06.pdf
+pdftotext ~/Dokumente/WBS/Jobcenter_Zusicherung_Hausenring_53_2026-05-06.pdf - | head -20
+```
+
+
+--- TEST: askdocs OpenClaw Workflow Library ---
+✅ OpenClaw Workflow Library verfügbar  
+🎯 Top-Dateien:  
+latest_discord_workflow_library.md  
+latest_shadowmaker_answer_engine_workflow_all_in_one.md  
+latest_ai_provider_workflow_all_in_one.md  
+latest_discord_shadowmaker_global_auto_answer_workflow_all_in_one.md  
+
+🧠 Vollständige Shadowmaker-spezifische Workflows im lokalen Archiv; Discord-Audit & AI-Provider integriert. Keine offiziellen OpenClaw-Docs lokal.  
+
+⚔️ Nächste Aktion: `cat /home/schattenmacher/openclaw_training/docs/docs_archive/06_it_openclaw_llm/workflow_library/latest_discord_workflow_library.md | head -50` für Überblick  
+
+🧪 Lokaler Prüf-Befehl: `ls -la /home/schattenmacher/openclaw_training/docs/docs_archive/06_it_openclaw_llm/workflow_library/ | head -20`
+
+
+--- TEST: askmail Thunderbird Discord Passwort ---
+✅ **Kontext-Mismatch erkannt**
+
+🎯 **Kernproblem:**
+Die Frage verbindet zwei unabhängige Systeme:
+- **Thunderbird** = E-Mail-Client (Passwörter für Mail-Server)
+- **Discord** = Chat-Plattform (Bot-Tokens, Webhooks)
+
+Im lokalen Kontext gibt es:
+- Discord Bot Token Setup Guides (`discord_bot_token_setup_guide.md`)
+- Discord Channel Plans
+- **KEIN** Thunderbird-Discord-Passwort-Mapping
+
+🧠 **Bewertung:**
+
+⚔️ **Nächste Aktion:**
+Präzisiere deine Frage:
+1. **Brauchst du Discord Bot Token?** → Siehe `discord_bot_token_setup_guide.md`
+2. **Brauchst du Thunderbird Mail-Passwort?** → Siehe Web-Ergebnisse [1-5]
+3. **Brauchst du etwas anderes?** → Beschreib den Use-Case
+
+🧪 **Lokaler Prüf-Befehl:**
+```
+grep -r "discord.*password\|thunderbird.*discord" /home/schattenmacher/openclaw_training/docs/
+```
+
+**Im lokalen Kontext nicht gefunden:** Thunderbird-Discord-Passwort-Integration
+
+
+--- TEST: askfinance Pfändung ---
+✅ **Pfändung – Aktuelle Rechtslage Mai 2026**
+
+🎯 **Wichtigste Treffer (lokal):**
+1. **Pfändungsbescheid Stadtkämmerei** (1,6 MB) – Deine aktive Vollstreckungssache
+2. **Zwangsvollstreckungssache Amtsgericht Stuttgart** (790 KB) – Verfahrensdokumentation
+3. **Antrag auf Einstellung der Zwangsvollstreckung § 765a ZPO** – Abwehrmaßnahme vorhanden
+4. **Anlagen Pfändungsschutz** (1,7 MB) – Schutzmaßnahmen dokumentiert
+
+🧠 **Bewertung:**
+- **Grundfreibetrag (ab 01.07.2025):** 1.559,99 € monatlich (nicht pfändbar)
+- **Rechtsgrundlage:** ZPO §§ 803 ff., § 850c (Pfändungsfreigrenzen)
+- **Dein Status:** Aktive Pfändung durch Stadtkämmerei Stuttgart; Antrag auf Einstellung liegt vor
+- **P-Konto-Option:** Gesetzlicher Anspruch auf Pfändungsschutzkonto (seit 2010)
+
+⚔️ **Nächste Aktion:**
+1. **Ratenvorschlag prüfen** – Liegt vor (Ratenvorschlag_Pfaendungsruecknahme_DanielMassa.pdf)
+2. **§ 765a-Antrag Status** – Einstellungsantrag nachverfolgen beim AG Stuttgart
+3. **P-Konto eröffnen** – Falls noch nicht geschehen → Bank kann Ablehnung nicht rechtfertigen
+4. **Kostenfestsetzung prüfen** – AG Stuttgart-Beschluss vom 17.10.24 vorhanden
+
+🧪 **Lokaler Prüf-Befehl:**
+```
+grep -r "Pfändungsfreibetrag\|Ratenvorschlag\|Einstellung" 
+/home/schattenmacher/Dokumente/FINANZEN_ARCHIV_2026-03-03/01_PFAENDUNG_P-KONTO_RECHT/
+```
+
+**Empfehlung:** Fokus auf Ratenvereinbarung + § 765a-Antrag-Status beim Amtsgericht Stuttgart erfragen.
+
+
+--- TEST: ask OpenClaw RAG Status ---
+✅ **OpenClaw RAG Status**
+Lokale Workflow-Library aktiv. 31 Dateien indexiert, davon 4 Discord-Audit-Logs (aktuellstes: 105911).
+
+🎯 **Wichtigste Treffer**
+- **Shadowmaker Control Stack Runbook**: OpenClaw läuft **container-intern stabil** (HTTP/1.1 200 OK)
+- **Host-Binding**: `http://127.0.0.1:18789` kann `Server disconnected` zeigen → **erwartetes Verhalten**
+- **Status**: OK – kein Binding-Experiment nötig, solange Container-intern funktioniert
+
+🧠 **Bewertung**
+RAG-Index vollständig. OpenClaw operativ im Docker-Setup. Keine kritischen Fehler im lokalen Kontext dokumentiert.
+
+⚔️ **Nächste Aktion**
+1. Health-Check: `~/shadowmaker_stack_healthcheck.sh`
+2. Logs prüfen: `~/shadowmaker_stack_logs.sh`
+3. CrashBandicot Telegram-Control aktiv halten (nicht mit OpenClaw-Telegram-Plugin mischen)
+
+🧪 **Lokaler Prüf-Befehl**
+```bash
+docker exec openclaw-openclaw-gateway-1 curl -s http://localhost:18789/health
+```
+
+
+GREEN_PASS=1
+STATUS=PERFECT_ENOUGH
